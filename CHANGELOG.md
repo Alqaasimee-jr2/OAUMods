@@ -69,5 +69,33 @@
 *   Scaffold the lightweight mobile web foundation (HTML/CSS/JS or Vite PWA) with OAU-curated design tokens, responsive viewport handling, and component architecture.
 
 ---
+
+## 📅 2026-09-18 — Entry 003: The Core Trio Assembles (Project Lead, Tobi, Richard)
+
+### 💭 Context & Thoughts
+*   The project transitioned from a solo concept into an active team effort. The Project Lead formed the dedicated dev group bringing in **Tobi** and **Richard** as co-founding core team members.
+*   The philosophy set for the team: *High energy, fun, zero corporate stiffness, but focused on building something that will genuinely impact the Great Ife campus.*
+
+### 🧠 Strategic Debates & Key Decisions
+1.  **The "Plus-One Trust" Scaling Mechanism**:
+    *   Instead of opening the floodgates to a public group where quality and accountability degrade, the team instituted the **Plus-One Rule**: each core member invites exactly **one** trusted, high-signal person (developer, designer, or campus data curator).
+    *   This caps the initial team at 6 sharp, accountable people who can collaborate without bikeshedding.
+2.  **Product Execution Strategy**:
+    *   While the team introduces themselves and brings their +1s, the Project Lead and AI pair programmer will immediately stand up the **v0 working interactive prototype** (Clearance Tracker + OAU Campus Atlas) so the team rallies around a live, clickable product.
+
+### 🎯 Milestone Status & Immediate Tasks
+*   [x] Core dev group established and welcome message deployed.
+*   [x] Plus-One recruitment protocol initiated.
+*   [ ] **Phase 0.4 / Phase 1**: Scaffold the frontend web engine and seed authentic OAU data (Angola, Mozambique, BOOC, White House, SUB, Health Center, and the clearance pipeline).
+
+### 👥 People & Community
+*   **The Core Trio**: Project Lead, Tobi, and Richard.
+*   **Next Growth Step**: Welcoming the 3 invited trusted contributors.
+
+### ⏭️ Next Immediate Step
+*   Build the mobile web foundation with modern Great Ife aesthetic tokens and seed the clearance and landmark datasets.
+
+---
 *(Next entry will be recorded upon subsequent updates or session milestones.)*
+
 
