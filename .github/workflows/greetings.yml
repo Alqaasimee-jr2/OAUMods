@@ -1,0 +1,33 @@
+name: Greetings
+
+on: [pull_request_target, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: |
+          ### Great Ife! ✊ Welcome to OAUMods!
+
+          Thank you for opening your first issue! Whether you are reporting an outdated bus fare, a clearance requirement change, or suggesting a new campus feature, your feedback directly helps incoming freshmen navigate OAU stress-free.
+
+          - 📌 **Tip**: If this is a data update (e.g. departmental contacts, file jacket colors, landmark tips), please include your **Faculty & Department**.
+          - 🧭 Take a look at our [MILESTONES.md](https://github.com/Alqaasimee-jr2/OAUMods/blob/main/MILESTONES.md) to see what the team is currently building.
+
+          The core team will review this shortly. *Against all odds, we build!* 🏛️⚡
+        pr-message: |
+          ### Great Ife! ✊ First-Time Contributor Alert!
+
+          Thank you for submitting your first Pull Request to **OAUMods**! You are officially helping build the open-source digital compass for Great Ife students.
+
+          - 🔍 A maintainer will review your changes shortly.
+          - 📜 Please ensure your contribution aligns with our [PROJECT_RULES.md](https://github.com/Alqaasimee-jr2/OAUMods/blob/main/PROJECT_RULES.md).
+          - 💬 Drop any extra context or screenshots in this thread if applicable.
+
+          Welcome to the builders' circle! 🏛️🚀
