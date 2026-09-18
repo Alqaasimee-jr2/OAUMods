@@ -3,7 +3,13 @@
 > **The open-source, community-driven survival guide and campus companion built by Great Ife students for incoming Great Ife freshmen.**  
 > *100% Non-Profit • Mobile-First • Offline-Ready • Built with Pride for Obafemi Awolowo University, Ile-Ife.*
 
+[![Repository](https://img.shields.io/badge/GitHub-Alqaasimee--jr2%2FOAUMods-181717?logo=github)](https://github.com/Alqaasimee-jr2/OAUMods)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/Platform-PWA%20%7C%20Mobile%20Web-orange.svg)](#)
+[![Campus](https://img.shields.io/badge/Campus-Obafemi%20Awolowo%20University-gold.svg)](#)
+
 ---
+
 
 ## 🧭 Why We Exist: The Great Ife Reality
 
@@ -95,7 +101,27 @@ OAUMods is designed to be the single place a Great Ife student goes whenever the
 
 ---
 
+## 💻 Quick Start & Running Locally
+
+Because OAUMods is designed as a zero-bloat, framework-free PWA, you don't need heavy build chains to run it locally:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Alqaasimee-jr2/OAUMods.git
+cd OAUMods
+
+# 2. Start any local static file server (e.g. Python or Node)
+python -m http.server 3000
+# or: npx serve .
+
+# 3. Open in your mobile browser or emulator
+# http://localhost:3000
+```
+
+---
+
 ## 🚀 Getting Involved
+
 
 This is a community effort born out of personal experience. Whether you are a developer, designer, or just a student who knows the ins and outs of your faculty clearance:
 
