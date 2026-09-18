@@ -1,6 +1,6 @@
-# 🏛️ Great Ife Freshman Companion (FreshOAU)
+# 🏛️ OAUMods (Great Ife Freshman Companion)
 
-> **The open-source, community-driven survival guide and campus navigator built by Great Ife students for incoming Great Ife freshmen.**  
+> **The open-source, community-driven survival guide and campus companion built by Great Ife students for incoming Great Ife freshmen.**  
 > *100% Non-Profit • Mobile-First • Offline-Ready • Built with Pride for Obafemi Awolowo University, Ile-Ife.*
 
 ---
@@ -9,20 +9,20 @@
 
 Stepping onto the grounds of Obafemi Awolowo University for the first time is both exhilarating and bewildering. Every session, thousands of freshers arrive in Ile-Ife to face an initiation by fire:
 
-*   **The Bed Space Balloting Scramble**: Frantically refreshing portals at 10:00 AM, worrying about accommodation in Angola Hall (freshmen males) or Mozambique Hall (freshmen females), and avoiding opportunistic middlemen and scams.
-*   **The Clearance Paper Chase**: Endless queues across campus—trying to determine whether you need red or white background passport photos, which office requires the green file jacket vs the yellow file jacket, paying Remita fees, and getting signatures from the Faculty Officer to the Health Sciences Health Center.
-*   **The Campus Labyrinth**: Walking under the hot sun trying to locate BOOC, ODLT, Spider House, White House, Yellow House, Pit Theatre, or your department's secret administrative annex.
+*   **The Bed Space Balloting Scramble**: Frantically refreshing portals at 10:00 AM, worrying about accommodation in Angola Hall (freshmen males) or Mozambique Hall (freshmen females), and dodging opportunistic middlemen and scams.
+*   **The Clearance Paper Chase**: Endless queues across campus—trying to determine whether you need red or white background passport photos, which office requires the green file jacket vs the yellow file jacket, paying fees through Remita/ePortal, and getting signatures from the Faculty Officer to the Health Center.
+*   **The Campus Labyrinth**: Walking under the hot sun trying to locate BOOC, ODLT, Spider House, White House, Yellow House, Pit Theatre, or your department's administrative offices.
 *   **Transit Confusion**: Deciding whether to take a Campus Shuttle bus from Main Gate to SUB, where to catch a tricycle (keke) to Mozambique or Fajuyi, and what the legitimate student fares are so you don't get overcharged.
 *   **Information Chaos**: 50+ unofficial WhatsApp and Telegram groups broadcasting outdated, conflicting PDF circulars and repeating the exact same questions around the clock.
 
-**FreshOAU exists to solve this once and for all.** We are building a single, cohesive, ultra-fast, mobile-first web app that serves as every freshman’s pocket mentor.
+**OAUMods exists to solve this once and for all.** We are building a single, cohesive, ultra-fast, mobile-first web app that serves as every freshman’s pocket mentor.
 
 ---
 
-## 🎯 What FreshOAU Delivers
+## 🎯 What OAUMods Delivers
 
 ### 1. 📋 Interactive Clearance & Registration Pipeline
-*   **Step-by-Step Milestones**: Pre-arrival tasks, Acceptance Fee payment, Bio-data verification, Bed Space balloting, Faculty clearance, Departmental clearance, Health Center screening, and Library ID registration.
+*   **Step-by-Step Milestones**: Pre-arrival tasks, School Fees payment on ePortal via Remita, Bio-data verification, Bed Space balloting (Angola/Moz), Faculty clearance, Departmental clearance, Health Center medical screening, and Library registration.
 *   **Document Prerequisite Checklists**: Exact requirements for each checkpoint (e.g., number of copies, JAMB result slips, O'Level statements, birth certificate, local government certificate, file jacket colors).
 *   **Office Directory**: Room numbers, building locations, and key personnel for each clearance stage.
 

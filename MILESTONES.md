@@ -1,6 +1,6 @@
-# 🏆 Project Milestones & Execution Roadmap
+# 🏆 OAUMods: Project Milestones & Execution Roadmap
 
-> **"A realistic, phase-by-phase compass guiding the development of the Great Ife Freshman Companion."**  
+> **"A realistic, phase-by-phase compass guiding the development of OAUMods (Great Ife Freshman Companion)."**  
 > *No matter how day-to-day work fluctuates, as long as we achieve each milestone phase, we remain on course to transform the freshman experience.*
 
 ---

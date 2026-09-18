@@ -41,4 +41,33 @@
 *   Begin technical setup for the interactive clearance pipeline and OAU campus POI database.
 
 ---
+
+## 📅 2026-09-18 — Entry 002: Name Locked ("OAUMods") & Landscape Verification
+
+### 💭 Context & Thoughts
+*   Before committing to the build, the Project Lead asked for an exhaustive web and app store search to ensure we are not duplicating an existing project at Obafemi Awolowo University.
+*   The results confirmed a massive strategic greenlight: there is **no existing campus guide or freshman companion app** active for OAU. The campus relies solely on unguided ePortal transactions and messy WhatsApp groups.
+
+### 🧠 Strategic Debates & Key Decisions
+1.  **Brand Selection**:
+    *   Evaluated naming styles inspired by NUSMods (NUS + Mods) and TUM Campus.
+    *   The Project Lead officially locked in the name: **OAUMods**.
+    *   *Why this wins*: It pays homage to the legendary student-engineered NUSMods, sounds developer-native, and conveys a modular, ever-evolving toolkit for Great Ife students.
+2.  **OAU Institutional Reality Confirmed**:
+    *   Web intelligence verified that OAU does **not** charge an "Acceptance Fee" (unlike other federal institutions). This was immediately flagged as a high-value scam alert for freshmen to be built into the survival guide.
+    *   Halls of residence for freshers: Angola (Males) and Mozambique (Females).
+
+### 🎯 Milestone Status & Immediate Tasks
+*   [x] Competitive landscape & feasibility audit completed.
+*   [x] Official brand identity established: **OAUMods**.
+*   [ ] **Phase 0.4**: Scaffold the mobile-first frontend web app with offline capabilities.
+
+### 👥 People & Community
+*   **Project Lead**: Selected the official name **OAUMods** and gave the green light for technical scaffolding.
+
+### ⏭️ Next Immediate Step
+*   Scaffold the lightweight mobile web foundation (HTML/CSS/JS or Vite PWA) with OAU-curated design tokens, responsive viewport handling, and component architecture.
+
+---
 *(Next entry will be recorded upon subsequent updates or session milestones.)*
+
