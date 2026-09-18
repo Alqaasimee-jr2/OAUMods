@@ -19,36 +19,72 @@ Stepping onto the grounds of Obafemi Awolowo University for the first time is bo
 
 ---
 
-## 🎯 What OAUMods Delivers
-
-### 1. 📋 Interactive Clearance & Registration Pipeline
-*   **Step-by-Step Milestones**: Pre-arrival tasks, School Fees payment on ePortal via Remita, Bio-data verification, Bed Space balloting (Angola/Moz), Faculty clearance, Departmental clearance, Health Center medical screening, and Library registration.
-*   **Document Prerequisite Checklists**: Exact requirements for each checkpoint (e.g., number of copies, JAMB result slips, O'Level statements, birth certificate, local government certificate, file jacket colors).
-*   **Office Directory**: Room numbers, building locations, and key personnel for each clearance stage.
-
-### 2. 🗺️ Campus Atlas & Landmark Directory
-*   **Comprehensive Points of Interest (POIs)**:
-    *   **Faculties & Depts**: Administration, Agriculture, Arts, Education, Environmental Design & Management (EDM), Basic Medical Sciences, Clinical Sciences, Dentistry, Pharmacy, Science, Social Sciences, Technology, Law.
-    *   **Lecture Theatres**: BOOC, AUD, ODLT 1 & 2, PGLT, BOOT, Spider House, White House Lecture Theatres, Yellow House.
-    *   **Halls of Residence**: Angola Hall, Mozambique Hall, Fajuyi Hall, Awolowo Hall, Moremi Hall, Alumni Hall, ETF.
-    *   **Student Hubs & Services**: Student Union Building (SUB), Hezekiah Oluwasanmi Library, Health Center (JAC), Amphitheatre, Motion Ground, Sport Complex, University Bookshop, Banks/ATMs.
-*   **Rich Attributes**: Landmark photo, "What happens here", office hours, tips, and nearest transit drop-off.
-
-### 3. 🚌 Campus Movement & Transit Guide
-*   **Routes & Stops**: Campus Gate to SUB, Town-to-Campus transit, Halls of Residence routes, New Market/Buttery connections.
-*   **Fare Transparency**: Verified, official student fares to protect new students from exploitation.
-*   **Walking Shortcuts**: Recommended pedestrian paths between faculties and residential halls.
-
-### 4. ☎️ Essential Directory & Emergency Helplines
-*   **Emergency Lines**: Health Center emergency ambulance line, Campus Security emergency post, Student Union (SUG) Welfare desk.
-*   **Academic Contacts**: Dean of Student Affairs, Faculty Officers, Sub-Deans, and departmental advisory units.
-
-### 5. 📖 Freshman Survival Bible & Great Ife Culture
-*   **Campus Lingo & Slang Decoder**: Understanding "Aro", "Town-Gown", "Aluta", "Motion Ground", and campus traditions.
-*   **Scam Prevention Alerts**: How to spot fake hostel agents, fake clearance assistants, and unauthorized dues.
-*   **Life Hacks**: Affordable eating spots, quiet night reading venues, power hubs during outages, and laundry hacks.
-
 ---
+
+## 🎯 The Big Picture: What OAUMods Delivers
+
+OAUMods is designed to be the single place a Great Ife student goes whenever they need to find something, understand something, or figure out what to do next.
+
+### 🗺️ 1. Campus Atlas & Navigation
+*   Interactive campus map and route guidance.
+*   Comprehensive database of faculties, departments, and administrative annexes.
+*   Every lecture theatre (BOOC, AUD, ODLT 1 & 2, PGLT, BOOT, Spider House, White House, Yellow House, Pit Theatre).
+*   Hostels, landmarks, walking shortcuts, and key campus points of interest.
+
+### 🏠 2. Accommodation Hub
+*   Detailed hall guides: Angola (freshmen males), Mozambique (freshmen females), Fajuyi, Awolowo, Moremi, Alumni, ETF.
+*   Bed-space balloting strategy: countdowns, network prep tips, portal steps, and verification.
+*   Hostel rules, porter desk info, and survival hacks.
+*   Off-campus accommodation directory (Maintenance, Mayfair, Asherifa, Ibadan Road, AP, OAU Gate) with verified landlord tips and pricing expectations.
+
+### 📚 3. Academics & GPA Calculator
+*   Directory of faculties, departments, and course codes.
+*   Course information, units, prerequisites, and typical freshman elective selections.
+*   Timetable planner & examination schedules.
+*   Official academic calendar tracking.
+*   **🧮 Great Ife GPA Calculator**: Tailored precisely to OAU's 5.0 grading system (A=5, B=4, C=3, D=2, E=1, F=0) with target GPA projections.
+
+### 📄 4. Student Guides & Clearance Pipeline
+*   Step-by-step interactive clearance checklist (School Fees on Remita -> Bio-data -> Health Center medical screening -> Bed Space -> Faculty clearance -> Departmental clearance -> Library ID).
+*   Exact document requirements per office (number of copies, red vs white passport backgrounds, green vs yellow file jackets).
+*   Freshers' Survival Guide: what to do during your first 30 days.
+
+### 🚌 5. Campus Mobility & Transport
+*   Campus shuttle bus routes (Main Gate to SUB, Town to Campus, Hall routes).
+*   Tricycle (Keke) parks & drop-off points (SUB, Fajuyi, Mozambique, Maintenance, Gate).
+*   Verified, official student fares to protect students from exploitation.
+*   Walking guides and inter-faculty shortcuts.
+
+### 🍜 6. Campus Life & Essentials
+*   Affordable food spots, cafeterias, and buttery joints across campus and halls.
+*   Essential student services: Printing/photocopying hubs, cybercafés, bookshops, laundry.
+*   Banks, working ATMs, and POS points.
+*   Campus events, fellowship centers, and student union activities.
+
+### 📞 7. Important Directory & Emergency Contacts
+*   Direct emergency call triggers: Health Center Ambulance (JAC), Campus Security Post.
+*   Dean of Student Affairs, Faculty Officers, Sub-Deans, and SUG Welfare Desk.
+
+### 🔎 8. Instant Global Search
+*   One-box universal search: Type any building, lecturer office, course code, clearance requirement, or food spot to get instant results.
+
+### 📱 9. Offline Mode (PWA)
+*   100% core functionality without internet access.
+*   Cached offline state for clearance checklists, directories, and maps.
+*   Automatic background sync when connection is restored.
+
+### 👥 10. Community & Verification
+*   Student-powered crowdsourced corrections and data updates.
+*   Departmental verification badges ensuring freshmen get accurate information.
+
+### 🛠️ 11. Admin & Curator Dashboard
+*   Lightweight curation portal to manage campus notices, update transit fares, and approve community additions.
+
+### 🔔 12. Updates & Deadlines
+*   Timely tracking of portal deadlines, balloting dates, matriculation rehearsals, and exam commencement.
+
+### 🤖 13. Future AI Campus Assistant (Roadmap)
+*   Natural language Q&A: *"How do I register for MTH101?", "Where is Room 15 in White House?", "What documents do I take to Faculty of Tech?"*
 
 ## 🛠️ Architecture & Guiding Philosophy
 
