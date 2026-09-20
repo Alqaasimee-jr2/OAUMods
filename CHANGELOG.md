@@ -277,7 +277,193 @@
 *   **Core Team (Tobi & Richard)**: Remote repository now fully accessible for review.
 
 ### ⏭️ Next Immediate Step
-*   Gather feedback from Tobi and Richard on the idea specifications.
+*   [x] Gathered initial feedback and reviewed prototype ideas.
 
 ---
-*(Next entry will be recorded upon subsequent updates or session milestones.)*
+
+## 📅 2026-09-20 — Entry 010: The "Info HUB" North Star, Guide16 Forensic Audit & Workspace Purge
+
+### 💭 Context & Thoughts
+*   A new development stretch began between the Project Lead and Guide 17.
+*   The Project Lead established the inviolable foundational directive to avoid mission drift: **OAUMods is built as an Information HUB first**. It begins as the definitive single source of truth for the Great Ife campus, and all interactive tools, calculators, and automated workflows grow on and serve this core data repository.
+*   To ground the next phase, we conducted an exhaustive review of the Project Lead's earlier prototype, **Guide16** (`Alqaasimee-jr2/guide16`), as well as global benchmark models **NUSMods** (National University of Singapore) and **TUM Campus** (Technical University of Munich).
+
+### 🧠 Strategic Decisions & Forensic Findings
+1.  **The "Info HUB First" Core Anchor**:
+    *   *Decision*: Every design choice, data structure, and feature must prioritize clearing freshman information blindness (accurate document prerequisites, fee clarity, room numbers, real transit fares, and scam defense) before secondary widgets.
+2.  **Guide16 Deconstruction & Extracted Assets**:
+    *   *Stack Audit*: Next.js 15, Tailwind CSS v4, shadcn/ui, Bun runtime, and OAU green theme (`#4ade80`).
+    *   *Identified Treasures to Salvage*:
+        *   **20-Question Authentic FAQ Knowledgebase**: Covers critical student realities (48-hour missed exam protocol, ID card loss procedures, Hezekiah Library opening hours & borrowing rules, add/drop limits, and portal errors).
+        *   **26 Direct Google Maps GPS Deep-Links**: Exact coordinate links for specific lecture halls (Humanities 1000-seater, Chem Eng LT A/B, Science Complex G.17, Agric LT A/B, etc.).
+        *   **5 Additional Campus Task Workflows**: Course Registration, Student Induction, ID Card Collection, Hostel Balloting, and Exam Registration.
+        *   **Social & Polish Patterns**: Native Web Share integration (`navigator.share`) for instant WhatsApp transmission and search-target highlight pulses.
+3.  **Workspace Directory Cleanup & Hygiene**:
+    *   *Directive*: Remove any and all non-development clutter from the workspace.
+    *   *Actions Taken*:
+        *   Permanently deleted `scratch/` (containing the temporary `guide16` clone, now archived in the audit).
+        *   Purged legacy raw audio recordings directory (`audio ideas/`, 7 `.ogg` files), as all audio insights were already transcribed and codified into modular markdown specifications in `ideas/`.
+        *   Directory verified clean, containing only production code (`css/`, `js/`, `data/`, `index.html`, `manifest.json`, `sw.js`), active specifications (`ideas/`), and living governance docs.
+
+### 🎯 Milestone Status & Immediate Tasks
+*   [x] Core "Info HUB First" architectural principle locked in.
+*   [x] Forensic audit of `guide16`, `NUSMods`, and `TUM Campus` completed.
+*   [x] Workspace cleansed of all non-dev temporary files and raw audio blobs.
+*   [ ] **Phase 2 Expansion**: Integrate the 20-question FAQ database and Google Maps deeplinks into `data/landmarks.js` and `data/survival_data.js`.
+
+### 👥 People & Community
+*   **Project Lead**: Set the "Info HUB First" compass and ordered the workspace purge.
+*   **Guide 17**: Executed the forensic review and cleaned up workspace files.
+
+### ⏭️ Next Immediate Step
+*   [x] Codified all beneficial campus knowledge into dedicated vaults and purged all production/dev files.
+
+---
+
+## 📅 2026-09-20 — Entry 011: Complete Dev & Production Code Stripping — Codifying the Campus Knowledge Vault
+
+### 💭 Context & Thoughts
+*   The Project Lead issued an uncompromising directive: **Remove all production and development files and folders from the workspace**, stripping away all code bloat.
+*   Prior to removal, every ounce of beneficial campus knowledge, authentic OAU datasets, document prerequisite lists, landmark coordinates, transit routes, and grading mathematics had to be preserved in full fidelity within a dedicated Markdown knowledge vault.
+*   The workspace is now completely reset to pure living documentation, feature specifications, and institutional knowledge—solidifying OAUMods as an **Information HUB** before any code is written.
+
+### 🧠 Strategic Decisions & Actions Taken
+1.  **Creation of the Consolidated Campus Knowledge Vault**:
+    *   Authored [`CAMPUS_KNOWLEDGE_VAULT.md`](file:///c:/Users/DELL/Desktop/GUIDE17/CAMPUS_KNOWLEDGE_VAULT.md) at the project root and mirrored in [`ideas/08_campus_data_and_knowledge_vault.md`](file:///c:/Users/DELL/Desktop/GUIDE17/ideas/08_campus_data_and_knowledge_vault.md).
+    *   *Content Preserved with Zero Data Loss*:
+        *   **Clearance Pipeline**: All 8 stages, complete document prerequisite checklists, required copies, red-background photo mandates, and faculty file jacket color conventions.
+        *   **Campus Atlas & POIs**: 25+ landmarks (BOOC, White House, Spider House, ODLT 1&2, AUD, Pit Theatre, Angola, Moz, Awo, Fajuyi, Moremi, SUB, Hezekiah Library, Health Center, Sports Complex, ATMs) with direct Google Maps GPS deep-links.
+        *   **Accommodation Hub**: The Bed Space Balloting Masterclass, Angola/Moz guidelines, and the 4 off-campus zones (Maintenance, Gate/AP, Mayfair, Asherifa) with price brackets, power ratings, and landlord anti-dupe checklists.
+        *   **Transit Engine**: 5 verified campus shuttle and Keke routes with official student fares and morning rush survival hacks.
+        *   **Campus Life & Safety**: Curated budget food spots (Awo Cafe, Faj Buttery, Moz Vendors, SUB), photocopying hubs, 24/7 night reading rooms, and verified 24/7 emergency helplines.
+        *   **Lingo & Scam Defense**: Great Ife slang dictionary (Aro, Motion Ground, Town-Gown, BOOC) and scam alerts (Acceptance fee fraud, fake WhatsApp bed space touts, 48-hour exam illness reporting rule).
+        *   **Academics & CGPA Engine**: The complete OAU 5.0 grading scale, degree classification benchmarks, and 100-level STEM core course units.
+        *   **Design Tokens**: Great Ife Cobalt (`#0B1B3D`), Gold (`#EAA812`), Outfit and Plus Jakarta Sans typography, and mobile-first layout constants.
+2.  **Removal of All Production & Development Assets**:
+    *   Permanently deleted:
+        *   `css/` (`app.css`, `design_tokens.css`)
+        *   `data/` (`clearance_pipeline.js`, `landmarks.js`, `accommodation_data.js`, `transit_fares.js`, `survival_data.js`)
+        *   `js/` (`app.js`, `clearance.js`, `atlas.js`, `accommodation.js`, `transit.js`, `gpa.js`, `account.js`)
+        *   `index.html`
+        *   `manifest.json`
+        *   `sw.js`
+    *   Workspace verified clean: only living markdown documents, the `.ideas/` vault, and essential repository configuration files remain.
+
+### 🎯 Milestone Status & Immediate Tasks
+*   [x] All beneficial knowledge extracted and preserved in `CAMPUS_KNOWLEDGE_VAULT.md`.
+*   [x] All production and development files and directories removed.
+*   [x] Repository status verified clean and fully documented.
+*   [ ] Review the consolidated Knowledge Vault with the Project Lead and align on next documentation or design specifications.
+
+### 👥 People & Community
+*   **Project Lead**: Directed the complete stripping of dev/production files and enforced knowledge codification.
+*   **Guide 17**: Extracted and authored the Knowledge Vault and purged the codebase.
+
+### ⏭️ Next Immediate Step
+*   [x] Presented clean workspace and consolidated Campus Knowledge Vault to Project Lead.
+
+---
+
+## 📅 2026-09-20 — Entry 012: Hyper-Extensive Wide Research Suite Established (`research/`)
+
+### 💭 Context & Thoughts
+*   With the project purified into an Information Hub foundation, the Project Lead initiated **"Info Stacking"** and ordered a **hyper-extensive wide research sweep** across Obafemi Awolowo University (Great Ife).
+*   The objective: Build an authoritative, multi-dimensional institutional encyclopedia to serve as the factual bedrock before embarking on narrower domain-specific investigations.
+*   Conducted deep-dive web intelligence gathering on institutional history, Arieh Sharon's tropical modernist master plan, the 13-faculty academic structure, residential sociology, student unionism, and campus regulations.
+
+### 🧠 Research Deliverables & Artifacts Codified
+Established the dedicated `research/` directory housing 6 modular, comprehensive research documents:
+1.  [`research/01_history_identity_and_culture.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/01_history_identity_and_culture.md):
+    *   1961 founding as University of Ife, 1987 renaming after Chief Obafemi Awolowo.
+    *   Motto: *"For Learning and Culture"* (*"Fun Èkó àti Àsà"*); Cobalt Blue & Gold palette.
+    *   Full authentic lyrics of the Great Ife Anthem.
+    *   Arieh Sharon's Bauhaus-inspired tropical modernism (inverted pyramids, covered walkways, natural cross-ventilation, Getty conservation grant).
+    *   Aroism culture (Awolowo & Fajuyi halls) and the historic July 10, 1999 anti-cultism martyrdom of George Iwilade ("Afrika").
+2.  [`research/02_campus_geography_masterplan_and_zones.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/02_campus_geography_masterplan_and_zones.md):
+    *   13,000-acre (~11,861-hectare) land tenure and the Sharon Three-Community master plan.
+    *   Road 1 (Adesoji Aderemi Road) main arterial spine, Road 2, Road 7 (staff villas), and Maintenance Road.
+    *   Breakdown of 11 functional zones (Central Core, Science Quad, Tech Zone, Humanities, Health Sciences Belt, Residential Areas 1 & 2, Farm basin).
+3.  [`research/03_academic_structure_faculties_and_institutes.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/03_academic_structure_faculties_and_institutes.md):
+    *   The complete collegiate structure: College of Health Sciences (Basic Medical Sciences, Clinical Sciences, Dentistry).
+    *   All 10 autonomous faculties (Technology, Science, EDM, Pharmacy, Law, Social Sciences, Administration, Arts, Education, Agriculture) + Postgraduate College.
+    *   Autonomous centers of excellence: CERD (nuclear energy), NACETEM, RECTAS (UN aerospace geoinformatics), ARCSSTE-E (space science), DRPU, INTECU, Natural History Museum, and OAUTHC hospital complex.
+4.  [`research/04_student_residential_and_offcampus_ecosystem.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/04_student_residential_and_offcampus_ecosystem.md):
+    *   Profiles of all 9 halls of residence: Angola (male freshers), Mozambique (female freshers), Awo, Fajuyi, Moremi, ETF, Alumni, Ladoke Akintola, Murtala Muhammed.
+    *   ePortal bed space balloting mechanics, 72-hour forfeiture rule, and porter governance.
+    *   Detailed breakdown of 5 off-campus student neighborhoods: Maintenance/Staff Quarters Road (#1 choice), Campus Gate/AP, Asherifa/Parakin, Mayfair/Lagere, and Ede/Ibadan Road corridors.
+5.  [`research/05_administration_services_and_calendar.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/05_administration_services_and_calendar.md):
+    *   Statutory governance hierarchy: Vice-Chancellor, DVCs, Registrar, Bursar, Librarian.
+    *   Division of Student Affairs (DSA) welfare & guidance counseling unit.
+    *   Health Center (JAC) Green Card privileges & 24/7 ambulance dispatch.
+    *   The authentic **Harmattan Semester** (1st Semester) and **Rain Semester** (2nd Semester) calendar structure.
+    *   Core regulations: 15–24 credit unit load, the strict **48-Hour Exam Illness Rule**, and academic probation thresholds.
+6.  [`research/06_student_governance_media_and_campus_life.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/06_student_governance_media_and_campus_life.md):
+    *   Students' Union (SUG) governance: Central Executive Council (CEC), Students' Representative Council (SRC), Judicial Council, Hall Executives, and the supreme Student Congress.
+    *   Association of Campus Journalists (ACJ) and iconic hall press boards (Awo Press, Faj Press, Moz Press).
+    *   Daily student sustenance: Awo Cafe late-night meals, Fajuyi buttery strip, SUB swallow cafeteria, Mozambique food stalls, New Market raw foodstuffs, Bank Road morning ATM hacks, and INTECU campus Wi-Fi.
+7.  [`research/README.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/README.md):
+    *   Master index synthesizing the entire wide research suite.
+
+### 🎯 Milestone Status & Immediate Tasks
+*   [x] Hyper-extensive wide research sweep completed across 6 key institutional domains.
+*   [x] Dedicated `research/` dossier established and cataloged.
+*   [ ] Await Project Lead review and direction on specific deep-dive research tracks.
+
+### 👥 People & Community
+*   **Project Lead**: Commenced the "Info Stacking" phase and ordered the wide research sweep.
+*   **Guide 17**: Conducted deep-dive intelligence research and authored the 6 research dossiers.
+
+### ⏭️ Next Immediate Step
+*   [x] Completed and codified deep research into Great Ife student politics, positions, eligibility, and election proceedings.
+
+---
+
+## 📅 2026-09-20 — Entry 013: Deep Research Codified: Great Ife Student Politics, Positions, Eligibility & Electoral Proceedings
+
+### 💭 Context & Thoughts
+*   The Project Lead issued a direct research mandate for the first specific deep-dive: **Campus politics, positions, proceedings, eligibility per level, and electoral bodies at Great Ife**.
+*   Freshmen and students frequently navigate university politics blind: they do not know what positions exist, who is eligible to contest, what CGPA is required, how campaigns are waged, or how positions are lost.
+*   Conducted exhaustive intelligence gathering on the constitutional framework of the Students' Union (CEC, SRC, Judiciary), Faculty Associations, Departmental Bodies, Hall Executive Councils (HEC), and Class Representation.
+
+### 🧠 Research Deliverables & Insights Codified
+Authored [`research/07_student_politics_elections_and_governance.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/07_student_politics_elections_and_governance.md) and updated [`research/README.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/README.md):
+1.  **The 5-Tier Leadership Pyramid**:
+    *   *Tier 1 (Academic Class)*: Class Representative (Course Rep) & Assistant Class Rep.
+    *   *Tier 2 (Residential/Hall)*: Block Reps, Floor Reps, and the Hall Executive Council (HEC - Chairman, Vice-Chair, Gen Sec, Welfare, Social, Sports, etc.).
+    *   *Tier 3 (Departmental)*: Departmental Executive Council (President, PRO, etc.) and Departmental Student Representative Council (DSRC).
+    *   *Tier 4 (Faculty)*: Faculty Executive Council (President, PRO, etc.) and Faculty Consultative Council (FCC/FRC).
+    *   *Tier 5 (University-Wide Union)*: Central Executive Council (CEC), Students' Representative Council (SRC), Judicial Council, and the supreme Student Congress.
+2.  **Eligibility by Year / Level**:
+    *   *Class Rep*: Open to any registered student in that specific cohort (100L–500L).
+    *   *Angola & Mozambique HEC*: Exclusively 100-Level freshmen; **exempt from the CGPA rule** as Part 1 results are not yet computed.
+    *   *Departmental & Faculty President*: Typically 300L/400L (minimum 2 full academic sessions completed; barred to 100L and final-semester graduating students).
+    *   *CEC President & Union Executives*: Typically 300L/400L/500L (minimum 1 full academic session completed; barred to 100L).
+3.  **Mandatory Qualifications & Benchmarks**:
+    *   *CGPA Rule*: Strict **minimum 2.50 CGPA** mandate (OAU Governing Council policy); departments/faculties can set 3.00–3.50 for the presidency.
+    *   *SDC Disciplinary Clearance*: Zero indictments for cultism, examination malpractice, theft, or violence.
+    *   *Financial Standing*: Cleared school charges, hall dues, and association dues.
+4.  **The 8-Step Election Journey**:
+    *   1. Ban Lifting $\rightarrow$ 2. Nomination Forms & Signatures $\rightarrow$ 3. Screening Panel $\rightarrow$ 4. Room-to-Room Trekking $\rightarrow$ 5. Press Confrontation (ACJ Grilling Night) $\rightarrow$ 6. Manifesto Night (Amphitheatre) $\rightarrow$ 7. Election Day & Open Ballot Counting $\rightarrow$ 8. Swearing-In.
+5.  **Loss & Forfeiture of Office (Vacation of Seat)**:
+    *   *Impeachment*: 2/3 supermajority vote of the SRC/Assembly for gross misconduct, embezzlement, or unauthorized management concessions.
+    *   *Academic Deficiency*: CGPA falling below 2.50 or academic probation (< 1.00).
+    *   *SDC Indictment*: Rustication or suspension by university authorities.
+    *   *Recall*: Petition signed by 1/3 constituents ratified by referendum.
+6.  **Electoral Bodies**:
+    *   SUIEC (Union), HEC-EC (Halls), DEC (Departments), FEC (Faculties), SRC (Parliament), Judicial Council (Arbitration), and Division of Student Affairs (DSA regulatory oversight).
+
+### 🎯 Milestone Status & Immediate Tasks
+*   [x] Complete political, electoral, and governance dossier established in `research/07_student_politics_elections_and_governance.md`.
+*   [x] Research master index updated in `research/README.md`.
+*   [ ] Await Project Lead direction on the next specific deep-dive research topic.
+
+### 👥 People & Community
+*   **Project Lead**: Directed the political architecture and election deep-dive.
+*   **Guide 17**: Researched and authored the comprehensive political dossier.
+
+### ⏭️ Next Immediate Step
+*   [x] Session concluded cleanly. All wide and political deep-dive dossiers codified.
+*   [ ] Next Session: Select the next specific deep-dive research domain (e.g. 100-Level Course Catalogs & Prerequisites across faculties, Campus Venue Room Capacities & Facilities, or Transit & Commuter Logistics).
+
+---
+*(Work session wrapped up cleanly on 2026-09-20. Ready for next stretch.)*
