@@ -1,6 +1,6 @@
 # 🍲 Research 18: Campus Dining, Hidden Food Gems & Scenic Sanctuaries
 
-> **"Beyond the brutal lectures in BOOC and the labyrinthine clearance queues lies the authentic soul of Great Ife: the aroma of peppered barbecue wafting from Orente Grills, the golden puff-puff of 'As E Dey Hot' opposite Moremi, the rustic wooden charm of the Archi kiosk, and the breathtaking sunset views from the mountain behind Architecture. This is the insider's roadmap to eating well, chilling deeply, and discovering campus romance."**  
+> **"Beyond the lectures in BOOC and the clearance queues lies the authentic soul of Great Ife: the aroma of grilled food wafting from Orente Grills, the hot puff-puff of 'As E Dey Hot' opposite Moremi, the rustic wooden charm of the Archi kiosk, and the scenic views from the mountain behind Architecture. This is the insider's roadmap to eating well, relaxing, and discovering campus romance."**  
 > *Living Research Dossier 18 — OAUMods Information HUB Architecture*
 
 ---
@@ -9,135 +9,117 @@
 
 ```
 ┌──────────────────────────────┬───────────────────────────────┬────────────────────────────────────────────────────────┐
-│ Dining Hotspot               │ Precise Campus Location       │ Culinary Specialties & Price Reality                   │
+│ Dining Hotspot               │ Campus Location               │ Culinary Offerings & Character                         │
 ├──────────────────────────────┼───────────────────────────────┼────────────────────────────────────────────────────────┤
 │ 1. Orente Grills             │ Amphi / ODLT Axis             │ Grilled Chicken, Catfish, Shawarma, Barbecue Chops     │
 │ 2. Captain Cook              │ Student Union Building (SUB)  │ Pastries, Meat Pies, Scoop Ice Cream, Jollof Rice      │
-│ 3. As E Dey Hot              │ Opp. Moremi & Alumni Halls    │ Piping Hot Puff-Puff, Meat Pies, Samosas, Spring Rolls │
+│ 3. As E Dey Hot              │ Opp. Moremi & Alumni Halls    │ Hot Puff-Puff, Meat Pies, Samosas, Spring Rolls        │
 │ 4. Coca-Cola Restaurant      │ Near Akintola Hall (PG Axis)  │ Traditional Swallow (Amala, Pounded Yam, Eba), Soups   │
-│ 5. Mini Shawarma Cluster     │ SUB Front Paved Apron         │ Fast-wrap Shawarma, Hot Sausages, Chilled Sodas        │
-│ 6. The Archi Hut Kiosk       │ Architecture Quadrangle       │ Fried Eggs, Noodles, Coffee/Tea, Light Finger Chops    │
-│ 7. "Lil Dinners" (Hostels)   │ Awo, Fajuyi, Moz & Angola     │ Awo Cafe Mountain Portions, Faj Buttery Strip, Moz Eats│
+│ 5. Mini Shawarma Spots       │ SUB Front Paved Apron         │ Shawarma Wraps, Sausages & Suya, Cold Drinks           │
+│ 6. The Archi Hut Kiosk       │ Architecture Quadrangle       │ Cooked Indomie, Fried Eggs, Hot Coffee/Tea, Toast      │
+│ 7. "Lil Dinners" (Hostels)   │ Awo, Fajuyi, Moz & Angola     │ Awo Cafe Jollof & Beans, Faj Buttery, Moz Delicacies   │
 │ 8. New Buka Complex          │ Central Food Corridor         │ Diverse Bukas, Fresh Local Soups, Pepper Soup, Rice    │
-│ 9. New Market Eateries       │ Commercial Residential Edge   │ Fast Food, Roasted Plantain (*Boli*), Catfish Barbecue │
+│ 9. New Market Eateries       │ Commercial Residential Edge   │ Local Food Stalls, Roasted Plantain (*Boli*), Fish     │
 └──────────────────────────────┴───────────────────────────────┴────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🍗 2. Deep-Dive Profiles of Curated Dining Gems
+## 🍗 2. Profiles of Curated Dining Gems
 
 ### 1. Orente Grills (Afrika Amphitheatre / ODLT Axis)
-*   **The Vibe**: Open-air evening social hub. The sizzle of hot grills, ambient music, and clouds of aromatic spice drifting between the Amphitheatre steps and the ODLT lecture halls.
-*   **Signature Dishes**:
-    *   *Peppered Chicken & Chips*: Well-marinated, spicy fried chicken served with seasoned potato or yam chips.
-    *   *Grilled Catfish (Point & Kill)*: Prepared fresh on charcoal barbecues with spicy pepper sauce and onions.
-    *   *Double-Sausage Shawarma*: Generously stuffed with shredded chicken, beef, cabbage, and sweet cream dressing.
-*   **Operational Hours**: **3:00 PM – 11:00 PM** (peaks during evening social hours and after night classes).
-*   **Price Range**: ₦1,200 – ₦4,500.
-*   **Student Reality**: The prime location to meet friends after a grueling 5:00 PM lecture or grab dinner before an Amphitheatre show or rehearsal.
+*   **The Vibe**: Open-air evening social hub by the Amphitheatre and ODLT lecture halls. Sizzle of grills and aromatic spice in the evening air.
+*   **Offerings**:
+    *   *Grilled Chicken & Chips*: Seasoned grilled chicken with potato or yam chips.
+    *   *Grilled Catfish*: Freshly grilled on charcoal barbecues with pepper sauce.
+    *   *Shawarma*: Stuffed chicken/beef shawarma wraps.
+*   **Setting**: Active in the late afternoon and evening hours after classes or before Amphitheatre events.
+*   **Student Context**: Prime spot to meet friends after late lectures or grab a bite before an evening event.
 
 ### 2. Captain Cook (Student Union Building — SUB)
-*   **The Vibe**: Classic urban fast-food environment. Air-conditioned indoor dining hall, bright lighting, cushioned seating, and clean tiled floors.
-*   **Signature Dishes**:
-    *   *Fresh Meat Pies & Chicken Pies*: Flaky, buttery golden crusts packed with seasoned minced beef and potatoes.
-    *   *Scoop Ice Cream*: Vanilla, chocolate, and strawberry scoops served in waffle cones or plastic bowls.
-    *   *Executive Jollof & Fried Rice*: Served with fried chicken, beef, or roasted turkey.
-*   **Operational Hours**: **8:00 AM – 8:00 PM**.
-*   **Price Range**: ₦500 (snacks) – ₦2,800 (full meals).
-*   **Student Reality**: The go-to spot for a civilized, sit-down lunch meeting, quick project discussions with classmates, or a chilled sweet treat to escape the scorching midday sun.
+*   **The Vibe**: Air-conditioned indoor cafeteria with clean dining seating inside the Student Union Building.
+*   **Offerings**:
+    *   *Fresh Meat Pies & Pastries*: Flaky golden pastries with seasoned fillings.
+    *   *Scoop Ice Cream*: Ice cream scoops in waffle cones or bowls.
+    *   *Jollof & Fried Rice*: Classic rice dishes with chicken, beef, or fish.
+*   **Setting**: Daytime dining, lunch, and mid-afternoon study break meetings.
+*   **Student Context**: Ideal for sit-down lunch discussions, project meetings with classmates, or cooling off from the midday heat.
 
 ### 3. "As E Dey Hot" (Opposite Moremi & Alumni Halls)
-*   **The Vibe**: Bustling, high-speed snack outpost strategically positioned on the pedestrian thoroughfare connecting the female hostels to the academic quad.
-*   **Signature Dishes**:
-    *   *The Legendary Hot Puff-Puff*: Round, golden-brown, sweet, and served burning hot directly from the frying cauldrons into paper bags.
-    *   *Spicy Samosas & Spring Rolls*: Crispy, spicy finger foods.
-    *   *Egg Rolls & Fish Pies*: Thick, doughy, filling snacks perfect for on-the-go walking.
-*   **Operational Hours**: **7:30 AM – 9:00 PM**.
-*   **Price Range**: ₦100 – ₦800.
-*   **Student Reality**: Completely lives up to its name—students queue up between classes because snacks are sold within seconds of exiting the oil. A ₦300 bag of hot puff-puff has saved countless freshers walking back from morning lectures.
+*   **The Vibe**: High-speed, high-turnover pedestrian snack spot along the main hostel avenue.
+*   **Offerings**:
+    *   *Hot Puff-Puff*: Round, golden-brown sweet puff-puff served hot directly from the frying pan.
+    *   *Finger Foods*: Samosas, spring rolls, egg rolls, and meat pies.
+*   **Setting**: Continuous frying batches serving the pedestrian flow between hostels and faculties.
+*   **Student Context**: Completely lives up to its name—snacks are sold immediately as they exit the hot oil. A campus favorite walking snack.
 
 ### 4. Coca-Cola Restaurant (Near Akintola Hall — PG Axis)
-*   **The Vibe**: Grounded, traditional Nigerian cafeteria situated near the postgraduate Akintola Hall enclave. Mature, calm, and deeply authentic.
-*   **Signature Dishes**:
-    *   *Classic Swallow & Rich Soups*: Steaming *Amala dudu* (yam flour), pounded yam, and *eba*, served with authentic *Gbegiri*, *Ewedu*, and spicy *Obe Ata*.
-    *   *Assorted Meats & Fish*: Shaki, roundabout, cow leg (*bokoto*), beef, and fresh fish cuts.
-*   **Operational Hours**: **9:00 AM – 7:30 PM**.
-*   **Price Range**: ₦1,000 – ₦3,000.
-*   **Student Reality**: When light snacks and noodles can no longer satisfy you, this is the ultimate "heavy fuel" sanctuary for students preparing for all-night reading sessions.
+*   **The Vibe**: Grounded, traditional Nigerian cafeteria near the postgraduate Akintola Hall area. Calm and mature.
+*   **Offerings**:
+    *   *Classic Swallow & Rich Soups*: Steaming *Amala dudu* (yam flour), pounded yam, and *eba*, with *Gbegiri*, *Ewedu*, and *Obe Ata*.
+    *   *Assorted Meats & Fish*: Shaki, beef, and fish cuts.
+*   **Setting**: Lunch and dinner hours.
+*   **Student Context**: Go-to destination when students need solid, heavy traditional swallow meals before marathon reading nights.
 
 ### 5. Mini Shawarma Spots (In Front of SUB)
-*   **The Vibe**: Dynamic cluster of fast-service kiosks located on the paved apron right outside the SUB building, overlooking the bus and keke terminal.
-*   **Signature Dishes**: Quick-wrap beef and chicken shawarmas, hot dogs, suya-spiced beef skewers, and ice-cold soft drinks.
-*   **Operational Hours**: **11:00 AM – 10:00 PM**.
-*   **Price Range**: ₦1,000 – ₦2,500.
-*   **Student Reality**: Designed for maximum convenience when catching a bus down to Campus Gate or dashing to an afternoon practical.
+*   **The Vibe**: Cluster of quick-service kiosks on the paved apron right outside SUB, overlooking the bus and tricycle terminal.
+*   **Offerings**: Quick-wrap beef and chicken shawarmas, hot sausages, and cold soft drinks.
+*   **Setting**: Convenient stop throughout the day and evening.
+*   **Student Context**: Designed for quick grab-and-go before boarding a bus or dashing to an afternoon class.
 
 ### 6. The Hut-Like Kiosk at Architecture (Archi)
-*   **The Vibe**: Rustic, thatched-roof wooden pavilion nestled quietly within the Department of Architecture quadrangle. Surrounded by architectural drafting studios, breezy trees, and shaded outdoor benches.
-*   **Signature Dishes**:
-    *   *Freshly Made Indomie & Fried Eggs*: Cooked to order with chopped onions, fresh peppers, and sausage slices.
-    *   *Hot Beverages*: Freshly brewed coffee, hot chocolate, and tea.
-    *   *Light Snacks & Cold Sodas*.
-*   **Operational Hours**: **8:00 AM – 10:00 PM** (often stays open late to serve architecture students working on overnight studio designs).
-*   **Price Range**: ₦600 – ₦1,800.
-*   **Student Reality**: During the day, it’s a tranquil designer haven; on quiet campus nights, the soft yellow light, rustic timber frame, and gentle breeze make it one of the most intimate, low-key dining spots at OAU.
+*   **The Vibe**: Rustic, thatched-roof wooden pavilion tucked inside the Department of Architecture quadrangle under shady trees.
+*   **Offerings**:
+    *   *Cooked Indomie & Eggs*: Prepared to order with onions, fresh peppers, and eggs.
+    *   *Hot Beverages*: Brewed coffee, hot chocolate, and tea.
+    *   *Light Snacks & Cold Drinks*.
+*   **Setting**: Nice spot to eat by day; deeply atmospheric and romantic on quiet nights.
+*   **Student Context**: By day, a calm retreat among studio buildings; by night, a warm and romantic spot to sit, eat, and talk.
 
 ### 7. "Lil Dinners" Across Halls of Residence
-*   **Awo Cafe (Awolowo Hall)**: Famous for massive "mountain portions" of jollof rice, beans, and dodo served late into the night. It is the cheapest calorie-per-naira deal on campus.
-*   **Fajuyi Buttery Strip (Fajuyi Hall)**: Known for 24/7 fast snacks—fried egg and bread, instant noodles, meat pies, and cold malt drinks.
-*   **Mozambique Buttery Outlets (Moz Hall)**: Tailored for female freshers with delicacies like spiced spaghetti, fried chicken, pastries, smoothies, and fruit salads.
+*   **Awo Cafe (Awolowo Hall)**: Known for generous portions of jollof rice, beans, and dodo served late into the evening for hall residents.
+*   **Fajuyi Buttery Strip (Fajuyi Hall)**: Fast hot snacks—fried egg and bread, noodles, pastries, and drinks.
+*   **Mozambique Buttery Outlets (Moz Hall)**: Convenient meals and snacks catering to female freshmen right inside the hall.
 
 ---
 
 ## 🌹 3. Romantic Sanctuaries & Scenic Chill Spots
 
-Campus life is demanding, but Great Ife’s sprawling modernist architecture and undulating topography conceal some of the most scenic, peaceful retreats in Nigerian academia.
+Great Ife’s undulating topography and architecture provide peaceful retreats for contemplation, picnics, and quiet evenings.
 
 ```
 ┌──────────────────────────────┬───────────────────────────────┬────────────────────────────────────────────────────────┐
-│ Sanctuary Name               │ Visual Landscape & Setting    │ Best Hours & Cultural Nuance                           │
+│ Sanctuary Name               │ Landscape & Setting           │ Atmosphere & Context                                   │
 ├──────────────────────────────┼───────────────────────────────┼────────────────────────────────────────────────────────┤
-│ 1. The Mountain Behind Archi │ Panoramic rock outcrop & view │ 5:30 PM – 7:00 PM (Sunset & Golden Hour)               │
-│ 2. Alex Duduyemi / Old EDM   │ Expansive manicured lawn      │ 4:00 PM – 6:30 PM (Picnics & Blanket Spreads)          │
-│ 3. Moot Court Biological Gdn │ Dense tropical shade & flora  │ 12:00 PM – 4:00 PM (Cool Shade & Quiet Reflection)     │
-│ 4. Sports Main Bowl Bleachers│ Elevated stadium view of pitch│ 5:00 PM – 8:00 PM (Watching Games & Stargazing)        │
+│ 1. The Mountain Behind Archi │ Panoramic hill outcrop        │ Sunset & quiet evenings, panoramic campus views        │
+│ 2. Alex Duduyemi / Old EDM   │ Open green lawn under trees   │ Nice for a picnic, calm outdoor shade                  │
+│ 3. Moot Court Biological Gdn │ Shaded biological garden      │ Quiet garden setting, midday study breaks              │
+│ 4. Sports Main Bowl Bleachers│ Elevated stadium grandstands  │ Watching games, or quiet at night (check vigils)       │
 └──────────────────────────────┴───────────────────────────────┴────────────────────────────────────────────────────────┘
 ```
 
 ### 1. The Mountain Behind Archi (Department of Architecture)
-*   **The Landscape**: An elevated natural rocky hill formation rising directly behind the Architecture complex. 
-*   **The Experience**: Offers a breathtaking panoramic view of the campus forest canopy, academic rooftops, and distant rolling hills of Ile-Ife.
-*   **Best Time to Visit**: **5:30 PM – 7:00 PM**. Golden hour here is magical as the sun sinks beneath the horizon, casting warm orange hues across campus.
-*   **Atmosphere**: Deeply cinematic, serene, and cool. Ideal for deep conversations, quiet couple walks, post-exam decompression, or contemplative solitude.
+*   **The Landscape**: An elevated natural rocky hill formation rising directly behind the Architecture complex.
+*   **The Experience**: Offers a panoramic viewpoint over the campus forest canopy and rolling Ife hills.
+*   **Atmosphere**: Sunset and quiet evening visits. Scenic and breezy; ideal for deep conversations, quiet couple walks, and unwinding.
 
 ### 2. The Open Lawn at Alex Duduyemi / Old EDM Axis
-*   **The Landscape**: A broad, gently sloping expanse of soft green grass framed by mature shade trees, situated near the Alex Duduyemi building and the Old EDM site.
-*   **The Experience**: **The quintessential campus picnic sanctuary**. Bring a light throw blanket, grab hot snacks from "As E Dey Hot" or pastries from Captain Cook, and sit on the grass without the overwhelming pedestrian traffic found on Motion Ground.
-*   **Best Time to Visit**: **4:00 PM – 6:30 PM** when the sun drops below tree level and the heat dissipates into a gentle evening breeze.
-*   **Atmosphere**: Unhurried, romantic, and peaceful. Perfect for couples reading together, casual acoustic music, or unwinding with a close friend.
+*   **The Landscape**: Open green expanse framed by mature shade trees near the Alex Duduyemi building and Old EDM site.
+*   **The Experience**: **Nice for a picnic**. Bring a blanket and snacks to sit on the grass away from crowded pedestrian pathways.
+*   **Atmosphere**: Calm, shaded, and peaceful. Great for reading together or relaxing with friends.
 
 ### 3. The Biological Garden Around Moot Court (Faculty of Law)
-*   **The Landscape**: A secluded garden grove tucked behind the Faculty of Law Moot Court complex. Features dense tropical foliage, towering indigenous trees, stone benches, and natural shade.
-*   **The Experience**: Stepping into this garden feels like entering an ancient botanical sanctuary. The thick tree canopy blocks out the midday heat, keeping the temperature noticeable cooler than the surrounding concrete quads.
-*   **Best Time to Visit**: **12:00 PM – 4:30 PM**.
-*   **Atmosphere**: Scholarly, intimate, and deeply calm. Whispering leaves and gentle birdsong provide natural privacy for quiet study or personal conversation.
+*   **The Landscape**: A secluded biological garden area located around the Faculty of Law Moot Court.
+*   **The Experience**: Shaded tree canopy and stone benches providing relief from the sun.
+*   **Atmosphere**: Quiet and scholarly; suited for reading, quiet reflection, or relaxed study breaks.
 
 ### 4. The Bleachers at the Main Bowl (Sports Complex)
-*   **The Landscape**: Massive tiered concrete grandstands rising above the lush green football pitch and all-weather tartan running tracks of the university Sports Complex.
-*   **Daytime Vibe**: Great for sitting elevated with friends, enjoying a panoramic breeze, and watching departmental soccer derbies or varsity athletes train.
-*   **Nighttime Vibe**: Elevated, breezy, and peaceful for stargazing and open-air talks under the night sky.
-*   **The Authentic Great Ife Nuance (Fellowship Vigil Reality)**:
+*   **The Landscape**: Elevated concrete grandstands overlooking the main football pitch and running tracks.
+*   **The Experience**: Great for sitting and watching athletic games, or quiet at night.
+*   **The Campus Reality**:
     > [!NOTE]
-    > While the Main Bowl bleachers can be deeply serene on ordinary nights, **campus fellowship programs and night vigils frequently book the Sports Complex**. When a mega-fellowship sets up their sound system, loudspeakers, electric guitars, and full-choir praise sessions directly on the pitch, the tranquil romantic silence is comically replaced by thunderous revival prayers! Check whether the floodlights are on before planning a quiet evening here.
+    > While the Main Bowl bleachers are enjoyable for quiet sitting at night, **campus church programs and night vigils sometimes hold at the pitch**, with sound systems, drums, and revival prayers that spoil the quiet. Check if the stadium lights and program are active before planning a quiet evening here.
 
 ---
 
-## 💡 4. Freshman Food & Social Survival Rules
-
-1.  **Budgeting Hack: Alternate Between Buka and Fast Food**: Eating every day at Captain Cook or Orente will drain a freshman's monthly allowance within two weeks. Balance treats with rich, affordable local meals at New Buka or Awo Cafe.
-2.  **Evening Snack Runs**: Keep small cash (₦200, ₦500) handy for evening stalls. High-demand kiosks like "As E Dey Hot" experience heavy queues between 6:00 PM and 8:00 PM.
-3.  **Respect Campus Romance Etiquette**: OAU is an enlightened academic community, but overt public displays of affection in heavy academic transit corridors (like Motion Ground or White House stairs) attract campus scrutiny and friendly student teasing (*"Aro"*). Scenic sanctuaries like the Archi mountain or Alex Duduyemi lawns offer dignity, peace, and natural seclusion.
-
----
 *(Codified in the OAUMods Living Research Suite — Dossier 18.)*

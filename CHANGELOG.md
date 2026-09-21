@@ -998,3 +998,44 @@ Codified and integrated the official 13-token **OAUMods Brand Color Palette** ac
 *   **Project Lead**: Provided the official 13-token color palette.
 *   **Guide 17**: Codified tokens into Tailwind v4 architecture, updated all components, and verified visual fidelity.
 
+---
+
+## 2026-09-21 (Entry 024: Strict Ground-Truth Audit & Elimination of Unprovided Metrics)
+
+### 📌 Summary
+Enacted and codified **Rule 5 (Strict Ground-Truth & Anti-Hallucination Policy)** in [`AGENTS.md`](file:///c:/Users/DELL/Desktop/GUIDE17/AGENTS.md) following explicit Project Lead instructions: *"for anything i never provided, eg. time, location, stats, price. don't add it, unless there is specialized reliable info online."* Conducted a codebase-wide audit and purged all synthetic opening/closing hours, artificial food prices, estimated seat capacities, and guessed transit frequencies across both the application layer and research dossiers.
+
+### 🔍 Ground-Truth Amends & Codebase Sanitization
+1.  **Strict Rule Enacted in [`AGENTS.md`](file:///c:/Users/DELL/Desktop/GUIDE17/AGENTS.md)**:
+    *   Formally established Rule 5: Never invent or guess arbitrary operational metrics (e.g. artificial prices, clock minutes, or seat stats) unless explicitly provided by the Project Lead or verified through authoritative institutional documentation online.
+2.  **Dining Gems Sanitization ([`oaumods/src/data/diningSpots.ts`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/data/diningSpots.ts) & [`research/18`](file:///c:/Users/DELL/Desktop/GUIDE17/research/18_campus_dining_hidden_food_gems_and_scenic_sanctuaries.md))**:
+    *   **Purged All Synthetic Price Ranges**: Eliminated unprovided ranges (`₦1,200 – ₦4,500`, `₦500 – ₦2,800`, `₦100 – ₦800`, `₦1,000 – ₦3,000`, `₦600 – ₦1,800`, etc.) across Orente Grills, Captain Cook, As E Dey Hot, Coca-Cola Restaurant, Archi Kiosk, and Lil Dinners.
+    *   **Purged Synthetic Clock Hours**: Removed artificial operational hours (`3:00 PM – 11:00 PM`, `8:00 AM – 8:00 PM`, `7:30 AM – 9:00 PM`, `8:00 AM – 10:00 PM`).
+    *   Replaced with authentic qualitative context directly grounded in the Project Lead's notes (*"Evenings"*, *"Daytime dining"*, *"Continuous fresh batches"*, *"Quiet nights"*).
+3.  **Romantic Sanctuaries Sanitization**:
+    *   Removed arbitrary clock windows (`5:30 PM – 7:00 PM`, `4:00 PM – 6:30 PM`, `12:00 PM – 4:30 PM`).
+    *   Adopted exact qualitative descriptions: *"Sunset & quiet evenings"*, *"Picnics under open shade"*, *"Midday study breaks"*, and *"Watching games or quiet at night (check for church programs)"*.
+4.  **Lecture Hall Capacity & Stationery Sanitization ([`oaumods/src/components/AcademicsHub.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/components/AcademicsHub.tsx))**:
+    *   **Eliminated Synthetic Seat Capacities**: Removed unverified capacity estimates (`700+ seats`, `800+ seats`, `600 seats`, `550 seats`, `350 seats`, `400 seats`) from BOOC, White House, ODLT, First Bank LT, HSLT, and Engineering LTs.
+    *   **Removed Unprovided Folder Price**: Removed `(₦150 – ₦250)` from the Pale Yellow Manila file section.
+5.  **Transit Data Sanitization ([`oaumods/src/data/transit.ts`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/data/transit.ts) & [`oaumods/src/components/CampusGuide.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/components/CampusGuide.tsx))**:
+    *   Removed guessed operational hours (`6:30 AM – 10:00 PM`, `7:00 AM – 9:00 PM`) and arbitrary frequencies (`Every 2–3 minutes`, `Every 15–20 minutes`).
+    *   Preserved strictly verified student union fares (₦100 ticket, ₦300 OAUTHC cab, ₦150 Mayfair).
+6.  **Clearance Timeline Sanitization ([`oaumods/src/data/clearanceStages.ts`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/data/clearanceStages.ts))**:
+    *   Removed fabricated clock times (`8:00 AM – 3:30 PM`, `8:30 AM – 3:00 PM`, `9:00 AM – 2:00 PM`, `8:00 AM – 4:00 PM`).
+    *   Replaced with verified administrative periods: orientation screening days during university working hours, with early arrival recommended for the morning entry tally.
+
+### 📂 Files Updated & Sanitized
+*   [`AGENTS.md`](file:///c:/Users/DELL/Desktop/GUIDE17/AGENTS.md): Enacted Rule 5 (Strict Ground-Truth & Anti-Hallucination Policy).
+*   [`oaumods/src/data/diningSpots.ts`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/data/diningSpots.ts): Removed unprovided prices and clock hours.
+*   [`oaumods/src/data/transit.ts`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/data/transit.ts): Removed unverified operating hours and frequencies.
+*   [`oaumods/src/data/clearanceStages.ts`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/data/clearanceStages.ts): Converted timelines to verified qualitative periods.
+*   [`oaumods/src/components/AcademicsHub.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/components/AcademicsHub.tsx): Removed seat counts and file price estimates.
+*   [`oaumods/src/components/CampusGuide.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/components/CampusGuide.tsx): Updated UI cards to display authentic vibes, settings, and tips.
+*   [`research/18_campus_dining_hidden_food_gems_and_scenic_sanctuaries.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/18_campus_dining_hidden_food_gems_and_scenic_sanctuaries.md): Sanitized living research dossier.
+
+### 👥 People & Community
+*   **Project Lead**: Issued explicit directive to eliminate unprovided/unverified times, prices, and statistics.
+*   **Guide 17**: Enacted Rule 5 in `AGENTS.md` and executed a complete audit and sanitization across all data structures and UI components.
+
+

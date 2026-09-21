@@ -17,14 +17,10 @@ import {
   Heart,
   Bus,
   MapPin,
-  Clock,
   Sparkles,
   AlertTriangle,
-  BadgePercent,
   Search,
   CheckCircle2,
-  DollarSign,
-  Coffee,
   Trees,
 } from 'lucide-react';
 
@@ -161,17 +157,13 @@ export default function CampusGuide() {
                 </div>
 
                 <div className="pt-3 border-t border-soft-blue-gray/50 dark:border-white/5 space-y-2 text-xs">
-                  <div className="flex items-center justify-between text-muted-slate dark:text-slate-400">
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5" />
-                      {spot.hours}
-                    </span>
-                    <span className="font-bold text-fresh-green dark:text-emerald-300">
-                      {spot.priceRange}
-                    </span>
-                  </div>
+                  {spot.settingNote && (
+                    <div className="text-[11px] text-muted-slate dark:text-slate-400">
+                      <strong>Atmosphere:</strong> {spot.settingNote}
+                    </div>
+                  )}
                   <div className="p-2.5 rounded-xl bg-pale-blue/50 dark:bg-[#122033] text-deep-slate dark:text-slate-300 text-[11px] leading-relaxed border border-soft-blue-gray/40 dark:border-transparent">
-                    💡 <strong>Freshman Tip:</strong> {spot.tips}
+                    💡 <strong>Insider Tip:</strong> {spot.tips}
                   </div>
                 </div>
               </div>
@@ -184,7 +176,7 @@ export default function CampusGuide() {
       {activeTab === 'sanctuaries' && (
         <div className="space-y-4">
           <div className="p-4 rounded-2xl bg-soft-red/10 border border-soft-red/20 text-xs sm:text-sm text-deep-slate dark:text-slate-200 leading-relaxed">
-            <strong>Great Ife Scenic Retreats:</strong> Curated outdoor sanctuaries for quiet meditation, couples' sunset dates, picnic blankets, or escaping the midday campus rush.
+            <strong>Great Ife Scenic Retreats:</strong> Curated campus spots for quiet moments, picnics, scenic viewpoints, or relaxing between lectures.
           </div>
 
           <div className="space-y-4">
@@ -204,9 +196,11 @@ export default function CampusGuide() {
                       {spot.location}
                     </span>
                   </div>
-                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-soft-red/10 text-soft-red border border-soft-red/30 self-start sm:self-auto">
-                    Best: {spot.bestHours}
-                  </span>
+                  {spot.recommendedSetting && (
+                    <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-soft-red/10 text-soft-red border border-soft-red/30 self-start sm:self-auto">
+                      {spot.recommendedSetting}
+                    </span>
+                  )}
                 </div>
 
                 <p className="text-xs sm:text-sm text-muted-slate dark:text-slate-300 italic">
@@ -307,7 +301,7 @@ export default function CampusGuide() {
           {/* Route Matrix */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-muted-slate px-1">
-              Official Campus Routes & Tariffs
+              Official Campus Routes & Student Tariffs
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               {TRANSIT_ROUTES.map((route) => (
@@ -330,9 +324,8 @@ export default function CampusGuide() {
                   </div>
 
                   <div className="text-xs space-y-1 text-muted-slate dark:text-slate-400">
-                    <div className="flex items-center justify-between text-[11px] text-muted-slate dark:text-slate-400">
+                    <div className="text-[11px] text-muted-slate dark:text-slate-400">
                       <span>Vehicle: <strong className="text-deep-slate dark:text-slate-200">{route.vehicleType}</strong></span>
-                      <span>Freq: <strong className="text-deep-slate dark:text-slate-200">{route.frequency}</strong></span>
                     </div>
                     <p className="text-[11px] text-muted-slate dark:text-slate-400 pt-1 leading-relaxed">
                       💡 {route.tips}

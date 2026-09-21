@@ -26,42 +26,36 @@ const NOTABLE_LECTURE_CENTRES = [
     name: 'BOOC (Biological Sciences)',
     nick: 'Oduduwa Complex Ground Zero',
     location: 'Lower Ground Floor, Faculty of Science Quadrangle',
-    capacity: '700+ seats',
     primaryUse: 'CHM 101, BOT 101, ZOO 101, BIO 101 Mega Lectures',
   },
   {
     name: 'White House Auditorium & Labs',
     nick: 'Faculty of Science Flagship',
     location: 'Central Science Hill (White House building)',
-    capacity: '800+ seats + 4 Chemistry/Physics Labs',
     primaryUse: 'MTH 101, PHY 101, CHM practical sessions',
   },
   {
     name: 'ODLT 1 & 2 (Oduduwa Lecture Theatres)',
     nick: 'Amphitheatre Ring',
     location: 'Facing Afrika Amphitheatre & Library Circle',
-    capacity: '600 seats each',
     primaryUse: 'SER 001/002, General Faculty of Arts/Social Science lectures',
   },
   {
     name: 'First Bank Lecture Theatre',
     nick: 'Admin Giant',
     location: 'Faculty of Administration Quadrangle',
-    capacity: '550 seats',
     primaryUse: 'ECN 101, ACC 101, Management Science classes',
   },
   {
     name: 'HSLT A, B & C (Health Sciences LTs)',
     nick: 'Medics Hive',
     location: 'Faculty of Basic Medical Sciences Enclave',
-    capacity: '350 seats each',
     primaryUse: 'Pre-clinical anatomy, physiology & nursing lectures',
   },
   {
     name: 'Civil & Mech Lecture Theatres',
     nick: 'Tech Workshop Corridor',
     location: 'Faculty of Technology Engineering Complex',
-    capacity: '400 seats each',
     primaryUse: 'MEC 101, ENR 101, Engineering Foundation courses',
   },
 ];
@@ -133,7 +127,7 @@ export default function AcademicsHub() {
           }`}
         >
           <Building className="w-4 h-4" />
-          <span>14 Faculties & 79 Depts</span>
+          <span>Faculties & Departments</span>
         </button>
         <button
           onClick={() => setActiveTab('theatres')}
@@ -191,7 +185,7 @@ export default function AcademicsHub() {
           {/* Quick Counter */}
           <div className="flex items-center justify-between text-xs text-muted-slate dark:text-slate-400 px-1">
             <span>
-              Showing {filteredFaculties.length} faculties • {totalDepts} accredited departments
+              Showing {filteredFaculties.length} faculties ({totalDepts} mapped departments)
             </span>
             <span className="flex items-center gap-1 text-campus-blue dark:text-sky-blue font-semibold">
               <Sparkles className="w-3.5 h-3.5" /> Great Ife Academic Belt
@@ -308,7 +302,7 @@ export default function AcademicsHub() {
       {activeTab === 'theatres' && (
         <div className="space-y-4">
           <div className="p-4 rounded-2xl bg-pale-blue dark:bg-campus-blue/15 border border-campus-blue/30 text-xs sm:text-sm text-deep-slate dark:text-slate-200">
-            <strong>Freshman Navigation Tip:</strong> Great Ife lecture halls have distinctive campus nicknames. Arrive at least 15 minutes before 8:00 AM lectures to secure a seat with functional desk armrests.
+            <strong>Freshman Navigation Tip:</strong> Great Ife lecture halls have distinctive campus nicknames. Arrive early before morning lectures to secure a comfortable seat.
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
@@ -326,9 +320,6 @@ export default function AcademicsHub() {
                       "{theatre.nick}"
                     </span>
                   </div>
-                  <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-pale-blue dark:bg-white/10 text-campus-blue dark:text-sky-300 shrink-0">
-                    {theatre.capacity}
-                  </span>
                 </div>
 
                 <div className="text-xs space-y-1 text-muted-slate dark:text-slate-300">
@@ -359,7 +350,7 @@ export default function AcademicsHub() {
                   Standard Flat Manila File (Pale Yellow)
                 </h4>
                 <p className="text-xs text-amber-900 dark:text-student-gold">
-                  Available in bulk at the Sub Market or Library Circle photocopier shops (₦150 – ₦250).
+                  Obtainable at the SUB market, campus bookshops, or student stationery centers.
                 </p>
               </div>
             </div>
