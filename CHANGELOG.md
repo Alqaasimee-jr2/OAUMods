@@ -755,6 +755,69 @@ Authored [`research/07_student_politics_elections_and_governance.md`](file:///c:
 *   Present findings to the Project Lead for review and align on subsequent priorities.
 
 ---
-*(Session concluded with Dossier 15 codified and verified on 2026-09-21.)*
+
+## 📅 2026-09-21 — Entry 019: Ground-Truth Campus Transit System, Laminated Ticket Currency & Green Mobility Engine Codified (Voice Note Debrief)
+
+### 💭 Context & Thoughts
+*   The Project Lead provided an invaluable first-hand audio dispatch detailing the active on-the-ground operational reality of campus transportation at Obafemi Awolowo University.
+*   This ground-truth intelligence overturned static, generic assumptions and revealed the exact operational mechanics of the Great Ife transit ecosystem: the custom laminated ticket voucher system, the green fleet transition to Electric Tricycles (E-Trikes) and CNG vehicles, an upcoming October 1st tariff review, precise route-by-route ticket costs, Road 7 bus exclusivity, and the OAUTHC Micra cash corridor.
+*   Codified the complete operational architecture into [`research/16_campus_transit_mobility_and_fare_tariff_engine.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/16_campus_transit_mobility_and_fare_tariff_engine.md), updated [`CAMPUS_KNOWLEDGE_VAULT.md`](file:///c:/Users/DELL/Desktop/GUIDE17/CAMPUS_KNOWLEDGE_VAULT.md) Section 4, and marked Milestone Task 2.1 as completed in [`MILESTONES.md`](file:///c:/Users/DELL/Desktop/GUIDE17/MILESTONES.md).
+
+### 🧠 Ground-Truth Transit Architecture Codified
+
+1.  **The Universal Laminated Ticket Voucher System**:
+    *   *Master Denomination*: **1 Ticket = ₦100 (One Hundred Naira)**. Warning freshers against extortion: never pay ₦200 for a single ticket.
+    *   *Anti-Counterfeit Authentication*: Every genuine ticket is laminated with a **small paper sticker / validation stamp** affixed to the surface.
+    *   *Purchasing Terminals*: Tickets are purchased via **Cash or Bank Transfer** at designated booths: **Campus Main Gate**, **each Hall of Residence (Angola, Moz, Fajuyi, Awo, etc.)**, and **New Market**.
+    *   *Golden Rule for Students*: Ticket booths are rarely stationed at faculty buildings or lecture halls; students must purchase bundles (10–20 tickets) in advance at Gate or Halls.
+2.  **Fleet Evolution & Upcoming Tariff Review**:
+    *   *Green Mobility Shift*: Phasing in **Electric Tricycles (E-Trikes)** and **Compressed Natural Gas (CNG) buses**.
+    *   *Tariff Review Alert*: An official tariff review takes effect on **October 1st**. The documented rates serve as the active verified baseline.
+3.  **Tricycle (Keke / E-Trike) Routes & Current Tariffs**:
+    *   *Campus Gate $\rightarrow$ SUB / Central Bus Stop*: **2 Tickets (₦200)**.
+    *   *Campus Gate $\rightarrow$ Halls of Residence*: **3 Tickets (₦300)**.
+    *   *Campus Gate $\rightarrow$ New Market*: **3 Tickets (₦300)**.
+    *   *Campus Gate $\rightarrow$ Faculties & Lecture Theatres (BOOC, White House, Spider House, Law, EDM, etc.)*: **3 Tickets (₦300)**.
+    *   *Campus Gate $\rightarrow$ ICT (INTECU)*: **3 Tickets (₦300)**.
+    *   *Core Advantage*: Tricycles are the primary mode that takes students directly to inner lecture halls and faculties (which buses do not service).
+4.  **Campus Shuttle Bus Routes & Current Tariffs**:
+    *   *Campus Gate $\rightarrow$ Halls of Residence*: **2 Tickets (₦200)**.
+    *   *Campus Gate $\rightarrow$ New Market*: **2 Tickets (₦200)**.
+    *   *Campus Gate $\rightarrow$ ICT (INTECU)*: **2 Tickets (₦200)**.
+    *   *Campus Gate $\rightarrow$ Religious Ground*: **2 Tickets (₦200)**.
+    *   *Halls $\leftrightarrow$ Religious Ground*: **2 Tickets (₦200)** (Operates on worship days: Fridays for Muslim Juma'at and Sundays for Christian fellowship services).
+    *   *Limitation*: Buses rarely enter inner faculty or lecture hall areas.
+5.  **Road 7 Exclusive Bus Circuit (Buses Only)**:
+    *   Buses are the exclusive public transit operators on the Road 7 residential and staff axis.
+    *   *Campus Gate $\leftrightarrow$ Road 7*: **2 Tickets (₦200)**.
+    *   *New Market $\leftrightarrow$ Road 7*: **2 Tickets (₦200)**.
+    *   *Halls $\leftrightarrow$ Road 7*: **2 Tickets (₦200)**.
+6.  **OAUTHC (Teaching Hospital) Transit Corridor (Nissan Micra — Cash Only)**:
+    *   *Boarding Point on Campus*: Proceed to the **College of Health Sciences (CHS)** complex.
+    *   *Fleet*: Dedicated **Nissan Micra** town cabs.
+    *   *Route*: College of Health Sciences $\leftrightarrow$ OAUTHC Complex & THC Gate (Ilesa Road).
+    *   *Fare*: **₦300 Flat Rate** per passenger.
+    *   *Payment Rule*: **STRICTLY CASH ONLY**. Tickets are **not** accepted on Micras. Return trip from THC to campus is also **₦300 cash**.
+7.  **Files Codified & Synchronized**:
+    *   Authored [`research/16_campus_transit_mobility_and_fare_tariff_engine.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/16_campus_transit_mobility_and_fare_tariff_engine.md).
+    *   Updated [`CAMPUS_KNOWLEDGE_VAULT.md`](file:///c:/Users/DELL/Desktop/GUIDE17/CAMPUS_KNOWLEDGE_VAULT.md) Section 4.
+    *   Updated [`research/README.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/README.md) to index Dossier 16.
+    *   Updated [`MILESTONES.md`](file:///c:/Users/DELL/Desktop/GUIDE17/MILESTONES.md) (Task 2.1 marked completed).
+
+### 🎯 Milestone Status & Immediate Tasks
+*   [x] Ground-truth transit ticket system and tariffs codified.
+*   [x] Tricycle vs. Bus route matrices and OAUTHC Micra corridor mapped.
+*   [x] Phase 2 Task 2.1 completed in MILESTONES.md.
+*   [x] All project files synchronized and committed.
+
+### 👥 People & Community
+*   **Project Lead**: Provided direct audio dispatch with active ground-truth transit intel.
+*   **Guide 17**: Codified the complete transit engine into Dossier 16 and living vaults.
+
+### ⏭️ Next Immediate Step
+*   Present transit debrief to the Project Lead and align on remaining Phase 2 items (e.g. food spots & essentials directory or scaffolding UI components).
+
+---
+*(Session concluded with Dossier 16 codified and verified on 2026-09-21.)*
 
 

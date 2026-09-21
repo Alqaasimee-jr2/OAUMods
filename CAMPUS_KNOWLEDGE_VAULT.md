@@ -238,18 +238,58 @@
 
 ## 4. Campus Transit Engine & Regulated Fares
 
-| Route | Vehicle Type | Regulated Fare | Key Stops | Travel Tips |
-| :--- | :--- | :--- | :--- | :--- |
-| **Campus Main Gate $\rightarrow$ SUB Terminal** | Campus Shuttle Bus (Coaster / Korope) | **₦100 – ₦150** | Gate $\rightarrow$ Senate Junction $\rightarrow$ Sports Complex $\rightarrow$ Bank Road $\rightarrow$ SUB | Fastest entry into campus. Buses fill every 2–3 minutes during the 7:30–8:45 AM morning rush. |
-| **SUB $\rightarrow$ Angola & Mozambique Halls** | Tricycle (Keke Napep) | **₦100 – ₦150** | SUB $\rightarrow$ Moremi $\rightarrow$ Health Sciences $\rightarrow$ Moz Gate $\rightarrow$ Angola | Paved walkway is a 12-minute walk; Keke is ideal when transporting heavy supplies. |
-| **SUB $\rightarrow$ Maintenance Gate** | Tricycle (Keke Napep) | **₦150 – ₦200** | SUB $\rightarrow$ Civil Tech $\rightarrow$ Staff Quarters $\rightarrow$ Maintenance Gate | Main commuter line for students living in private hostels off Maintenance Road. |
-| **Mayfair / Lagere $\rightarrow$ Campus Main Gate** | Town Commercial Bus (Danfo) | **₦200 – ₦300** | Lagere $\rightarrow$ Mayfair $\rightarrow$ Toll Gate $\rightarrow$ Campus Gate | Alight at Campus Gate, then board a campus shuttle directly to SUB. |
-| **SUB $\rightarrow$ Fajuyi / Awolowo Halls** | Shuttle / Keke | **₦100 – ₦150** | SUB $\rightarrow$ Hezekiah Walkway $\rightarrow$ Fajuyi Park $\rightarrow$ Awo Archway | Pleasant 7-minute walk across Motion Ground; transport used mainly in rainy weather or with luggage. |
+> **Master Transit Currency**: Internal campus transportation does **NOT** use direct cash. It operates strictly on a **custom-made, laminated ticket voucher system**.
+> * **Golden Rate**: **1 Ticket = ₦100 (One Hundred Naira)**. Never let anyone deceive you into paying ₦200 for a single ticket.
+> * **Anti-Counterfeit Authentication**: Every authentic ticket carries a **small paper sticker / validation stamp** affixed to the laminated body.
+> * **Purchasing Points**: Tickets can be bought via **Cash** or **Instant Bank Transfer** at designated booths: **Campus Main Gate**, **each Hall of Residence (Angola, Moz, Fajuyi, Awo, etc.)**, and **New Market**. *(Note: Ticket booths are rarely stationed at faculties or lecture halls; always buy tickets in advance!)*
+> * **Fleet Transformation**: OAU is transitioning toward **Electric Tricycles (E-Trikes)** and **CNG (Compressed Natural Gas) vehicles**.
+> * **Tariff Advisory**: An official tariff review takes effect on **October 1st**. The figures below represent the verified active baseline.
+
+### 1. Tricycle (Keke / E-Trike) Routes & Regulated Tariffs
+Tricycles are the primary transit mode reaching **faculties and lecture theatres** (which large buses rarely access).
+
+| Route (Tricycle / Keke / E-Trike) | Fare (Tickets) | Naira Equivalent | Key Destinations & Notes |
+| :--- | :---: | :---: | :--- |
+| **Campus Gate $\rightarrow$ SUB / Central Bus Stop** | **2 Tickets** | **₦200** | Drops off at SUB central bus stop. |
+| **Campus Gate $\rightarrow$ Halls of Residence** | **3 Tickets** | **₦300** | Direct drop-off at Angola, Moz, Fajuyi, Awolowo, Moremi, ETF. |
+| **Campus Gate $\rightarrow$ New Market** | **3 Tickets** | **₦300** | Direct drop-off at OAU Central Market gate. |
+| **Campus Gate $\rightarrow$ Faculties & Lecture Theatres** | **3 Tickets** | **₦300** | Direct delivery to BOOC, White House, Yellow House, Spider House, Law, EDM, Arts. |
+| **Campus Gate $\rightarrow$ ICT (INTECU)** | **3 Tickets** | **₦300** | Direct drop-off along the central computing corridor. |
+
+### 2. Campus Shuttle Bus Routes & Regulated Tariffs
+Shuttle buses service primary arterial routes. **Buses rarely enter inner faculty quads or lecture halls.**
+
+| Route (Campus Shuttle Buses) | Fare (Tickets) | Naira Equivalent | Key Destinations & Notes |
+| :--- | :---: | :---: | :--- |
+| **Campus Gate $\rightarrow$ Halls of Residence** | **2 Tickets** | **₦200** | High-frequency arterial circuit to student halls. |
+| **Campus Gate $\rightarrow$ New Market** | **2 Tickets** | **₦200** | Direct to the commercial market depot. |
+| **Campus Gate $\rightarrow$ ICT (INTECU)** | **2 Tickets** | **₦200** | Drops off along the central ICT corridor. |
+| **Campus Gate $\rightarrow$ Religious Ground** | **2 Tickets** | **₦200** | Direct to Christian auditoriums and Central Mosque. |
+| **Halls of Residence $\leftrightarrow$ Religious Ground** | **2 Tickets** | **₦200** | Active on worship days: **Fridays (Muslim Juma'at)** and **Sundays (Christian services)**. |
+
+### 3. Road 7 Exclusive Bus Circuit (Buses Only)
+Only shuttle buses service the Road 7 residential and staff axis.
+
+| Route (Road 7 Axis — Buses Only) | Fare (Tickets) | Naira Equivalent | Operational Notes |
+| :--- | :---: | :---: | :--- |
+| **Campus Gate $\leftrightarrow$ Road 7** | **2 Tickets** | **₦200** | Connects Main Gate to Road 7 community. |
+| **New Market $\leftrightarrow$ Road 7** | **2 Tickets** | **₦200** | Direct transit for market shoppers. |
+| **Halls of Residence $\leftrightarrow$ Road 7** | **2 Tickets** | **₦200** | Available on select scheduled student runs. |
+
+### 4. OAUTHC (Teaching Hospital) Transit Corridor (Micra Cabs — CASH ONLY)
+* **Departure Point**: Proceed to the **College of Health Sciences (CHS)** complex on campus.
+* **Vehicle Fleet**: Dedicated **Nissan Micra** town shuttles.
+* **Route**: College of Health Sciences $\leftrightarrow$ OAUTHC Main Complex & THC Gate (Ilesa Road).
+* **Fare**: **₦300 Flat Rate** per passenger.
+* **CRITICAL RULE**: **Tickets are NOT accepted on Micras. Payment is strictly CASH (₦300).** Return trip from THC to campus is also **₦300 cash**.
 
 ### Transit Survival Hacks
-1. **Always carry small denominations** (₦100, ₦200, ₦500). Conductors struggle to provide change for ₦1,000 notes early in the morning.
-2. **Peak Morning Alert**: Between 7:30 AM and 8:45 AM, gate queues are long. Leave your off-campus lodge by 7:15 AM to reach an 8:00 AM test at BOOC.
-3. **Late Night Rule**: Campus shuttles dwindle after 10:00 PM. If studying late at the Library, coordinate with friends to walk back to Angola/Moz in groups.
+1. **Always keep 10–20 tickets in your wallet**: Buy a bundle (₦1,000–₦2,000) at the Campus Gate or Hall ticket booths so you never get stranded after an evening lecture.
+2. **Inspect the sticker stamp**: Check for the small paper seal on every laminated ticket to confirm authenticity.
+3. **Know when to take a Tricycle vs. a Bus**:
+   * If your destination is an inner academic building (BOOC, White House, Spider House, Yellow House), **take a Tricycle (3 tickets = ₦300)**.
+   * If you are going to the Halls or Market and want to save money, **take a Bus (2 tickets = ₦200)**.
+4. **Prepare for the October 1st Revision**: Stay alert for official DSA / Transportation Committee circulars announcing updated tariffs starting next month.
 
 ---
 

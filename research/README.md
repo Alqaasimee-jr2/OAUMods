@@ -24,6 +24,7 @@
 | **13** | **Faculties, Departments & Sub-Curricula** | Exhaustive catalog of all 13 faculties + Computing Science & Engineering, 60+ departments, file jacket color conventions, and deep dive on multi-program mini-departments (Sociology's 5-in-1: SOC, MCM, BCJ, ISMS, FMM; Agriculture FPY; Dramatic Arts, etc.). | [Read Research 13](./13_faculties_departments_and_specialized_course_curricula.md) |
 | **14** | **Landmarks, Architecture & Nicknames** | Forensic breakdown of iconic campus building nicknames (White House, Yellow House, Spider House), lecture theatres (BOOC, ODLT, Amphi, Pit Theatre), social hubs (Anglomoz, Moz 101, New Market, New Buka, Risky), and myth-busters. | [Read Research 14](./14_campus_landmarks_architecture_and_spatial_nicknames.md) |
 | **15** | **Social Lifecycle, Traditions & Events** | Chronological social journey from 100L freshers to postgrad: Orientation, Matriculation, Anglomoz & Moz 101, Hall Weeks (Awo Aroism, Fajuyi Zikists), Departmental themed days, FYB Week, Sign-Out Day, Murtala Hall PG life, and Convocation. | [Read Research 15](./15_student_social_lifecycle_traditions_and_events.md) |
+| **16** | **Campus Transit, Fleet & Tariff Engine** | Verified ground-truth transit reality: Laminated ticket currency (1 ticket = ₦100) with security stickers, Electric Tricycles & CNG fleet, October 1 tariff hike preview, Tricycle vs Bus route matrix, Road 7 bus exclusivity, and OAUTHC Micra cash corridor. | [Read Research 16](./16_campus_transit_mobility_and_fare_tariff_engine.md) |
 
 ---
 

@@ -79,11 +79,13 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
 **Status**: ⚪ *Not Started*
 
 ### Key Tasks:
-- [ ] **2.1 Campus Transit & Movement Engine**:
-  - [ ] Detailed guide to Campus Shuttles (Main Gate to SUB, Town to Campus, Hall routes).
-  - [ ] Tricycle (Keke) parks and routes (SUB, Fajuyi, Mozambique, Maintenance).
-  - [ ] Verified student fare table (protecting freshers from being overcharged).
-  - [ ] Recommended walking shortcuts across campus.
+- [x] **2.1 Campus Transit & Movement Engine**:
+  - [x] Ground-truth custom laminated ticket system (1 ticket = ₦100) with anti-counterfeiting paper seals and purchasing booths (`research/16`).
+  - [x] Fleet composition: Green transition to Electric Tricycles (E-Trikes) and CNG vehicles; October 1 tariff review advisory.
+  - [x] Regulated route matrices for Tricycles (Gate to SUB: 2 tickets; Gate to Halls/Market/Faculties/ICT: 3 tickets).
+  - [x] Regulated route matrices for Shuttle Buses (Gate to Halls/Market/ICT/Religious Ground: 2 tickets).
+  - [x] Exclusive Road 7 bus circuit (all routes 2 tickets / ₦200).
+  - [x] OAUTHC / College of Health Sciences transit corridor via Nissan Micra cabs (₦300 cash only).
 - [ ] **2.2 Campus Life & Essentials Directory**:
   - [ ] Affordable food spots, cafeterias, and buttery joints across campus and halls.
   - [ ] Student services: Printing/photocopying hubs, cybercafés, bookshops, laundry.
@@ -97,15 +99,6 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
   - [x] Comprehensive profiling of all 9 halls of residence, layout, amenities, cooking/appliance bans, curfew, and Aroism culture (`research/08`).
   - [x] Complete mapping of religious ecosystems: UJCM, Committee of Presidents, major fellowships, Catholic Chaplaincy OLPLC, All Souls Chapel, MSSN OAU, Central Mosque, hall mosques, and Jihad Week (`research/09`).
   - [x] Extensive sports intelligence: Directorate of Sports, available disciplines, world-class Sports Complex facilities, trials, HOD/Dean/VC cups, and 1970/1973/1984/2014 NUGA hosting history (`research/11`).
-- [ ] **2.5 Campus Mobility, Transit & Movement Engine**:
-  - [ ] Detailed guide to Campus Shuttles (Main Gate to SUB, Town to Campus, Hall routes).
-  - [ ] Tricycle (Keke) parks and routes (SUB, Fajuyi, Mozambique, Maintenance).
-  - [ ] Verified student fare table (protecting freshers from being overcharged).
-  - [ ] Recommended walking shortcuts across campus.
-- [ ] **2.6 Campus Life, Food Spots & Essentials**:
-  - [ ] Affordable food spots, cafeterias, and buttery joints across campus and halls.
-  - [ ] Student services: Printing/photocopying hubs, cybercafés, bookshops, laundry.
-  - [ ] Banks, working ATMs, and POS cash withdrawal points.
 
 **Exit Criteria for Phase 2**: Full coverage of day-to-day freshman survival, transport, food, health, and safety.
 
