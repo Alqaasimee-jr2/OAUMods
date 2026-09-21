@@ -945,3 +945,56 @@ Built, styled, and verified the modern Next.js 16 (App Router) + TypeScript + Ta
 ### 👥 People & Community
 *   **Project Lead**: Approved the tech stack and provided high-fidelity spatial and dining ground truth.
 *   **Guide 17**: Built the full Next.js stack, automated browser tests, and verified end-to-end functionality.
+
+---
+
+## 2026-09-21 (Entry 023: Official Brand Color Palette Codification & Design System Application)
+
+### 📌 Summary
+Codified and integrated the official 13-token **OAUMods Brand Color Palette** across the Next.js application, Tailwind CSS v4 `@theme` architecture, and master design documentation in [`DESIGN_TOKENS.md`](file:///c:/Users/DELL/Desktop/GUIDE17/DESIGN_TOKENS.md). Restyled all active frontend components—Header, GPA Engine & Dial, 5-Stage Clearance Tracker, Academics Hub, and Campus Guide—with verified light/dark mode contrast and live browser visual audits.
+
+### 🎨 The Codified 13-Token Palette
+| Role | Name | Hex | Implementation |
+| :--- | :--- | :--- | :--- |
+| **Brand primary** | **OAU Navy** | `#12345B` | Hero banner gradient, brand insignia, primary section headings, dark mode anchor. |
+| **Interactive blue** | **Campus Blue** | `#1769AA` | Active navigation tabs, primary CTA buttons, interactive links, focus outlines. |
+| **Friendly accent** | **Sky Blue** | `#4FA3D1` | Dark mode brand text, secondary pill tags, icon accents, micro-interaction highlights. |
+| **Soft section background** | **Pale Blue** | `#EEF7FC` | Tab rail container, subtle card backgrounds, accordion item hover tints. |
+| **Warm accent** | **Student Gold** | `#E6AD3C` | Great Ife honorary gold, Quality Points badges, degree classification highlights. |
+| **Page background** | **Warm White** | `#FAFCFE` | Light mode canvas root background (glare-free, soft mobile viewport reading). |
+| **Card background** | **Pure White** | `#FFFFFF` | Elevated surface cards, course rows, faculty accordions, form controls. |
+| **Main text** | **Deep Slate** | `#1F2937` | High-contrast WCAG AAA body headings, course codes, degree names. |
+| **Secondary text** | **Muted Slate** | `#64748B` | Subtitles, operating hours, prerequisite bullet notes, secondary captions. |
+| **Borders** | **Soft Blue Gray** | `#D9E6F0` | Subtle hairline dividers, card borders, table separators, input boundaries. |
+| **Success** | **Fresh Green** | `#25855A` | First Class classification, circular gauge stroke, clearance checkmarks, online status. |
+| **Warning** | **Amber** | `#C88719` | Pale yellow Manila file alert badges, 2:2 / 3rd class standing, underload notices. |
+| **Error** | **Soft Red** | `#C94B4B` | Academic probation alerts, credit overload (>24 units), anti-scam warnings. |
+
+### 🏛️ Deliverables & Verification
+1.  **Tailwind v4 Theme Integration**:
+    *   Defined `--color-*` tokens in `@theme` inside [`oaumods/src/app/globals.css`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/app/globals.css) and semantic CSS custom properties in `:root` and `@media (prefers-color-scheme: dark)`.
+2.  **Design System Master Spec**:
+    *   Authored [`DESIGN_TOKENS.md`](file:///c:/Users/DELL/Desktop/GUIDE17/DESIGN_TOKENS.md) establishing color definitions, CSS variables, dark mode surface mappings, and usage rules for the team.
+3.  **Component Refresh**:
+    *   Updated [`oaumods/src/app/page.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/app/page.tsx) with OAU Navy branding, Campus Blue tabs, and Fresh Green online pills.
+    *   Updated [`oaumods/src/components/GpaCalculator.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/components/GpaCalculator.tsx) and [`oaumods/src/lib/gpaCalculator.ts`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/lib/gpaCalculator.ts) with dynamic circular gauge colors, Student Gold points badges, and Pure White course cards.
+    *   Updated [`oaumods/src/components/ClearanceChecklist.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/components/ClearanceChecklist.tsx) with Pale Yellow (`#FEF9C3`) + Student Gold alert banner and Fresh Green progress completion rings.
+    *   Updated [`oaumods/src/components/AcademicsHub.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/components/AcademicsHub.tsx) and [`oaumods/src/components/CampusGuide.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/components/CampusGuide.tsx) with Pale Blue tags and Soft Blue Gray cards.
+4.  **Turbopack & Browser Visual Audit**:
+    *   Compiled production build in 3.2s with zero TypeScript/lint issues.
+    *   Verified all 4 modules in browser subagent on port 3050; captured screenshots across GPA Hub, Clearance, Academics, and Campus Guide.
+
+### 📂 Files Created & Updated
+*   [`DESIGN_TOKENS.md`](file:///c:/Users/DELL/Desktop/GUIDE17/DESIGN_TOKENS.md): Master design tokens specification.
+*   [`oaumods/src/app/globals.css`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/app/globals.css): Tailwind `@theme` color tokens & CSS properties.
+*   [`oaumods/src/lib/gpaCalculator.ts`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/lib/gpaCalculator.ts): Degree classifications with palette gradients & strokes.
+*   [`oaumods/src/app/page.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/app/page.tsx): Main layout and navigation restyling.
+*   [`oaumods/src/components/GpaCalculator.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/components/GpaCalculator.tsx): GPA calculator card, gauge, and table refresh.
+*   [`oaumods/src/components/ClearanceChecklist.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/components/ClearanceChecklist.tsx): Clearance tracker styling.
+*   [`oaumods/src/components/AcademicsHub.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/components/AcademicsHub.tsx): Faculty directory restyling.
+*   [`oaumods/src/components/CampusGuide.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/components/CampusGuide.tsx): Dining, scenic spots, and transit calculator restyling.
+
+### 👥 People & Community
+*   **Project Lead**: Provided the official 13-token color palette.
+*   **Guide 17**: Codified tokens into Tailwind v4 architecture, updated all components, and verified visual fidelity.
+

@@ -1,14 +1,49 @@
 @import "tailwindcss";
 
+@theme {
+  --color-oau-navy: #12345B;
+  --color-campus-blue: #1769AA;
+  --color-sky-blue: #4FA3D1;
+  --color-pale-blue: #EEF7FC;
+  --color-student-gold: #E6AD3C;
+  --color-warm-white: #FAFCFE;
+  --color-pure-white: #FFFFFF;
+  --color-deep-slate: #1F2937;
+  --color-muted-slate: #64748B;
+  --color-soft-blue-gray: #D9E6F0;
+  --color-fresh-green: #25855A;
+  --color-amber-warn: #C88719;
+  --color-soft-red: #C94B4B;
+}
+
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  --background: #FAFCFE;
+  --foreground: #1F2937;
+  --card: #FFFFFF;
+  --border: #D9E6F0;
+  --primary: #12345B;
+  --interactive: #1769AA;
+  --accent-gold: #E6AD3C;
+  --accent-sky: #4FA3D1;
+  --bg-soft: #EEF7FC;
+  --text-muted: #64748B;
+  --success: #25855A;
+  --warning: #C88719;
+  --error: #C94B4B;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #090d16;
-    --foreground: #f1f5f9;
+    --background: #09101A;
+    --foreground: #F1F5F9;
+    --card: #0E1827;
+    --border: #1C2D44;
+    --primary: #4FA3D1;
+    --interactive: #38BDF8;
+    --accent-gold: #F59E0B;
+    --accent-sky: #60A5FA;
+    --bg-soft: #122033;
+    --text-muted: #94A3B8;
   }
 }
 
@@ -40,13 +75,13 @@ body {
 
 /* Glassmorphism helpers */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
 @media (prefers-color-scheme: dark) {
   .glass-panel {
-    background: rgba(15, 23, 42, 0.85);
+    background: rgba(14, 24, 39, 0.9);
   }
 }

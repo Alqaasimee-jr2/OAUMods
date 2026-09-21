@@ -13,6 +13,7 @@ export interface DegreeClassification {
   badgeColor: string;
   textColor: string;
   bgGradient: string;
+  strokeColor: string;
   icon: string;
   description: string;
 }
@@ -70,9 +71,10 @@ export function getDegreeClassification(gpa: number): DegreeClassification {
   if (gpa >= 4.5) {
     return {
       classTitle: 'First Class Honours',
-      badgeColor: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40',
-      textColor: 'text-emerald-400',
-      bgGradient: 'from-emerald-500/10 via-emerald-600/5 to-transparent',
+      badgeColor: 'bg-fresh-green/15 text-fresh-green border-fresh-green/30 dark:bg-fresh-green/25 dark:text-emerald-300',
+      textColor: 'text-fresh-green dark:text-emerald-300',
+      bgGradient: 'from-oau-navy via-campus-blue to-[#0D2440]',
+      strokeColor: '#25855A',
       icon: '🌟',
       description: 'Outstanding academic distinction. Keep this trajectory for university commendations.',
     };
@@ -80,9 +82,10 @@ export function getDegreeClassification(gpa: number): DegreeClassification {
   if (gpa >= 3.5) {
     return {
       classTitle: 'Second Class Honours (Upper Division)',
-      badgeColor: 'bg-blue-500/20 text-blue-400 border-blue-500/40',
-      textColor: 'text-blue-400',
-      bgGradient: 'from-blue-500/10 via-blue-600/5 to-transparent',
+      badgeColor: 'bg-campus-blue/15 text-campus-blue border-campus-blue/30 dark:bg-campus-blue/25 dark:text-sky-300',
+      textColor: 'text-campus-blue dark:text-sky-300',
+      bgGradient: 'from-oau-navy via-[#164e7c] to-[#0E2845]',
+      strokeColor: '#1769AA',
       icon: '🎖️',
       description: 'Strong academic performance (2:1). Competitive for scholarships and postgraduate studies.',
     };
@@ -90,9 +93,10 @@ export function getDegreeClassification(gpa: number): DegreeClassification {
   if (gpa >= 2.4) {
     return {
       classTitle: 'Second Class Honours (Lower Division)',
-      badgeColor: 'bg-amber-500/20 text-amber-400 border-amber-500/40',
-      textColor: 'text-amber-400',
-      bgGradient: 'from-amber-500/10 via-amber-600/5 to-transparent',
+      badgeColor: 'bg-student-gold/20 text-amber-800 dark:text-student-gold border-student-gold/40',
+      textColor: 'text-amber-800 dark:text-student-gold',
+      bgGradient: 'from-[#192E48] via-[#214366] to-[#122338]',
+      strokeColor: '#E6AD3C',
       icon: '📘',
       description: 'Good standing (2:2). Focus on prerequisite courses to push your cumulative average into 2:1.',
     };
@@ -100,9 +104,10 @@ export function getDegreeClassification(gpa: number): DegreeClassification {
   if (gpa >= 1.5) {
     return {
       classTitle: 'Third Class Honours',
-      badgeColor: 'bg-orange-500/20 text-orange-400 border-orange-500/40',
-      textColor: 'text-orange-400',
-      bgGradient: 'from-orange-500/10 via-orange-600/5 to-transparent',
+      badgeColor: 'bg-amber-warn/20 text-amber-warn border-amber-warn/40',
+      textColor: 'text-amber-warn',
+      bgGradient: 'from-[#2A231C] via-[#3D2F1E] to-[#1B1612]',
+      strokeColor: '#C88719',
       icon: '📙',
       description: 'Marginal standing. Consult your 100-Level Course Advisor to optimize elective selections.',
     };
@@ -110,18 +115,20 @@ export function getDegreeClassification(gpa: number): DegreeClassification {
   if (gpa >= 1.0) {
     return {
       classTitle: 'Pass Degree',
-      badgeColor: 'bg-rose-500/20 text-rose-400 border-rose-500/40',
-      textColor: 'text-rose-400',
-      bgGradient: 'from-rose-500/10 via-rose-600/5 to-transparent',
+      badgeColor: 'bg-soft-red/20 text-soft-red border-soft-red/40',
+      textColor: 'text-soft-red',
+      bgGradient: 'from-[#351B20] via-[#482028] to-[#1F1216]',
+      strokeColor: '#C94B4B',
       icon: '⚠️',
       description: 'Critical warning zone. Minimum passing grade threshold to avoid academic dismissal.',
     };
   }
   return {
     classTitle: 'Academic Probation / Advisory',
-    badgeColor: 'bg-red-600/30 text-red-400 border-red-500/50 animate-pulse',
-    textColor: 'text-red-400',
-    bgGradient: 'from-red-600/20 via-red-900/10 to-transparent',
+    badgeColor: 'bg-soft-red/30 text-soft-red border-soft-red/60 animate-pulse',
+    textColor: 'text-soft-red',
+    bgGradient: 'from-[#3F1418] via-[#521820] to-[#250C10]',
+    strokeColor: '#C94B4B',
     icon: '🚨',
     description: 'CGPA below 1.00 triggers statutory academic probation under OAU Senate examination rules.',
   };
@@ -140,36 +147,36 @@ export function forecastRequiredGPA(
   if (sem1Units <= 0 || sem2Units <= 0) {
     return {
       requiredSem2GPA: 0,
-      isAchievable: true,
-      message: 'Enter credit units for both semesters to calculate projection.',
+      isAchievable: false,
+      message: 'Both semester units must be greater than zero.',
     };
   }
 
   const totalUnits = sem1Units + sem2Units;
-  const targetTotalQP = targetCGPA * totalUnits;
-  const sem1QP = sem1GPA * sem1Units;
-  const requiredSem2QP = targetTotalQP - sem1QP;
-  const requiredSem2GPA = Number((requiredSem2QP / sem2Units).toFixed(2));
+  const targetTotalQualityPoints = totalUnits * targetCGPA;
+  const sem1QualityPoints = sem1Units * sem1GPA;
+  const neededSem2QualityPoints = targetTotalQualityPoints - sem1QualityPoints;
+  const requiredSem2GPA = Number((neededSem2QualityPoints / sem2Units).toFixed(2));
 
   if (requiredSem2GPA > 5.0) {
     return {
       requiredSem2GPA,
       isAchievable: false,
-      message: `Mathematically unattainable this session (requires ${requiredSem2GPA} GPA, maximum possible is 5.00). Aim for a ${((sem1QP + sem2Units * 5.0) / totalUnits).toFixed(2)} maximum cap.`,
+      message: `Mathematically unattainable in 2 semesters: You would need a Rain Semester GPA of ${requiredSem2GPA.toFixed(2)}, which exceeds the maximum possible 5.00. Focus on maintaining a strong cumulative baseline.`,
     };
   }
 
-  if (requiredSem2GPA <= 0) {
+  if (requiredSem2GPA <= 0.0) {
     return {
       requiredSem2GPA: 0.0,
       isAchievable: true,
-      message: 'Your current semester score already locks in your target degree classification!',
+      message: `Your current Harmattan GPA (${sem1GPA.toFixed(2)}) has already banked sufficient points! Even with minimal passing grades in Rain Semester, you will meet or exceed your target CGPA of ${targetCGPA.toFixed(2)}.`,
     };
   }
 
   return {
     requiredSem2GPA,
     isAchievable: true,
-    message: `You need a minimum GPA of ${requiredSem2GPA} in the next semester (${sem2Units} units) to secure a ${targetCGPA.toFixed(2)} CGPA.`,
+    message: `To graduate 100-Level with a target CGPA of ${targetCGPA.toFixed(2)}, you must achieve at least a ${requiredSem2GPA.toFixed(2)} GPA across your ${sem2Units} Rain Semester units.`,
   };
 }

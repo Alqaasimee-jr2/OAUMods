@@ -38,37 +38,37 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-zinc-50 dark:bg-[#070b12] text-zinc-900 dark:text-zinc-100 flex flex-col pb-24 md:pb-12">
+    <div className="min-h-screen bg-warm-white dark:bg-[#09101A] text-deep-slate dark:text-zinc-100 flex flex-col pb-24 md:pb-12">
       {/* Top Header */}
-      <header className="sticky top-0 z-40 w-full border-b border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-[#0a0f1d]/80 backdrop-blur-md">
+      <header className="sticky top-0 z-40 w-full border-b border-soft-blue-gray dark:border-[#1C2D44] bg-pure-white/90 dark:bg-[#0E1827]/90 backdrop-blur-md">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-amber-500 flex items-center justify-center text-white font-black text-lg shadow-xs shadow-emerald-500/20">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-oau-navy via-campus-blue to-student-gold flex items-center justify-center text-white font-black text-lg shadow-xs shadow-oau-navy/20">
               O
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h1 className="font-extrabold text-base sm:text-lg tracking-tight bg-gradient-to-r from-emerald-600 via-emerald-500 to-amber-600 dark:from-emerald-400 dark:via-emerald-300 dark:to-amber-400 bg-clip-text text-transparent">
+                <h1 className="font-extrabold text-base sm:text-lg tracking-tight text-oau-navy dark:text-sky-blue">
                   OAUMods
                 </h1>
-                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-sm bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60">
+                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-sm bg-pale-blue dark:bg-oau-navy/60 text-campus-blue dark:text-sky-blue border border-soft-blue-gray dark:border-campus-blue/30">
                   v1.0
                 </span>
               </div>
-              <p className="text-[11px] text-zinc-500 dark:text-zinc-400 font-medium">
+              <p className="text-[11px] text-muted-slate dark:text-slate-400 font-medium">
                 Great Ife Freshman Companion
               </p>
             </div>
           </div>
 
           {/* Desktop Navigation Tabs */}
-          <nav className="hidden md:flex items-center gap-1 bg-zinc-100 dark:bg-zinc-800/70 p-1 rounded-xl border border-zinc-200 dark:border-zinc-700/60 text-xs font-semibold">
+          <nav className="hidden md:flex items-center gap-1 bg-pale-blue/60 dark:bg-[#122033] p-1 rounded-xl border border-soft-blue-gray dark:border-[#1C2D44] text-xs font-semibold">
             <button
               onClick={() => setActiveTab('gpa')}
               className={`px-3.5 py-2 rounded-lg transition-all flex items-center gap-1.5 ${
                 activeTab === 'gpa'
-                  ? 'bg-white dark:bg-zinc-900 text-emerald-600 dark:text-emerald-400 shadow-xs'
-                  : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200'
+                  ? 'bg-pure-white dark:bg-[#0E1827] text-campus-blue dark:text-sky-blue shadow-xs font-bold'
+                  : 'text-muted-slate dark:text-slate-400 hover:text-deep-slate dark:hover:text-slate-200'
               }`}
             >
               <Calculator className="w-4 h-4" />
@@ -78,8 +78,8 @@ export default function Home() {
               onClick={() => setActiveTab('clearance')}
               className={`px-3.5 py-2 rounded-lg transition-all flex items-center gap-1.5 ${
                 activeTab === 'clearance'
-                  ? 'bg-white dark:bg-zinc-900 text-emerald-600 dark:text-emerald-400 shadow-xs'
-                  : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200'
+                  ? 'bg-pure-white dark:bg-[#0E1827] text-campus-blue dark:text-sky-blue shadow-xs font-bold'
+                  : 'text-muted-slate dark:text-slate-400 hover:text-deep-slate dark:hover:text-slate-200'
               }`}
             >
               <CheckSquare className="w-4 h-4" />
@@ -89,8 +89,8 @@ export default function Home() {
               onClick={() => setActiveTab('academics')}
               className={`px-3.5 py-2 rounded-lg transition-all flex items-center gap-1.5 ${
                 activeTab === 'academics'
-                  ? 'bg-white dark:bg-zinc-900 text-emerald-600 dark:text-emerald-400 shadow-xs'
-                  : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200'
+                  ? 'bg-pure-white dark:bg-[#0E1827] text-campus-blue dark:text-sky-blue shadow-xs font-bold'
+                  : 'text-muted-slate dark:text-slate-400 hover:text-deep-slate dark:hover:text-slate-200'
               }`}
             >
               <GraduationCap className="w-4 h-4" />
@@ -100,8 +100,8 @@ export default function Home() {
               onClick={() => setActiveTab('guide')}
               className={`px-3.5 py-2 rounded-lg transition-all flex items-center gap-1.5 ${
                 activeTab === 'guide'
-                  ? 'bg-white dark:bg-zinc-900 text-emerald-600 dark:text-emerald-400 shadow-xs'
-                  : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200'
+                  ? 'bg-pure-white dark:bg-[#0E1827] text-campus-blue dark:text-sky-blue shadow-xs font-bold'
+                  : 'text-muted-slate dark:text-slate-400 hover:text-deep-slate dark:hover:text-slate-200'
               }`}
             >
               <Compass className="w-4 h-4" />
@@ -112,20 +112,20 @@ export default function Home() {
           {/* Status & Motto */}
           <div className="flex items-center gap-2">
             <span
-              className={`inline-flex items-center gap-1 text-[11px] font-medium px-2 py-0.5 rounded-full border ${
+              className={`inline-flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-full border ${
                 isOnline
-                  ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/40'
-                  : 'bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800/40'
+                  ? 'bg-fresh-green/10 text-fresh-green border-fresh-green/20 dark:bg-fresh-green/20 dark:text-emerald-300'
+                  : 'bg-amber-warn/10 text-amber-warn border-amber-warn/20 dark:bg-amber-warn/20 dark:text-amber-300'
               }`}
             >
               {isOnline ? (
                 <>
-                  <Wifi className="w-3 h-3 text-emerald-500" />
+                  <Wifi className="w-3 h-3 text-fresh-green" />
                   <span className="hidden sm:inline">Online</span>
                 </>
               ) : (
                 <>
-                  <WifiOff className="w-3 h-3 text-amber-500" />
+                  <WifiOff className="w-3 h-3 text-amber-warn" />
                   <span>Offline Ready</span>
                 </>
               )}
@@ -139,10 +139,10 @@ export default function Home() {
         {activeTab === 'gpa' && (
           <div className="space-y-6 animate-in fade-in duration-200">
             <div className="text-center sm:text-left space-y-1">
-              <h2 className="text-xl sm:text-2xl font-black text-zinc-900 dark:text-zinc-50 tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-black text-oau-navy dark:text-white tracking-tight">
                 Great Ife 5.0 GPA & Forecaster
               </h2>
-              <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
+              <p className="text-xs sm:text-sm text-muted-slate dark:text-slate-400">
                 Official OAU 5.0 scale with Harmattan/Rain session simulations and 1-tap course presets.
               </p>
             </div>
@@ -153,10 +153,10 @@ export default function Home() {
         {activeTab === 'clearance' && (
           <div className="space-y-6 animate-in fade-in duration-200">
             <div className="text-center sm:text-left space-y-1">
-              <h2 className="text-xl sm:text-2xl font-black text-zinc-900 dark:text-zinc-50 tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-black text-oau-navy dark:text-white tracking-tight">
                 Freshman Physical Clearance Tracker
               </h2>
-              <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
+              <p className="text-xs sm:text-sm text-muted-slate dark:text-slate-400">
                 Interactive 5-stage clearance roadmap with offline checklist and Pale Yellow file mandate.
               </p>
             </div>
@@ -167,11 +167,11 @@ export default function Home() {
         {activeTab === 'academics' && (
           <div className="space-y-6 animate-in fade-in duration-200">
             <div className="text-center sm:text-left space-y-1">
-              <h2 className="text-xl sm:text-2xl font-black text-zinc-900 dark:text-zinc-50 tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-black text-oau-navy dark:text-white tracking-tight">
                 Academics & Faculty Matrix
               </h2>
-              <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
-                Directory of all 14 faculties, 60+ departments, lecture halls, and file jacket rules.
+              <p className="text-xs sm:text-sm text-muted-slate dark:text-slate-400">
+                Directory of all 14 faculties, 79 departments, lecture halls, and file jacket rules.
               </p>
             </div>
             <AcademicsHub />
@@ -181,10 +181,10 @@ export default function Home() {
         {activeTab === 'guide' && (
           <div className="space-y-6 animate-in fade-in duration-200">
             <div className="text-center sm:text-left space-y-1">
-              <h2 className="text-xl sm:text-2xl font-black text-zinc-900 dark:text-zinc-50 tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-black text-oau-navy dark:text-white tracking-tight">
                 Campus Dining, Sanctuaries & Transit
               </h2>
-              <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
+              <p className="text-xs sm:text-sm text-muted-slate dark:text-slate-400">
                 Curated dining gems (Orente, Captain Cook, As E Dey Hot), scenic retreats, and transport tariffs.
               </p>
             </div>
@@ -194,14 +194,14 @@ export default function Home() {
       </main>
 
       {/* Mobile Bottom Sticky Navigation */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 border-t border-zinc-200/80 dark:border-zinc-800 bg-white/90 dark:bg-[#0a0f1d]/90 backdrop-blur-lg px-2 py-1.5">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 border-t border-soft-blue-gray dark:border-[#1C2D44] bg-pure-white/95 dark:bg-[#0E1827]/95 backdrop-blur-lg px-2 py-1.5">
         <div className="grid grid-cols-4 gap-1">
           <button
             onClick={() => setActiveTab('gpa')}
             className={`flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all ${
               activeTab === 'gpa'
-                ? 'text-emerald-600 dark:text-emerald-400 font-bold'
-                : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200'
+                ? 'text-campus-blue dark:text-sky-blue font-bold'
+                : 'text-muted-slate hover:text-deep-slate dark:text-slate-400 dark:hover:text-slate-200'
             }`}
           >
             <Calculator className="w-5 h-5 mb-0.5" />
@@ -211,8 +211,8 @@ export default function Home() {
             onClick={() => setActiveTab('clearance')}
             className={`flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all ${
               activeTab === 'clearance'
-                ? 'text-emerald-600 dark:text-emerald-400 font-bold'
-                : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200'
+                ? 'text-campus-blue dark:text-sky-blue font-bold'
+                : 'text-muted-slate hover:text-deep-slate dark:text-slate-400 dark:hover:text-slate-200'
             }`}
           >
             <CheckSquare className="w-5 h-5 mb-0.5" />
@@ -222,8 +222,8 @@ export default function Home() {
             onClick={() => setActiveTab('academics')}
             className={`flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all ${
               activeTab === 'academics'
-                ? 'text-emerald-600 dark:text-emerald-400 font-bold'
-                : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200'
+                ? 'text-campus-blue dark:text-sky-blue font-bold'
+                : 'text-muted-slate hover:text-deep-slate dark:text-slate-400 dark:hover:text-slate-200'
             }`}
           >
             <GraduationCap className="w-5 h-5 mb-0.5" />
@@ -233,8 +233,8 @@ export default function Home() {
             onClick={() => setActiveTab('guide')}
             className={`flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all ${
               activeTab === 'guide'
-                ? 'text-emerald-600 dark:text-emerald-400 font-bold'
-                : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200'
+                ? 'text-campus-blue dark:text-sky-blue font-bold'
+                : 'text-muted-slate hover:text-deep-slate dark:text-slate-400 dark:hover:text-slate-200'
             }`}
           >
             <Compass className="w-5 h-5 mb-0.5" />
@@ -244,11 +244,11 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="mt-auto border-t border-zinc-200/60 dark:border-zinc-800/60 pt-6 pb-2 text-center text-xs text-zinc-500 dark:text-zinc-400 space-y-1">
-        <p className="font-semibold text-zinc-700 dark:text-zinc-300">
+      <footer className="mt-auto border-t border-soft-blue-gray dark:border-[#1C2D44] pt-6 pb-2 text-center text-xs text-muted-slate dark:text-slate-400 space-y-1">
+        <p className="font-semibold text-deep-slate dark:text-slate-200">
           Obafemi Awolowo University, Ile-Ife • Africa's Most Beautiful Campus
         </p>
-        <p className="text-[11px] text-zinc-400 dark:text-zinc-500">
+        <p className="text-[11px] text-muted-slate/80 dark:text-slate-500">
           "For Learning and Culture" • OAUMods Offline Companion • 100% Client-Side Persistent
         </p>
       </footer>
