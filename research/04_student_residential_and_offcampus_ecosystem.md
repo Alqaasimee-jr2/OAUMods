@@ -32,11 +32,11 @@ OAU operates nine official residential halls designed by Arieh Sharon as distinc
 
 #### 1. Angola Hall (Male Freshmen Enclave)
 * **Designation**: Exclusively for 100-Level Male Freshmen.
-* **Location**: Hostel Area 1, adjacent to Health Sciences Road and Maintenance Gate.
+* **Location**: Hostel Area 1, adjacent to Maintenance Gate and the central hostel avenue.
 * **Capacity**: Approx. 1,500+ freshmen.
 * **Cultural Life**: Intense bonding, evening quadrangle football tournaments, debate circles, and early introduction to campus life.
 * **Security & Curfew**: The main gate closes strictly at **10:00 PM**. Porter’s lodge operates 24/7 on the Ground Floor of Block 1.
-* **Survival Pro-Tip**: Angola is a 10-minute walk to BOOC via the Health Sciences path; taking a Keke is unnecessary.
+* **Survival Pro-Tip**: Angola is a 10-minute walk to BOOC via the central paved hostel walkway; taking a Keke is unnecessary.
 
 #### 2. Mozambique Hall ("Moz" - Female Freshmen Enclave)
 * **Designation**: Exclusively for 100-Level Female Freshmen.

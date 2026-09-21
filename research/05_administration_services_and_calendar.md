@@ -43,7 +43,7 @@ Departmental Oversight      Financial Clearances        E-Resources & Archives
 * **Guidance and Counselling Unit**: Located within DSA; provides free, confidential psychological support, mental health counseling, and academic stress therapy.
 
 ### B. Directorate of Medical Services (University Health Center / JAC)
-* **Location**: Health Sciences Road (near Angola and Mozambique Halls).
+* **Location**: Residential / Hostel Precinct (opposite Alumni Hall, beside Awolowo Hall; easily accessible from Angola and Mozambique Halls).
 * **Role**: Primary healthcare provider for the entire university community.
 * **The "Green Card" Privileges**:
   - Every registered student receives a laminated **Health Center Patient Card ("Green Card")**.

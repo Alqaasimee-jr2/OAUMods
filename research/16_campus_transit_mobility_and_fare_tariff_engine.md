@@ -129,7 +129,9 @@ Transit to the **Obafemi Awolowo University Teaching Hospitals Complex (OAUTHC)*
 ```
 
 ### The OAUTHC Transit Rules:
-1. **Departure Point on Campus**: Commuters proceed to the **College of Health Sciences (CHS)** complex (adjacent to the University Health Centre along Road 1).
+1. **Departure Point on Campus**: Commuters proceed to the **College of Health Sciences (CHS)** complex car park along **Road 2** (Academic Core).
+   > [!IMPORTANT]
+   > **Crucial Geographic Distinction**: The **College of Health Sciences (CHS)** is **NOT** close to or at the **University Health Centre ("JAC")**. They are located in completely different parts of the campus. The Health Centre is located in the student residential hostel sector (opposite Alumni Hall, beside Awolowo Hall), whereas the College of Health Sciences is an academic collegiate complex located along Road 2 (adjacent to Pharmacy and EDM). Commuters heading to OAUTHC must board the Nissan Micra cabs at the **College of Health Sciences (CHS) park along Road 2**, NOT at the Health Centre!
 2. **Vehicle Fleet**: Operated by **Nissan Micra** vehicles.
 3. **Fare**: **₦300 Flat Rate** per passenger.
 4. **Payment Mode**: **CASH ONLY**. *Tickets are strictly NOT accepted on the Micra shuttles*.

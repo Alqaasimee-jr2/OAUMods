@@ -85,11 +85,12 @@ The university is navigated via a numbered arterial road grid:
 * **Core Buildings**: Humanities Blocks I, II & III (Inverted Pyramids), AUD 1 & 2, Humanities 1000-Seater Lecture Theatre, Department of Dramatic Arts, Pit Theatre.
 
 ### Zone 5: Social Sciences & Administration Complex
-* **Core Buildings**: Yellow House (Faculty of Social Sciences), Faculty of Administration Complex, First Bank LT, Admin (1st Bank) Lecture Theatre.
+* **Core Buildings**: Faculty of Social Sciences Building (Yellow-Panel Complex), Faculty of Administration Complex, First Bank LT, Admin (1st Bank) Lecture Theatre.
 
-### Zone 6: Health Sciences & Pharmaceutical Belt
-* **Core Buildings**: University Health Center (JAC), College of Health Sciences complex, Faculty of Pharmacy auditoriums, Drug Research & Production Unit (DRPU).
-* **Location**: Situated along Health Sciences Road, conveniently adjacent to freshman halls.
+### Zone 6: Medical Sciences, Pharmacy & Health Services Precincts
+* **Academic Wing (Road 2 Academic Belt)**: **College of Health Sciences (CHS)** complex (Basic Medical Sciences, Anatomy, Physiology, Medical Biochemistry, Dentistry, and Clinical training complexes), **Faculty of Pharmacy** auditoriums, and Drug Research & Production Unit (DRPU).
+* **Clinical Primary Care Wing (Residential Hostel Precinct)**: **University Health Centre ("JAC")** — situated opposite Alumni Hall and beside Awolowo Hall, providing 24/7 outpatient/inpatient healthcare, diagnostic lab tests, chest X-rays, and prescription pharmacy for students and staff.
+* **Spatial Reality Check**: The College of Health Sciences (academic instruction on Road 2) and the University Health Centre (primary clinical care in the student residential area) are in completely different parts of campus. Shuttles to OAUTHC load at CHS on Road 2, never at the Health Centre.
 
 ### Zone 7: Student Residential Area 1 (Freshmen Enclave)
 * **Halls**: **Angola Hall** (Male Freshmen) & **Mozambique Hall** (Female Freshmen).

@@ -820,4 +820,38 @@ Authored [`research/07_student_politics_elections_and_governance.md`](file:///c:
 ---
 *(Session concluded with Dossier 16 codified and verified on 2026-09-21.)*
 
+---
+
+## 2026-09-21 (Entry 020: Spatial Precision Correction — Decoupling College of Health Sciences from the University Health Centre)
+
+### 📌 Summary
+Executed a comprehensive campus geography audit and correction following direct Project Lead directive. Fully decoupled the **College of Health Sciences (CHS)** from the **University Health Centre ("JAC")**, eliminating erroneous proximity claims and codifying their true distinct locations and transit realities.
+
+### 🏛️ Spatial Reality & Clarifications Codified
+1.  **University Health Centre ("JAC")**:
+    *   *Location*: Residential / Hostel precinct, situated directly **opposite Alumni Hall and beside Awolowo Hall**.
+    *   *Function*: 24/7 primary healthcare clinic, GOPD, emergency triage wards, pharmacy dispensary, radiography/X-ray, and mandatory freshman medical screening ("Green Card" clearance).
+2.  **College of Health Sciences (CHS)**:
+    *   *Location*: Situated along **Road 2** in the southern academic sciences quadrangle (adjacent to Faculty of Pharmacy and Faculty of Environmental Design and Management - EDM).
+    *   *Function*: Academic collegiate complex housing the Faculty of Basic Medical Sciences (Anatomy, Physiology, Medical Biochemistry), Faculty of Clinical Sciences, and Faculty of Dentistry.
+3.  **OAUTHC Transit Corridor Boarding Point**:
+    *   The **Nissan Micra** town shuttles (₦300 cash flat rate) to the OAUTHC teaching hospital complex on Ilesa Road load exclusively at the **College of Health Sciences (CHS) car park along Road 2**, NOT at the Health Centre.
+4.  **Campus Myth-Buster Formally Codified**:
+    *   Added dedicated entry in [`research/14_campus_landmarks_architecture_and_spatial_nicknames.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/14_campus_landmarks_architecture_and_spatial_nicknames.md) debunking the misconception that CHS is at or near the Health Centre.
+
+### 📂 Files Synchronized & Updated
+*   [`research/16_campus_transit_mobility_and_fare_tariff_engine.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/16_campus_transit_mobility_and_fare_tariff_engine.md): Corrected departure point to CHS along Road 2 with explicit alert never to board at the Health Centre.
+*   [`research/14_campus_landmarks_architecture_and_spatial_nicknames.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/14_campus_landmarks_architecture_and_spatial_nicknames.md): Added Section 5 myth-buster debunking CHS vs. Health Centre proximity.
+*   [`research/13_faculties_departments_and_specialized_course_curricula.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/13_faculties_departments_and_specialized_course_curricula.md): Updated CHS and Pharmacy locations to Road 2 Academic Quadrangle.
+*   [`research/10_health_services_health_centre_pharmacy_and_oauthc.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/10_health_services_health_centre_pharmacy_and_oauthc.md): Clarified Health Centre position opposite Alumni Hall / beside Awolowo Hall and added contrast section on CHS.
+*   [`research/02_campus_geography_masterplan_and_zones.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/02_campus_geography_masterplan_and_zones.md): Restructured Zone 6 into Road 2 Academic Medical Belt vs. Residential Primary Care Clinic.
+*   [`research/05_administration_services_and_calendar.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/05_administration_services_and_calendar.md): Updated Directorate of Medical Services location.
+*   [`research/04_student_residential_and_offcampus_ecosystem.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/04_student_residential_and_offcampus_ecosystem.md): Cleaned Angola Hall pedestrian route description.
+*   [`CAMPUS_KNOWLEDGE_VAULT.md`](file:///c:/Users/DELL/Desktop/GUIDE17/CAMPUS_KNOWLEDGE_VAULT.md): Corrected CHS, Pharmacy, EDM, and Social Sciences locations; updated OAUTHC boarding point.
+
+### 👥 People & Community
+*   **Project Lead**: Flagged the critical geographic distinction between CHS and the Health Centre.
+*   **Guide 17**: Performed repo-wide spatial audit, corrected all references, and updated living dossiers.
+
+
 

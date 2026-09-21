@@ -148,7 +148,7 @@ Obafemi Awolowo University's academic structure comprises:
 ---
 
 ### 4. Faculty of Basic Medical Sciences (College of Health Sciences)
-*   **Location**: College of Health Sciences Complex (Road 1, adjacent to OAU Health Centre).
+*   **Location**: College of Health Sciences Complex (Road 2, Academic Science Quadrangle — adjacent to Faculty of Pharmacy and EDM; completely distinct from the University Health Centre located in the residential zone).
 *   **Provost's & Dean's Office**: CHS Administrative Block.
 *   **Clearance File Jacket Convention**: **Purple / Maroon File**.
 
@@ -320,7 +320,7 @@ Obafemi Awolowo University's academic structure comprises:
 ---
 
 ### 10. Faculty of Pharmacy
-*   **Location**: Pharmacy Complex (Road 1, adjacent to EDM and Health Centre).
+*   **Location**: Pharmacy Complex (Road 2, adjacent to EDM and College of Health Sciences — completely separate from the University Health Centre in the residential zone).
 *   **Dean's Office**: Ground Floor, Faculty of Pharmacy Building.
 *   **Degree Awarded**: **B.Pharm (Bachelor of Pharmacy)** / **Pharm.D** — 5-Year Professional Program.
 *   **Clearance File Jacket Convention**: **Yellowish-Green / Emerald File**.

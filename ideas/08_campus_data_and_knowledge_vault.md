@@ -53,7 +53,7 @@
 
 ### Stage 3: Medical Screening & Health Center Registration
 * **Category**: Medical & Health
-* **Location**: University Health Center (JAC - Health Sciences Road)
+* **Location**: University Health Center (Residential Precinct — opposite Alumni Hall, beside Awolowo Hall)
 * **Office**: Records & Medical Screening Unit
 * **Summary**: Mandatory physical examination, chest X-ray, blood group/genotype screening, urinalysis, and physician certification.
 * **Critical Rule**: Morning queues grow massive by 8:00 AM. Arrive between 6:30 AM and 7:00 AM to secure a low number tally.

@@ -25,7 +25,10 @@ Obafemi Awolowo University's healthcare framework operates across two distinct, 
 ## 🏛️ 2. The OAU Health Centre (University Health Services)
 
 ### Location & Spatial Context
-*   **Geographic Positioning**: Centrally situated on **Road 1**, nestled strategically between Moremi Hall and the Faculty of Pharmacy/Health Sciences complex. It is within a 5- to 10-minute walk from the central hostels and academic quad.
+*   **Geographic Positioning**: Situated in the residential/hostel precinct, directly opposite Alumni Hall and beside Awolowo Hall along the pedestrian corridor connecting student hostels to the central academic core.
+*   **Crucial Geographic Distinction (Health Centre vs. College of Health Sciences)**: The University Health Centre is **NOT** the College of Health Sciences (CHS), nor are they located near each other. They occupy completely different sectors of campus:
+    *   *University Health Centre ("JAC")*: A 24/7 primary healthcare clinic, pharmacy dispensary, emergency triage unit, and medical screening centre serving the general student/staff population in the residential hostel sector.
+    *   *College of Health Sciences (CHS)*: An academic training and research collegiate complex situated along **Road 2** in the academic core (housing Anatomy, Physiology, Medical Biochemistry, Dentistry, and clinical faculty offices, adjacent to Pharmacy and EDM). Shuttles heading to OAUTHC (Nissan Micras) load exclusively at the CHS complex along Road 2, never at the Health Centre.
 *   **Colloquial Identity ("JAC")**: Popularly nicknamed *"JAC"* across student generations (derived from the historic Jaja Clinic tradition and Joint Action Committees).
 
 ---

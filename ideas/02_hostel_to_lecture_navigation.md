@@ -23,8 +23,8 @@ OAU has a sprawling 11,000+ hectare estate with iconic architectural complexes c
 *   **Walking Time**: 8–12 Minutes.
 *   **Recommended Method**: Walking (Keke is unnecessary).
 *   **Step-by-Step Waypoint Guidance**:
-    1.  Exit Angola / Moz main gate toward Health Sciences Road.
-    2.  Pass the University Health Center (JAC) on your right.
+    1.  Exit Angola / Moz main gate toward the central hostel avenue.
+    2.  Pass the University Health Centre ("JAC") on your right (opposite Alumni Hall).
     3.  Take the paved pedestrian walkway heading directly toward the Science complex.
     4.  BOOC is the massive tiered auditorium building directly ahead with wide front stairways.
 
