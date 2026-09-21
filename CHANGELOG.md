@@ -649,6 +649,56 @@ Authored [`research/07_student_politics_elections_and_governance.md`](file:///c:
 *   Present findings to the Project Lead and determine next priority domain (e.g. course code & prerequisite maps, campus venue capacities, transit logistics, or commencement of Phase 2/3 UI features).
 
 ---
-*(Session concluded with Dossier 13 codified and verified on 2026-09-21.)*
+
+## 📅 2026-09-21 — Entry 017: Comprehensive Research & Myth-Busting of Campus Landmarks, Architecture & Spatial Nicknames Codified
+
+### 💭 Context & Thoughts
+*   The Project Lead prompted: **"now there are some places given nicknames, like white house, yellow house, etc. bring them up, but check them out first, i only want accurate info."**
+*   In response, we conducted a rigorous architectural, historical, and geospatial investigation to verify every building, hall, lecture theatre, eatery, and social space known by a colloquial moniker on the Great Ife campus.
+*   Prioritized myth-busting to eradicate persistent urban legends and misattributions common among freshers and external commentators.
+
+### 🧠 Verified Spatial Architecture & Forensic Findings
+
+1.  **The "Big Three" Building Nicknames**:
+    *   **"White House" (Faculty of Science Complex)**: The iconic white-painted brutalist/tropical modernist edifice designed by Arieh Sharon with open breezeways, housing the Science Deanship, large undergraduate Chemistry/Physics laboratories, and AUD II.
+    *   **"Yellow House" (Department of Mathematics Building)**: Located within the Faculty of Science quadrangle adjacent to White House and Moremi Hall. Painted in vibrant yellow masonry; the academic nerve center for mathematics lectures, calculus tutorials, and board examinations.
+    *   **"Spider House" (Civil Engineering Building / Technology Foyer)**: Designed by Arieh and Eldar Sharon with A.A. Egbor; celebrated for its external cantilevered diagonal steel trusses and supporting stilts that give the building the striking visual appearance of a colossal mechanical spider.
+2.  **Lecture Theatres & Cultural Performance Spaces**:
+    *   **"BOOC" (Biological Sciences Lecture Theatre C)**: Pronounced *"Bee-Oh-Oh-See"* (part of the BOOA/BOOB/BOOC complex). Ground zero for 100-level STEM foundation courses (`BIO 101/102`, `CHM 101`). Completely refurbished and air-conditioned in 2022 via Platform Capital.
+    *   **"ODLT 1 & 2" (Oduduwa Lecture Theatres 1 & 2)**: Stepped mega-theatres behind Oduduwa Hall for large General Studies (GST) lectures and university congresses.
+    *   **"Afrika Amphitheatre" ("Amphi")**: 5,000-seat outdoor bowl beneath Oduduwa Hall, renamed in eternal memory of martyred SUG Secretary-General **George Akinyemi Iwilade ("Afrika")**, murdered in the July 10, 1999 cultist attack.
+    *   **"Pit Theatre" (Department of Dramatic Arts)**: Sharon-designed sunken arena / theatre-in-the-round with tiered concentric seating surrounding a sunken pit stage; legendary venue of Wole Soyinka and Ola Rotimi productions.
+    *   **"Motion Ground"**: The central paved concourse between Hezekiah Library, Oduduwa Hall, and SUB; historical launchpad of student resolutions, motions, and peaceful aluta marches.
+    *   **"SUB" (Ken Saro-Wiwa Building)**: The Students' Union administrative headquarters, dedicated to writer/activist Ken Saro-Wiwa, remodeled in Nov 2022 through alumnus Gen. Lucky Irabor.
+3.  **Residential, Commercial & Culinary Culture**:
+    *   **"Anglomoz" & "Moz 101"**: The lively pedestrian strip and car park between Angola (freshmen males) and Mozambique (freshmen females); home to the humorous art of courting female freshers (*"Moz 101"*).
+    *   **"New Market" (OAU Central Market)**: Sprawling commercial hub behind ETF and Fajuyi Halls for provisions, tailoring, barbering, phone repairs, and traditional food bukas.
+    *   **"New Buka" (New Bukateria)**: Dedicated restaurant complex along the residential ring road housing popular student eateries (*Mr. Banwill*, *Jo's Indulge*, *A1*).
+    *   **"Risky" (or "Risky Burger")**: The iconic student midnight fuel—spicy fried egg tucked inside a warm loaf of Agege bread; the unofficial culinary rite of passage during all-night reading (*TDB*).
+    *   **"Subair"**: The central campus borehole reservoir near Fajuyi/Moremi, celebrated for providing emergency water during campus shortages (as in the 2023 "Subair wash-a-thon").
+4.  **Forensic Myth-Busters**:
+    *   *The "Glass House" Myth*: Debunked. OAU has no building named "Glass House." The central administrative tower is strictly the **Senate Building**.
+    *   *The "Yellow House = Social Sciences" Myth*: Debunked. On Great Ife campus, "Yellow House" specifically designates the **Department of Mathematics building**, not Social Sciences.
+    *   *The "JAC" Myth*: Debunked. The clinic is the **University Health Centre**. "JAC" is the **Joint Action Committee** of non-teaching staff unions (NASU, SSANU, NAAT).
+    *   *The "Opa Oranmiyan on Campus" Myth*: Debunked. The ancient 5.5-meter granite monolith is in **ancient Ife town** (Mopa/Arubidi quarter).
+5.  **Files Codified & Synchronized**:
+    *   Authored [`research/14_campus_landmarks_architecture_and_spatial_nicknames.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/14_campus_landmarks_architecture_and_spatial_nicknames.md).
+    *   Updated [`research/README.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/README.md) to index Dossier 14.
+    *   Updated [`CAMPUS_KNOWLEDGE_VAULT.md`](file:///c:/Users/DELL/Desktop/GUIDE17/CAMPUS_KNOWLEDGE_VAULT.md) Section 6 with the verified landmark dictionary and myth-busters.
+
+### 🎯 Milestone Status & Immediate Tasks
+*   [x] All major campus building nicknames forensically checked and verified.
+*   [x] Spatial mythbusters codified.
+*   [x] Living documentation suite fully synchronized.
+
+### 👥 People & Community
+*   **Project Lead**: Enforced strict verification of campus place nicknames.
+*   **Guide 17**: Conducted deep architectural research and codified Dossier 14.
+
+### ⏭️ Next Immediate Step
+*   Share verified landmark and nickname findings with the Project Lead.
+
+---
+*(Session concluded with Dossier 14 codified and verified on 2026-09-21.)*
 
 

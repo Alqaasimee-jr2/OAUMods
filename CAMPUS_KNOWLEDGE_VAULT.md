@@ -300,20 +300,32 @@
 
 ## 6. Great Ife Lingo Decoder & Scam Defense
 
-### The Great Ife Lingo Decoder
-* **Aro / Aroism**: The famed Great Ife culture of witty, theatrical satire, playful teasing, and humorous street banter practiced in Awolowo and Fajuyi Halls. It is never malicious—it is campus comedy theater. *Survival rule: Never react with anger; smile, banter back, or walk calmly.*
-* **Motion Ground**: The expansive central concourse between the Library, SUB, and Oduduwa Hall. The social, cultural, and political crossroads of Great Ife.
-* **Town-Gown**: The cultural and geographic interface between the student university campus ("Gown") and the ancient town of Ile-Ife ("Town").
-* **BOOC**: Biological Sciences Lecture Theatre (Buba Marwa). The hall where almost all 100-level students take their first university lecture.
-* **White House & Yellow House**: White House is the white-painted Faculty of Science complex; Yellow House is the yellow-painted Faculty of Social Sciences building.
-* **Spider House**: The Faculty of Technology complex with external structural steel trusses resembling spider legs.
-* **Aluta**: The tradition of principled student unionism, intellectual advocacy, and standing up for student welfare ("Victoria Acerta").
+### The Great Ife Landmark & Spatial Nicknames Matrix
+* **White House**: The Faculty of Science central complex. Features iconic white-painted brutalist/tropical modernist architecture with breezy corridors; houses the Science Deanship, Chemistry & Physics departments, and lecture halls.
+* **Yellow House**: The **Department of Mathematics building** (Faculty of Science). Painted in bright yellow masonry, located adjacent to the White House and Moremi Hall; venue for mathematics lectures, calculus tutorials, and math board exams. *(Note: NOT the Faculty of Social Sciences building).*
+* **Spider House**: The Civil Engineering building (housing Civil, Mechanical, and Materials Science Engineering in the Faculty of Technology). Named for its striking cantilevered diagonal steel trusses and support stilts projecting outward like a giant mechanical spider.
+* **BOOC**: **Biological Sciences Lecture Theatre C** (pronounced *"Bee-Oh-Oh-See"*). The largest lecture theatre in the Biological Sciences cluster where 100-level STEM students take foundation biology and general science lectures.
+* **ODLT 1 & 2**: Oduduwa Lecture Theatres 1 & 2 (located behind Oduduwa Hall). Massive stepped lecture halls used for large General Studies (GST) classes and faculty exams.
+* **Afrika Amphitheatre ("Amphi")**: 5,000-seat open-air stepped amphitheatre bowl beneath Oduduwa Hall. Renamed in eternal memory of **George Akinyemi Iwilade ("Afrika")**, the 21-year-old SUG Secretary-General martyred on July 10, 1999; host of matriculations, presidential inaugurations, and concerts.
+* **Pit Theatre**: The Department of Dramatic Arts sunken performance laboratory designed by Arieh Sharon. Features a sunken circular stage ("the pit") surrounded by stepped audience tiers; historical home to Wole Soyinka and Ola Rotimi productions.
+* **Motion Ground**: The expansive central paved concourse between the Hezekiah Library, Oduduwa Hall, and SUB. The historic, cultural, and political crossroads of Great Ife where student motions are passed and peaceful aluta marches converge.
+* **SUB (Ken Saro-Wiwa Building)**: The Students' Union Building, officially named after martyr Ken Saro-Wiwa; remodeled in November 2022 (sponsored by alumnus Gen. Lucky Irabor). The administrative "Seat of Aluta."
+* **Anglomoz & Moz 101**: The social concourse and commercial car park between Angola Hall (freshmen male) and Mozambique Hall (freshmen female). Famous for evening student banter, street snacks, and **"Moz 101"** (campus slang for courting female freshers).
+* **New Market (OAU Central Market)**: The bustling commercial market situated behind ETF and Fajuyi Halls, housing food vendors, grocery stalls, phone repairers, unisex salons, tailor shops, and bukas.
+* **New Buka (New Bukateria)**: The dedicated campus restaurant hub along the residential perimeter road, housing popular eateries (Mr. Banwill, Jo's Indulge, A1 Food Court).
+* **Risky (or "Risky Burger")**: The iconic student midnight fuel—spicy fried egg tucked inside a warm miniature loaf of Agege bread; the unofficial culinary rite of passage during all-night reading ("TDB").
+* **Subair**: The central campus borehole and water distribution reserve near Fajuyi/Moremi, celebrated for providing emergency water during campus shortages (as in the 2023 "Subair wash-a-thon").
+* **Aro / Aroism**: The famed Great Ife culture of witty, theatrical satire, playful teasing, and humorous street banter practiced in Awolowo and Fajuyi Halls. It is campus comedy theater—never react with anger; smile, banter back, or walk calmly.
+* **Aluta**: The tradition of principled student unionism, intellectual advocacy, and defense of student rights ("Victoria Acerta").
 
-### Critical Scam Defense Rules
+### Critical Scam Defense & Spatial Myth-Busters
 1. **The 'Acceptance Fee' Fraud**: OAU has never charged an acceptance fee. Any portal or cybercafé asking for one is scamming you.
 2. **Fake WhatsApp Hostel 'Agents'**: Touts pretending to be Student Affairs officials offering to "sell" or "reserve" Angola or Moz bed spaces for ₦50,000–₦100,000. All allocations are 100% automated on `eportal.oauife.edu.ng`.
-3. **Clearance Fast-Track Touts**: People loitering near faculties offering to "help submit your file jacket for a fee." Clearance is completely free. Submit only to designated faculty officers inside faculty offices.
-4. **The 48-Hour Exam Illness Rule**: If severe illness forces you to miss a university exam, you must report to the University Health Center within **48 hours** to obtain an official medical certificate. Uncertified missed exams result in an automatic 'F'.
+3. **The "Glass House" Myth**: OAU has no building called "Glass House." That belongs to OOU or Ibadan. The administrative tower at OAU is strictly the **Senate Building**.
+4. **The "JAC" Health Centre Myth**: The clinic is the **University Health Centre**. **"JAC"** stands for the **Joint Action Committee**, the non-teaching staff union coalition (NASU, SSANU, NAAT) that leads industrial actions.
+5. **The "Opa Oranmiyan" Myth**: The ancient granite Staff of Oranmiyan is located in **ancient Ile-Ife town** (Mopa/Arubidi quarter), NOT on the university campus.
+6. **Clearance Fast-Track Touts**: People loitering near faculties offering to "help submit your file jacket for a fee." Clearance is completely free. Submit only to designated faculty officers inside faculty offices.
+7. **The 48-Hour Exam Illness Rule**: If severe illness forces you to miss a university exam, you must report to the University Health Center within **48 hours** to obtain an official medical certificate. Uncertified missed exams result in an automatic 'F'.
 
 ---
 
