@@ -296,6 +296,27 @@
 * **All Souls' Chapel (Chapel of the Resurrection)**: Interdenominational Protestant services; choral evensong and communion.
 * **University Joint Christian Mission (UJCM)**: Coordinating council for all campus fellowships (ECU, RCF, BSF, CASOR, TACSFON, DLCF, WCF, etc.); Afrika Amphitheatre joint services.
 
+### Great Ife Student Social Lifecycle & Milestone Traditions
+* **100-Level Freshmen**:
+  * *Orientation Week*: Central University Orientation at Afrika Amphitheatre, mandatory INTECU ICT training, faculty/departmental orientations, and religious fellowship welcomes (ECU, RCF, MSSN).
+  * *Matriculation Ceremony*: Academic gown procession in Afrika Amphitheatre, Registrar's Matriculation Oath, family feasts ("Matric Rice") in Angola and Mozambique quadrangles.
+  * *Anglomoz & "Moz 101"*: Evening strolls, street fast food, and the art of courting female freshers at the Anglomoz car park.
+  * *Freshers' Sports Cup*: Inter-departmental soccer championships for 100-level athletic discovery.
+* **Stalites (200L – 300L/400L Intermediate Years)**:
+  * *Hall Weeks*: Annual 7-day residential carnivals—most notably **Awo Hall Week** featuring the satirical Aro Carnival and the communal *Common Pot* (*Asepo*), and **Fajuyi Hall Week** with the *Tug of Words* debates.
+  * *Departmental Weeks (The 5-Day Dress Parade)*: Monday (Corporate/Professional), Tuesday (Jersey/Sports), Wednesday (Denim-on-Denim), Thursday (Costume/Retro 70s), Friday (Cultural/Native Royalty), concluding with the Saturday Annual Departmental Dinner & Awards Gala.
+  * *Campus Politics*: Intense election cycles featuring **Manifesto Night** at the Amphitheatre and **Press Night** grilled by the Association of Campus Journalists (ACJ OAU).
+* **Final Year Brethren (FYB)**:
+  * *FYB Week*: Penultimate week celebrations including *Costume Day* (parodying Nollywood characters, historical figures) and *Back to Primary School Day* (wearing school uniforms with lunchboxes).
+  * *Sign-Out Day*: Emergence from final degree exams in plain white T-shirts; peers and professors cover the shirts in Sharpie signatures and prayers, followed by wild car motorcades along Road 1 and water splashes on Motion Ground.
+  * *Professional Inductions*: Formal statutory oath-taking ceremonies—Hippocratic Oath at OAUTHC (Medicine), PCN Induction (Pharmacy), NMCN Induction (Nursing), COREN/NSE (Engineering).
+* **Postgraduate Scholars (Masters & Ph.D.)**:
+  * *Murtala Muhammed Hall Culture*: Serene, mature research environment; intellectual salon discussions in the Common Room.
+  * *Postgraduate Students' Association (PGSA)*: Orientation colloquiums, research funding advocacy, and annual networking galas.
+  * *Academic Defense Feasts*: Celebratory meals hosted by candidates after successfully passing external thesis defenses.
+* **Campus-Wide Celebration**:
+  * *Annual December Convocation*: Multi-day graduation festival in Oduduwa Hall and the legendary student tradition of the **"Convo Rice Hunt"** across campus.
+
 ---
 
 ## 6. Great Ife Lingo Decoder & Scam Defense

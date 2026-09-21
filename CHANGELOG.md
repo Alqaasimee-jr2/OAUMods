@@ -699,6 +699,62 @@ Authored [`research/07_student_politics_elections_and_governance.md`](file:///c:
 *   Share verified landmark and nickname findings with the Project Lead.
 
 ---
-*(Session concluded with Dossier 14 codified and verified on 2026-09-21.)*
+
+## 📅 2026-09-21 — Entry 018: Complete Student Social Lifecycle, Traditions & Milestone Calendar Codified (100L Freshers to Postgrad)
+
+### 💭 Context & Thoughts
+*   The Project Lead issued a clear, expansive directive: **"look into social activities, from freshmen to the final and to postgrad. from new intake up."**
+*   Student life at Obafemi Awolowo University is renowned for being an intense dialectic between high academic rigor and an unwritten, fiercely protected generational calendar of social rites, residential carnivals, satirical street theater, and graduation milestones.
+*   Conducted an exhaustive investigation into the social trajectory across all four academic tiers: Freshmen (100L), Stalites (200L–300/400L), Final Year Brethren (FYB), and Postgraduate Scholars (Masters & Ph.D.).
+
+### 🧠 Verified Lifecycle Stages & Milestone Traditions Codified
+
+1.  **Stage 1: Freshmen (Part 1 / 100-Level)**:
+    *   *Arrival & Residential Inception*: Moving into Angola (males) and Mozambique (females); room-rep elections; squatting/porting networks.
+    *   *Orientation Pipeline*: Central University Orientation at the Afrika Amphitheatre; mandatory INTECU ICT training; departmental course advisor orientations; religious fellowship welcomes (ECU, RCF, MSSN Dawah caravan, NFCS banquet).
+    *   *Matriculation Ceremony*: Academic gown processions, Registrar's Matriculation Oath in the Amphitheatre, family arrivals, and the famous campus feast of "Matric Rice."
+    *   *Freshmen Social Scene*: Anglomoz car park evening food stalls (indomie, *boli*, "Risky") and **"Moz 101"** (the art of courting female freshers); Freshers' Sports Cup; Health Centre ("JAC") early-morning screening queue camaraderie.
+2.  **Stage 2: Stalites & Intermediate Years (Parts 2–4)**:
+    *   *Hall Weeks*: Annual 7-day residential carnivals. Foremost is **Awo Hall Week** featuring the satirical **Aro Carnival Procession** across campus, the communal firewood **"Common Pot" (*Asepo*)**, and the midnight bonfire/variety night; **Fajuyi Hall Week** featuring the *Tug of Words* intellectual debates; **Moremi/Moz Weeks** featuring pageants and health symposia.
+    *   *Departmental Weeks (The 5-Day Themed Dress Parade)*:
+        *   Monday: Corporate / Professional Day (business suits, blazers).
+        *   Tuesday: Jersey / Sports Day (club jerseys, football matches).
+        *   Wednesday: Denim-on-Denim / Streetwear Day.
+        *   Thursday: Costume / Retro Day (70s/80s vintage, character parodies).
+        *   Friday: Cultural / Traditional Royalty Day (Aso-Oke, Agbada, Ankara, Isiagu).
+        *   Saturday: Grand Annual Departmental Dinner & Awards Gala.
+    *   *Democratic Politics*: High-stakes unionism featuring **Manifesto Night** at the Amphitheatre, **Press Night** grilled by the Association of Campus Journalists (ACJ OAU), and post-election victory processions.
+    *   *Cultural & Spiritual Peaks*: MSSN Jihad Week; UJCM multi-fellowship joint amphitheatre crusades; weekend dramatic productions at the Sharon Pit Theatre.
+3.  **Stage 3: Final Year Brethren (FYB) & Graduation**:
+    *   *FYB Week*: Penultimate week celebrations including *Costume Day* (parodying Nollywood, historical monarchs, pop culture) and *Back to Primary School Day* (wearing school uniforms with lunchboxes and knee socks).
+    *   *Sign-Out Day (The Ritual of the White Shirts)*: Finalists emerge from their last examination in plain white crewnecks; peers, juniors, and lecturers cover every inch of the shirts with Sharpie signatures, blessings, and jokes; followed by car convoys along Road 1 and joyous water/drink splashing on Motion Ground and Senate Building steps.
+    *   *Finalists' Dinner & Superlatives Gala*: Formal black-tie banquet awarding departmental superlatives.
+    *   *Statutory Professional Inductions*: Hippocratic Oath at OAUTHC (Medicine), Pharmacy Council of Nigeria (PCN) induction, NMCN induction (Nursing), COREN/NSE (Engineering), and Nigerian Law School send-offs.
+4.  **Stage 4: Postgraduate Scholars (Masters & Ph.D.)**:
+    *   *Murtala Muhammed Hall Culture*: Serene, mature research environment; intellectual salon discussions in the Common Room on research hypotheses and academic publications.
+    *   *Postgraduate Students' Association (PGSA)*: Orientation colloquiums, thesis processing advocacy, and annual networking galas with faculty.
+    *   *Academic Defense Feasts*: Celebratory meals hosted by candidates after successfully passing external thesis defenses.
+    *   *Town-Gown & Staff Club*: Networking at the University Senior Staff Club and evening dinners in Mayfair.
+5.  **University-Wide Pinnacle: Annual Convocation Week**:
+    *   Multi-day graduation ceremonies at Oduduwa Hall and the legendary campus tradition of the **"Convo Rice Hunt"** where students share meals with graduands' families.
+6.  **Files Codified & Synchronized**:
+    *   Authored [`research/15_student_social_lifecycle_traditions_and_events.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/15_student_social_lifecycle_traditions_and_events.md).
+    *   Updated [`research/README.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/README.md) to index Dossier 15.
+    *   Updated [`CAMPUS_KNOWLEDGE_VAULT.md`](file:///c:/Users/DELL/Desktop/GUIDE17/CAMPUS_KNOWLEDGE_VAULT.md) Section 5 with the social lifecycle calendar.
+
+### 🎯 Milestone Status & Immediate Tasks
+*   [x] Student social activities mapped from 100L freshers to postgrad.
+*   [x] Milestone traditions (Matriculation, Hall Weeks, FYB Week, Sign-Out, Inductions, Convocation) codified.
+*   [x] Living documentation suite fully synchronized and committed.
+
+### 👥 People & Community
+*   **Project Lead**: Prompted the deep investigation into social activities across all academic tiers.
+*   **Guide 17**: Researched, synthesized, and codified the complete social lifecycle matrix into Dossier 15.
+
+### ⏭️ Next Immediate Step
+*   Present findings to the Project Lead for review and align on subsequent priorities.
+
+---
+*(Session concluded with Dossier 15 codified and verified on 2026-09-21.)*
 
 
