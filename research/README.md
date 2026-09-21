@@ -20,6 +20,7 @@
 | **09** | **Religious Bodies, Worship Places & Mosques** | Christian ecosystem (UJCM, Committee of Presidents, ECU, RCF, BSF, Catholic Chaplaincy OLPLC/NFCS, All Souls Chapel), Muslim ecosystem (MSSN OAU, Central Mosque, hall mosques, Jihad Week, Ramadan feeding), regulations. | [Read Research 09](./09_religious_bodies_places_of_worship_and_fellowships.md) |
 | **10** | **Health Services, Pharmacy & OAUTHC** | Primary care at Health Centre ("JAC"), Green Card mandatory registration, TSHIP health insurance, 24/7 ambulance lines, pharmacy reality, OAUTHC tertiary teaching hospital referral, and 2021 medical protests. | [Read Research 10](./10_health_services_health_centre_pharmacy_and_oauthc.md) |
 | **11** | **Sports, Athletics & NUGA History** | Directorate of Sports, available disciplines, Sports Complex (Main Bowl, Olympic pool, indoor hall, tennis), trials/admission through sports, HOD/Dean/VC cups, and 1970/1973/1984/2014 NUGA hosting history. | [Read Research 11](./11_sports_athletics_facilities_and_nuga_history.md) |
+| **12** | **Verified Sources & Credible Registry** | Statutory university handbooks, verified principal officers (VC, DSA Odedire, CMD Okeniyi, Chief Imam Sanusi, Chaplains), independent press archives (ACJ, Premium Times, Punch), and forensic case registries. | [Read Research 12](./12_verified_sources_institutional_citations_and_directory.md) |
 
 ---
 

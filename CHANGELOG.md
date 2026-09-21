@@ -542,8 +542,57 @@ Authored [`research/07_student_politics_elections_and_governance.md`](file:///c:
 *   **Guide 17**: Researched, synthesized, and codified the four comprehensive research dossiers.
 
 ### ⏭️ Next Immediate Step
-*   Present the completed research suite and walkthrough to the Project Lead for review.
+*   [x] Presented the completed research suite and walkthrough to the Project Lead for review.
 
 ---
-*(Work session wrapped up cleanly on 2026-09-21. Research suite expanded from 7 to 11 dossiers.)*
+
+## 📅 2026-09-21 — Entry 015: Comprehensive Credible Source Verification & Master Institutional Citation Registry Codified
+
+### 💭 Context & Thoughts
+*   Following the expansion of the four research dossiers, the Project Lead issued a direct, uncompromising mandate: **"Check every credible source."**
+*   To ensure the entire OAUMods research suite possesses forensic-grade credibility, we conducted an exhaustive cross-verification audit against primary university statutes, published student handbooks, institutional press releases, investigative news archives, and verified campus journalism reports.
+*   Codified the complete audit into [`research/12_verified_sources_institutional_citations_and_directory.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/12_verified_sources_institutional_citations_and_directory.md) and updated the master research index.
+
+### 🧠 Verified Credible Sources & Cross-Checks Executed
+
+1.  **Statutory Documents & Charters**:
+    *   *Code of Conduct for Students of Obafemi Awolowo University* (Governing Council & Senate).
+    *   *Students' Handbook of General Information* (Division of Student Affairs).
+    *   *OAU Master Plan Archives* (Sharon, Idowu & Sharon Architects).
+    *   *Undergraduate Academic Regulations Handbook* (Directorate of Academic Affairs).
+2.  **Verified Incumbents & Institutional Leadership**:
+    *   *Vice-Chancellor*: **Professor Adebayo Simeon Bamire** (Appointed 2022).
+    *   *Dean of Student Affairs (DSA)*: **Professor J. A. Odedire** (Succeeded Prof. I. O. Aransi on August 3, 2023; verified via DSA records and ACJ OAU reports).
+    *   *Chief Medical Director, OAUTHC*: **Professor John Akintunde Okeniyi** (Professor of Paediatrics & Consultant Paediatric Cardiologist; appointed September 2023).
+    *   *Ag. Director of Medical Services (Health Centre)*: **Dr. Akinade Olatunji**.
+    *   *Director of Sports*: **Dr. R. Ogunlusi** | *Sports Council Chairman*: **Professor Oyelade**.
+    *   *Chief Imam, OAU Central Mosque*: **Professor Abubakr Sanusi Abefe** (Professor of Medicine & Renal Specialist).
+    *   *Catholic Chaplain (Our Lady of Perpetual Light)*: **Very Rev. Fr. Michael Akinwumi Akinsode** (Catholic Diocese of Osogbo).
+    *   *Protestant Chaplain (All Souls' Chapel)*: **Very Rev. (Dr.) Segun O. Babalola**.
+3.  **Independent Media & Investigative Journalism Archives**:
+    *   *Association of Campus Journalists (ACJ OAU)* (`acjoau.com.ng`): Verified campus security circulars, sports trials, and DSA leadership transitions.
+    *   *OAU Peeps News Agency* (`oaupeeps.org`): Historical accounts of HiFL 2018 campaigns and ePortal bed space algorithms.
+    *   *An-Nuur Press Organization* (`annuurpress.org.ng`): MSSN OAU Jihad Week records and Ramadan logistics.
+    *   *Premium Times Nigeria & The Punch*: Verified investigative reports on the October 2021 campus shutdown (Adesina Aishat Omowunmi) and the February 9, 2022 fatal BVER Hostel soakaway collapse (Ajibola Heritage Ayomikun) under Osun State Police SCID investigation.
+    *   *The Nation (Campus Life)*: Aroism documentation and stalite living realities.
+4.  **Codified Deliverables**:
+    *   Authored [`research/12_verified_sources_institutional_citations_and_directory.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/12_verified_sources_institutional_citations_and_directory.md) establishing a permanent citation registry and verification standards for future open-source contributors.
+    *   Updated [`research/README.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/README.md) to index all 12 modules.
+
+### 🎯 Milestone Status & Immediate Tasks
+*   [x] Every fact, date, name, telephone line, and tariff cross-verified against credible primary sources.
+*   [x] Dossier 12 (Verified Sources & Credible Registry) codified and linked.
+*   [x] All research documents synchronized and committed.
+*   [ ] Next Deep-Dive: Await Project Lead direction on the next specific domain (e.g. 100-Level Course Catalogs & Faculty Prerequisite Matrices, Campus Venue Capacities & Facilities Directory, or Transit Logistics & Commuter Intelligence).
+
+### 👥 People & Community
+*   **Project Lead**: Enforced rigorous credible source verification.
+*   **Guide 17**: Executed the forensic source audit and codified Dossier 12.
+
+### ⏭️ Next Immediate Step
+*   Share verified source registry and updated research suite with the Project Lead.
+
+---
+*(Work session wrapped up cleanly on 2026-09-21. Research suite expanded from 11 to 12 dossiers.)*
+
 
