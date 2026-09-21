@@ -219,8 +219,11 @@
 | **Mayfair / Lagere Axis** | 15–25 mins by Campus Bus / Town Shuttle | ₦120,000 – ₦250,000 | **Power**: Moderate (Town grid)<br>**Security**: Moderate | Budget-friendly rents and low food costs, but daily transportation budget and travel time must be factored in. |
 | **Asherifa / Parakin Axis** | 10–15 mins by Keke / Shuttle | ₦200,000 – ₦450,000 (Modern studio flats) | **Power**: High (Substation)<br>**Security**: High (Gated estates) | High-end student flats with tiles, private boreholes, and quiet study environments. |
 
+* **Official On-Campus Bed Space Fee**: **₦50,000** (2023/2024 session rate). **Crucial rule: Never pay on the portal without an active, cryptographically allocated bed space confirmation slip.** Payments made without an allocation are non-refundable.
+
 ### Landlord & Inspection Anti-Dupe Checklist
 * Never pay money to any agent via WhatsApp or bank transfer without a physical walk-through inspection with an accompanying senior student or friend.
+* **Inspect Soakaways & Septic Tank Slabs Rigorously**: Verify that all septic tanks and drainage pits have solid reinforced concrete covers, not wooden planks or termite-damaged lids (following the fatal February 2022 BVER Hostel collapse in Maintenance).
 * Verify the water source: does the house have an electric borehole with generator backup, or does it rely on a hand-drawn well that dries up in the dry season?
 * Confirm whether the electrical meter is a dedicated prepaid meter split evenly among tenants, or an unmetered estimated billing setup.
 * Confirm recurring security dues and waste disposal levies in writing before signing the tenancy agreement.
@@ -263,12 +266,29 @@
 * **INTECU / Computer Center**: Reliable charging hub and stable Wi-Fi connection during general power maintenance.
 * **BOOC & ODLT Classrooms**: Large auditoriums open at night for group revision, peer tutorials, and study circles.
 
-### Verified Campus Emergency Helplines
-* **University Health Center Ambulance (JAC)**: `+234 803 392 4118` *(24/7 Medical Emergencies)*
-* **Campus Security Post (Main Gate)**: `+234 803 721 9540` *(Safety, Intrusion, Theft)*
-* **Campus Security Unit (SUB Post)**: `+234 802 884 1221` *(Internal Campus Distress)*
-* **Student Union (SUG) Welfare Office**: `+234 814 620 3000` *(Student Rights, Harassment, Welfare)*
-* **Division of Student Affairs (DSA)**: `+234 803 516 7744` *(Hostel & Administrative Inquiries)*
+### Verified Campus Emergency Helplines & Health Facilities
+* **University Health Center Ambulances (JAC - 24/7 Primary Care Dispatch)**:
+  * 📞 Line 1: `0815 375 0977`
+  * 📞 Line 2: `0903 569 9725`
+  * 📞 Line 3: `0817 398 0288`
+* **OAUTHC Emergency Medicine Department (Tertiary Teaching Hospital - Ilesa Rd)**:
+  * 📞 Adult Emergency: `+234 815 209 2813`
+  * 📞 Children Emergency (CHED): `+234 815 209 2908`
+  * 📞 General Outpatient (GOPD): `+234 805 500 4262`
+* **Campus Security Network**:
+  * 📞 Campus Security Post (Main Gate): `+234 803 721 9540` *(Safety, Intrusion, Theft)*
+  * 📞 Campus Security Unit (SUB Post): `+234 802 884 1221` *(Internal Campus Distress)*
+* **Student Union (SUG) & Student Affairs**:
+  * 📞 Student Union (SUG) Welfare Office: `+234 814 620 3000` *(Student Rights, Harassment, Welfare)*
+  * 📞 Division of Student Affairs (DSA): `+234 803 516 7744` *(Hostel & Administrative Inquiries)*
+* **Directorate of Sports (Sports Council)**:
+  * 📍 Office: OAU Sports Complex Secretariat | 📧 `oausports@gmail.com` | Trials in Harmattan Semester
+
+### Campus Religious & Worship Centers
+* **OAU Central Mosque**: Central campus religious hub; Friday Juma'at (1:00 PM) and daily prayers. Hall mosques in Awo, Fajuyi, ETF, Angola, and Mozambique.
+* **Our Lady of Perpetual Light Catholic Chaplaincy (OLPLC / NFCS)**: Central campus Catholic church; daily and Sunday masses.
+* **All Souls' Chapel (Chapel of the Resurrection)**: Interdenominational Protestant services; choral evensong and communion.
+* **University Joint Christian Mission (UJCM)**: Coordinating council for all campus fellowships (ECU, RCF, BSF, CASOR, TACSFON, DLCF, WCF, etc.); Afrika Amphitheatre joint services.
 
 ---
 

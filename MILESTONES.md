@@ -88,15 +88,26 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
   - [ ] Affordable food spots, cafeterias, and buttery joints across campus and halls.
   - [ ] Student services: Printing/photocopying hubs, cybercafés, bookshops, laundry.
   - [ ] Banks, working ATMs, and POS cash withdrawal points.
-- [ ] **2.3 Essential Directory & Emergency Helplines**:
-  - [ ] One-tap emergency call buttons for Health Center Ambulance (JAC) and Campus Security Post.
-  - [ ] Contact list for Dean of Student Affairs, Faculty Officers, Sub-Deans, and SUG Welfare Desk.
-- [ ] **2.4 Great Ife Survival Bible & Lingo Decoder**:
-  - [ ] Campus slang dictionary ("Aro", "Town-Gown", "Aluta", "Motion Ground", "BOOC").
-  - [ ] Scam Alert section (fake hostel agents, unofficial clearance fees, dues to avoid).
-  - [ ] Lifestyle guide: Top budget eateries, reliable power outlets, 24/7 night study halls.
+- [x] **2.3 Essential Directory, Health & Emergency Systems**:
+  - [x] University Health Center ("JAC") primary care protocols, mandatory "Green Card" registration pipeline, and TSHIP integration.
+  - [x] 24/7 dedicated campus ambulance hotlines (`0815 375 0977`, `0903 569 9725`, `0817 398 0288`) and OAUTHC tertiary referral protocols.
+  - [x] OAUTHC Emergency Medicine Department direct contact lines (`+234 815 209 2813`, `+234 815 209 2908`, `+234 805 500 4262`).
+  - [x] Historical review of health crises (October 2021 protests) and student emergency escort playbooks.
+- [x] **2.4 Great Ife Residential, Religious & Sports Knowledge Base**:
+  - [x] Comprehensive profiling of all 9 halls of residence, layout, amenities, cooking/appliance bans, curfew, and Aroism culture (`research/08`).
+  - [x] Complete mapping of religious ecosystems: UJCM, Committee of Presidents, major fellowships, Catholic Chaplaincy OLPLC, All Souls Chapel, MSSN OAU, Central Mosque, hall mosques, and Jihad Week (`research/09`).
+  - [x] Extensive sports intelligence: Directorate of Sports, available disciplines, world-class Sports Complex facilities, trials, HOD/Dean/VC cups, and 1970/1973/1984/2014 NUGA hosting history (`research/11`).
+- [ ] **2.5 Campus Mobility, Transit & Movement Engine**:
+  - [ ] Detailed guide to Campus Shuttles (Main Gate to SUB, Town to Campus, Hall routes).
+  - [ ] Tricycle (Keke) parks and routes (SUB, Fajuyi, Mozambique, Maintenance).
+  - [ ] Verified student fare table (protecting freshers from being overcharged).
+  - [ ] Recommended walking shortcuts across campus.
+- [ ] **2.6 Campus Life, Food Spots & Essentials**:
+  - [ ] Affordable food spots, cafeterias, and buttery joints across campus and halls.
+  - [ ] Student services: Printing/photocopying hubs, cybercafés, bookshops, laundry.
+  - [ ] Banks, working ATMs, and POS cash withdrawal points.
 
-**Exit Criteria for Phase 2**: Full coverage of day-to-day freshman survival, transport, food, and safety.
+**Exit Criteria for Phase 2**: Full coverage of day-to-day freshman survival, transport, food, health, and safety.
 
 ---
 

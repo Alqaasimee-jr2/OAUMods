@@ -462,8 +462,88 @@ Authored [`research/07_student_politics_elections_and_governance.md`](file:///c:
 *   **Guide 17**: Researched and authored the comprehensive political dossier.
 
 ### ⏭️ Next Immediate Step
-*   [x] Session concluded cleanly. All wide and political deep-dive dossiers codified.
-*   [ ] Next Session: Select the next specific deep-dive research domain (e.g. 100-Level Course Catalogs & Prerequisites across faculties, Campus Venue Room Capacities & Facilities, or Transit & Commuter Logistics).
+* [x] Session concluded cleanly. All wide and political deep-dive dossiers codified.
+* [x] Next Session: Select the next specific deep-dive research domain (e.g. 100-Level Course Catalogs & Prerequisites across faculties, Campus Venue Room Capacities & Facilities, or Transit & Commuter Logistics).
 
 ---
-*(Work session wrapped up cleanly on 2026-09-20. Ready for next stretch.)*
+
+## 📅 2026-09-21 — Entry 014: Deep Research Sweep Codified: Halls of Residence, Religious Ecosystems, Healthcare & OAUTHC, and Sports & NUGA Legacy
+
+### 💭 Context & Thoughts
+*   The Project Lead issued a comprehensive, high-intensity research mandate covering four foundational pillars of Great Ife campus life:
+    1. **Halls of Residence**: Exact locations, architectural layouts, comprehensive amenities inventory, strict DSA regulations, cooking/electrical bans, gate curfews, and unique hall cultures.
+    2. **Religious Bodies**: Christian ecosystem (UJCM, Committee of Presidents, major fellowships, Catholic Chaplaincy OLPLC, All Souls Chapel), Muslim ecosystem (MSSN OAU Branch, Central Mosque, hall mosques, Jihad Week, Ramadan feeding), and DSA inter-faith regulations.
+    3. **Health Services & OAUTHC**: Primary care at the Health Centre ("JAC"), the mandatory "Green Card" screening pipeline, TSHIP health insurance, 24/7 emergency ambulance dispatch lines, pharmacy formulary realities, OAUTHC tertiary teaching hospital emergency departments, and historical analysis of health crises/reforms (October 2021 protests).
+    4. **Sports & Athletic History**: Governance via the Directorate of Sports (Sports Council), 15+ sporting disciplines, world-class facilities (Main Bowl, Olympic pool, indoor gym, tennis courts), athlete recruitment (trials, Admission Through Sports, Freshmen Sports Fiesta), intramural cups (HOD, Dean's, VC Cup), and OAU's legendary hosting of NUGA in 1970, 1973, 1984, and 2014.
+*   Conducted exhaustive intelligence gathering across institutional archives, university handbooks, student press dispatches (ACJ OAU), and news reports to author four authoritative, modular research dossiers.
+
+### 🧠 Research Deliverables & Insights Codified
+
+1.  [`research/08_halls_of_residence_amenities_and_regulations.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/08_halls_of_residence_amenities_and_regulations.md):
+    *   *Spatial Master Plan*: The Sharon residential layout, separation of academic core from residential zones, the "Anglo-Moz" freshman periphery vs. the central stalite citadel.
+    *   *Profiles of All 9 Halls*: Angola Hall (Part 1 males, Blocks A–F), Mozambique Hall (Part 1 females, low-rise courtyard blocks), Adekunle Fajuyi Hall (stalite gentlemen, Main Blocks & Annex), Obafemi Awolowo Hall (political headquarters, Blocks A–H, Awo Cafe), Moremi Hall (premium central stalite females), ETF Hall (modern stalite males), Alumni Hall (stalite females/finalists), Ladoke Akintola Hall (senior females/PGs), and Murtala Muhammed Hall (postgraduate flats).
+    *   *Amenities Inventory*: Boreholes, overhead tanks, water tapping culture, reading rooms, butteries (Awo Cafe, Fajuyi buttery strip, Moz vendors), sports courts (Moz volleyball, Faj table tennis), and power backups.
+    *   *Hostel Regulations (DSA Standards)*:
+        *   **The Boiling Ring & Hot Plate Trap**: Total prohibition on cooking in rooms; strict ban on immersion heaters, hot plates, and gas cylinders. Penalties: mandatory 1-semester suspension and property confiscation.
+        *   **Squatting & Bed Space Trading**: Ban on unauthorized "porting" and commercial black-market trading; forfeiture of bed space and Student Disciplinary Committee (SDC) referral.
+        *   **Gate Closures & Visitors**: Mozambique Hall gate lock strictly at 10:00 PM; absolute ban on male visitors crossing the Porters' Lodge in female halls.
+    *   *Cultural Sociology*: The art and philosophy of "Aroism" in Awo and Fajuyi; survival rules for freshers; Mozambique "Mozilla" sisterhood; floor representatives and Hall Executive Councils (HEC).
+
+2.  [`research/09_religious_bodies_places_of_worship_and_fellowships.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/09_religious_bodies_places_of_worship_and_fellowships.md):
+    *   *Christian Ecosystem*:
+        *   **UJCM (University Joint Christian Mission)**: Coordinating council governed by the Committee of Presidents (C.O.P); organizes Amphitheatre mission congresses and exam prayer vigils.
+        *   **Fellowships Directory**: Evangelical Christian Union (ECU, founded 1962, oldest indigenous fellowship with massive alumni base), RCF, BSF, CASOR, TACSFON, DLCF, WCF, CACCF, NIFES, MFMCF, MCF, ASF.
+        *   **Academic Tutorial Networks**: Free Part 1 weekend tutorials run by campus fellowships in BOOC and White House (MTH 101, PHY 101, CHM 101).
+        *   **Catholic Chaplaincy**: Our Lady of Perpetual Light Catholic Chaplaincy (OLPLC, est. 1962) and NFCS; daily and Sunday mass schedules.
+        *   **Protestant Interdenominational**: All Souls' Chapel (Chapel of the Resurrection); choral evensong and communion.
+        *   **Gathering Venues**: Afrika Amphitheatre, Oduduwa Hall, SUB Canopies, and lecture theatres (BOOC, AUD, Yellow House, ODLT).
+    *   *Muslim Ecosystem*:
+        *   **MSSN OAU Branch**: Ameer, Shura Council, Dawah Secretariat, Sisters' Wing (Al-Mu'minaat / Sisters' Circle), and free freshman tutorials.
+        *   **Mosques Across Campus**: OAU Central Mosque (central Friday Juma'at hub for thousands), Awolowo Hall Mosque, Fajuyi Hall Mosque, ETF Hall Mosque, Angola Mosque, Mozambique Mosque.
+        *   **Flagship Calendar**: Annual "Jihad Week" (intellectual lectures, Prof. Rahaman Qur'an & Debate Competition, Ameer's Cup, Central Mosque cleaning), Ramadan Free Feeding Scheme (daily Sahur and Iftar across Central and hall mosques funded by UNIFEMGA alumni).
+        *   **Historical Resolution**: The 2016 hall mosques temporary administrative closure incident and institutional peace resolution.
+    *   *DSA Regulatory Framework*: Mandatory registration, strict noise pollution limits (PA system bans around lecture theatres during 7:00 AM–6:00 PM academic hours), and inter-faith harmony.
+
+3.  [`research/10_health_services_health_centre_pharmacy_and_oauthc.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/10_health_services_health_centre_pharmacy_and_oauthc.md):
+    *   *Two-Tier Healthcare Architecture*: Primary care at OAU Health Centre ("JAC") vs. tertiary care at Obafemi Awolowo University Teaching Hospitals Complex (OAUTHC).
+    *   *OAU Health Centre Units*: GOPD, Emergency Wards, Diagnostic Laboratory, Pharmacy, Dental Clinic, Nursing, Environmental Health, Student vs Staff Clinics.
+    *   *The Mandatory "Green Card" Registration Pipeline*: Step-by-step workflow from ePortal profile creation, payment verification, diagnostic screening (Chest X-ray, Full Blood Count, Blood Group/Genotype, Urinalysis), physical examination, and card issuance.
+    *   *Emergency Response & 24/7 Hotlines*: Verified campus ambulance dispatch numbers: `0815 375 0977`, `0903 569 9725`, `0817 398 0288`.
+    *   *Pharmacy Formulary Reality*: Essential medicines formulary under TSHIP/NHIA vs the student "paracetamol myth"; off-campus commercial pharmacy alternatives at Campus Gate, Mayfair, and Lagere.
+    *   *OAUTHC Tertiary Teaching Hospital*: Location on Ilesa Road / Ife bypass; 24-hour Emergency Medicine Department (EMD) contact lines: Adult Emergency (`+234 815 209 2813`), Children Emergency (`+234 815 209 2908`), GOPD (`+234 805 500 4262`); 2026 NEMSAS advanced life-support ambulance deployment; ambulance transfer protocols.
+    *   *Student Health Crises & Reforms*: Detailed analysis of the October 2021 protests following the demise of Adesina Aishat Omowunmi, highway blockades, campus shutdown, administrative probe, and subsequent emergency reforms; the November 2023 Subair Enitan "hand wash-a-thon" health debriefing.
+    *   *Emergency Student Playbook*: Six-step roommate emergency escalation protocol.
+
+4.  [`research/11_sports_athletics_facilities_and_nuga_history.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/11_sports_athletics_facilities_and_nuga_history.md):
+    *   *Sports Governance & Varsity*: Directorate of Sports / OAU Sports Council (Sports Complex Secretariat, `oausports@gmail.com`), coaching staff, student sports directors, the "OAU Giants".
+    *   *15+ Sports Disciplines*: Team ball sports, Track & Field, Swimming, Racquet sports, Combat arts (Taekwondo, Judo, Karate), and Mind sports (Chess, Scrabble).
+    *   *World-Class Facilities*: Main Bowl Stadium (IAAF-certified tartan track, football pitch), 50-meter Olympic-sized competition pool, Staff Club pool, basketball complex (4 outdoor courts + 1 indoor court), tennis complex (WAUG standard), indoor gymnasium (4 badminton courts, combat mats, fitness machines), cricket oval, practice fields, and squash courts.
+    *   *Pathways to Join*: Harmattan Semester general screening trials, specialized "Admission Through Sports" recruitment, Freshmen Sports Fiesta, HOD/Dean's Cup tryouts, and campus jogging/pickup game culture.
+    *   *Tournament Pyramid*: HOD Cup $\rightarrow$ Dean's Cup $\rightarrow$ Inter-Hall rivalries (Awo vs Fajuyi, Angola vs Moz) $\rightarrow$ Vice-Chancellor's Cup (VC Cup) $\rightarrow$ Varsity selection.
+    *   *Collegiate Sporting Legacy*: Founding role in NUGA (1965/1966); hosting history across 1970, 1973, 1984, and the landmark 24th NUGA Games in 2014; WAUG and Olympic alumni achievements.
+
+5.  *Living Documentation Synchronization*:
+    *   [`research/README.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/README.md) updated with complete entries for modules 08, 09, 10, and 11.
+    *   [`CAMPUS_KNOWLEDGE_VAULT.md`](file:///c:/Users/DELL/Desktop/GUIDE17/CAMPUS_KNOWLEDGE_VAULT.md) enriched with verified 24/7 Health Centre emergency dispatch hotlines, OAUTHC Emergency Department numbers, Sports Council contact details, and central worship center information.
+    *   [`MILESTONES.md`](file:///c:/Users/DELL/Desktop/GUIDE17/MILESTONES.md) updated reflecting completion of Tasks 2.3 and 2.4.
+
+### 🎯 Milestone Status & Immediate Tasks
+*   [x] Dossier 08 (Halls of Residence, Amenities & Regulations) created.
+*   [x] Dossier 09 (Religious Bodies, Worship Places & Mosques) created.
+*   [x] Dossier 10 (Health Services, Pharmacy & OAUTHC) created.
+*   [x] Dossier 11 (Sports, Athletics & NUGA History) created.
+*   [x] Master index `research/README.md` updated.
+*   [x] `CAMPUS_KNOWLEDGE_VAULT.md` synchronized with verified contacts.
+*   [x] `MILESTONES.md` roadmap updated.
+*   [ ] Next Deep-Dive: Await Project Lead direction on the next specific domain (e.g., 100-Level Course Catalogs & Faculty Prerequisite Matrices, Campus Venue Capacities & Facilities Directory, or Transit Logistics & Commuter Intelligence).
+
+### 👥 People & Community
+*   **Project Lead**: Commissioned the four deep-dive research domains.
+*   **Guide 17**: Researched, synthesized, and codified the four comprehensive research dossiers.
+
+### ⏭️ Next Immediate Step
+*   Present the completed research suite and walkthrough to the Project Lead for review.
+
+---
+*(Work session wrapped up cleanly on 2026-09-21. Research suite expanded from 7 to 11 dossiers.)*
+
