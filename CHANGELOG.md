@@ -593,6 +593,62 @@ Authored [`research/07_student_politics_elections_and_governance.md`](file:///c:
 *   Share verified source registry and updated research suite with the Project Lead.
 
 ---
-*(Work session wrapped up cleanly on 2026-09-21. Research suite expanded from 11 to 12 dossiers.)*
+
+## 📅 2026-09-21 — Entry 016: Complete Institutional Mapping of Faculties, Departments & Sub-Curricula ("Mini-Departments") Codified
+
+### 💭 Context & Thoughts
+*   The Project Lead issued a direct, structured directive: **"Now let's pull on faculties. All the faculties. Then departments. Then departments with mini departments {courses}: eg {sociology and anthropology holds, isms, mcm, fmm, bcj, and soc major}."**
+*   This addresses one of the biggest points of confusion for incoming Great Ife students: understanding how degree programs, unbundled departments, and specialized course options are administratively grouped, where faculty clearance takes place, and what foundational prerequisites govern each program.
+*   Conducted an exhaustive institutional audit across all 13 traditional faculties plus the newly unbundled Faculty of Computing Science & Engineering, detailing over 60 departments and 100+ course options.
+
+### 🧠 Institutional Architecture & Key Findings Codified
+
+1.  **Comprehensive Faculty Scope (14 Total Academic Faculties)**:
+    *   *Collegiate System*: **College of Health Sciences (CHS)** housing:
+        *   Faculty of Basic Medical Sciences (Anatomy, Physiology, Medical Biochemistry, Nursing Science, Medical Rehabilitation).
+        *   Faculty of Clinical Sciences (11 clinical departments at OAUTHC; 6-Year MBBS).
+        *   Faculty of Dentistry (4 departments; 6-Year B.Ch.D).
+    *   *Autonomous Faculties*: Administration, Agriculture, Arts, Education, Environmental Design & Management (EDM), Law, Pharmacy, Science ("White House"), Social Sciences ("Yellow House"), Technology ("Spider House"), and the newly unbundled **Faculty of Computing Science & Engineering** (transitioned from Technology).
+2.  **Faculty File Jacket Color Conventions**:
+    *   Codified standard filing colors required for physical clearance: Administration (White/Cream), Agriculture (Light Green), Arts (Dark Blue), Basic Medical Sciences (Purple/Maroon), Clinical/Dentistry (Maroon/Navy Blue), Education (Orange), EDM (Brown), Law (Deep Navy Blue), Pharmacy (Yellowish-Green/Emerald), Science (Bright Green), Social Sciences (Red), Technology (Yellow), and Computing (Blue/Black).
+3.  **The Multi-Program ("Mini-Departments") Spotlight**:
+    *   **Department of Sociology & Anthropology (Faculty of Social Sciences)**:
+        *   Deconstructed the **5-in-1 unbundled degree matrix**:
+            1. `SOC`: B.Sc. Sociology & Anthropology (SOC Major)
+            2. `MCM`: B.Sc. Mass Communication
+            3. `BCJ`: B.Sc. Broadcast Journalism (signature course: `OAU-BCJ 105`)
+            4. `ISMS`: B.Sc. Information Science & Media Studies
+            5. `FMM`: B.Sc. Film Production & Multimedia Studies
+        *   *The Social Sciences Foundation Mandate*: Because media programs are housed inside Social Sciences (Yellow House) rather than Arts, all communication students must take and pass **`SSC 105` (Mathematics for Social Scientists) or `MTH 105`**, plus faculty foundation courses (`ECN 101`, `POL 101`, `PSY 101`, `DSS 101`).
+    *   **Department of Dramatic Arts (Faculty of Arts)**:
+        *   Deconstructed the 5 terminal professional options operating from the Sharon-designed Pit Theatre: Playwriting & Literature, Directing & Stage Management, Technical Theatre, Dance & Choreography, and Media/Motion Picture Production.
+    *   **Faculty of Agriculture 5-Year Integrated Curriculum**:
+        *   Common basic sciences (Part 1), common agricultural science core (Parts 2–3), zero-classroom **Farm Practical Year (FPY)** in Part 4 managing commercial crop/livestock plots on the Teaching & Research Farm, and terminal Part 5 departmental branch.
+    *   **Other Multi-Track Departments**:
+        *   *Chemistry*: Pure Chemistry vs. Industrial Chemistry.
+        *   *Physics*: Pure Physics vs. Engineering Physics.
+        *   *Medical Rehabilitation*: Physiotherapy (PT) vs. Occupational Therapy (OT).
+        *   *Nursing Science*: General Nursing (RN), Midwifery (RM), Public Health (RPHN), Psychiatric Nursing (RPN).
+        *   *Computing*: Computer Engineering, ICT, Computer Science, Cyber Security, Software Engineering.
+4.  **Files Codified & Synchronized**:
+    *   Authored [`research/13_faculties_departments_and_specialized_course_curricula.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/13_faculties_departments_and_specialized_course_curricula.md) (86KB master dossier).
+    *   Updated [`CAMPUS_KNOWLEDGE_VAULT.md`](file:///c:/Users/DELL/Desktop/GUIDE17/CAMPUS_KNOWLEDGE_VAULT.md) with Section 8 directory and updated Stage 5 file jacket colors.
+    *   Updated [`research/README.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/README.md) and [`MILESTONES.md`](file:///c:/Users/DELL/Desktop/GUIDE17/MILESTONES.md) (Task 3.1 marked completed).
+
+### 🎯 Milestone Status & Immediate Tasks
+*   [x] Complete faculty directory (all 14 faculties) codified.
+*   [x] Over 60 departments and 100+ degree pathways mapped.
+*   [x] Sociology & Anthropology 5-in-1 media unbundling fully deconstructed.
+*   [x] Living docs (`CHANGELOG.md`, `MILESTONES.md`, `CAMPUS_KNOWLEDGE_VAULT.md`, `research/README.md`) synchronized.
+
+### 👥 People & Community
+*   **Project Lead**: Directed comprehensive institutional pull on faculties, departments, and mini-departments.
+*   **Guide 17**: Codified the exhaustive academic curricula matrix.
+
+### ⏭️ Next Immediate Step
+*   Present findings to the Project Lead and determine next priority domain (e.g. course code & prerequisite maps, campus venue capacities, transit logistics, or commencement of Phase 2/3 UI features).
+
+---
+*(Session concluded with Dossier 13 codified and verified on 2026-09-21.)*
 
 

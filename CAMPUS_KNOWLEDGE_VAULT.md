@@ -14,7 +14,8 @@
 5. [Campus Life, Food Spots & Emergency Helplines](#5-campus-life-food-spots--emergency-helplines)
 6. [Great Ife Lingo Decoder & Scam Defense](#6-great-ife-lingo-decoder--scam-defense)
 7. [Academics, Grading Scale & 5.0 CGPA Mathematical Model](#7-academics-grading-scale--50-cgpa-mathematical-model)
-8. [Design System & Frontend Architectural Tokens](#8-design-system--frontend-architectural-tokens)
+8. [Faculties, Departments & Specialized Sub-Curricula Directory](#8-faculties-departments--specialized-sub-curricula-directory)
+9. [Design System & Frontend Architectural Tokens](#9-design-system--frontend-architectural-tokens)
 
 ---
 
@@ -90,14 +91,19 @@
 * **Office**: Faculty Officer (FO) Clearance Desk
 * **Summary**: Face-to-face verification of original certificates, JAMB slips, and submission of the faculty file jacket.
 * **Faculty File Jacket Color Guide**:
-  - *Faculty of Technology*: Orange / Brown file jackets
-  - *Faculty of Science*: Green file jackets
-  - *Faculty of Arts*: Blue file jackets
-  - *Faculty of Administration*: Yellow file jackets
-  - *Faculty of Social Sciences*: Yellow / Orange file jackets
-  - *Faculty of Education*: Light Blue / Pink file jackets
-  - *Faculty of Law*: Red / Maroon file jackets
-  - *Faculty of Pharmacy*: Green file jackets
+  - *Faculty of Administration*: **White / Cream**
+  - *Faculty of Agriculture*: **Light Green**
+  - *Faculty of Arts*: **Dark Blue**
+  - *Faculty of Basic Medical Sciences (CHS)*: **Purple / Maroon**
+  - *Faculty of Clinical Sciences / Dentistry (CHS)*: **Maroon / Navy Blue**
+  - *Faculty of Education*: **Orange**
+  - *Faculty of Environmental Design & Management (EDM)*: **Brown**
+  - *Faculty of Law*: **Deep Navy Blue**
+  - *Faculty of Pharmacy*: **Yellowish-Green / Emerald**
+  - *Faculty of Science*: **Bright Green**
+  - *Faculty of Social Sciences*: **Red**
+  - *Faculty of Technology*: **Yellow**
+  - *Faculty of Computing Science & Engineering*: **Blue / Black**
 * **Prerequisite Documents**:
   1. Original JAMB Result Slip & OAU Screening Slip
   2. Original O'Level Statement of Result / Certificate
@@ -337,7 +343,72 @@ $$\text{GPA} = \frac{\sum (\text{Course Credit Units} \times \text{Grade Quality
 
 ---
 
-## 8. Design System & Frontend Architectural Tokens
+## 8. Faculties, Departments & Specialized Sub-Curricula Directory
+
+> **Master Architecture**: Obafemi Awolowo University operates **13 Autonomous Faculties + the Faculty of Computing Science & Engineering**, comprising over **60 Departments** and more than **100 degree pathways and sub-specialization tracks**.
+
+### Master Faculty & Department Matrix
+
+| Faculty | Dean's Complex Location | File Jacket Color | Key Departments & Degrees |
+| :--- | :--- | :---: | :--- |
+| **Administration** | Management & Social Sciences Quad (opp. Hezekiah Library) | **White / Cream** | • Management & Accounting (B.Sc. Accounting, B.Sc. Business Admin)<br>• Public Administration (B.Sc. Public Admin)<br>• International Relations (B.Sc. Int'l Relations)<br>• Local Government & Development Studies |
+| **Agriculture** | Agric Complex (Eastern Academic Belt) | **Light Green** | • Integrated 5-Yr B.Agric (Agric Economics, Animal Sciences, Crop Production & Protection, Soil Science, Agric Extension)<br>• Family, Nutrition & Consumer Sciences (4-Yr B.Sc.) |
+| **Arts** | Humanities Blocks 1–3 (Oduduwa Quadrangle) | **Dark Blue** | • English (Language & Literature tracks)<br>• Dramatic Arts (Pit Theatre: Playwriting, Directing, Technical, Dance, Media)<br>• Foreign Languages (French, German, Portuguese)<br>• Linguistics & African Languages (Linguistics, Yoruba)<br>• History, Philosophy, Religious Studies, Music |
+| **Basic Medical Sciences (CHS)** | CHS Complex (Road 1, adj. Health Centre) | **Purple / Maroon** | • Anatomy & Cell Biology (B.Sc.)<br>• Physiological Sciences (B.Sc.)<br>• Medical Biochemistry (B.Sc.)<br>• Nursing Science (5-Yr B.N.Sc. — RN, RM, RPHN, RPN)<br>• Medical Rehabilitation (5-Yr B.MR — Physiotherapy & Occupational Therapy) |
+| **Clinical Sciences (CHS)** | Pre-clinical on Campus; Clinical at OAUTHC | **Maroon / Navy Blue** | • 6-Year MBBS Program: Medicine, Surgery, Paediatrics, Obstetrics & Gynaecology, Community Health, Mental Health, Anaesthesia, Radiology, Ophthalmology, ENT |
+| **Dentistry (CHS)** | Dental Clinic Complex (Campus & OAUTHC) | **Maroon / Navy Blue** | • 6-Year B.Ch.D Program: Child Dental Health, Oral & Maxillofacial Surgery, Preventive & Community Dentistry, Restorative Dentistry |
+| **Education** | Education Complex (Road 1, adj. Fajuyi) | **Orange** | • Arts & Social Sciences Education (B.A./B.Sc. Ed)<br>• Science & Technology Education (B.Sc. Ed)<br>• Educational Foundations & Counselling (B.Ed)<br>• Educational Management (B.Ed)<br>• Educational Technology & Library Science (B.Ed / B.LIS)<br>• Physical & Health Education (PHE)<br>• Adult Education & Lifelong Learning |
+| **Environmental Design & Mgt (EDM)** | EDM Studio Quad (Road 1, adj. Pharmacy) | **Brown** | • Architecture (4-Yr B.Sc. + 2-Yr M.Sc.)<br>• Building (5-Yr B.Sc.)<br>• Estate Management (5-Yr B.Sc.)<br>• Quantity Surveying (5-Yr B.Sc.)<br>• Urban & Regional Planning (5-Yr B.Sc.)<br>• Fine & Applied Arts (4-Yr B.A. — Painting, Sculpture, Ceramics, Graphics, Textile)<br>• Surveying & Geoinformatics (5-Yr B.Sc.) |
+| **Law** | Law Complex (Road 1, adj. SUB & Library) | **Deep Navy Blue** | • 5-Year LL.B Program: Public Law, International Law, Business Law, Jurisprudence & Private Law |
+| **Pharmacy** | Pharmacy Complex (Road 1, adj. EDM & JAC) | **Yellowish-Green** | • 5-Year B.Pharm / Pharm.D: Pharmaceutics & Pharm. Tech, Pharmaceutical Chemistry, Pharmacognosy, Pharmacology, Clinical Pharmacy |
+| **Science** | Iconic "White House" Complex | **Bright Green** | • Chemistry (Pure Chemistry vs. Industrial Chemistry)<br>• Physics & Engineering Physics (Pure Physics vs. Engineering Physics)<br>• Mathematics & Statistics<br>• Microbiology, Biochemistry & Molecular Biology<br>• Botany, Zoology, Geology & Applied Geophysics |
+| **Social Sciences** | Iconic "Yellow House" Complex (opp. Senate) | **Red** | • Sociology & Anthropology (5-in-1 unbundled matrix)<br>• Economics (B.Sc.)<br>• Political Science (B.Sc.)<br>• Psychology (B.Sc.)<br>• Demography & Social Statistics (B.Sc.)<br>• Geography (B.Sc.) |
+| **Technology** | Iconic "Spider House" Complex | **Yellow** | • Electronic & Electrical Engineering (5-Yr B.Sc.)<br>• Mechanical Engineering (5-Yr B.Sc.)<br>• Chemical Engineering (5-Yr B.Sc.)<br>• Civil Engineering (5-Yr B.Sc.)<br>• Materials Science & Engineering (5-Yr B.Sc.)<br>• Agricultural & Environmental Engineering (5-Yr B.Sc.)<br>• Food Science & Technology (5-Yr B.Sc.) |
+| **Computing Science & Engineering** | Computing Complex / INTECU Corridor | **Blue / Black** | • Computer Engineering (5-Yr B.Sc. — Hardware, IoT, Embedded Systems)<br>• ICT (5-Yr B.Sc.)<br>• Computer Science (4-Yr B.Sc. — AI, Software, Systems)<br>• Cyber Security (4-Yr B.Sc. — Forensics, Cryptography)<br>• Software Engineering (4-Yr B.Sc.)<br>• Combined Honours: CS with Mathematics, CS with Economics |
+
+---
+
+### 🎯 Spotlight on Multi-Program Departments ("Mini-Departments")
+
+#### 1. Department of Sociology & Anthropology (Faculty of Social Sciences)
+The Department of Sociology & Anthropology at OAU is a rare multidisciplinary engine that houses both traditional sociology and the university's unbundled **Communication & Media Studies** programs:
+
+```
+                  [ DEPARTMENT OF SOCIOLOGY & ANTHROPOLOGY ]
+                                      │
+  ┌────────────────┬──────────────────┼──────────────────┬────────────────┐
+  ▼                ▼                  ▼                  ▼                ▼
+[ SOC MAJOR ]    [ MCM ]            [ BCJ ]            [ ISMS ]         [ FMM ]
+B.Sc. Sociology B.Sc. Mass         B.Sc. Broadcast    B.Sc. Info       B.Sc. Film &
+& Anthropology  Communication      Journalism         Science & Media  Multimedia
+```
+
+1. **B.Sc. Sociology & Anthropology (SOC Major)** (`SOC`): Classical & modern sociological theory, ethnography, criminology, and culture.
+2. **B.Sc. Mass Communication (MCM)** (`MCM`): Print journalism, corporate public relations, advertising, media management.
+3. **B.Sc. Broadcast Journalism (BCJ)** (`BCJ`): Radio & TV production, news anchoring, studio mixing, electronic field production (signature course: `OAU-BCJ 105`).
+4. **B.Sc. Information Science & Media Studies (ISMS)** (`ISMS`): Digital media publishing, web analytics, data-driven journalism, tech communication.
+5. **B.Sc. Film Production & Multimedia Studies (FMM)** (`FMM`): Screenwriting, cinematography, non-linear video editing (NLE), directing, and sound design.
+
+> [!IMPORTANT]
+> **The Social Science Foundation Rule for Media Students**: Because MCM, BCJ, ISMS, and FMM are domiciled inside the **Faculty of Social Sciences** (Yellow House) and not Arts, all students admitted into these communication programs **must take and pass SSC 105 (Mathematics for Social Scientists) or MTH 105**, alongside introductory faculty courses (`ECN 101`, `POL 101`, `PSY 101`, and `DSS 101`).
+
+#### 2. Department of Dramatic Arts (Faculty of Arts)
+Operating from the historic Sharon-designed **Pit Theatre**, Dramatic Arts students branch into five distinct professional specializations in Part 3 and Part 4:
+* **Playwriting & Literature**: Script development and African dramatic critique.
+* **Directing & Stage Management**: Theatrical staging, actor coaching, and blocking.
+* **Technical Theatre**: Stage lighting, acoustic engineering, costume, and set design.
+* **Dance & Choreography**: Traditional Yoruba and contemporary African dance performance.
+* **Media & Motion Picture**: Broadcast drama, screen acting, and film editing.
+
+#### 3. Faculty of Agriculture Integrated 5-Year Curriculum
+* **Part 1**: Foundation sciences in the White House (`BIO 101`, `CHM 101`, `PHY 101`, `MTH 101`).
+* **Part 2 & 3**: Common agricultural fundamentals across all departments (`AGR 201`, `AGR 301`).
+* **Part 4 (Farm Practical Year - FPY)**: Zero theoretical classroom exams. Students spend an entire academic session living and working on the **OAU Teaching & Research Farm** managing crop plantations and livestock herds.
+* **Part 5 (Terminal Departmental Specialization)**: Post-FPY students return to their specific departmental silos (Agric Economics, Animal Science, Crop Production, Soil Science, or Agric Extension) to complete their final dissertations.
+
+---
+
+## 9. Design System & Frontend Architectural Tokens
 
 To ensure future interfaces adhere to the established premium Great Ife aesthetic:
 

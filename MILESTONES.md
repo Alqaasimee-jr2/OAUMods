@@ -116,9 +116,10 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
 **Status**: ⚪ *Not Started*
 
 ### Key Tasks:
-- [ ] **3.1 Academics Hub**:
-  - [ ] Directory of faculties, departments, and typical freshman 100-level course codes.
-  - [ ] Course information, credit units, prerequisites, and elective selection advice.
+- [x] **3.1 Academics Hub & Curricula Architecture**:
+  - [x] Directory of all 13 faculties + Computing Science & Engineering, 60+ departments, and file jacket color conventions (`research/13`).
+  - [x] Comprehensive mapping of multi-program "mini-departments" (Sociology & Anthropology's 5-in-1 unbundled matrix: SOC, MCM, BCJ, ISMS, FMM; Agriculture FPY; Dramatic Arts tracks).
+  - [x] Course codes, credit units, prerequisites, and foundational requirements (e.g. SSC 105 for Social Science media students).
 - [ ] **3.2 🧮 Great Ife 5.0 GPA Calculator**:
   - [ ] Pre-calibrated to OAU's grading scale (A = 5, B = 4, C = 3, D = 2, E = 1, F = 0).
   - [ ] Dynamic course adder (Course Code, Unit, Grade).

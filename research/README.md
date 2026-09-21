@@ -21,6 +21,7 @@
 | **10** | **Health Services, Pharmacy & OAUTHC** | Primary care at Health Centre ("JAC"), Green Card mandatory registration, TSHIP health insurance, 24/7 ambulance lines, pharmacy reality, OAUTHC tertiary teaching hospital referral, and 2021 medical protests. | [Read Research 10](./10_health_services_health_centre_pharmacy_and_oauthc.md) |
 | **11** | **Sports, Athletics & NUGA History** | Directorate of Sports, available disciplines, Sports Complex (Main Bowl, Olympic pool, indoor hall, tennis), trials/admission through sports, HOD/Dean/VC cups, and 1970/1973/1984/2014 NUGA hosting history. | [Read Research 11](./11_sports_athletics_facilities_and_nuga_history.md) |
 | **12** | **Verified Sources & Credible Registry** | Statutory university handbooks, verified principal officers (VC, DSA Odedire, CMD Okeniyi, Chief Imam Sanusi, Chaplains), independent press archives (ACJ, Premium Times, Punch), and forensic case registries. | [Read Research 12](./12_verified_sources_institutional_citations_and_directory.md) |
+| **13** | **Faculties, Departments & Sub-Curricula** | Exhaustive catalog of all 13 faculties + Computing Science & Engineering, 60+ departments, file jacket color conventions, and deep dive on multi-program mini-departments (Sociology's 5-in-1: SOC, MCM, BCJ, ISMS, FMM; Agriculture FPY; Dramatic Arts, etc.). | [Read Research 13](./13_faculties_departments_and_specialized_course_curricula.md) |
 
 ---
 
