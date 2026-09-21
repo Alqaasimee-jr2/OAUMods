@@ -113,11 +113,13 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
   - [x] Directory of all 13 faculties + Computing Science & Engineering, 60+ departments, and file jacket color conventions (`research/13`).
   - [x] Comprehensive mapping of multi-program "mini-departments" (Sociology & Anthropology's 5-in-1 unbundled matrix: SOC, MCM, BCJ, ISMS, FMM; Agriculture FPY; Dramatic Arts tracks).
   - [x] Course codes, credit units, prerequisites, and foundational requirements (e.g. SSC 105 for Social Science media students).
-- [ ] **3.2 🧮 Great Ife 5.0 GPA Calculator**:
-  - [ ] Pre-calibrated to OAU's grading scale (A = 5, B = 4, C = 3, D = 2, E = 1, F = 0).
-  - [ ] Dynamic course adder (Course Code, Unit, Grade).
-  - [ ] Real-time GPA calculation + target GPA projection for future semesters.
-  - [ ] Local storage persistence so calculations aren't lost.
+- [x] **3.2 🧮 Great Ife 5.0 GPA Calculator**:
+  - [x] Pre-calibrated to OAU's grading scale (A = 5, B = 4, C = 3, D = 2, E = 1, F = 0).
+  - [x] Dynamic course adder (Course Code, Unit, Grade).
+  - [x] Real-time GPA calculation + target GPA projection for future semesters.
+  - [x] Local storage persistence so calculations aren't lost.
+  - [x] 1-tap course bundles for 100L (Science, Tech, Health Sciences, Social Sciences, Computing, Law, Admin, Arts, EDM).
+  - [x] Animated circular progress gauge and degree classification badges.
 - [ ] **3.3 Roommate Testing & Alpha Review**:
   - [ ] Deploy a live staging link for mobile testing.
   - [ ] Have roommates stress-test usability, speed, and accuracy of clearance steps and GPA math.
