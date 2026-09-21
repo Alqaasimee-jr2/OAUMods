@@ -16,7 +16,7 @@
 Stepping onto the grounds of Obafemi Awolowo University for the first time is both exhilarating and bewildering. Every session, thousands of freshers arrive in Ile-Ife to face an initiation by fire:
 
 *   **The Bed Space Balloting Scramble**: Frantically refreshing portals at 10:00 AM, worrying about accommodation in Angola Hall (freshmen males) or Mozambique Hall (freshmen females), and dodging opportunistic middlemen and scams.
-*   **The Clearance Paper Chase**: Endless queues across campus—trying to determine whether you need red or white background passport photos, which office requires the green file jacket vs the yellow file jacket, paying fees through Remita/ePortal, and getting signatures from the Faculty Officer to the Health Center.
+*   **The Clearance Paper Chase**: Endless queues across campus—ensuring you have the mandatory red-background passport photos, the standard pale yellow file jacket, paying fees through Remita/ePortal, and getting signatures from the Faculty Officer to the Health Center.
 *   **The Campus Labyrinth**: Walking under the hot sun trying to locate BOOC, ODLT, Spider House, White House, Yellow House, Pit Theatre, or your department's administrative offices.
 *   **Transit Confusion**: Deciding whether to take a Campus Shuttle bus from Main Gate to SUB, where to catch a tricycle (keke) to Mozambique or Fajuyi, and what the legitimate student fares are so you don't get overcharged.
 *   **Information Chaos**: 50+ unofficial WhatsApp and Telegram groups broadcasting outdated, conflicting PDF circulars and repeating the exact same questions around the clock.
@@ -52,7 +52,7 @@ OAUMods is designed to be the single place a Great Ife student goes whenever the
 
 ### 📄 4. Student Guides & Clearance Pipeline
 *   Step-by-step interactive clearance checklist (School Fees on Remita -> Bio-data -> Health Center medical screening -> Bed Space -> Faculty clearance -> Departmental clearance -> Library ID).
-*   Exact document requirements per office (number of copies, red vs white passport backgrounds, green vs yellow file jackets).
+*   Exact document requirements per office (number of copies, red background passport mandate, standard pale yellow file jackets).
 *   Freshers' Survival Guide: what to do during your first 30 days.
 
 ### 🚌 5. Campus Mobility & Transport

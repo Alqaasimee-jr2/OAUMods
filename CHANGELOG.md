@@ -853,5 +853,50 @@ Executed a comprehensive campus geography audit and correction following direct 
 *   **Project Lead**: Flagged the critical geographic distinction between CHS and the Health Centre.
 *   **Guide 17**: Performed repo-wide spatial audit, corrected all references, and updated living dossiers.
 
+---
+
+## 2026-09-21 (Entry 021: Institutional Pale Yellow File Jacket Mandate & Codification of Dossiers 17 & 18)
+
+### 📌 Summary
+Standardized the campus-wide clearance file jacket protocol to the universal **Pale Yellow** flat file following direct Project Lead directive. Authored two extensive living research dossiers: **Dossier 17 (Freshman Master Registration & Clearance Pipeline)** and **Dossier 18 (Campus Dining, Hidden Food Gems & Scenic Sanctuaries)**, fully integrating the Project Lead's first-hand dining recommendations and romantic campus retreats.
+
+### 🏛️ Key Standardizations & Dossiers Codified
+1.  **Universal Pale Yellow File Jacket Standard**:
+    *   Eliminated previous multi-color faculty file distinctions across all documentation.
+    *   Ground-truth confirmed: The standard student file jacket across all 13 faculties, admissions, and departmental archives at OAU is strictly **Pale Yellow**.
+2.  **Dossier 17: Freshman Registration & Clearance Master Pipeline**:
+    *   *Health Registration (University Health Centre)*: Pre-dawn tally queue (6:30–7:30 AM), nursing vitals, diagnostic labs, chest X-ray audit, physician certification, and laminated **Green Card** issuance.
+    *   *Hall of Residence Registration*: Angola & Mozambique bedspace validation, Remita accommodation receipt check, hall executive dues, Tenancy/Curfew agreement (cooking coil/appliance bans), and Porter's lodge key collection.
+    *   *Faculty Registration*: Faculty Officer credential audit (JAMB, WAEC/NECO scratch cards, birth certificate, state of origin, attestation), standard pale yellow file jacket labeling, and course eligibility endorsement.
+    *   *Departmental Registration*: 100-Level Course Advisor interview, prerequisite mapping, strict credit load enforcement (**15–24 units**), departmental dues payment, student handbook collection, and HOD stamp on 5-way course form distribution.
+    *   *Library Registration*: Hezekiah Oluwasanmi Library (Readers' Services), borrower's ticket issuance (2–4 books for 14 days), e-library international database activation (JSTOR, ScienceDirect), and cloakroom rules.
+3.  **Dossier 18: Campus Dining, Food Gems & Scenic Sanctuaries**:
+    *   *Orente Grills (Amphi / ODLT Axis)*: Peppered chicken, fresh grilled catfish (*point & kill*), shawarma, and evening social atmosphere.
+    *   *Captain Cook (SUB)*: Pastries (meat pies), scoop ice cream, jollof/fried rice, air-conditioned seating.
+    *   *Lil Dinners in Halls*: Awo Cafe mountain portions, Fajuyi buttery 24/7 strip, Moz freshers' delicacies.
+    *   *Coca-Cola Restaurant (Near Akintola Hall)*: Traditional swallows (*amala dudu*, pounded yam, *eba*), rich local soups (*egusi*, *ewedu*, *gbegiri*), and assorted meats.
+    *   *Mini Shawarma Cluster (In Front of SUB)*: Quick grab-and-go kiosk cluster.
+    *   *"As E Dey Hot" (Opposite Moremi & Alumni Halls)*: Steaming hot puff-puff, spicy samosas, and high-turnover pedestrian finger food.
+    *   *The Archi Hut Kiosk (Architecture)*: Rustic timber/thatched pavilion, cooked-to-order Indomie, eggs, hot coffee/tea, intimate evening lighting.
+    *   *Romantic & Scenic Sanctuaries*:
+        1. **The Mountain Behind Archi**: Sunset panoramic views over the campus forest and rolling Ife hills.
+        2. **Alex Duduyemi / Old EDM Lawn**: Manicured open green space for couple picnics and quiet reading.
+        3. **Moot Court Biological Garden (Law)**: Dense tropical canopy, shaded calm, secluded stone benches.
+        4. **Main Bowl Bleachers (Sports Complex)**: Elevated stadium seating for sports watching and stargazing—with the authentic Great Ife caveat of periodic fellowship night vigils.
+
+### 📂 Files Synchronized & Updated
+*   [`research/17_freshman_registration_and_clearance_master_pipeline.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/17_freshman_registration_and_clearance_master_pipeline.md): Authored new master dossier.
+*   [`research/18_campus_dining_hidden_food_gems_and_scenic_sanctuaries.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/18_campus_dining_hidden_food_gems_and_scenic_sanctuaries.md): Authored new dining & sanctuaries dossier.
+*   [`research/13_faculties_departments_and_specialized_course_curricula.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/13_faculties_departments_and_specialized_course_curricula.md): Standardized all 13 faculties to Pale Yellow file jackets; updated Rule 4.
+*   [`CAMPUS_KNOWLEDGE_VAULT.md`](file:///c:/Users/DELL/Desktop/GUIDE17/CAMPUS_KNOWLEDGE_VAULT.md): Standardized Stage 5 and Section 8 table to universal Pale Yellow.
+*   [`README.md`](file:///c:/Users/DELL/Desktop/GUIDE17/README.md): Updated clearance paper chase and document requirements to reflect Pale Yellow jackets.
+*   [`research/README.md`](file:///c:/Users/DELL/Desktop/GUIDE17/research/README.md): Indexed Dossiers 17 and 18.
+*   [`MILESTONES.md`](file:///c:/Users/DELL/Desktop/GUIDE17/MILESTONES.md): Updated Task 2.2 food and dining check-off.
+
+### 👥 People & Community
+*   **Project Lead**: Provided decisive ground-truth corrections (pale yellow file jacket mandate) and curated personal picks for campus dining and romantic sanctuaries.
+*   **Guide 17**: Codified Dossiers 17 & 18 and standardized the institutional repositories.
+
+
 
 

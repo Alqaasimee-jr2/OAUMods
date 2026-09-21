@@ -90,27 +90,14 @@
 * **Location**: Your Respective Faculty Building (Dean's Complex)
 * **Office**: Faculty Officer (FO) Clearance Desk
 * **Summary**: Face-to-face verification of original certificates, JAMB slips, and submission of the faculty file jacket.
-* **Faculty File Jacket Color Guide**:
-  - *Faculty of Administration*: **White / Cream**
-  - *Faculty of Agriculture*: **Light Green**
-  - *Faculty of Arts*: **Dark Blue**
-  - *Faculty of Basic Medical Sciences (CHS)*: **Purple / Maroon**
-  - *Faculty of Clinical Sciences / Dentistry (CHS)*: **Maroon / Navy Blue**
-  - *Faculty of Education*: **Orange**
-  - *Faculty of Environmental Design & Management (EDM)*: **Brown**
-  - *Faculty of Law*: **Deep Navy Blue**
-  - *Faculty of Pharmacy*: **Yellowish-Green / Emerald**
-  - *Faculty of Science*: **Bright Green**
-  - *Faculty of Social Sciences*: **Red**
-  - *Faculty of Technology*: **Yellow**
-  - *Faculty of Computing Science & Engineering*: **Blue / Black**
+* **Institutional File Jacket Standard**: Across all faculties and departments at OAU, document screening requires the standard **Pale Yellow flat file jacket**. Do not purchase colored folders; pale yellow is the official campus-wide standard.
 * **Prerequisite Documents**:
   1. Original JAMB Result Slip & OAU Screening Slip
   2. Original O'Level Statement of Result / Certificate
   3. Original Birth Certificate or Age Declaration
   4. Letter of Attestation from a Clergy, Legal Practitioner, or High-Ranking Civil Servant
   5. Bank-stamped School Fees Remita Receipt
-  6. Correctly colored Faculty File Jacket labeled with Name, Reg Number, and Department
+  6. Standard Pale Yellow Faculty File Jacket labeled with Name, Reg Number, and Department
   7. Four (4) Passport photographs (Red background)
 * **Pro-Tips**:
   - **NEVER staple original certificates into your file jacket.** Use paperclips or transparent sleeves. Stapler damage can invalidate documents.
@@ -423,22 +410,22 @@ $$\text{GPA} = \frac{\sum (\text{Course Credit Units} \times \text{Grade Quality
 
 ### Master Faculty & Department Matrix
 
-| Faculty | Dean's Complex Location | File Jacket Color | Key Departments & Degrees |
+| Faculty | Dean's Complex Location | Clearance File Jacket | Key Departments & Degrees |
 | :--- | :--- | :---: | :--- |
-| **Administration** | Management & Social Sciences Quad (opp. Hezekiah Library) | **White / Cream** | • Management & Accounting (B.Sc. Accounting, B.Sc. Business Admin)<br>• Public Administration (B.Sc. Public Admin)<br>• International Relations (B.Sc. Int'l Relations)<br>• Local Government & Development Studies |
-| **Agriculture** | Agric Complex (Eastern Academic Belt) | **Light Green** | • Integrated 5-Yr B.Agric (Agric Economics, Animal Sciences, Crop Production & Protection, Soil Science, Agric Extension)<br>• Family, Nutrition & Consumer Sciences (4-Yr B.Sc.) |
-| **Arts** | Humanities Blocks 1–3 (Oduduwa Quadrangle) | **Dark Blue** | • English (Language & Literature tracks)<br>• Dramatic Arts (Pit Theatre: Playwriting, Directing, Technical, Dance, Media)<br>• Foreign Languages (French, German, Portuguese)<br>• Linguistics & African Languages (Linguistics, Yoruba)<br>• History, Philosophy, Religious Studies, Music |
-| **Basic Medical Sciences (CHS)** | CHS Complex (Road 2, Academic Belt — separate from Health Centre) | **Purple / Maroon** | • Anatomy & Cell Biology (B.Sc.)<br>• Physiological Sciences (B.Sc.)<br>• Medical Biochemistry (B.Sc.)<br>• Nursing Science (5-Yr B.N.Sc. — RN, RM, RPHN, RPN)<br>• Medical Rehabilitation (5-Yr B.MR — Physiotherapy & Occupational Therapy) |
-| **Clinical Sciences (CHS)** | Pre-clinical on Campus; Clinical at OAUTHC | **Maroon / Navy Blue** | • 6-Year MBBS Program: Medicine, Surgery, Paediatrics, Obstetrics & Gynaecology, Community Health, Mental Health, Anaesthesia, Radiology, Ophthalmology, ENT |
-| **Dentistry (CHS)** | Dental Clinic Complex (Campus & OAUTHC) | **Maroon / Navy Blue** | • 6-Year B.Ch.D Program: Child Dental Health, Oral & Maxillofacial Surgery, Preventive & Community Dentistry, Restorative Dentistry |
-| **Education** | Education Complex (Road 1, adj. Fajuyi) | **Orange** | • Arts & Social Sciences Education (B.A./B.Sc. Ed)<br>• Science & Technology Education (B.Sc. Ed)<br>• Educational Foundations & Counselling (B.Ed)<br>• Educational Management (B.Ed)<br>• Educational Technology & Library Science (B.Ed / B.LIS)<br>• Physical & Health Education (PHE)<br>• Adult Education & Lifelong Learning |
-| **Environmental Design & Mgt (EDM)** | EDM Studio Quad (Road 2, adj. Pharmacy) | **Brown** | • Architecture (4-Yr B.Sc. + 2-Yr M.Sc.)<br>• Building (5-Yr B.Sc.)<br>• Estate Management (5-Yr B.Sc.)<br>• Quantity Surveying (5-Yr B.Sc.)<br>• Urban & Regional Planning (5-Yr B.Sc.)<br>• Fine & Applied Arts (4-Yr B.A. — Painting, Sculpture, Ceramics, Graphics, Textile)<br>• Surveying & Geoinformatics (5-Yr B.Sc.) |
-| **Law** | Law Complex (Road 1, adj. SUB & Library) | **Deep Navy Blue** | • 5-Year LL.B Program: Public Law, International Law, Business Law, Jurisprudence & Private Law |
-| **Pharmacy** | Pharmacy Complex (Road 2, adj. EDM & CHS) | **Yellowish-Green** | • 5-Year B.Pharm / Pharm.D: Pharmaceutics & Pharm. Tech, Pharmaceutical Chemistry, Pharmacognosy, Pharmacology, Clinical Pharmacy |
-| **Science** | Iconic "White House" Complex | **Bright Green** | • Chemistry (Pure Chemistry vs. Industrial Chemistry)<br>• Physics & Engineering Physics (Pure Physics vs. Engineering Physics)<br>• Mathematics & Statistics<br>• Microbiology, Biochemistry & Molecular Biology<br>• Botany, Zoology, Geology & Applied Geophysics |
-| **Social Sciences** | Social Sciences Building / Yellow-Panel Complex (opp. Senate) | **Red** | • Sociology & Anthropology (5-in-1 unbundled matrix)<br>• Economics (B.Sc.)<br>• Political Science (B.Sc.)<br>• Psychology (B.Sc.)<br>• Demography & Social Statistics (B.Sc.)<br>• Geography (B.Sc.) |
-| **Technology** | Iconic "Spider House" Complex | **Yellow** | • Electronic & Electrical Engineering (5-Yr B.Sc.)<br>• Mechanical Engineering (5-Yr B.Sc.)<br>• Chemical Engineering (5-Yr B.Sc.)<br>• Civil Engineering (5-Yr B.Sc.)<br>• Materials Science & Engineering (5-Yr B.Sc.)<br>• Agricultural & Environmental Engineering (5-Yr B.Sc.)<br>• Food Science & Technology (5-Yr B.Sc.) |
-| **Computing Science & Engineering** | Computing Complex / INTECU Corridor | **Blue / Black** | • Computer Engineering (5-Yr B.Sc. — Hardware, IoT, Embedded Systems)<br>• ICT (5-Yr B.Sc.)<br>• Computer Science (4-Yr B.Sc. — AI, Software, Systems)<br>• Cyber Security (4-Yr B.Sc. — Forensics, Cryptography)<br>• Software Engineering (4-Yr B.Sc.)<br>• Combined Honours: CS with Mathematics, CS with Economics |
+| **Administration** | Management & Social Sciences Quad (opp. Hezekiah Library) | **Pale Yellow** | • Management & Accounting (B.Sc. Accounting, B.Sc. Business Admin)<br>• Public Administration (B.Sc. Public Admin)<br>• International Relations (B.Sc. Int'l Relations)<br>• Local Government & Development Studies |
+| **Agriculture** | Agric Complex (Eastern Academic Belt) | **Pale Yellow** | • Integrated 5-Yr B.Agric (Agric Economics, Animal Sciences, Crop Production & Protection, Soil Science, Agric Extension)<br>• Family, Nutrition & Consumer Sciences (4-Yr B.Sc.) |
+| **Arts** | Humanities Blocks 1–3 (Oduduwa Quadrangle) | **Pale Yellow** | • English (Language & Literature tracks)<br>• Dramatic Arts (Pit Theatre: Playwriting, Directing, Technical, Dance, Media)<br>• Foreign Languages (French, German, Portuguese)<br>• Linguistics & African Languages (Linguistics, Yoruba)<br>• History, Philosophy, Religious Studies, Music |
+| **Basic Medical Sciences (CHS)** | CHS Complex (Road 2, Academic Belt — separate from Health Centre) | **Pale Yellow** | • Anatomy & Cell Biology (B.Sc.)<br>• Physiological Sciences (B.Sc.)<br>• Medical Biochemistry (B.Sc.)<br>• Nursing Science (5-Yr B.N.Sc. — RN, RM, RPHN, RPN)<br>• Medical Rehabilitation (5-Yr B.MR — Physiotherapy & Occupational Therapy) |
+| **Clinical Sciences (CHS)** | Pre-clinical on Campus; Clinical at OAUTHC | **Pale Yellow** | • 6-Year MBBS Program: Medicine, Surgery, Paediatrics, Obstetrics & Gynaecology, Community Health, Mental Health, Anaesthesia, Radiology, Ophthalmology, ENT |
+| **Dentistry (CHS)** | Dental Clinic Complex (Campus & OAUTHC) | **Pale Yellow** | • 6-Year B.Ch.D Program: Child Dental Health, Oral & Maxillofacial Surgery, Preventive & Community Dentistry, Restorative Dentistry |
+| **Education** | Education Complex (Road 1, adj. Fajuyi) | **Pale Yellow** | • Arts & Social Sciences Education (B.A./B.Sc. Ed)<br>• Science & Technology Education (B.Sc. Ed)<br>• Educational Foundations & Counselling (B.Ed)<br>• Educational Management (B.Ed)<br>• Educational Technology & Library Science (B.Ed / B.LIS)<br>• Physical & Health Education (PHE)<br>• Adult Education & Lifelong Learning |
+| **Environmental Design & Mgt (EDM)** | EDM Studio Quad (Road 2, adj. Pharmacy) | **Pale Yellow** | • Architecture (4-Yr B.Sc. + 2-Yr M.Sc.)<br>• Building (5-Yr B.Sc.)<br>• Estate Management (5-Yr B.Sc.)<br>• Quantity Surveying (5-Yr B.Sc.)<br>• Urban & Regional Planning (5-Yr B.Sc.)<br>• Fine & Applied Arts (4-Yr B.A. — Painting, Sculpture, Ceramics, Graphics, Textile)<br>• Surveying & Geoinformatics (5-Yr B.Sc.) |
+| **Law** | Law Complex (Road 1, adj. SUB & Library) | **Pale Yellow** | • 5-Year LL.B Program: Public Law, International Law, Business Law, Jurisprudence & Private Law |
+| **Pharmacy** | Pharmacy Complex (Road 2, adj. EDM & CHS) | **Pale Yellow** | • 5-Year B.Pharm / Pharm.D: Pharmaceutics & Pharm. Tech, Pharmaceutical Chemistry, Pharmacognosy, Pharmacology, Clinical Pharmacy |
+| **Science** | Iconic "White House" Complex | **Pale Yellow** | • Chemistry (Pure Chemistry vs. Industrial Chemistry)<br>• Physics & Engineering Physics (Pure Physics vs. Engineering Physics)<br>• Mathematics & Statistics<br>• Microbiology, Biochemistry & Molecular Biology<br>• Botany, Zoology, Geology & Applied Geophysics |
+| **Social Sciences** | Social Sciences Building / Yellow-Panel Complex (opp. Senate) | **Pale Yellow** | • Sociology & Anthropology (5-in-1 unbundled matrix)<br>• Economics (B.Sc.)<br>• Political Science (B.Sc.)<br>• Psychology (B.Sc.)<br>• Demography & Social Statistics (B.Sc.)<br>• Geography (B.Sc.) |
+| **Technology** | Iconic "Spider House" Complex | **Pale Yellow** | • Electronic & Electrical Engineering (5-Yr B.Sc.)<br>• Mechanical Engineering (5-Yr B.Sc.)<br>• Chemical Engineering (5-Yr B.Sc.)<br>• Civil Engineering (5-Yr B.Sc.)<br>• Materials Science & Engineering (5-Yr B.Sc.)<br>• Agricultural & Environmental Engineering (5-Yr B.Sc.)<br>• Food Science & Technology (5-Yr B.Sc.) |
+| **Computing Science & Engineering** | Computing Complex / INTECU Corridor | **Pale Yellow** | • Computer Engineering (5-Yr B.Sc. — Hardware, IoT, Embedded Systems)<br>• ICT (5-Yr B.Sc.)<br>• Computer Science (4-Yr B.Sc. — AI, Software, Systems)<br>• Cyber Security (4-Yr B.Sc. — Forensics, Cryptography)<br>• Software Engineering (4-Yr B.Sc.)<br>• Combined Honours: CS with Mathematics, CS with Economics |
 
 ---
 

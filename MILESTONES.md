@@ -87,7 +87,7 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
   - [x] Exclusive Road 7 bus circuit (all routes 2 tickets / ₦200).
   - [x] OAUTHC / College of Health Sciences transit corridor via Nissan Micra cabs (₦300 cash only).
 - [ ] **2.2 Campus Life & Essentials Directory**:
-  - [ ] Affordable food spots, cafeterias, and buttery joints across campus and halls.
+  - [x] Affordable food spots, cafeterias, buttery joints, and romantic sanctuaries across campus and halls (`research/18`).
   - [ ] Student services: Printing/photocopying hubs, cybercafés, bookshops, laundry.
   - [ ] Banks, working ATMs, and POS cash withdrawal points.
 - [x] **2.3 Essential Directory, Health & Emergency Systems**:

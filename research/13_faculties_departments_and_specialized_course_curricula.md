@@ -23,7 +23,7 @@ Obafemi Awolowo University's academic structure comprises:
 ### 1. Faculty of Administration
 *   **Location**: Management and Social Sciences Quadrangle (Road 1, opposite Hezekiah Library).
 *   **Dean's Office**: Ground Floor, Faculty of Administration Building.
-*   **Clearance File Jacket Convention**: **White / Cream File**.
+*   **Clearance File Jacket Convention**: **Standard Pale Yellow File** (universal campus standard).
 
 ```
 ┌──────────────────────────────────────┬────────────────────────┬──────────┬──────────────────────────────────────────────────────────┐
@@ -56,7 +56,7 @@ Obafemi Awolowo University's academic structure comprises:
 ### 2. Faculty of Agriculture
 *   **Location**: Agricultural Sciences Complex (Eastern Academic Belt, near University Commercial Farm).
 *   **Dean's Office**: First Floor, Agriculture Central Complex.
-*   **Clearance File Jacket Convention**: **Light Green File**.
+*   **Clearance File Jacket Convention**: **Standard Pale Yellow File** (universal campus standard).
 *   **Undergraduate Degree Structure**: Integrated **5-Year Bachelor of Agriculture (B.Agric)** program with common coursework across Years 1–3, intensive **Farm Practical Year (FPY)** in Year 4, and terminal departmental specialization in Year 5.
 
 ```
@@ -100,7 +100,7 @@ Obafemi Awolowo University's academic structure comprises:
 ### 3. Faculty of Arts
 *   **Location**: Humanities & Humanities Complex (Humanities Blocks 1–3, Oduduwa Quadrangle).
 *   **Dean's Office**: Ground Floor, Faculty of Arts Complex (Block A).
-*   **Clearance File Jacket Convention**: **Dark Blue File**.
+*   **Clearance File Jacket Convention**: **Standard Pale Yellow File** (universal campus standard).
 
 ```
 ┌──────────────────────────────────────┬────────────────────────┬──────────┬──────────────────────────────────────────────────────────┐
@@ -150,7 +150,7 @@ Obafemi Awolowo University's academic structure comprises:
 ### 4. Faculty of Basic Medical Sciences (College of Health Sciences)
 *   **Location**: College of Health Sciences Complex (Road 2, Academic Science Quadrangle — adjacent to Faculty of Pharmacy and EDM; completely distinct from the University Health Centre located in the residential zone).
 *   **Provost's & Dean's Office**: CHS Administrative Block.
-*   **Clearance File Jacket Convention**: **Purple / Maroon File**.
+*   **Clearance File Jacket Convention**: **Standard Pale Yellow File** (universal campus standard).
 
 ```
 ┌──────────────────────────────────────┬────────────────────────┬──────────┬──────────────────────────────────────────────────────────┐
@@ -214,7 +214,7 @@ Obafemi Awolowo University's academic structure comprises:
 ### 7. Faculty of Education
 *   **Location**: Faculty of Education Complex (Road 1, adjacent to Fajuyi Hall).
 *   **Dean's Office**: First Floor, Education Complex Block A.
-*   **Clearance File Jacket Convention**: **Orange File**.
+*   **Clearance File Jacket Convention**: **Standard Pale Yellow File** (universal campus standard).
 
 ```
 ┌──────────────────────────────────────┬────────────────────────┬──────────┬──────────────────────────────────────────────────────────┐
@@ -263,7 +263,7 @@ Obafemi Awolowo University's academic structure comprises:
 ### 8. Faculty of Environmental Design & Management (EDM)
 *   **Location**: EDM Studio Quadrangle (Road 1, adjacent to Faculty of Pharmacy).
 *   **Dean's Office**: Ground Floor, EDM Complex.
-*   **Clearance File Jacket Convention**: **Brown File**.
+*   **Clearance File Jacket Convention**: **Standard Pale Yellow File** (universal campus standard).
 
 ```
 ┌──────────────────────────────────────┬────────────────────────┬──────────┬──────────────────────────────────────────────────────────┐
@@ -310,7 +310,7 @@ Obafemi Awolowo University's academic structure comprises:
 *   **Location**: Faculty of Law Complex (Road 1, adjacent to Hezekiah Library & SUB).
 *   **Dean's Office**: First Floor, Law Library Building.
 *   **Degree Awarded**: **LL.B (Bachelor of Laws)** — 5-Year Professional Degree.
-*   **Clearance File Jacket Convention**: **Deep Navy Blue File**.
+*   **Clearance File Jacket Convention**: **Standard Pale Yellow File** (universal campus standard).
 *   **Academic Departments**:
     1.  **Department of Public Law**: Constitutional Law, Administrative Law, Criminal Law, Nigerian Legal System, Human Rights Law.
     2.  **Department of International Law**: Public International Law, Law of the Sea, International Humanitarian Law, Conflict of Laws (Private International Law), Air and Space Law.
@@ -323,7 +323,7 @@ Obafemi Awolowo University's academic structure comprises:
 *   **Location**: Pharmacy Complex (Road 2, adjacent to EDM and College of Health Sciences — completely separate from the University Health Centre in the residential zone).
 *   **Dean's Office**: Ground Floor, Faculty of Pharmacy Building.
 *   **Degree Awarded**: **B.Pharm (Bachelor of Pharmacy)** / **Pharm.D** — 5-Year Professional Program.
-*   **Clearance File Jacket Convention**: **Yellowish-Green / Emerald File**.
+*   **Clearance File Jacket Convention**: **Standard Pale Yellow File** (universal campus standard).
 *   **Academic Departments**:
     1.  **Pharmaceutics & Pharmaceutical Technology**: Drug formulation, dosage form design, biopharmaceutics, pharmaceutical microbiology, and sterile production.
     2.  **Pharmaceutical Chemistry**: Medicinal chemistry, pharmaceutical analysis, quality assurance, drug synthesis, and spectroscopic characterization.
@@ -336,7 +336,7 @@ Obafemi Awolowo University's academic structure comprises:
 ### 11. Faculty of Science
 *   **Location**: The iconic **"White House"** (Complex of Central Science Laboratories and Lecture Theatres).
 *   **Dean's Office**: Ground Floor, White House Central Wing.
-*   **Clearance File Jacket Convention**: **Bright Green File**.
+*   **Clearance File Jacket Convention**: **Standard Pale Yellow File** (universal campus standard).
 
 ```
 ┌──────────────────────────────────────┬────────────────────────┬──────────┬──────────────────────────────────────────────────────────┐
@@ -385,9 +385,9 @@ Obafemi Awolowo University's academic structure comprises:
 ---
 
 ### 12. Faculty of Social Sciences
-*   **Location**: The iconic **"Yellow House"** (Directly facing the Central Administrative Senate Building).
-*   **Dean's Office**: Ground Floor, Yellow House Central Corridor.
-*   **Clearance File Jacket Convention**: **Red File**.
+*   **Location**: Faculty of Social Sciences Building / Yellow-Panel Complex (Directly facing the Central Administrative Senate Building).
+*   **Dean's Office**: Ground Floor, Social Sciences Central Corridor.
+*   **Clearance File Jacket Convention**: **Standard Pale Yellow File** (universal campus standard).
 
 ```
 ┌──────────────────────────────────────┬────────────────────────┬──────────┬──────────────────────────────────────────────────────────┐
@@ -436,7 +436,7 @@ Obafemi Awolowo University's academic structure comprises:
 *   **Location**: The iconic **"Spider House"** (Features exterior cantilevered steel trusses resembling arachnid legs).
 *   **Dean's Office**: Ground Floor, Spider House Central Foyer.
 *   **Degree Awarded**: **B.Sc. (Eng) / B.Sc. (Tech)** — 5-Year Professional Engineering Programs.
-*   **Clearance File Jacket Convention**: **Yellow File**.
+*   **Clearance File Jacket Convention**: **Standard Pale Yellow File** (universal campus standard).
 
 ```
 ┌──────────────────────────────────────┬────────────────────────┬──────────┬──────────────────────────────────────────────────────────┐
@@ -590,4 +590,4 @@ The Faculty of Agriculture operates an integrated pyramid where students do not 
 1.  **Locate Your Faculty Office on Day 1**: Do not wait for clearance week. Visit your Faculty Officer's desk to verify the approved course list for your specific department.
 2.  **Confirm Your Exact Course Code Prefixes**: Note whether your courses carry general faculty codes (e.g. `SSC 105`, `SER 001`, `LIB 001`) or departmental codes (`SOC`, `MCM`, `BCJ`, `CHM`, `MTH`, `EEE`).
 3.  **Buy the Authentic Departmental Handbook**: Every department publishes an official handbook detailing credit unit limits, prerequisite trees (e.g., you cannot take `MTH 201` without passing `MTH 101`), and graduation requirements.
-4.  **Know Your Faculty File Jacket Color**: Submitting documents in the wrong color folder causes immediate administrative rejection during physical screening.
+4.  **The Standard Pale Yellow File Jacket**: Across all faculties and departments at OAU, document screening strictly requires the standard **pale yellow flat file jacket**. Do not buy colored folders; pale yellow is universally mandated across campus.
