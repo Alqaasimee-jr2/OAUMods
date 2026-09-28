@@ -17,7 +17,7 @@ export interface FacultyData {
 
 export const UNIVERSAL_FILE_JACKET = {
   color: 'Pale Yellow',
-  description: 'Standard Pale Yellow flat manila file jacket mandated across all 13 faculties and departments.',
+  description: 'Standard Pale Yellow flat manila file jacket mandated across all 15 faculties and departments.',
   labeling: 'Full Legal Name, JAMB Reg Number, Matric Number, Faculty, Department, Session, Phone Number.',
   rules: 'Never staple original certificates into your file; use paperclips or transparent sleeves.',
 };
@@ -82,7 +82,6 @@ export const FACULTIES_DATA: FacultyData[] = [
       { name: 'Anatomy & Cell Biology', degree: 'B.Sc. Anatomy', duration: '4 Years' },
       { name: 'Physiological Sciences', degree: 'B.Sc. Physiology', duration: '4 Years' },
       { name: 'Medical Biochemistry', degree: 'B.Sc. Medical Biochemistry', duration: '4 Years' },
-      { name: 'Nursing Science', degree: '5-Yr B.N.Sc. (RN, RM, RPHN, RPN certifications)', duration: '5 Years' },
       { name: 'Medical Rehabilitation', degree: '5-Yr B.MR (Physiotherapy & Occupational Therapy)', duration: '5 Years' },
     ],
   },
@@ -112,6 +111,20 @@ export const FACULTIES_DATA: FacultyData[] = [
       { name: 'Oral & Maxillofacial Surgery', degree: '6-Year Professional B.Ch.D', duration: '6 Years' },
       { name: 'Preventive & Community Dentistry', degree: '6-Year Professional B.Ch.D', duration: '6 Years' },
       { name: 'Restorative Dentistry', degree: '6-Year Professional B.Ch.D', duration: '6 Years' },
+    ],
+  },
+  {
+    id: 'nursing',
+    name: 'Faculty of Nursing Science',
+    location: 'College of Health Sciences Complex (Road 2 & OAUTHC)',
+    deansOffice: 'Nursing Administration Wing, Health Sciences',
+    clearanceFile: 'Pale Yellow (Universal)',
+    lectureTheatres: ['Health Sciences Lecture Theatres', 'Nursing Clinical Skills Labs'],
+    departments: [
+      { name: 'Community Health Nursing', degree: '5-Yr B.N.Sc. (RN, RM, RPHN certifications)', duration: '5 Years' },
+      { name: 'Maternal & Child Health Nursing', degree: '5-Yr B.N.Sc.', duration: '5 Years' },
+      { name: 'Medical-Surgical Nursing', degree: '5-Yr B.N.Sc.', duration: '5 Years' },
+      { name: 'Mental Health & Psychiatric Nursing', degree: '5-Yr B.N.Sc.', duration: '5 Years' },
     ],
   },
   {
@@ -224,7 +237,7 @@ export const FACULTIES_DATA: FacultyData[] = [
   },
   {
     id: 'computing',
-    name: 'Computing Science & Engineering',
+    name: 'Faculty of Computing',
     location: 'Computing Complex / INTECU ICT Corridor',
     deansOffice: 'Computing Administration Block',
     clearanceFile: 'Pale Yellow (Universal)',

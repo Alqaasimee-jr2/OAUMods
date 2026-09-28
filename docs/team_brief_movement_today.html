@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Great Ife Freshman Companion — Team Brief: Movement for Today</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1e293b;
+      background: #ffffff;
+      line-height: 1.38;
+      font-size: 9pt;
+      margin: 0;
+      padding: 0;
+    }
+    .header-banner {
+      background: linear-gradient(135deg, #0a192f 0%, #0f3460 60%, #064e3b 100%);
+      color: #ffffff;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .header-tag {
+      display: inline-block;
+      background: rgba(217, 119, 6, 0.25);
+      color: #fbbf24;
+      border: 1px solid rgba(251, 191, 36, 0.4);
+      font-size: 7pt;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+    }
+    .header-title {
+      font-size: 16.5pt;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      margin: 0 0 4px 0;
+      color: #ffffff;
+    }
+    .header-subtitle {
+      font-size: 9.5pt;
+      color: #94a3b8;
+      margin: 0;
+      font-weight: 400;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 7.5pt;
+    }
+    .meta-item strong {
+      color: #fbbf24;
+      display: block;
+      margin-bottom: 1px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .meta-item span {
+      color: #cbd5e1;
+    }
+    .directive-card {
+      background: #f8fafc;
+      border-left: 4px solid #059669;
+      border-radius: 0 6px 6px 0;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+      border-top: 1px solid #e2e8f0;
+      border-right: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .directive-title {
+      font-size: 8.5pt;
+      font-weight: 800;
+      color: #064e3b;
+      margin: 0 0 2px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .directive-quote {
+      font-size: 9.8pt;
+      font-weight: 600;
+      font-style: italic;
+      color: #0f172a;
+      margin: 0;
+    }
+    h2.section-header {
+      font-size: 11pt;
+      font-weight: 800;
+      color: #0a192f;
+      margin: 12px 0 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 3px;
+    }
+    .step-box {
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 9px 12px;
+      margin-bottom: 8px;
+      background: #ffffff;
+    }
+    .step-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3px;
+    }
+    .step-number {
+      font-size: 7.2pt;
+      font-weight: 800;
+      color: #ffffff;
+      background: #0f3460;
+      padding: 1px 6px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+    .step-badge {
+      font-size: 7pt;
+      font-weight: 700;
+      color: #047857;
+      background: #d1fae5;
+      padding: 1px 7px;
+      border-radius: 999px;
+    }
+    .step-title {
+      font-size: 9.8pt;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 2px 0 4px 0;
+    }
+    .step-content {
+      font-size: 8.4pt;
+      color: #475569;
+      margin: 0;
+    }
+    .step-list {
+      margin: 4px 0 0 0;
+      padding-left: 16px;
+      font-size: 8.2pt;
+      color: #334155;
+    }
+    .step-list li {
+      margin-bottom: 2px;
+    }
+    .future-box {
+      background: #fffbeb;
+      border: 1px solid #fef3c7;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin-top: 10px;
+    }
+    .future-box h3 {
+      font-size: 8.5pt;
+      font-weight: 800;
+      color: #92400e;
+      margin: 0 0 3px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .future-box p {
+      margin: 0;
+      font-size: 8pt;
+      color: #78350f;
+      line-height: 1.35;
+    }
+    .footer {
+      margin-top: 12px;
+      padding-top: 6px;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 7.2pt;
+      color: #64748b;
+    }
+    .pill {
+      display: inline-block;
+      padding: 1px 5px;
+      font-size: 7pt;
+      font-weight: 600;
+      border-radius: 3px;
+      background: #f1f5f9;
+      color: #334155;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-banner">
+    <div class="header-tag">Strategic Direction // Team Directive</div>
+    <h1 class="header-title">Great Ife Freshman Companion (GUIDE17)</h1>
+    <p class="header-subtitle">Movement for Today: Architectural Baseline & Quality Fortification</p>
+    
+    <div class="meta-grid">
+      <div class="meta-item">
+        <strong>Date & Timestamp</strong>
+        <span>2026-09-28 // Session 025</span>
+      </div>
+      <div class="meta-item">
+        <strong>Authored By</strong>
+        <span>Project Lead & Antigravity</span>
+      </div>
+      <div class="meta-item">
+        <strong>Target Viewport</strong>
+        <span>Mobile-First (360px – 420px)</span>
+      </div>
+      <div class="meta-item">
+        <strong>Operating Rule</strong>
+        <span>Strict Anti-Slop & Ground Truth</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="directive-card">
+    <div class="directive-title">Core Operating Philosophy</div>
+    <p class="directive-quote">"We're building the skeleton and the muscles holding the skeleton together first. Advanced additions roll out progressively as we grow."</p>
+  </div>
+
+  <h2 class="section-header">📌 Strategic Alignment on Team Feedback (NUSMods & TUM)</h2>
+  <p style="font-size: 8.3pt; color: #334155; margin: 0 0 8px 0;">
+    The team member's voice notes brought high-value analysis modeled after <strong>NUSMods</strong> (open-source timetable & map routing) and <strong>TUM Munich</strong> (all-in-one student portal). While we embrace this long-term trajectory, attempting full campus-wide timetabling and live GPS tracking immediately creates massive data maintenance drag. <strong>Our agreement is clear: anchor the basics today, then scale features progressively.</strong>
+  </p>
+
+  <h2 class="section-header">⚡ Our 3-Step Movement for Today</h2>
+
+  <div class="step-box">
+    <div class="step-header">
+      <span class="step-number">Movement 1</span>
+      <span class="step-badge">Architecture & Build</span>
+    </div>
+    <div class="step-title">Build Layer A (Public Info Portal) & Layer B (OAUMods Companion)</div>
+    <p class="step-content">Construct the foundational two-layer structure that forms the core backbone of the project:</p>
+    <ul class="step-list">
+      <li><strong>Layer A (Public Orientation & Info Portal)</strong>: High-impact hero introducing Great Ife culture, freshman halls (Angola for males, Mozambique for females, plus Fajuyi & Awolowo), landmark directory (Oduduwa Hall, SUB, Motion Ground, Pit Theatre), and campus lingo.</li>
+      <li><strong>Layer B (OAUMods Companion App)</strong>: Seamlessly accessible freshman utility suite featuring the Freshman Clearance Checklist (persisted via <span class="pill">localStorage</span>), 100-Level Course Helper, and Venue Directory (BOO, 1k LT, AUD).</li>
+    </ul>
+  </div>
+
+  <div class="step-box">
+    <div class="step-header">
+      <span class="step-number">Movement 2</span>
+      <span class="step-badge">Multi-Device QA</span>
+    </div>
+    <div class="step-title">Rigorous Interaction, Viewport & Offline Testing</div>
+    <p class="step-content">Stress-test the unified skeleton across real-world campus constraints before external integrations:</p>
+    <ul class="step-list">
+      <li><strong>Viewport Integrity</strong>: Strict validation across 360px, 390px, and 414px viewports to eliminate horizontal scrolling leaks and ensure minimum 48px touch targets.</li>
+      <li><strong>Offline-First Resilience</strong>: Verify that the app and its stored checklist/course data load and run smoothly without active internet connectivity.</li>
+      <li><strong>State Retention</strong>: Guarantee that freshman clearance checklist marks and custom courses survive page refreshes and browser restarts.</li>
+    </ul>
+  </div>
+
+  <div class="step-box">
+    <div class="step-header">
+      <span class="step-number">Movement 3</span>
+      <span class="step-badge">Visual & UX Polish</span>
+    </div>
+    <div class="step-title">Extreme UI/UX Elevation (No Vibe Code / No Agent Slop)</div>
+    <p class="step-content">Elevate the product aesthetic beyond a "plain school website" to a world-class consumer-grade app:</p>
+    <ul class="step-list">
+      <li><strong>Curated OAU Palette</strong>: Deep OAU Navy (<span class="pill">#0A192F</span>), Rich Ochre Gold (<span class="pill">#D97706</span>), and Forest Emerald (<span class="pill">#059669</span>).</li>
+      <li><strong>Modern Design Standards</strong>: Refined frosted glassmorphism, responsive micro-animations (&lt;150ms transitions), and crystal-clear typographic hierarchy.</li>
+      <li><strong>Mobile Dock Navigation</strong>: Smooth, thumb-friendly bottom app dock designed for seamless navigation while walking between lecture halls.</li>
+    </ul>
+  </div>
+
+  <div class="future-box">
+    <h3>🔭 What Comes Next (Progressive Phase 2 & Beyond)</h3>
+    <p>
+      Once today's skeleton and muscles are rock-solid and verified, we will progressively introduce:
+      <strong>(1) Leaflet.js + OpenStreetMap integration</strong> with walking time prompts from Angola/Moz, 
+      <strong>(2) Supabase user accounts & notes</strong>, and 
+      <strong>(3) Faculty-wide timetable builder with manual slot adjustments</strong>.
+    </p>
+  </div>
+
+  <div class="footer">
+    <span>Great Ife Freshman Companion // Project Blueprint & Roadmap</span>
+    <span>Document Ref: GUIDE17-BRIEF-025 // Official Team Copy</span>
+  </div>
+
+</body>
+</html>

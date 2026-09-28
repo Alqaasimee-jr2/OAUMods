@@ -68,6 +68,7 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
 - [x] **1.3 Accommodation Hub (Hostel & Bed Space Engine)**:
   - [x] Bed space balloting strategy: countdowns, network prep tips, portal steps, and verification.
   - [x] Detailed hall guides: Angola (freshmen males), Mozambique (freshmen females), Fajuyi, Awolowo, Moremi, Alumni, ETF.
+  - [x] 100-Level spillover allocations in upperclassmen halls (Fajuyi, Awolowo, Moremi, Alumni) when Angola or Moz reach full capacity.
   - [x] Off-campus accommodation directory (Maintenance, Mayfair, Asherifa, Ibadan Road, AP, OAU Gate) with verified landlord tips and pricing expectations.
 
 **Exit Criteria for Phase 1**: A functional, mobile-tested prototype where a student can check off clearance steps, look up any key building at OAU, and navigate accommodation.
@@ -80,14 +81,13 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
 
 ### Key Tasks:
 - [x] **2.1 Campus Transit & Movement Engine**:
-  - [x] Ground-truth custom laminated ticket system (1 ticket = ₦100) with anti-counterfeiting paper seals and purchasing booths (`research/16`).
-  - [x] Fleet composition: Green transition to Electric Tricycles (E-Trikes) and CNG vehicles; October 1 tariff review advisory.
-  - [x] Regulated route matrices for Tricycles (Gate to SUB: 2 tickets; Gate to Halls/Market/Faculties/ICT: 3 tickets).
-  - [x] Regulated route matrices for Shuttle Buses (Gate to Halls/Market/ICT/Religious Ground: 2 tickets).
-  - [x] Exclusive Road 7 bus circuit (all routes 2 tickets / ₦200).
-  - [x] OAUTHC / College of Health Sciences transit corridor via Nissan Micra cabs (₦300 cash only).
+  - [x] Ground-truth custom paper ticket boarding system with official park purchasing booths (`research/16`).
+  - [x] Fleet composition: Green transition to Electric Tricycles (E-Trikes / Kekes) and CNG vehicles; regulated campus corridors.
+  - [x] Regulated route matrices for Tricycles / Kekes (Gate to SUB, Halls, Market, and Faculty corridors).
+  - [x] Regulated route matrices for Shuttle Buses (Gate to Halls, Market, ICT, and Religious Grounds).
+  - [x] Town and teaching hospital transit corridors (Town Campus Buses to Mayfair/Lagere, Teaching Hospital shuttle buses).
 - [ ] **2.2 Campus Life & Essentials Directory**:
-  - [x] Affordable food spots, cafeterias, buttery joints, and romantic sanctuaries across campus and halls (`research/18`).
+  - [x] Affordable food spots, cafeterias, buttery joints, proven faculty private restaurants (Science, Admin, Social Sciences, EDM Archi Kiosk), and Orente Grills (`research/18`).
   - [ ] Student services: Printing/photocopying hubs, cybercafés, bookshops, laundry.
   - [ ] Banks, working ATMs, and POS cash withdrawal points.
 - [x] **2.3 Essential Directory, Health & Emergency Systems**:
@@ -96,7 +96,7 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
   - [x] OAUTHC Emergency Medicine Department direct contact lines (`+234 815 209 2813`, `+234 815 209 2908`, `+234 805 500 4262`).
   - [x] Historical review of health crises (October 2021 protests) and student emergency escort playbooks.
 - [x] **2.4 Great Ife Residential, Religious & Sports Knowledge Base**:
-  - [x] Comprehensive profiling of all 9 halls of residence, layout, amenities, cooking/appliance bans, curfew, and Aroism culture (`research/08`).
+  - [x] Comprehensive profiling of all 9 halls of residence, layout, amenities, cooking/appliance bans, and curfew (`research/08`).
   - [x] Complete mapping of religious ecosystems: UJCM, Committee of Presidents, major fellowships, Catholic Chaplaincy OLPLC, All Souls Chapel, MSSN OAU, Central Mosque, hall mosques, and Jihad Week (`research/09`).
   - [x] Extensive sports intelligence: Directorate of Sports, available disciplines, world-class Sports Complex facilities, trials, HOD/Dean/VC cups, and 1970/1973/1984/2014 NUGA hosting history (`research/11`).
 
@@ -110,16 +110,16 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
 
 ### Key Tasks:
 - [x] **3.1 Academics Hub & Curricula Architecture**:
-  - [x] Directory of all 13 faculties + Computing Science & Engineering, 60+ departments, and file jacket color conventions (`research/13`).
-  - [x] Comprehensive mapping of multi-program "mini-departments" (Sociology & Anthropology's 5-in-1 unbundled matrix: SOC, MCM, BCJ, ISMS, FMM; Agriculture FPY; Dramatic Arts tracks).
-  - [x] Course codes, credit units, prerequisites, and foundational requirements (e.g. SSC 105 for Social Science media students).
+  - [x] Directory of all 15 institutional faculties, 60+ departments, and universal Pale Yellow file jacket conventions (`research/13`).
+  - [x] Compulsory campus-wide foundational general courses (GST 111, GST 112, LIB 101) required for every fresher across all 15 faculties.
+  - [x] Course codes, credit units, prerequisites, and foundational requirements (e.g. SSC 105 for Social Science students, MEG 101 for Tech, PUL 101 for Law).
 - [x] **3.2 🧮 Great Ife 5.0 GPA Calculator**:
   - [x] Pre-calibrated to OAU's grading scale (A = 5, B = 4, C = 3, D = 2, E = 1, F = 0).
   - [x] Dynamic course adder (Course Code, Unit, Grade).
   - [x] Real-time GPA calculation + target GPA projection for future semesters.
   - [x] Local storage persistence so calculations aren't lost.
-  - [x] 1-tap course bundles for 100L (Science, Tech, Health Sciences, Social Sciences, Computing, Law, Admin, Arts, EDM).
-  - [x] Animated circular progress gauge and degree classification badges.
+  - [x] 1-tap course bundles for all 15 faculties + dedicated Campus-Wide Compulsory bundle (GST 111, 112, LIB 101).
+  - [x] Degree classification badges and category-based course directory filters.
 - [ ] **3.3 Roommate Testing & Alpha Review**:
   - [ ] Deploy a live staging link for mobile testing.
   - [ ] Have roommates stress-test usability, speed, and accuracy of clearance steps and GPA math.

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
 
 @theme {
   --color-oau-navy: #12345B;
@@ -17,34 +18,19 @@
 }
 
 :root {
-  --background: #FAFCFE;
-  --foreground: #1F2937;
+  --background: #F8FAFC;
+  --foreground: #0F172A;
   --card: #FFFFFF;
-  --border: #D9E6F0;
+  --border: #E2E8F0;
   --primary: #12345B;
   --interactive: #1769AA;
-  --accent-gold: #E6AD3C;
-  --accent-sky: #4FA3D1;
-  --bg-soft: #EEF7FC;
-  --text-muted: #64748B;
-  --success: #25855A;
-  --warning: #C88719;
-  --error: #C94B4B;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #09101A;
-    --foreground: #F1F5F9;
-    --card: #0E1827;
-    --border: #1C2D44;
-    --primary: #4FA3D1;
-    --interactive: #38BDF8;
-    --accent-gold: #F59E0B;
-    --accent-sky: #60A5FA;
-    --bg-soft: #122033;
-    --text-muted: #94A3B8;
-  }
+  --accent-gold: #D97706;
+  --accent-sky: #0284C7;
+  --bg-soft: #F1F5F9;
+  --text-muted: #475569;
+  --success: #16A34A;
+  --warning: #D97706;
+  --error: #DC2626;
 }
 
 body {
@@ -71,6 +57,17 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(148, 163, 184, 0.5);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 /* Glassmorphism helpers */
