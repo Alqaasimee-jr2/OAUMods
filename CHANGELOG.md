@@ -1911,6 +1911,42 @@ Enacted and codified **Rule 5 (Strict Ground-Truth & Anti-Hallucination Policy)*
 *   **Project Lead**: Prompted the direct download and deep integration of Google Maps for maximal institutional fidelity and offline accessibility.
 *   **Guide 17 / Antigravity**: Integrated Google Maps as the default interactive experience, engineered the offline downloaded aerial viewer with sub-pixel pin projections, and verified clean Turbopack production builds.
 
+---
+
+## 2026-09-28 (Entry 047: Elimination of Dossier Text Sprawl, Leaflet Pin Labels & Smart Geolocation Guard)
+
+### 📌 Summary & Strategic Alignment
+*   Resolved the UI and spatial issues identified in the user's screenshot (`why are the text panning out like that. please work on it,`):
+    1.  **Elimination of Dossier Text Sprawl & Desktop Asymmetry**:
+        *   **Root Cause**: The right dossier drawer was stacking 6 separate content blocks plus the 280px Fast-Jump directory, totaling over 1,100px in height, while the left map was only ~500px tall. This caused the right column to sprawl far below the bottom fold into empty whitespace, while metadata badges stretched awkwardly across the card header.
+        *   **Height Balance & Symmetrical Layout**: Standardized both the map viewport and the right panel to exactly **`620px`** on desktop screens (`h-[480px] sm:h-[560px] lg:h-[620px]`).
+        *   **Right Panel Tab Switcher**: Split the right sidebar into two clean, contained views:
+            - **Tab 1: Landmark Dossier** — Unified metadata header (category badge + zone pill side-by-side), crisp typography, 2-column walking time micro-grid, transit info, fresher intelligence tip, and action buttons. The entire card body scrolls internally within the fixed 620px boundary without sprawling.
+            - **Tab 2: Directory ({count})** — Interactive directory list of all 35+ landmarks with category dots and verified Google pin badges. Clicking any item instantly selects it and switches to the dossier view.
+    2.  **Permanent High-Contrast Text Labels on Map Pins**:
+        *   **Root Cause**: Previously, Leaflet pins rendered only 2-letter abbreviation circles ("OD", "AN", "MO") without building names.
+        *   **Label Badges**: Added permanent, crisp, high-contrast label badges beneath every pin on Leaflet (e.g., "Oduduwa Hall", "Senate Building", "Angola Hall", "Mozambique Hall", "Hezekiah Library") styled with drop shadows and rounded borders. Active landmarks feature glowing amber badges.
+        *   **Label Toggle**: Added an on-canvas `Labels: ON / OFF` toolbar button for both Leaflet and the Downloaded Satellite view.
+    3.  **Smart Geolocation Guard (Anti-Displacement)**:
+        *   **Root Cause**: When a user outside Ile-Ife (e.g., in Lagos at `6.5469, 3.2387`) clicked *"Locate Me"*, Leaflet flew 200km away to Lagos residential streets, panning all OAU buildings and pins completely out of the viewport.
+        *   **Campus Bounds Check**: Implemented a distance and boundary check (`lat 7.48..7.55`, `lng 4.50..4.55`). If the user is outside OAU campus, the map **remains centered on OAU** and displays a temporary notification badge indicating distance from campus (e.g., *"You are ~215 km away from campus. Map remains centered on OAU."*). If on campus, it smoothly centers on the student's location.
+    4.  **Build & Verification**:
+        *   `npm run lint`: **0 errors, 0 warnings**.
+        *   `npm run build`: Compiled all 18 static routes cleanly in Turbopack in 1.8s.
+        *   HTTP GET on `/map` verified 200 OK.
+
+### 🏛️ Deliverables Completed
+1.  **Components Updated**:
+    *   [`oaumods/src/components/CampusMap.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/components/CampusMap.tsx): Height-balanced desktop layout (620px), unified metadata headers, and right-panel Dossier/Directory tab switcher.
+    *   [`oaumods/src/components/LeafletMap.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/components/LeafletMap.tsx): Permanent text label badges, label toggle, smart geolocation guard, and 620px height alignment.
+2.  **Chronicle Updated**:
+    *   [`CHANGELOG.md`](file:///c:/Users/DELL/Desktop/GUIDE17/CHANGELOG.md): Appended Entry 047.
+
+### 👥 People & Community
+*   **Project Lead**: Identified the layout awkwardness and text sprawling in the desktop map interface.
+*   **Guide 17 / Antigravity**: Diagnosed the root causes (unbalanced heights, missing pin labels, and off-campus geolocation fly-away), redesigned the right panel with internal tabs, added text badges to all map pins, and verified zero-error production builds.
+
+
 
 
 

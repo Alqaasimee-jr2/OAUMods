@@ -25,6 +25,7 @@ import {
   Eye,
   EyeOff,
   Crosshair,
+  ListFilter,
 } from 'lucide-react';
 import {
   CampusLandmark,
@@ -39,7 +40,7 @@ import { GeometricShape, WordAccent } from './GeometricShapes';
 const LeafletMap = dynamic(() => import('./LeafletMap'), {
   ssr: false,
   loading: () => (
-    <div className="w-full aspect-4/3 sm:aspect-16/10 bg-slate-900 border border-slate-700 flex flex-col items-center justify-center text-white gap-3 select-none">
+    <div className="w-full h-[480px] sm:h-[560px] lg:h-[620px] bg-slate-900 border border-slate-700 flex flex-col items-center justify-center text-white gap-3 select-none">
       <div className="w-8 h-8 border-3 border-amber-400 border-t-transparent animate-spin rounded-full"></div>
       <div className="text-center space-y-1">
         <p className="text-sm font-bold tracking-wide">Loading OAU Geospatial Map...</p>
@@ -63,13 +64,14 @@ export default function CampusMap({
   // 'real' = Leaflet OpenStreetMap & Satellite Tiles
   // 'vector' = 100% Offline Sharon Masterplan SVG
   const [activeTab, setActiveTab] = useState<'google' | 'downloaded' | 'real' | 'vector'>('google');
+  const [rightPanelTab, setRightPanelTab] = useState<'dossier' | 'directory'>('dossier');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedLandmark, setSelectedLandmark] = useState<CampusLandmark | null>(() => {
     if (initialLandmarkId) {
       return CAMPUS_LANDMARKS.find((l) => l.id === initialLandmarkId) || null;
     }
-    // Default to Hezekiah Library or Oduduwa Hall
+    // Default to Oduduwa Hall
     return CAMPUS_LANDMARKS.find((l) => l.id === 'oduduwa-hall') || CAMPUS_LANDMARKS[0];
   });
   const [activeRouteId, setActiveRouteId] = useState<string | null>(null);
@@ -149,6 +151,7 @@ export default function CampusMap({
 
   const handleSelectLandmark = (landmark: CampusLandmark) => {
     setSelectedLandmark(landmark);
+    setRightPanelTab('dossier');
 
     // Pan Downloaded Aerial map towards landmark if zoomed in
     if (aerialZoom > 1) {
@@ -256,7 +259,7 @@ export default function CampusMap({
   return (
     <div className="space-y-6 text-left">
       {/* Top Header Card */}
-      <div className="relative border border-slate-200 bg-white p-5 sm:p-6 space-y-3 overflow-hidden shadow-xs">
+      <div className="relative border border-slate-200 bg-white p-5 sm:p-6 space-y-4 overflow-hidden shadow-xs">
         <div className="absolute top-2 right-4 pointer-events-none opacity-20 hidden sm:block">
           <GeometricShape type="hexagon" color="gold" size="lg" variant="outline" />
         </div>
@@ -320,13 +323,13 @@ export default function CampusMap({
           <h1 className="text-xl sm:text-2xl font-black text-oau-navy">
             Interactive Campus <WordAccent shape="circle" color="gold">Map & Spatial</WordAccent> Navigator
           </h1>
-          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed max-w-3xl">
-            Real-world geospatial map of Obafemi Awolowo University. Seamlessly toggle between live Google Maps, 100% offline downloaded satellite imagery, Leaflet GPS, and the Sharon Masterplan.
+          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed max-w-3xl mt-1">
+            Real-world geospatial map of Obafemi Awolowo University. Seamlessly toggle between live Google Maps, 100% offline downloaded satellite imagery, Leaflet GPS with crisp building labels, and the Sharon Masterplan.
           </p>
         </div>
 
         {/* Quick Search & Route Bar */}
-        <div className="pt-2 grid grid-cols-1 md:grid-cols-12 gap-3">
+        <div className="pt-1 grid grid-cols-1 md:grid-cols-12 gap-3">
           <div className="md:col-span-7 relative">
             <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
@@ -363,7 +366,7 @@ export default function CampusMap({
         </div>
 
         {/* Category Filter Pills */}
-        <div className="flex gap-1.5 overflow-x-auto pb-1 pt-1 no-scrollbar">
+        <div className="flex gap-1.5 overflow-x-auto pb-1 no-scrollbar">
           {categories.map((cat) => {
             const Icon = cat.icon;
             const isSelected = selectedCategory === cat.id;
@@ -385,16 +388,16 @@ export default function CampusMap({
         </div>
       </div>
 
-      {/* Main Map Viewport & Dossier Grid */}
+      {/* Main Map Viewport & Dossier Grid (Height-Balanced on Desktop) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-        {/* Left / Top Map Canvas Container (8 cols) */}
-        <div className="lg:col-span-8 space-y-4">
+        {/* Left Map Canvas Container (8 cols) */}
+        <div className="lg:col-span-8 space-y-3">
           <div className="relative border border-slate-300 bg-white shadow-xs overflow-hidden">
             {/* ============================================================== */}
             {/* MODE 1: Live Embedded Google Maps View (PRIMARY DEFAULT)       */}
             {/* ============================================================== */}
             {activeTab === 'google' && (
-              <div className="relative w-full aspect-4/3 sm:aspect-16/10 bg-slate-950 overflow-hidden">
+              <div className="relative w-full h-[480px] sm:h-[560px] lg:h-[620px] bg-slate-950 overflow-hidden">
                 <iframe
                   key={`${selectedLandmark?.id || 'center'}-${googleMapType}-${googleZoom}`}
                   title="Google Maps Live OAU View"
@@ -487,7 +490,7 @@ export default function CampusMap({
             {/* ============================================================== */}
             {activeTab === 'downloaded' && (
               <div
-                className={`relative w-full aspect-4/3 sm:aspect-16/10 bg-slate-950 overflow-hidden select-none ${
+                className={`relative w-full h-[480px] sm:h-[560px] lg:h-[620px] bg-slate-950 overflow-hidden select-none ${
                   aerialZoom > 1 ? 'cursor-grab active:cursor-grabbing' : 'cursor-default'
                 }`}
                 onMouseDown={handleMouseDown}
@@ -520,11 +523,9 @@ export default function CampusMap({
 
                   {/* Overlaid Institutional Landmark Pins */}
                   {filteredLandmarks.map((lm) => {
-                    // Geographic linear projection onto [lon 4.510..4.532] and [lat 7.512..7.526]
                     const leftPercent = ((lm.lng - 4.510) / 0.022) * 100;
                     const topPercent = ((7.526 - lm.lat) / 0.014) * 100;
 
-                    // Clamping points outside the aerial photograph bounds (e.g. Main Gate at 7.4975)
                     if (leftPercent < 0 || leftPercent > 100 || topPercent < 0 || topPercent > 100) {
                       return null;
                     }
@@ -645,7 +646,7 @@ export default function CampusMap({
             {/* MODE 4: 100% Offline Geographically Projected SVG Masterplan   */}
             {/* ============================================================== */}
             {activeTab === 'vector' && (
-              <div className="relative w-full aspect-4/3 sm:aspect-16/10 bg-[#0B1528] overflow-hidden select-none cursor-grab active:cursor-grabbing">
+              <div className="relative w-full h-[480px] sm:h-[560px] lg:h-[620px] bg-[#0B1528] overflow-hidden select-none cursor-grab active:cursor-grabbing">
                 <svg
                   viewBox="0 0 1000 650"
                   className="w-full h-full transition-transform duration-200"
@@ -843,7 +844,7 @@ export default function CampusMap({
           </div>
 
           {/* Quick External Map Navigation Strip */}
-          <div className="flex flex-wrap items-center justify-between gap-3 text-xs text-slate-600 bg-white p-3 border border-slate-200">
+          <div className="flex flex-wrap items-center justify-between gap-3 text-xs text-slate-600 bg-white p-3 border border-slate-200 shadow-xs">
             <span className="font-semibold text-slate-700">Need Turn-by-Turn GPS Navigation?</span>
             <div className="flex flex-wrap items-center gap-2">
               <a
@@ -937,159 +938,209 @@ export default function CampusMap({
           )}
         </div>
 
-        {/* Right Landmark Dossier Drawer (4 cols) */}
-        <div className="lg:col-span-4 space-y-4">
-          {selectedLandmark ? (
-            <div className="border border-slate-300 bg-white p-5 space-y-4 shadow-xs sticky top-20">
-              <div className="flex items-start justify-between gap-2 border-b border-slate-200 pb-3">
-                <div>
-                  <span
-                    className="inline-block px-2 py-0.5 text-[10px] font-bold text-white uppercase tracking-wider mb-1"
-                    style={{ backgroundColor: getCategoryColor(selectedLandmark.category) }}
-                  >
-                    {selectedLandmark.categoryLabel}
-                  </span>
-                  <h2 className="text-lg font-black text-oau-navy leading-tight">{selectedLandmark.name}</h2>
-                  <p className="text-xs text-slate-500 font-medium mt-0.5">{selectedLandmark.officialName}</p>
-                </div>
-                <div className="text-right shrink-0">
-                  <span className="text-[10px] font-mono text-slate-500 block">ZONE</span>
-                  <span className="text-xs font-bold text-oau-navy">{selectedLandmark.zone}</span>
-                </div>
-              </div>
+        {/* Right Dossier & Directory Panel (4 cols, Balanced Height) */}
+        <div className="lg:col-span-4 flex flex-col space-y-3">
+          {/* Header Switcher: Landmark Dossier vs Fast-Jump Directory */}
+          <div className="flex items-center border border-slate-300 bg-slate-100 p-0.5 text-xs font-bold shrink-0">
+            <button
+              onClick={() => setRightPanelTab('dossier')}
+              className={`flex-1 py-1.5 px-3 text-center transition-colors flex items-center justify-center gap-1.5 ${
+                rightPanelTab === 'dossier'
+                  ? 'bg-oau-navy text-white shadow-xs'
+                  : 'text-slate-700 hover:text-oau-navy'
+              }`}
+            >
+              <Compass className="w-3.5 h-3.5 text-amber-400" />
+              <span>Landmark Dossier</span>
+            </button>
+            <button
+              onClick={() => setRightPanelTab('directory')}
+              className={`flex-1 py-1.5 px-3 text-center transition-colors flex items-center justify-center gap-1.5 ${
+                rightPanelTab === 'directory'
+                  ? 'bg-oau-navy text-white shadow-xs'
+                  : 'text-slate-700 hover:text-oau-navy'
+              }`}
+            >
+              <ListFilter className="w-3.5 h-3.5 text-emerald-500" />
+              <span>Directory ({filteredLandmarks.length})</span>
+            </button>
+          </div>
 
-              <p className="text-xs text-slate-700 leading-relaxed">{selectedLandmark.description}</p>
+          {/* TAB 1: Selected Landmark Dossier */}
+          {rightPanelTab === 'dossier' && (
+            <div className="border border-slate-300 bg-white p-4 sm:p-5 flex flex-col h-[560px] lg:h-[620px] shadow-xs">
+              {selectedLandmark ? (
+                <div className="flex flex-col h-full space-y-3">
+                  {/* Top Metadata Header */}
+                  <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 pb-2.5 shrink-0">
+                    <span
+                      className="inline-block px-2.5 py-0.5 text-[10px] font-bold text-white uppercase tracking-wider rounded-xs"
+                      style={{ backgroundColor: getCategoryColor(selectedLandmark.category) }}
+                    >
+                      {selectedLandmark.categoryLabel}
+                    </span>
+                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-600 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded-xs">
+                      <span className="text-slate-400 font-normal">Zone:</span> {selectedLandmark.zone}
+                    </span>
+                  </div>
 
-              {/* Verified Pin Badge */}
-              {selectedLandmark.googleMapsUrl && (
-                <div className="flex items-center gap-2 p-2 bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span className="text-[11px] font-bold">Verified Google Maps Institutional Pin</span>
+                  {/* Scrollable Dossier Content Area */}
+                  <div className="overflow-y-auto pr-1 space-y-3 flex-1 text-left">
+                    <div>
+                      <h2 className="text-xl font-black text-oau-navy leading-tight">{selectedLandmark.name}</h2>
+                      <p className="text-xs text-slate-500 font-medium mt-0.5">{selectedLandmark.officialName}</p>
+                    </div>
+
+                    {/* Verified Pin Badge */}
+                    {selectedLandmark.googleMapsUrl && (
+                      <div className="flex items-center gap-2 p-2 bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs rounded-xs">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                        <span className="text-[11px] font-bold">Verified Google Maps Institutional Pin</span>
+                      </div>
+                    )}
+
+                    {/* Description */}
+                    <p className="text-xs text-slate-700 leading-relaxed">{selectedLandmark.description}</p>
+
+                    {/* Fresher Walking Metrics */}
+                    <div className="border border-slate-200 bg-slate-50 p-2.5 space-y-1.5 rounded-xs">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-600 flex items-center gap-1.5">
+                        <Clock className="w-3.5 h-3.5 text-campus-blue" />
+                        <span>Walking Time from 100L Hostels</span>
+                      </span>
+                      <div className="grid grid-cols-2 gap-2 text-xs">
+                        <div className="p-2 bg-white border border-slate-200 rounded-xs">
+                          <span className="text-[10px] text-slate-500 block uppercase font-bold">From Mozambique</span>
+                          <span className="font-black text-oau-navy text-xs">{selectedLandmark.walkingTimeFromMoz}</span>
+                        </div>
+                        <div className="p-2 bg-white border border-slate-200 rounded-xs">
+                          <span className="text-[10px] text-slate-500 block uppercase font-bold">From Angola</span>
+                          <span className="font-black text-oau-navy text-xs">{selectedLandmark.walkingTimeFromAngola}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Transit Stop */}
+                    <div className="p-2.5 border border-slate-200 bg-white text-xs space-y-0.5 rounded-xs">
+                      <span className="text-[10px] text-slate-500 uppercase font-bold flex items-center gap-1">
+                        <Bus className="w-3.5 h-3.5 text-amber-500" />
+                        <span>Nearest Shuttle & Transit Stop</span>
+                      </span>
+                      <p className="font-bold text-slate-800 text-xs">{selectedLandmark.nearestTransitStop}</p>
+                    </div>
+
+                    {/* Fresher Insider Tip */}
+                    <div className="p-2.5 border border-amber-300 bg-amber-50/70 text-xs text-amber-950 space-y-1 rounded-xs">
+                      <span className="font-bold uppercase text-[10px] tracking-wide text-amber-900 flex items-center gap-1">
+                        <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                        <span>Fresher Survival Intelligence</span>
+                      </span>
+                      <p className="leading-relaxed text-[11px]">{selectedLandmark.fresherTip}</p>
+                    </div>
+
+                    {/* Courses & Primary Uses */}
+                    <div className="text-xs text-slate-600 border-t border-slate-200 pt-2 space-y-0.5">
+                      <span className="font-bold uppercase text-[10px] text-slate-500 block">
+                        Courses & Institutional Uses:
+                      </span>
+                      <p className="leading-relaxed text-[11px] text-slate-700">{selectedLandmark.coursesOrUses}</p>
+                    </div>
+                  </div>
+
+                  {/* Direct GPS Navigation Buttons (Pinned at Bottom) */}
+                  <div className="pt-2 space-y-1.5 shrink-0 border-t border-slate-200">
+                    {selectedLandmark.googleMapsUrl && (
+                      <a
+                        href={selectedLandmark.googleMapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full py-2 px-3 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-xs transition-colors rounded-xs"
+                      >
+                        <Navigation className="w-3.5 h-3.5 text-amber-300" />
+                        <span>Open Verified Google Maps Pin</span>
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                    )}
+                    <a
+                      href={`https://www.google.com/maps/dir/?api=1&destination=${selectedLandmark.lat},${selectedLandmark.lng}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-2 px-3 bg-amber-400 hover:bg-amber-300 text-oau-navy text-xs font-bold flex items-center justify-center gap-2 border border-amber-500 shadow-xs transition-colors rounded-xs"
+                    >
+                      <Footprints className="w-3.5 h-3.5 text-oau-navy" />
+                      <span>Google Walking Directions</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                    <button
+                      onClick={() => {
+                        setActiveTab('downloaded');
+                        handleSelectLandmark(selectedLandmark);
+                      }}
+                      className="w-full py-1.5 px-3 bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] font-bold flex items-center justify-center gap-1.5 border border-slate-300 transition-colors rounded-xs"
+                    >
+                      <Crosshair className="w-3 h-3 text-slate-600" />
+                      <span>Inspect on Downloaded Aerial Map</span>
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="h-full flex flex-col items-center justify-center border border-dashed border-slate-300 p-8 text-center text-slate-500 text-xs space-y-2">
+                  <Compass className="w-8 h-8 text-slate-400" />
+                  <p className="font-bold text-slate-700">Select any landmark on the map</p>
+                  <p>Click any marker or select a route to inspect walking times, shuttle stops, and tips.</p>
                 </div>
               )}
-
-              {/* Fresher Walking Metrics */}
-              <div className="border border-slate-200 bg-slate-50 p-3 space-y-2">
-                <span className="text-[11px] font-bold uppercase tracking-wide text-slate-700 flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-campus-blue" />
-                  <span>Walking Time from 100L Hostels</span>
-                </span>
-                <div className="grid grid-cols-2 gap-2 text-xs">
-                  <div className="p-2 bg-white border border-slate-200">
-                    <span className="text-[10px] text-slate-500 block uppercase font-bold">From Mozambique</span>
-                    <span className="font-black text-oau-navy">{selectedLandmark.walkingTimeFromMoz}</span>
-                  </div>
-                  <div className="p-2 bg-white border border-slate-200">
-                    <span className="text-[10px] text-slate-500 block uppercase font-bold">From Angola</span>
-                    <span className="font-black text-oau-navy">{selectedLandmark.walkingTimeFromAngola}</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Transit Stop */}
-              <div className="p-2.5 border border-slate-200 bg-white text-xs space-y-1">
-                <span className="text-[10px] text-slate-500 uppercase font-bold flex items-center gap-1">
-                  <Bus className="w-3 h-3 text-amber-500" />
-                  <span>Nearest Shuttle & Transit Stop</span>
-                </span>
-                <p className="font-bold text-slate-800">{selectedLandmark.nearestTransitStop}</p>
-              </div>
-
-              {/* Fresher Insider Tip */}
-              <div className="p-3 border border-amber-300 bg-amber-50/70 text-xs text-amber-950 space-y-1">
-                <span className="font-bold uppercase text-[10px] tracking-wide text-amber-900 flex items-center gap-1">
-                  <Sparkles className="w-3 h-3 text-amber-600" />
-                  <span>Fresher Survival Intelligence</span>
-                </span>
-                <p className="leading-relaxed">{selectedLandmark.fresherTip}</p>
-              </div>
-
-              {/* Courses & Primary Uses */}
-              <div className="text-xs text-slate-600 border-t border-slate-200 pt-3">
-                <span className="font-bold uppercase text-[10px] text-slate-500 block mb-1">
-                  Courses & Institutional Uses:
-                </span>
-                <p className="leading-relaxed">{selectedLandmark.coursesOrUses}</p>
-              </div>
-
-              {/* Direct GPS Navigation Buttons */}
-              <div className="pt-2 space-y-2">
-                {selectedLandmark.googleMapsUrl && (
-                  <a
-                    href={selectedLandmark.googleMapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full py-2.5 px-3 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-xs transition-colors"
-                  >
-                    <Navigation className="w-3.5 h-3.5 text-amber-300" />
-                    <span>Open Verified Google Maps Pin</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                )}
-                <a
-                  href={`https://www.google.com/maps/dir/?api=1&destination=${selectedLandmark.lat},${selectedLandmark.lng}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-2.5 px-3 bg-amber-400 hover:bg-amber-300 text-oau-navy text-xs font-bold flex items-center justify-center gap-2 border border-amber-500 shadow-xs transition-colors"
-                >
-                  <Footprints className="w-3.5 h-3.5 text-oau-navy" />
-                  <span>Google Walking Directions</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-                <button
-                  onClick={() => {
-                    setActiveTab('downloaded');
-                    handleSelectLandmark(selectedLandmark);
-                  }}
-                  className="w-full py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold flex items-center justify-center gap-2 border border-slate-300 transition-colors"
-                >
-                  <Crosshair className="w-3.5 h-3.5 text-slate-600" />
-                  <span>Inspect on Downloaded Aerial Map</span>
-                </button>
-              </div>
-            </div>
-          ) : (
-            <div className="border border-dashed border-slate-300 p-8 text-center text-slate-500 text-xs space-y-2">
-              <Compass className="w-8 h-8 mx-auto text-slate-400" />
-              <p className="font-bold text-slate-700">Select any landmark on the map</p>
-              <p>Click any marker or select a walking route to inspect walking times, shuttle stops, and tips.</p>
             </div>
           )}
 
-          {/* Quick Landmark Fast-Jump List */}
-          <div className="border border-slate-200 bg-white p-4 space-y-3">
-            <h3 className="font-bold text-xs uppercase tracking-wider text-oau-navy border-b border-slate-200 pb-1.5 flex items-center justify-between">
-              <span>Quick Fast-Jump ({filteredLandmarks.length})</span>
-              <span className="text-[10px] text-slate-500 font-normal">Click to view</span>
-            </h3>
-            <div className="max-h-60 overflow-y-auto space-y-1 text-xs pr-1">
-              {filteredLandmarks.map((lm) => (
-                <button
-                  key={lm.id}
-                  onClick={() => handleSelectLandmark(lm)}
-                  className={`w-full text-left p-2 border transition-colors flex items-center justify-between ${
-                    selectedLandmark?.id === lm.id
-                      ? 'bg-slate-100 border-oau-navy font-bold text-oau-navy'
-                      : 'border-transparent hover:bg-slate-50 text-slate-700'
-                  }`}
-                >
-                  <div className="flex items-center gap-1.5 truncate pr-2">
-                    {lm.googleMapsUrl && <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>}
-                    <span className="truncate">{lm.name}</span>
-                  </div>
-                  <span
-                    className="w-2 h-2 rounded-full shrink-0"
-                    style={{ backgroundColor: getCategoryColor(lm.category) }}
-                  ></span>
-                </button>
-              ))}
+          {/* TAB 2: Full Fast-Jump Directory */}
+          {rightPanelTab === 'directory' && (
+            <div className="border border-slate-300 bg-white p-4 flex flex-col h-[560px] lg:h-[620px] shadow-xs">
+              <div className="border-b border-slate-200 pb-2 mb-2 flex items-center justify-between shrink-0">
+                <span className="font-bold text-xs uppercase tracking-wider text-oau-navy">
+                  Campus POI Directory ({filteredLandmarks.length})
+                </span>
+                <span className="text-[10px] text-slate-500 font-normal">Click to pan</span>
+              </div>
+              <div className="overflow-y-auto space-y-1.5 text-xs pr-1 flex-1">
+                {filteredLandmarks.map((lm) => (
+                  <button
+                    key={lm.id}
+                    onClick={() => {
+                      handleSelectLandmark(lm);
+                      setRightPanelTab('dossier');
+                    }}
+                    className={`w-full text-left p-2.5 border transition-colors flex items-center justify-between rounded-xs ${
+                      selectedLandmark?.id === lm.id
+                        ? 'bg-amber-50 border-amber-400 font-bold text-oau-navy'
+                        : 'border-slate-100 hover:bg-slate-50 text-slate-700'
+                    }`}
+                  >
+                    <div className="flex items-center gap-2 min-w-0 pr-2">
+                      <span
+                        className="w-2.5 h-2.5 rounded-full shrink-0"
+                        style={{ backgroundColor: getCategoryColor(lm.category) }}
+                      />
+                      <div className="truncate">
+                        <p className="text-xs truncate font-bold text-slate-800">{lm.name}</p>
+                        <p className="text-[10px] text-slate-400 truncate">{lm.zone}</p>
+                      </div>
+                    </div>
+                    {lm.googleMapsUrl && (
+                      <span className="text-[9px] bg-emerald-50 text-emerald-700 border border-emerald-200 px-1 py-0.5 rounded font-mono shrink-0">
+                        Verified
+                      </span>
+                    )}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
 
       {/* Sharon Architectural Zone Glossary */}
-      <div className="border border-slate-200 bg-white p-5 space-y-3 text-left">
+      <div className="border border-slate-200 bg-white p-5 space-y-3 text-left shadow-xs">
         <h3 className="font-black text-sm uppercase tracking-wide text-oau-navy border-b border-slate-200 pb-2">
           Arieh Sharon’s Campus Masterplan: 10 Functional Zones
         </h3>
@@ -1098,7 +1149,7 @@ export default function CampusMap({
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 pt-2">
           {CAMPUS_ZONES.map((z) => (
-            <div key={z.id} className="p-2.5 border border-slate-200 bg-slate-50 space-y-1">
+            <div key={z.id} className="p-2.5 border border-slate-200 bg-slate-50 space-y-1 rounded-xs">
               <span className="text-xs font-bold text-oau-navy block">{z.name}</span>
               <p className="text-[11px] text-slate-600 leading-tight">{z.desc}</p>
             </div>
