@@ -121,7 +121,7 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
   - [x] 1-tap course bundles for all 15 faculties + dedicated Campus-Wide Compulsory bundle (GST 111, 112, LIB 101).
   - [x] Degree classification badges and category-based course directory filters.
 - [ ] **3.3 Roommate Testing & Alpha Review**:
-  - [ ] Deploy a live staging link for mobile testing.
+  - [x] Deploy a live staging link for mobile testing (Live at https://oaumods.vercel.app/).
   - [ ] Have roommates stress-test usability, speed, and accuracy of clearance steps and GPA math.
   - [ ] Log all feedback, bugs, and clearance war stories directly into `CHANGELOG.md`.
 - [ ] **3.4 Offline PWA Hardening**:
@@ -138,7 +138,8 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
 
 ### Key Tasks:
 - [ ] **4.1 Open Source Repository Prep**:
-  - [ ] Push to GitHub with a welcoming `CONTRIBUTING.md` and issue templates.
+  - [x] Push to GitHub with clean repository structure and strict secret hygiene (`https://github.com/Alqaasimee-jr2/OAUMods.git`).
+  - [ ] Push welcoming `CONTRIBUTING.md` and issue templates.
   - [ ] Label beginner-friendly issues (`good first issue`, `data wanted`, `design tweak`).
 - [ ] **4.2 Community Verification Engine**:
   - [ ] In-app contribution trigger: students can submit corrections, new food spots, or updated clearance room numbers.

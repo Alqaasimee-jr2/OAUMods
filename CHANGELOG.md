@@ -1946,6 +1946,41 @@ Enacted and codified **Rule 5 (Strict Ground-Truth & Anti-Hallucination Policy)*
 *   **Project Lead**: Identified the layout awkwardness and text sprawling in the desktop map interface.
 *   **Guide 17 / Antigravity**: Diagnosed the root causes (unbalanced heights, missing pin labels, and off-campus geolocation fly-away), redesigned the right panel with internal tabs, added text badges to all map pins, and verified zero-error production builds.
 
+---
+
+## 2026-09-28 (Entry 048: Production Verification & Live Vercel Deployment)
+
+### 📌 Summary & Strategic Alignment
+*   **Live Production Verification at `https://oaumods.vercel.app/`**:
+    1.  **Vercel Deployment Confirmation**:
+        *   Inspected the live Vercel production deployment at `https://oaumods.vercel.app/` and verified that commit `916269e` was successfully built and deployed automatically by Vercel from the GitHub repository (`https://github.com/Alqaasimee-jr2/OAUMods.git`).
+        *   All 18 static routes are serving clean HTML/JS with HTTP 200 responses.
+    2.  **Map Layout & Text Fixes Validated Live**:
+        *   **Fixed Height & Symmetry**: On desktop viewports, both the map container and the right drawer are locked to the balanced **620px** standard (`h-[480px] sm:h-[560px] lg:h-[620px]`).
+        *   **No Text Sprawl**: The right drawer now uses the clean **Landmark Dossier** vs. **Directory (33)** tab switcher. Dossier descriptions, hostel walking times, transit badges, and fresher survival tips scroll smoothly within the internal container boundary, completely resolving the bottom fold overflow and empty whitespace issue.
+        *   **Google Maps Live as Default**: Loads the real-time Google Maps embed centered on Oduduwa Hall (`7.518797, 4.5220266`) with interactive Roadmap / Satellite mode switcher and zoom stepper.
+        *   **Offline Downloaded Satellite**: The 1600×1050 aerial imagery view with pan, zoom, and SVG pins functions without external network tile requests.
+        *   **Leaflet GPS**: High-contrast text label badges render clearly beneath all building pins with the on-canvas `Labels: ON / OFF` toggle and anti-displacement geolocation guard.
+    3.  **Route Integrity Checked**:
+        *   Portal routes verified live: `/` (Overview), `/map` (Campus Atlas), `/faculties` (15 Faculties Guide), `/facilities` (Hezekiah Library & JAC Health Centre), `/halls` (Campus Hostels), `/life` (Faith, Sports & Societies), `/heritage` (Sharon Architecture).
+        *   Companion app routes verified live: `/app` (Freshman Dashboard), `/app/clearance` (Clearance Pipeline), `/app/map` (Freshman Route Navigator), `/app/venues` (Lecture Theatres & Venues), `/app/academics` (Curricula & 5.0 GPA Calculator), `/app/guide` (Hostel Rules & Survival Tips).
+    4.  **Institutional Anti-Hallucination Adherence (Rule 5)**:
+        *   Zero invented prices, clock hours, or arbitrary metrics on live production.
+    5.  **Repository Security**:
+        *   Public repository working tree is 100% clean and fully synchronized with GitHub `origin/main`. No secrets, keys, or credentials are committed.
+
+### 🏛️ Deliverables Completed
+1.  **Production Verification**:
+    *   Verified live deployment at `https://oaumods.vercel.app/`, `https://oaumods.vercel.app/map`, and `https://oaumods.vercel.app/app/map`.
+2.  **Milestones & Chronicle**:
+    *   [`MILESTONES.md`](file:///c:/Users/DELL/Desktop/GUIDE17/MILESTONES.md): Updated Phase 3.3 and Phase 4.1 with live staging link and GitHub sync.
+    *   [`CHANGELOG.md`](file:///c:/Users/DELL/Desktop/GUIDE17/CHANGELOG.md): Appended Entry 048.
+
+### 👥 People & Community
+*   **Project Lead**: Tested the live production link at `https://oaumods.vercel.app/` and guided alignment on public repository syncing and map layout refinements.
+*   **Guide 17 / Antigravity**: Performed live HTTP verification across all portal and app routes, audited desktop and mobile responsiveness, and verified seamless Vercel production deployment.
+
+
 
 
 
