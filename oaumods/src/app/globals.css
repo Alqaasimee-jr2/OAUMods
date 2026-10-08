@@ -82,3 +82,51 @@ body {
     background: rgba(14, 24, 39, 0.9);
   }
 }
+
+
+/* OAUMods frontend polish — keeps the existing geometric identity intact */
+.oa-section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.045);
+}
+
+.oa-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.875rem;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.oa-card:hover {
+  transform: translateY(-1px);
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.oa-action {
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.oa-action:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+}
+
+.oa-action:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .oa-section {
+    padding: 1rem;
+    border-radius: 0.875rem;
+  }
+}
+
+::selection {
+  background: #E6AD3C;
+  color: #12345B;
+}

@@ -69,9 +69,9 @@ export default function PortalHomePage() {
   ];
 
   return (
-    <div className="space-y-10 text-left">
+    <div className="space-y-12 text-left">
       {/* Top Welcome Header with Bauhaus Geometric Accents */}
-      <div className="relative border border-slate-200 bg-white p-6 sm:p-8 overflow-hidden">
+      <div className="relative rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 overflow-hidden shadow-[0_12px_40px_rgba(15,23,42,0.06)]">
         {/* Architectural Background Shapes (Subtle Contrast) */}
         <div className="absolute -top-6 -right-6 pointer-events-none opacity-20 hidden sm:block">
           <GeometricShape type="hexagon" color="gold" size="xl" variant="outline" />
@@ -96,14 +96,14 @@ export default function PortalHomePage() {
             <div className="pt-2 flex flex-wrap gap-2.5 text-xs font-bold">
               <Link
                 href="/map"
-                className="px-4 py-2 bg-oau-navy text-white hover:bg-slate-800 border border-oau-navy flex items-center gap-1.5 shadow-xs"
+                className="oa-action px-4 py-2 rounded-lg bg-oau-navy text-white hover:bg-slate-800 border border-oau-navy flex items-center gap-1.5 shadow-xs"
               >
                 <MapIcon className="w-3.5 h-3.5 text-amber-400" />
                 <span>Interactive Campus Map</span>
               </Link>
               <Link
                 href="/faculties"
-                className="px-4 py-2 bg-white text-slate-800 hover:bg-slate-100 border border-slate-300 flex items-center gap-1.5"
+                className="oa-action px-4 py-2 rounded-lg bg-white text-slate-800 hover:bg-slate-100 border border-slate-300 flex items-center gap-1.5"
               >
                 <span>15 Faculties</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -143,7 +143,7 @@ export default function PortalHomePage() {
       </div>
 
       {/* Dedicated Freshman Guide Callout Box with Geometric Contrast */}
-      <div className="relative border-2 border-amber-500 bg-amber-50/70 p-6 sm:p-7 overflow-hidden">
+      <div className="relative rounded-2xl border-2 border-amber-500 bg-amber-50/70 p-6 sm:p-7 overflow-hidden shadow-[0_10px_30px_rgba(217,119,6,0.08)]">
         {/* Contrast Background Hexagon */}
         <div className="absolute -right-4 -bottom-4 pointer-events-none opacity-25">
           <GeometricShape type="hexagon" color="amber" size="xl" />
@@ -170,7 +170,7 @@ export default function PortalHomePage() {
             href="/app"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-oau-navy font-black text-sm border-2 border-oau-navy shrink-0 shadow-xs"
+            className="oa-action inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-amber-400 hover:bg-amber-300 text-oau-navy font-black text-sm border-2 border-oau-navy shrink-0 shadow-xs"
           >
             <span>Launch Freshman Guide (App)</span>
             <ExternalLink className="w-4 h-4" />
@@ -179,7 +179,7 @@ export default function PortalHomePage() {
       </div>
 
       {/* University Key Facts */}
-      <div className="border border-slate-200 bg-white p-6">
+      <div className="oa-section">
         <h3 className="text-base font-bold text-oau-navy uppercase tracking-wide border-b border-slate-200 pb-2 mb-4 flex items-center gap-2">
           <GeometricShape type="circle" color="navy" size="sm" />
           <span>University Quick Facts</span>
@@ -224,7 +224,7 @@ export default function PortalHomePage() {
       </div>
 
       {/* Interactive Campus Map & Masterplan Showcase */}
-      <div className="relative border border-slate-300 bg-white p-6 sm:p-7 overflow-hidden space-y-4 shadow-xs">
+      <div className="relative oa-section overflow-hidden space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-slate-200 gap-3">
           <div>
             <div className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-blue-100 text-blue-900 border border-blue-300 text-[10px] font-bold uppercase tracking-wide mb-1">
@@ -240,7 +240,7 @@ export default function PortalHomePage() {
           </div>
           <Link
             href="/map"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-oau-navy hover:bg-slate-800 text-white font-bold text-xs shrink-0 transition-colors shadow-xs"
+            className="oa-action inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-oau-navy hover:bg-slate-800 text-white font-bold text-xs shrink-0 transition-colors shadow-xs"
           >
             <MapIcon className="w-4 h-4 text-amber-400" />
             <span>Launch Interactive Map</span>
@@ -249,19 +249,19 @@ export default function PortalHomePage() {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
-          <div className="p-3 bg-slate-50 border border-slate-200 space-y-1">
+          <div className="oa-card p-3 space-y-1">
             <span className="font-bold text-slate-900 block">🗺️ 100% Offline Vector</span>
             <p className="text-[11px] text-slate-600">Fast interactive masterplan schematic with zero data consumption.</p>
           </div>
-          <div className="p-3 bg-slate-50 border border-slate-200 space-y-1">
+          <div className="oa-card p-3 space-y-1">
             <span className="font-bold text-slate-900 block">🚶 Walking Trail Finder</span>
             <p className="text-[11px] text-slate-600">Walking times and step-by-step directions from Angola and Moz.</p>
           </div>
-          <div className="p-3 bg-slate-50 border border-slate-200 space-y-1">
+          <div className="oa-card p-3 space-y-1">
             <span className="font-bold text-slate-900 block">🏛️ 30+ Mapped POIs</span>
             <p className="text-[11px] text-slate-600">Amphitheatres, faculties, libraries, health clinics, and sports arena.</p>
           </div>
-          <div className="p-3 bg-slate-50 border border-slate-200 space-y-1">
+          <div className="oa-card p-3 space-y-1">
             <span className="font-bold text-slate-900 block">🌐 Live OpenStreetMap</span>
             <p className="text-[11px] text-slate-600">Real-time geospatial tiles and mobile GPS navigation links.</p>
           </div>
@@ -269,7 +269,7 @@ export default function PortalHomePage() {
       </div>
 
       {/* Directory of 15 Faculties with Geometric Badges */}
-      <div className="border border-slate-200 bg-white p-6">
+      <div className="oa-section">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-slate-200 gap-2 mb-4">
           <div>
             <h3 className="text-base font-bold text-oau-navy uppercase tracking-wide">
@@ -290,7 +290,7 @@ export default function PortalHomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {faculties.map((fac) => (
-            <div key={fac.code} className="relative p-3.5 border border-slate-200 bg-slate-50 flex flex-col justify-between">
+            <div key={fac.code} className="relative oa-card p-3.5 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between text-xs font-bold mb-1">
                   <span className="text-oau-navy flex items-center gap-1.5">
@@ -312,7 +312,7 @@ export default function PortalHomePage() {
       </div>
 
       {/* Regulated Campus Transit & Mobility with Geometric Markers */}
-      <div className="border border-slate-200 bg-white p-6">
+      <div className="oa-section">
         <div className="border-b border-slate-200 pb-2 mb-4">
           <div className="flex items-center gap-2 text-oau-navy">
             <Bus className="w-4 h-4 text-amber-500" />
@@ -368,7 +368,7 @@ export default function PortalHomePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="p-4 border border-slate-200 bg-slate-50 space-y-2">
+          <div className="oa-card p-4 space-y-2">
             <div className="flex items-center justify-between">
               <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-1.5 py-0.5">Faith Ecosystem</span>
               <GeometricShape type="square" color="emerald" size="sm" />
@@ -379,7 +379,7 @@ export default function PortalHomePage() {
             </p>
           </div>
 
-          <div className="p-4 border border-slate-200 bg-slate-50 space-y-2">
+          <div className="oa-card p-4 space-y-2">
             <div className="flex items-center justify-between">
               <span className="text-[10px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-1.5 py-0.5">Collegiate Athletics</span>
               <GeometricShape type="hexagon" color="gold" size="sm" />
@@ -390,7 +390,7 @@ export default function PortalHomePage() {
             </p>
           </div>
 
-          <div className="p-4 border border-slate-200 bg-slate-50 space-y-2">
+          <div className="oa-card p-4 space-y-2">
             <div className="flex items-center justify-between">
               <span className="text-[10px] font-bold uppercase tracking-wider text-blue-800 bg-blue-100 px-1.5 py-0.5">Societies & Traditions</span>
               <GeometricShape type="triangle" color="blue" size="sm" />
@@ -404,7 +404,7 @@ export default function PortalHomePage() {
       </div>
 
       {/* Emergency Assistance & Health Care */}
-      <div className="border border-slate-200 bg-white p-6">
+      <div className="oa-section">
         <div className="border-b border-slate-200 pb-2 mb-4">
           <div className="flex items-center gap-2 text-oau-navy">
             <PhoneCall className="w-4 h-4 text-red-600" />
@@ -419,7 +419,7 @@ export default function PortalHomePage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="p-4 border border-slate-200 bg-slate-50 space-y-1">
+          <div className="oa-card p-4 space-y-1">
             <div className="flex items-center justify-between">
               <p className="text-xs font-bold uppercase text-slate-500">Ambulance Line 1</p>
               <GeometricShape type="square" color="navy" size="sm" />
@@ -428,7 +428,7 @@ export default function PortalHomePage() {
             <p className="text-xs text-slate-600">Available 24/7 for students and staff on campus.</p>
           </div>
 
-          <div className="p-4 border border-slate-200 bg-slate-50 space-y-1">
+          <div className="oa-card p-4 space-y-1">
             <div className="flex items-center justify-between">
               <p className="text-xs font-bold uppercase text-slate-500">Ambulance Line 2</p>
               <GeometricShape type="triangle" color="gold" size="sm" />
@@ -437,7 +437,7 @@ export default function PortalHomePage() {
             <p className="text-xs text-slate-600">Direct mobile dispatch for student medical distress.</p>
           </div>
 
-          <div className="p-4 border border-slate-200 bg-slate-50 space-y-1">
+          <div className="oa-card p-4 space-y-1">
             <div className="flex items-center justify-between">
               <p className="text-xs font-bold uppercase text-slate-500">Hospital Emergency (OAUTHC)</p>
               <GeometricShape type="hexagon" color="blue" size="sm" />
