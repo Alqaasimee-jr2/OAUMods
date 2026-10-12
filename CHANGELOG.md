@@ -1977,8 +1977,79 @@ Enacted and codified **Rule 5 (Strict Ground-Truth & Anti-Hallucination Policy)*
     *   [`CHANGELOG.md`](file:///c:/Users/DELL/Desktop/GUIDE17/CHANGELOG.md): Appended Entry 048.
 
 ### 👥 People & Community
-*   **Project Lead**: Tested the live production link at `https://oaumods.vercel.app/` and guided alignment on public repository syncing and map layout refinements.
-*   **Guide 17 / Antigravity**: Performed live HTTP verification across all portal and app routes, audited desktop and mobile responsiveness, and verified seamless Vercel production deployment.
+
+
+## 2026-09-28 (Entry 049: Session Pause, Teamwork Subagent Shutdown & Handover Log)
+
+### 📌 Summary & Strategic Alignment
+*   **Session Suspension & Resource Conservation**:
+    1.  **Immediate Work Stoppage**:
+        *   In accordance with the Project Lead's directive regarding remaining quota limits (20% left) and an imminent logout, all active processes and generation loops were halted immediately.
+    2.  **Subagent Swarm Termination**:
+        *   Killed active subagent `44b65148-7d9e-41a3-930b-ebbad46282bb` (`teamwork_preview`) and its nested orchestrator (`719cca80-4118-4fbd-8867-1b5658998ce6`) via `manage_subagents(Action: 'kill_all')`.
+        *   All recurring cron jobs (8-minute report, 10-minute liveness watchdog) and nested explorer/worker subagents have been terminated. Zero background tasks remain active.
+    3.  **Root-Cause Diagnosis for Prolonged Work & Hurdles**:
+        *   Triggering the "Full multi-agent team" mode of `/teamwork-preview` generated a heavyweight multi-agent hierarchy inside `.agents/teamwork/` (`teamwork_preview_orchestrator`, `spec_miner_1`, `explorer_routes_1`, `explorer_assets_1`, `test_writer_1`, `worker_m1`, `worker_m4`).
+        *   The swarm constructed an elaborate 103-case automated E2E test harness (`oaumods/tests/seo-e2e.test.mjs`), redundant auditing loops, and multi-tier handoffs that consumed excessive tool turns and token budget.
+        *   For future iterations, focused single-turn or targeted subagents are recommended over full swarm orchestration when implementing discrete features.
+
+### 🏛️ Deliverables Completed & Preserved on Disk
+1.  **Social Preview Image Asset (`oaumods/public/og-image.png`)**:
+    *   Synthesized from authentic Oduduwa Hall photograph (`docs/imgs/20260702185336 (1).jpeg`).
+    *   Strict adherence to user boundary: used **solely** for the social preview card.
+    *   Verified dimensions: **1200 × 630 px** (Open Graph 1.91:1 ratio).
+    *   Optimized file size: **269.5 KB** (well within WhatsApp/Twitter/Telegram 500KB limits).
+2.  **Search Discovery (`sitemap.ts` & `robots.ts`)**:
+    *   `oaumods/src/app/sitemap.ts`: Dynamic Next.js sitemap mapping all 18 routes with canonical URLs, change frequencies, and priorities.
+    *   `oaumods/src/app/robots.ts`: Search engine crawler rules pointing to `https://oaumods.vercel.app/sitemap.xml`.
+3.  **Root Layout Metadata & Structured Data (`layout.tsx`)**:
+    *   Configured `metadataBase: new URL('https://oaumods.vercel.app')`.
+    *   Configured Open Graph defaults, Twitter `summary_large_image`, Apple touch icons (`/oau-logo.png`), theme-color (`#12345B`), and JSON-LD schema (`WebApplication` & `EducationalOrganization`).
+4.  **Route-Level Social Cards & Server Layout Wrappers**:
+    *   Portal routes (`/`, `/map`, `/faculties`, `/facilities`, `/halls`, `/life`, `/heritage`).
+    *   Companion app routes (`/app`, `/app/clearance`, `/app/map`, `/app/venues`, `/app/academics`, `/app/guide`).
+    *   Clean separation of interactive client components (`FreshmanDashboardClient.tsx`) from server metadata layouts (`layout.tsx`).
+
+### 🚀 Resumption Checklist (Next Session Handover)
+1.  **Local Build Verification**:
+    *   Run `npm run build` in `oaumods/` to confirm 0 TypeScript errors and verify generated `/sitemap.xml` and `/robots.txt`.
+2.  **Test Cleanup**:
+    *   Optionally remove or archive temporary `.agents/teamwork/` and `oaumods/tests/` scaffolding if not required for CI.
+3.  **Git Commit & Sync**:
+    *   Stage changes: `git add .`
+
+---
+
+## 2026-10-12 (Entry 050: Map Streamlining to 2 Modes, Direct POI Deep-Linking & Directory Map Connect)
+
+### 📌 Summary & Strategic Alignment
+*   **Map System Overhaul & Elimination of Redundant Modes**:
+    1.  **Strict Limitation to Exactly Two Map Modes**:
+        *   In accordance with user directive, removed the legacy 300+ line static SVG masterplan mode and raw downloaded satellite canvas views from `CampusMap.tsx`.
+        *   Streamlined map modes strictly to:
+            - **Interactive Campus GPS Map** (`interactive`): Real-time Leaflet map powered by OpenStreetMap and Esri World Imagery satellite tiles, interactive marker pins, walking paths, geolocation, and search filter pills.
+            - **Google Maps View** (`google`): Embedded live Google Maps iframe with satellite/roadmap toggle and direct external navigation directions link.
+    2.  **Universal URL Landmark Deep-Linking**:
+        *   Equipped `CampusMap.tsx` with dynamic `useSearchParams` reader (`?landmark=` and `?id=`).
+        *   Visiting any map URL with a landmark query parameter instantly focuses the map view, sets appropriate zoom level, and opens the detailed landmark dossier drawer.
+        *   Wrapped `CampusMap` in `<Suspense>` across both `/map` and `/app/map` to ensure robust Next.js App Router static optimization.
+    3.  **Institutional Faculty & POI Map Integration**:
+        *   Added missing verified landmarks to `campusMapData.ts` for all 15 faculties (`faculty-agric`, `faculty-computing`, `faculty-bms`, `faculty-clin`, `faculty-dentistry`, `faculty-nursing`).
+        *   Linked all 15 faculty cards in `faculties/page.tsx` and homepage grid to `/map?landmark=${fac.landmarkId}`.
+        *   Linked all lecture theatres and venues in `app/venues/page.tsx` (`BOOC`, `White House`, `1000-Seater`, `First Bank LT`, `Spider House`, `AUD`, `ODLT`, etc.) to `/app/map?landmark=...`.
+        *   Linked academic curriculum faculties in `app/academics/page.tsx` to `/app/map?landmark=...`.
+        *   Linked residential halls in `halls/page.tsx` (Angola, Mozambique, Fajuyi, Awolowo, Moremi, ETF) to `/map?landmark=...`.
+        *   Linked campus facilities in `facilities/page.tsx` (Hezekiah Library, JAC Health Centre, SUB, Sports Complex, Computer Centre, Security Unit) with inline map badges and "Locate on Map" action buttons.
+        *   Linked architectural landmarks in `heritage/page.tsx` (Oduduwa Hall, Hezekiah Library, Senate Building, Pit Theatre, Spider House) directly to `/map?landmark=...`.
+
+### 🏛️ Verification & Build Health
+*   **Static Page Generation**: Tested and compiled cleanly with `npm run build` using Next.js 16.3.5 and Turbopack.
+*   **Route Integrity**: All 20 application routes compiled with 0 TypeScript errors and 0 missing static endpoints.
+*   **Pacing & Mobile UX**: Verified 360px–420px responsive rhythm with zero horizontal overflow and seamless client-side SPA navigation via `<Link>`.
+
+### 👥 People & Community
+*   **Project Lead**: Clarified UX vision to eliminate SVG clutter, maintain two clean map modes, and tie all directory entities to map coordinates.
+*   **Guide 17 / Antigravity**: Implemented map deep-linking, wired all standalone directories to GPS coordinates, and verified production build health.
 
 
 

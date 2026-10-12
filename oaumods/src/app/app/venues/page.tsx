@@ -2,13 +2,14 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Navigation, Coffee, AlertCircle, Building2, MapPin, Map as MapIcon } from 'lucide-react';
+import { Navigation, Coffee, AlertCircle, Building2, MapPin, Map as MapIcon, ArrowRight } from 'lucide-react';
 import { GeometricShape, WordAccent, ShapeType, ShapeColor } from '@/components/GeometricShapes';
 
 interface VenueItem {
   code: string;
   name: string;
   location: string;
+  landmarkId: string;
   scope: 'central' | 'science' | 'admin-social' | 'arts' | 'tech';
   scopeLabel: string;
   courses: string;
@@ -28,6 +29,7 @@ export default function VenuesPage() {
       code: 'ODUDUWA HALL',
       name: 'Oduduwa Hall & Foyer',
       location: 'Central Campus Core (Opposite Senate Building & Hezekiah Library)',
+      landmarkId: 'oduduwa-hall',
       scope: 'central',
       scopeLabel: 'Central / University-Wide Auditorium',
       courses: 'University Matriculation, Convocation ceremonies, Academic Symposiums, and Senate public lectures',
@@ -43,6 +45,7 @@ export default function VenuesPage() {
       code: 'AUD I & II',
       name: 'Amphitheatre Lecture Theatres (AUD I & AUD II)',
       location: 'Beside Oduduwa Hall & Central Afrika Amphitheatre',
+      landmarkId: 'aud-theatres',
       scope: 'central',
       scopeLabel: 'Central / University-Wide Theatre',
       courses: 'Campus-wide courses (GST 111, GST 112, LIB 101), general university electives, and large multi-faculty lectures',
@@ -58,6 +61,7 @@ export default function VenuesPage() {
       code: 'ODLT 1 & 2',
       name: 'Open Distance Learning Theatres (ODLT 1 & 2)',
       location: 'Afrika Amphitheatre / Sports Complex Axis',
+      landmarkId: 'amphi-theatre',
       scope: 'central',
       scopeLabel: 'Central / University-Wide Theatre',
       courses: 'Multi-faculty lecture streams, campus-wide exams, evening tutorials, and academic conferences',
@@ -75,6 +79,7 @@ export default function VenuesPage() {
       code: 'BOOC',
       name: 'Babcock & Brown Ocean Complex (BOOC)',
       location: 'Faculty of Science Quadrangle (Behind Chemistry & Central Science)',
+      landmarkId: 'booc',
       scope: 'science',
       scopeLabel: 'Faculty of Science Specific',
       courses: 'CHM 101, PHY 101, BIO 101 (Science, Technology, Health Sciences, Pharmacy, Agriculture)',
@@ -90,6 +95,7 @@ export default function VenuesPage() {
       code: 'WHITE HOUSE',
       name: 'White House (Faculty of Science)',
       location: 'Central Science Quadrangle',
+      landmarkId: 'white-house',
       scope: 'science',
       scopeLabel: 'Faculty of Science Specific',
       courses: 'MTH 101, MTH 102, Chemistry and Physics practical laboratory sessions',
@@ -105,6 +111,7 @@ export default function VenuesPage() {
       code: 'CHEM LT',
       name: 'Chemistry Lecture Theatre (Chem LT)',
       location: 'Ground Floor, Department of Chemistry (Science Complex)',
+      landmarkId: 'white-house',
       scope: 'science',
       scopeLabel: 'Faculty of Science Specific',
       courses: 'Departmental Chemistry lectures and introductory laboratory briefings',
@@ -120,6 +127,7 @@ export default function VenuesPage() {
       code: 'GEOL LT',
       name: 'Geology Lecture Theatre (Geol LT)',
       location: 'Earth Sciences Wing (near Natural History Museum)',
+      landmarkId: 'white-house',
       scope: 'science',
       scopeLabel: 'Faculty of Science Specific',
       courses: 'Geology lectures, Earth Sciences seminars, and Science elective classes',
@@ -137,6 +145,7 @@ export default function VenuesPage() {
       code: '1000-SEATER',
       name: '1000-Seater Lecture Theatre',
       location: 'Between Faculty of Social Sciences and Faculty of Administration',
+      landmarkId: '1000-seater',
       scope: 'admin-social',
       scopeLabel: 'Social Sciences & Administration Axis',
       courses: 'ECN 101, POL 101, SOC 101, SSC 105, and campus-wide general examinations',
@@ -152,6 +161,7 @@ export default function VenuesPage() {
       code: 'FIRST BANK LT',
       name: 'First Bank Lecture Theatre (Admin LT)',
       location: 'Faculty of Administration Quadrangle (Opposite Pit Theatre)',
+      landmarkId: 'faculty-admin',
       scope: 'admin-social',
       scopeLabel: 'Faculty of Administration Specific',
       courses: 'ACC 101, BUS 101, PAD 101, and Management Sciences lectures',
@@ -169,6 +179,7 @@ export default function VenuesPage() {
       code: 'HLT 1 & 2',
       name: 'Humanities Lecture Theatres (HLT 1 & HLT 2)',
       location: 'Faculty of Arts Humanities Blocks',
+      landmarkId: 'faculty-arts',
       scope: 'arts',
       scopeLabel: 'Faculty of Arts Specific',
       courses: 'LIT 101, ENG 101, HIS 101, PHL 101, Foreign Languages, and Humanities electives',
@@ -184,6 +195,7 @@ export default function VenuesPage() {
       code: 'PIT THEATRE',
       name: 'Pit Theatre',
       location: 'Between Faculty of Arts and Faculty of Administration',
+      landmarkId: 'faculty-arts',
       scope: 'arts',
       scopeLabel: 'Faculty of Arts (Dramatic Arts Axis)',
       courses: 'Dramatic Arts productions, stage acting rehearsals, play directorships, and cultural performances',
@@ -201,6 +213,7 @@ export default function VenuesPage() {
       code: 'SPIDER HOUSE',
       name: 'Spider House (Faculty of Technology)',
       location: 'Faculty of Technology complex (Behind Hezekiah Library)',
+      landmarkId: 'spider-house',
       scope: 'tech',
       scopeLabel: 'Faculty of Technology Specific',
       courses: 'TPD 101, introductory engineering classes, and departmental technical briefings',
@@ -332,6 +345,16 @@ export default function VenuesPage() {
               <p className="text-xs text-slate-600 leading-relaxed pt-1 border-t border-slate-200">
                 {r.route}
               </p>
+              <div className="pt-2 border-t border-slate-200 flex items-center justify-between">
+                <span className="text-[11px] text-slate-500">Live GPS Trail</span>
+                <Link
+                  href="/app/map"
+                  className="inline-flex items-center gap-1 text-[11px] font-bold text-campus-blue hover:text-oau-navy hover:underline"
+                >
+                  <span>Trace on Map</span>
+                  <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
             </div>
           ))}
         </div>
@@ -464,6 +487,17 @@ export default function VenuesPage() {
                   Student Practical Advice:
                 </span>
                 <p className="leading-relaxed">{v.fresherTip}</p>
+              </div>
+
+              <div className="pt-2.5 flex items-center justify-between border-t border-slate-100">
+                <span className="text-[11px] text-slate-500 font-semibold">Campus Spatial Landmark</span>
+                <Link
+                  href={`/app/map?landmark=${v.landmarkId}`}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-oau-navy hover:bg-slate-800 text-white text-xs font-bold transition-colors shadow-xs"
+                >
+                  <MapPin className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Locate on Map</span>
+                </Link>
               </div>
             </div>
           ))}

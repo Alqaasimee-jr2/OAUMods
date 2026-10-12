@@ -139,6 +139,7 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
 ### Key Tasks:
 - [ ] **4.1 Open Source Repository Prep**:
   - [x] Push to GitHub with clean repository structure and strict secret hygiene (`https://github.com/Alqaasimee-jr2/OAUMods.git`).
+  - [x] Institutional SEO, Open Graph social cards (Oduduwa Hall card), sitemap.ts, robots.ts, and JSON-LD schema implemented.
   - [ ] Push welcoming `CONTRIBUTING.md` and issue templates.
   - [ ] Label beginner-friendly issues (`good first issue`, `data wanted`, `design tweak`).
 - [ ] **4.2 Community Verification Engine**:

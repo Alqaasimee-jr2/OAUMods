@@ -1,8 +1,40 @@
-'use client';
-
 import React from 'react';
+import type { Metadata } from 'next';
 import ClearanceChecklist from '@/components/ClearanceChecklist';
 import { GeometricShape, WordAccent } from '@/components/GeometricShapes';
+
+export const metadata: Metadata = {
+  title: 'Freshman Clearance & Document Verification',
+  description:
+    'Step-by-step verification pipeline for newly admitted OAU students: Remita fees, Health Centre Green Card, Faculty/Departmental submissions, and library sign-off.',
+  alternates: {
+    canonical: '/app/clearance',
+  },
+  openGraph: {
+    title: 'Freshman Clearance & Document Verification | OAUMods',
+    description:
+      'Step-by-step verification pipeline for newly admitted OAU students: Remita fees, Health Centre Green Card, Faculty/Departmental submissions, and library sign-off.',
+    url: '/app/clearance',
+    siteName: 'OAUMods | Great Ife Freshman Companion',
+    locale: 'en_NG',
+    type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'OAUMods — Great Ife Freshman Companion',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Freshman Clearance & Document Verification | OAUMods',
+    description:
+      'Step-by-step verification pipeline for newly admitted OAU students: Remita fees, Health Centre Green Card, Faculty/Departmental submissions, and library sign-off.',
+    images: ['/og-image.png'],
+  },
+};
 
 export default function ClearancePage() {
   return (

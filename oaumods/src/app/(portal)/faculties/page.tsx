@@ -1,12 +1,48 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { MapPin, ArrowRight, BookOpen } from 'lucide-react';
 import { GeometricShape, WordAccent } from '@/components/GeometricShapes';
+
+export const metadata: Metadata = {
+  title: '15 Faculties & Academic Divisions Directory',
+  description:
+    'Comprehensive guide to all 15 institutional faculties and departments at Obafemi Awolowo University, including Administration, Science, Technology, and Health Sciences. Linked to interactive campus map.',
+  alternates: {
+    canonical: '/faculties',
+  },
+  openGraph: {
+    title: '15 Faculties & Academic Divisions Directory | OAUMods',
+    description:
+      'Comprehensive guide to all 15 institutional faculties and departments at Obafemi Awolowo University, including Administration, Science, Technology, and Health Sciences. Linked to interactive campus map.',
+    url: '/faculties',
+    siteName: 'OAUMods | Great Ife Freshman Companion',
+    locale: 'en_NG',
+    type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'OAUMods — Great Ife Freshman Companion',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '15 Faculties & Academic Divisions Directory | OAUMods',
+    description:
+      'Comprehensive guide to all 15 institutional faculties and departments at Obafemi Awolowo University, including Administration, Science, Technology, and Health Sciences. Linked to interactive campus map.',
+    images: ['/og-image.png'],
+  },
+};
 
 export default function FacultiesPage() {
   const faculties = [
     {
       code: 'ADMIN',
       name: 'Faculty of Administration',
+      landmarkId: 'faculty-admin',
       established: '1962',
       location: 'Beside Hezekiah Library & Pit Theatre',
       departments: [
@@ -21,6 +57,7 @@ export default function FacultiesPage() {
     {
       code: 'AGRIC',
       name: 'Faculty of Agriculture',
+      landmarkId: 'faculty-agric',
       established: '1962',
       location: 'Agriculture Complex & Teaching Farm',
       departments: [
@@ -37,6 +74,7 @@ export default function FacultiesPage() {
     {
       code: 'ARTS',
       name: 'Faculty of Arts',
+      landmarkId: 'faculty-arts',
       established: '1962',
       location: 'Humanities Blocks 1, 2 & 3',
       departments: [
@@ -55,6 +93,7 @@ export default function FacultiesPage() {
     {
       code: 'BMS',
       name: 'Faculty of Basic Medical Sciences',
+      landmarkId: 'faculty-bms',
       established: '1972',
       location: 'College of Health Sciences Complex, Road 2',
       departments: [
@@ -69,6 +108,7 @@ export default function FacultiesPage() {
     {
       code: 'CLIN',
       name: 'Faculty of Clinical Sciences',
+      landmarkId: 'faculty-clin',
       established: '1972',
       location: 'Pre-clinical: Road 2; Clinical: OAUTHC Teaching Hospital',
       departments: [
@@ -83,6 +123,7 @@ export default function FacultiesPage() {
     {
       code: 'COMP',
       name: 'Faculty of Computing',
+      landmarkId: 'faculty-computing',
       established: '2023',
       location: 'Computing Complex & INTECU ICT Corridor',
       departments: [
@@ -98,6 +139,7 @@ export default function FacultiesPage() {
     {
       code: 'DENT',
       name: 'Faculty of Dentistry',
+      landmarkId: 'faculty-dentistry',
       established: '1972',
       location: 'Dental Hospital Complex (Road 2 & OAUTHC)',
       departments: [
@@ -112,6 +154,7 @@ export default function FacultiesPage() {
     {
       code: 'EDUC',
       name: 'Faculty of Education',
+      landmarkId: 'faculty-education',
       established: '1967',
       location: 'Education Building near Social Sciences & Fajuyi Hall',
       departments: [
@@ -128,6 +171,7 @@ export default function FacultiesPage() {
     {
       code: 'EDM',
       name: 'Faculty of Environmental Design & Management',
+      landmarkId: 'edm-architecture',
       established: '1982',
       location: 'Yellow House & Architecture Studios',
       departments: [
@@ -145,6 +189,7 @@ export default function FacultiesPage() {
     {
       code: 'LAW',
       name: 'Faculty of Law',
+      landmarkId: 'faculty-law',
       established: '1962',
       location: 'Law Complex near Central Administration & SUB',
       departments: [
@@ -159,6 +204,7 @@ export default function FacultiesPage() {
     {
       code: 'NURS',
       name: 'Faculty of Nursing Science',
+      landmarkId: 'faculty-nursing',
       established: '1993',
       location: 'Nursing Administration Wing, CHS Complex & OAUTHC',
       departments: [
@@ -173,6 +219,7 @@ export default function FacultiesPage() {
     {
       code: 'PHARM',
       name: 'Faculty of Pharmacy',
+      landmarkId: 'faculty-pharmacy',
       established: '1969',
       location: 'Pharmacy Complex along Road 2',
       departments: [
@@ -188,6 +235,7 @@ export default function FacultiesPage() {
     {
       code: 'SCI',
       name: 'Faculty of Science',
+      landmarkId: 'white-house',
       established: '1962',
       location: 'White House & Central Science Quadrangle',
       departments: [
@@ -206,6 +254,7 @@ export default function FacultiesPage() {
     {
       code: 'SOC SCI',
       name: 'Faculty of Social Sciences',
+      landmarkId: 'faculty-social-sciences',
       established: '1962',
       location: 'Social Sciences Complex & 1000-Seater',
       departments: [
@@ -222,6 +271,7 @@ export default function FacultiesPage() {
     {
       code: 'TECH',
       name: 'Faculty of Technology',
+      landmarkId: 'spider-house',
       established: '1970',
       location: 'Spider House & Engineering Buildings',
       departments: [
@@ -241,13 +291,13 @@ export default function FacultiesPage() {
   return (
     <div className="space-y-8 text-left">
       {/* Page Header */}
-      <div className="relative border border-slate-200 bg-white p-6 sm:p-8 space-y-3 overflow-hidden">
+      <div className="relative border border-slate-200 bg-white p-6 sm:p-8 space-y-3 overflow-hidden shadow-xs">
         <div className="absolute top-2 right-4 pointer-events-none opacity-20 hidden sm:block">
           <GeometricShape type="square" color="navy" size="lg" variant="outline" />
         </div>
         <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-100 border border-slate-300 text-xs font-bold text-slate-800">
           <GeometricShape type="hexagon" color="gold" size="sm" />
-          <span>ACADEMIC STRUCTURE</span>
+          <span>ACADEMIC STRUCTURE &amp; SPATIAL LOCATIONS</span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-black text-oau-navy">
           <WordAccent shape="square" color="navy">15 Faculties</WordAccent> & Academic Structure of OAU
@@ -255,12 +305,30 @@ export default function FacultiesPage() {
         <p className="text-sm text-slate-700 leading-relaxed max-w-3xl">
           Obafemi Awolowo University runs 15 academic faculties across physical sciences, computing,
           engineering, humanities, law, administration, agriculture, education, and medical sciences.
-          Below is the official directory of faculties and departments.
+          Every faculty below is directly linked to its verified GPS location on the interactive campus map.
         </p>
+
+        {/* Global Action Bar */}
+        <div className="pt-2 flex flex-wrap gap-2.5 text-xs font-bold">
+          <Link
+            href="/map"
+            className="px-4 py-2 bg-oau-navy text-white hover:bg-slate-800 border border-oau-navy flex items-center gap-1.5 shadow-xs transition-colors"
+          >
+            <MapPin className="w-3.5 h-3.5 text-amber-400" />
+            <span>Open Global Campus Map</span>
+          </Link>
+          <Link
+            href="/app/academics"
+            className="px-4 py-2 bg-white text-slate-800 hover:bg-slate-100 border border-slate-300 flex items-center gap-1.5 transition-colors shadow-xs"
+          >
+            <BookOpen className="w-3.5 h-3.5 text-campus-blue" />
+            <span>100L Course Curricula &amp; CGPA</span>
+          </Link>
+        </div>
       </div>
 
       {/* General Academic Rules Summary */}
-      <div className="border border-slate-200 bg-white p-6 space-y-4">
+      <div className="border border-slate-200 bg-white p-6 space-y-4 shadow-xs">
         <div className="flex items-center justify-between border-b border-slate-200 pb-2">
           <h2 className="text-base font-bold text-oau-navy uppercase tracking-wide">
             General Academic Regulations (All Students)
@@ -332,65 +400,76 @@ export default function FacultiesPage() {
             const curShape = facShapes[idx % facShapes.length];
 
             return (
-              <div key={fac.code} className="border border-slate-200 bg-white p-5 space-y-3">
-                <div className="flex items-start justify-between border-b border-slate-100 pb-2">
-                  <div className="flex items-center gap-2.5">
-                    <GeometricShape type={curShape.type} color={curShape.color} size="sm" />
-                    <div>
-                      <span className="text-xs font-bold text-campus-blue uppercase tracking-wider">
-                        {fac.code}
-                      </span>
-                      <h3 className="text-base font-black text-oau-navy">{fac.name}</h3>
+              <div key={fac.code} className="border border-slate-200 bg-white p-5 space-y-3 flex flex-col justify-between shadow-xs">
+                <div className="space-y-3">
+                  <div className="flex items-start justify-between border-b border-slate-100 pb-2">
+                    <div className="flex items-center gap-2.5">
+                      <GeometricShape type={curShape.type} color={curShape.color} size="sm" />
+                      <div>
+                        <span className="text-xs font-bold text-campus-blue uppercase tracking-wider">
+                          {fac.code}
+                        </span>
+                        <h3 className="text-base font-black text-oau-navy">{fac.name}</h3>
+                      </div>
+                    </div>
+                    <span className="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 border border-slate-200">
+                      Est. {fac.established}
+                    </span>
+                  </div>
+
+                  <p className="text-xs text-slate-600 leading-relaxed">{fac.description}</p>
+
+                  <div className="space-y-1 text-xs">
+                    <span className="font-bold text-slate-800 block">Departments:</span>
+                    <div className="flex flex-wrap gap-1.5">
+                      {fac.departments.map((dept, i) => (
+                        <span
+                          key={i}
+                          className="px-2 py-0.5 bg-slate-50 border border-slate-200 text-slate-700 text-[11px]"
+                        >
+                          {dept}
+                        </span>
+                      ))}
                     </div>
                   </div>
-                  <span className="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 border border-slate-200">
-                    Est. {fac.established}
-                  </span>
                 </div>
 
-              <p className="text-xs text-slate-600 leading-relaxed">{fac.description}</p>
-
-              <div className="space-y-1 text-xs">
-                <span className="font-bold text-slate-800 block">Departments:</span>
-                <div className="flex flex-wrap gap-1.5">
-                  {fac.departments.map((dept, i) => (
-                    <span
-                      key={i}
-                      className="px-2 py-0.5 bg-slate-50 border border-slate-200 text-slate-700 text-[11px]"
-                    >
-                      {dept}
-                    </span>
-                  ))}
+                {/* Card Bottom: Location & Direct Map Linking */}
+                <div className="pt-3 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs text-slate-600">
+                  <div className="min-w-0 pr-1">
+                    <span className="font-bold text-slate-700">Location: </span>
+                    <span className="text-slate-600">{fac.location}</span>
+                  </div>
+                  <Link
+                    href={`/map?landmark=${fac.landmarkId}`}
+                    className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 bg-oau-navy hover:bg-slate-800 text-white text-xs font-bold shrink-0 transition-colors shadow-xs"
+                    title={`Locate ${fac.name} on the interactive map`}
+                  >
+                    <MapPin className="w-3.5 h-3.5 text-amber-400" />
+                    <span>View on Map</span>
+                  </Link>
                 </div>
               </div>
-
-              <div className="pt-2 border-t border-slate-100 text-xs text-slate-600">
-                <span className="font-bold text-slate-700">Location: </span>
-                <span>{fac.location}</span>
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
         </div>
       </div>
 
       {/* Link to Freshman App */}
-      <div className="border border-amber-400 bg-amber-50 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="border border-amber-400 bg-amber-50 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xs">
         <div>
           <h3 className="font-bold text-sm text-oau-navy">Are you taking 100-Level Courses?</h3>
-          <p className="text-xs text-slate-700">
+          <p className="text-xs text-slate-700 mt-1">
             Check the Freshman Companion App to calculate your target GPA and explore course bundles across all 15 faculties.
           </p>
         </div>
-        <a
+        <Link
           href="/app/academics"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 px-4 py-2 bg-amber-400 text-oau-navy font-bold text-xs border border-amber-500 shrink-0"
+          className="inline-flex items-center gap-1.5 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-oau-navy font-bold text-xs border border-amber-500 shrink-0 transition-colors shadow-xs"
         >
           <span>Open 100L Course Navigator</span>
-          <ExternalLink className="w-3.5 h-3.5" />
-        </a>
+          <ArrowRight className="w-3.5 h-3.5" />
+        </Link>
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
+import { useSearchParams } from 'next/navigation';
 import {
   MapPin,
   Navigation,
@@ -12,7 +12,6 @@ import {
   Layers,
   ZoomIn,
   ZoomOut,
-  RotateCcw,
   Clock,
   Bus,
   Footprints,
@@ -22,8 +21,6 @@ import {
   Map as MapIcon,
   Globe,
   Sparkles,
-  Eye,
-  EyeOff,
   Crosshair,
   ListFilter,
 } from 'lucide-react';
@@ -59,37 +56,46 @@ export default function CampusMap({
   initialLandmarkId,
   isFreshmanContext = false,
 }: CampusMapProps) {
-  // 'google' = Google Maps Live (DEFAULT)
-  // 'downloaded' = Downloaded High-Res Aerial Satellite (100% Offline)
-  // 'real' = Leaflet OpenStreetMap & Satellite Tiles
-  // 'vector' = 100% Offline Sharon Masterplan SVG
-  const [activeTab, setActiveTab] = useState<'google' | 'downloaded' | 'real' | 'vector'>('google');
+  const searchParams = useSearchParams();
+  const queryLandmarkId = searchParams?.get('landmark') || searchParams?.get('id') || initialLandmarkId;
+
+  // Exactly TWO map modes as requested:
+  // 1. 'interactive' = High-Performance Leaflet OpenStreetMap with GPS nodes & routes
+  // 2. 'google' = Google Maps Live Embed with Roadmap & Satellite options
+  const [activeTab, setActiveTab] = useState<'interactive' | 'google'>('interactive');
   const [rightPanelTab, setRightPanelTab] = useState<'dossier' | 'directory'>('dossier');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
+  
   const [selectedLandmark, setSelectedLandmark] = useState<CampusLandmark | null>(() => {
-    if (initialLandmarkId) {
-      return CAMPUS_LANDMARKS.find((l) => l.id === initialLandmarkId) || null;
+    if (queryLandmarkId) {
+      const match = CAMPUS_LANDMARKS.find(
+        (l) => l.id === queryLandmarkId || l.nickname?.toLowerCase() === queryLandmarkId.toLowerCase()
+      );
+      if (match) return match;
     }
     // Default to Oduduwa Hall
     return CAMPUS_LANDMARKS.find((l) => l.id === 'oduduwa-hall') || CAMPUS_LANDMARKS[0];
   });
+  
   const [activeRouteId, setActiveRouteId] = useState<string | null>(null);
+
+  // Sync state if query parameter changes
+  useEffect(() => {
+    if (queryLandmarkId) {
+      const match = CAMPUS_LANDMARKS.find(
+        (l) => l.id === queryLandmarkId || l.nickname?.toLowerCase() === queryLandmarkId.toLowerCase()
+      );
+      if (match) {
+        setSelectedLandmark(match);
+        setRightPanelTab('dossier');
+      }
+    }
+  }, [queryLandmarkId]);
 
   // Google Maps Embed State
   const [googleMapType, setGoogleMapType] = useState<'m' | 'k'>('m'); // 'm' = Roadmap, 'k' = Satellite
   const [googleZoom, setGoogleZoom] = useState<number>(17);
-
-  // Downloaded Aerial Satellite State (Pan & Zoom)
-  const [aerialZoom, setAerialZoom] = useState<number>(1);
-  const [aerialPan, setAerialPan] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
-  const [isDragging, setIsDragging] = useState<boolean>(false);
-  const [dragStart, setDragStart] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
-  const [showLabels, setShowLabels] = useState<boolean>(true);
-
-  // Vector Mode Zoom & Pan States
-  const [zoomLevel, setZoomLevel] = useState<number>(1);
-  const [panOffset, setPanOffset] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
 
   const categories = [
     { id: 'all', label: 'All Landmarks', icon: Compass },
@@ -122,27 +128,6 @@ export default function CampusMap({
     return POPULAR_WALKING_ROUTES.find((r) => r.id === activeRouteId) || null;
   }, [activeRouteId]);
 
-  const routeCoordinates = useMemo(() => {
-    if (!activeRoute) return null;
-    const origin = CAMPUS_LANDMARKS.find((l) => l.id === activeRoute.originId);
-    const destination = CAMPUS_LANDMARKS.find((l) => l.id === activeRoute.destinationId);
-    if (!origin || !destination) return null;
-
-    const midX = (origin.mapX + destination.mapX) / 2;
-    const midY = (origin.mapY + destination.mapY) / 2 - 20;
-
-    return {
-      x1: origin.mapX,
-      y1: origin.mapY,
-      midX,
-      midY,
-      x2: destination.mapX,
-      y2: destination.mapY,
-      originName: origin.name,
-      destName: destination.name,
-    };
-  }, [activeRoute]);
-
   const googleEmbedUrl = useMemo(() => {
     const lat = selectedLandmark ? selectedLandmark.lat : OAU_CENTER_COORDINATES.lat;
     const lng = selectedLandmark ? selectedLandmark.lng : OAU_CENTER_COORDINATES.lng;
@@ -152,89 +137,6 @@ export default function CampusMap({
   const handleSelectLandmark = (landmark: CampusLandmark) => {
     setSelectedLandmark(landmark);
     setRightPanelTab('dossier');
-
-    // Pan Downloaded Aerial map towards landmark if zoomed in
-    if (aerialZoom > 1) {
-      const leftPercent = (landmark.lng - 4.510) / 0.022;
-      const topPercent = (7.526 - landmark.lat) / 0.014;
-      setAerialPan({
-        x: Math.max(-350, Math.min(350, (0.5 - leftPercent) * 600 * (aerialZoom - 1))),
-        y: Math.max(-280, Math.min(280, (0.5 - topPercent) * 450 * (aerialZoom - 1))),
-      });
-    }
-
-    // Pan Vector map
-    if (zoomLevel > 1) {
-      setPanOffset({
-        x: Math.max(-200, Math.min(200, (500 - landmark.mapX) * 0.4)),
-        y: Math.max(-150, Math.min(150, (325 - landmark.mapY) * 0.4)),
-      });
-    }
-  };
-
-  // Aerial pan & drag handlers
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (aerialZoom <= 1) return;
-    setIsDragging(true);
-    setDragStart({ x: e.clientX - aerialPan.x, y: e.clientY - aerialPan.y });
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging) return;
-    setAerialPan({
-      x: e.clientX - dragStart.x,
-      y: e.clientY - dragStart.y,
-    });
-  };
-
-  const handleMouseUp = () => setIsDragging(false);
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    if (aerialZoom <= 1 || e.touches.length !== 1) return;
-    setIsDragging(true);
-    setDragStart({ x: e.touches[0].clientX - aerialPan.x, y: e.touches[0].clientY - aerialPan.y });
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging || e.touches.length !== 1) return;
-    setAerialPan({
-      x: e.touches[0].clientX - dragStart.x,
-      y: e.touches[0].clientY - dragStart.y,
-    });
-  };
-
-  const handleTouchEnd = () => setIsDragging(false);
-
-  const handleAerialZoom = (delta: number) => {
-    setAerialZoom((prev) => {
-      const next = Math.min(3.0, Math.max(1.0, +(prev + delta).toFixed(1)));
-      if (next === 1) {
-        setAerialPan({ x: 0, y: 0 });
-      }
-      return next;
-    });
-  };
-
-  const handleAerialReset = () => {
-    setAerialZoom(1);
-    setAerialPan({ x: 0, y: 0 });
-  };
-
-  // Vector zoom handlers
-  const handleVectorZoom = (delta: number) => {
-    setZoomLevel((prev) => {
-      const next = Math.min(2.2, Math.max(1, +(prev + delta).toFixed(1)));
-      if (next === 1) {
-        setPanOffset({ x: 0, y: 0 });
-      }
-      return next;
-    });
-  };
-
-  const handleVectorReset = () => {
-    setZoomLevel(1);
-    setPanOffset({ x: 0, y: 0 });
-    setActiveRouteId(null);
   };
 
   const getCategoryColor = (category: string) => {
@@ -270,51 +172,29 @@ export default function CampusMap({
             <span>{isFreshmanContext ? 'FRESHMAN ROUTE NAVIGATOR' : 'OAU CAMPUS ATLAS'}</span>
           </div>
 
-          {/* Mode Switcher: Google Maps (Default), Downloaded Satellite, Leaflet GPS, Vector Masterplan */}
-          <div className="flex items-center overflow-x-auto no-scrollbar border border-slate-300 bg-slate-100 p-0.5 text-xs font-bold w-full sm:w-auto">
+          {/* Mode Switcher: Exactly TWO Modes (Interactive Map vs Google Maps) */}
+          <div className="flex items-center border border-slate-300 bg-slate-100 p-0.5 text-xs font-bold w-full sm:w-auto">
+            <button
+              onClick={() => setActiveTab('interactive')}
+              className={`flex items-center gap-1.5 px-4 py-2 transition-colors ${
+                activeTab === 'interactive'
+                  ? 'bg-oau-navy text-white shadow-xs'
+                  : 'text-slate-700 hover:text-oau-navy hover:bg-slate-200/60'
+              }`}
+            >
+              <Navigation className="w-3.5 h-3.5 text-blue-400" />
+              <span>Interactive Map (GPS)</span>
+            </button>
             <button
               onClick={() => setActiveTab('google')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 whitespace-nowrap transition-colors ${
+              className={`flex items-center gap-1.5 px-4 py-2 transition-colors ${
                 activeTab === 'google'
                   ? 'bg-oau-navy text-white shadow-xs'
-                  : 'text-slate-700 hover:text-oau-navy'
+                  : 'text-slate-700 hover:text-oau-navy hover:bg-slate-200/60'
               }`}
             >
               <Globe className="w-3.5 h-3.5 text-amber-400" />
               <span>Google Maps (Live)</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('downloaded')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 whitespace-nowrap transition-colors ${
-                activeTab === 'downloaded'
-                  ? 'bg-oau-navy text-white shadow-xs'
-                  : 'text-slate-700 hover:text-oau-navy'
-              }`}
-            >
-              <Layers className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Downloaded Satellite (Offline)</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('real')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 whitespace-nowrap transition-colors ${
-                activeTab === 'real'
-                  ? 'bg-oau-navy text-white shadow-xs'
-                  : 'text-slate-700 hover:text-oau-navy'
-              }`}
-            >
-              <Navigation className="w-3.5 h-3.5 text-blue-400" />
-              <span>Interactive GPS (OSM)</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('vector')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 whitespace-nowrap transition-colors ${
-                activeTab === 'vector'
-                  ? 'bg-oau-navy text-white shadow-xs'
-                  : 'text-slate-700 hover:text-oau-navy'
-              }`}
-            >
-              <MapIcon className="w-3.5 h-3.5 text-purple-400" />
-              <span>Masterplan (SVG)</span>
             </button>
           </div>
         </div>
@@ -324,7 +204,7 @@ export default function CampusMap({
             Interactive Campus <WordAccent shape="circle" color="gold">Map & Spatial</WordAccent> Navigator
           </h1>
           <p className="text-xs sm:text-sm text-slate-700 leading-relaxed max-w-3xl mt-1">
-            Real-world geospatial map of Obafemi Awolowo University. Seamlessly toggle between live Google Maps, 100% offline downloaded satellite imagery, Leaflet GPS with crisp building labels, and the Sharon Masterplan.
+            Real-world geospatial map of Obafemi Awolowo University. Toggle seamlessly between the interactive GPS map (with pin badges, walking trails, and OpenStreetMap tiles) and live Google Maps with direction routing.
           </p>
         </div>
 
@@ -394,7 +274,19 @@ export default function CampusMap({
         <div className="lg:col-span-8 space-y-3">
           <div className="relative border border-slate-300 bg-white shadow-xs overflow-hidden">
             {/* ============================================================== */}
-            {/* MODE 1: Live Embedded Google Maps View (PRIMARY DEFAULT)       */}
+            {/* MODE 1: Interactive Real Leaflet GPS Map                       */}
+            {/* ============================================================== */}
+            {activeTab === 'interactive' && (
+              <LeafletMap
+                landmarks={filteredLandmarks}
+                selectedLandmark={selectedLandmark}
+                onSelectLandmark={handleSelectLandmark}
+                activeRoute={activeRoute}
+              />
+            )}
+
+            {/* ============================================================== */}
+            {/* MODE 2: Live Embedded Google Maps View                         */}
             {/* ============================================================== */}
             {activeTab === 'google' && (
               <div className="relative w-full h-[480px] sm:h-[560px] lg:h-[620px] bg-slate-950 overflow-hidden">
@@ -481,363 +373,6 @@ export default function CampusMap({
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </div>
-                </div>
-              </div>
-            )}
-
-            {/* ============================================================== */}
-            {/* MODE 2: Downloaded Aerial Satellite Map (100% Offline)         */}
-            {/* ============================================================== */}
-            {activeTab === 'downloaded' && (
-              <div
-                className={`relative w-full h-[480px] sm:h-[560px] lg:h-[620px] bg-slate-950 overflow-hidden select-none ${
-                  aerialZoom > 1 ? 'cursor-grab active:cursor-grabbing' : 'cursor-default'
-                }`}
-                onMouseDown={handleMouseDown}
-                onMouseMove={handleMouseMove}
-                onMouseUp={handleMouseUp}
-                onMouseLeave={handleMouseUp}
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
-                onTouchEnd={handleTouchEnd}
-              >
-                <div
-                  className="w-full h-full relative transition-transform duration-100 ease-out"
-                  style={{
-                    transform: `scale(${aerialZoom}) translate(${aerialPan.x / aerialZoom}px, ${
-                      aerialPan.y / aerialZoom
-                    }px)`,
-                    transformOrigin: '50% 50%',
-                  }}
-                >
-                  {/* High-Resolution Downloaded Aerial Photograph (1600x1050 px) */}
-                  <Image
-                    src="/oau-satellite-map.png"
-                    alt="High-Resolution Downloaded Aerial Satellite Imagery of Obafemi Awolowo University Campus"
-                    width={1600}
-                    height={1050}
-                    priority
-                    className="w-full h-full object-cover pointer-events-none"
-                    draggable={false}
-                  />
-
-                  {/* Overlaid Institutional Landmark Pins */}
-                  {filteredLandmarks.map((lm) => {
-                    const leftPercent = ((lm.lng - 4.510) / 0.022) * 100;
-                    const topPercent = ((7.526 - lm.lat) / 0.014) * 100;
-
-                    if (leftPercent < 0 || leftPercent > 100 || topPercent < 0 || topPercent > 100) {
-                      return null;
-                    }
-
-                    const isSelected = selectedLandmark?.id === lm.id;
-                    const catColor = getCategoryColor(lm.category);
-
-                    return (
-                      <div
-                        key={lm.id}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleSelectLandmark(lm);
-                        }}
-                        className="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer group z-10"
-                        style={{ left: `${leftPercent}%`, top: `${topPercent}%` }}
-                      >
-                        {/* Animated beacon ring when selected */}
-                        {isSelected && (
-                          <span
-                            className="absolute -inset-2.5 rounded-full animate-ping opacity-75 pointer-events-none"
-                            style={{ backgroundColor: catColor }}
-                          />
-                        )}
-
-                        {/* Landmark Pin Dot */}
-                        <div
-                          className={`flex items-center justify-center rounded-full border-2 transition-transform duration-150 ${
-                            isSelected
-                              ? 'w-6 h-6 border-amber-300 ring-2 ring-white scale-125 shadow-lg'
-                              : 'w-4 h-4 border-white shadow-md hover:scale-125'
-                          }`}
-                          style={{ backgroundColor: catColor }}
-                        >
-                          {isSelected ? (
-                            <span className="w-2 h-2 rounded-full bg-white"></span>
-                          ) : (
-                            <span className="w-1.5 h-1.5 rounded-full bg-white opacity-80"></span>
-                          )}
-                        </div>
-
-                        {/* Label Tooltip */}
-                        {(showLabels || isSelected) && (
-                          <div
-                            className={`absolute top-full left-1/2 -translate-x-1/2 mt-1 px-1.5 py-0.5 whitespace-nowrap text-[9px] font-bold pointer-events-none transition-all shadow-md ${
-                              isSelected
-                                ? 'bg-amber-400 text-oau-navy border border-amber-500 scale-105 z-30'
-                                : 'bg-slate-900/90 text-white border border-slate-700/80 backdrop-blur-xs opacity-90 group-hover:opacity-100 group-hover:scale-105'
-                            }`}
-                          >
-                            {lm.name.replace(/ \(.*\)/, '')}
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {/* Top Controls Overlay for Downloaded Aerial */}
-                <div className="absolute top-3 right-3 flex flex-col gap-1.5 z-20">
-                  <button
-                    onClick={() => handleAerialZoom(0.3)}
-                    className="p-2 bg-white/95 text-oau-navy hover:bg-white border border-slate-300 shadow-md transition-colors"
-                    title="Zoom In (Aerial)"
-                  >
-                    <ZoomIn className="w-4 h-4" />
-                  </button>
-                  <button
-                    onClick={() => handleAerialZoom(-0.3)}
-                    className="p-2 bg-white/95 text-oau-navy hover:bg-white border border-slate-300 shadow-md transition-colors"
-                    title="Zoom Out (Aerial)"
-                  >
-                    <ZoomOut className="w-4 h-4" />
-                  </button>
-                  <button
-                    onClick={handleAerialReset}
-                    className="p-2 bg-white/95 text-oau-navy hover:bg-white border border-slate-300 shadow-md transition-colors"
-                    title="Reset View"
-                  >
-                    <RotateCcw className="w-4 h-4" />
-                  </button>
-                  <button
-                    onClick={() => setShowLabels(!showLabels)}
-                    className={`p-2 border shadow-md transition-colors ${
-                      showLabels
-                        ? 'bg-amber-400 text-oau-navy border-amber-500'
-                        : 'bg-white/95 text-slate-700 hover:bg-white border-slate-300'
-                    }`}
-                    title={showLabels ? 'Hide Landmark Labels' : 'Show Landmark Labels'}
-                  >
-                    {showLabels ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
-                  </button>
-                </div>
-
-                {/* Bottom Offline Badge */}
-                <div className="absolute bottom-3 left-3 z-10 flex items-center gap-2">
-                  <div className="bg-slate-900/90 backdrop-blur-sm text-white px-2.5 py-1 text-[11px] border border-slate-700 shadow-md flex items-center gap-1.5">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                    <span className="font-semibold">Downloaded Satellite Map (100% Offline • 1600×1050 px)</span>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* ============================================================== */}
-            {/* MODE 3: Interactive Real Leaflet GPS Map                       */}
-            {/* ============================================================== */}
-            {activeTab === 'real' && (
-              <LeafletMap
-                landmarks={filteredLandmarks}
-                selectedLandmark={selectedLandmark}
-                onSelectLandmark={handleSelectLandmark}
-                activeRoute={activeRoute}
-              />
-            )}
-
-            {/* ============================================================== */}
-            {/* MODE 4: 100% Offline Geographically Projected SVG Masterplan   */}
-            {/* ============================================================== */}
-            {activeTab === 'vector' && (
-              <div className="relative w-full h-[480px] sm:h-[560px] lg:h-[620px] bg-[#0B1528] overflow-hidden select-none cursor-grab active:cursor-grabbing">
-                <svg
-                  viewBox="0 0 1000 650"
-                  className="w-full h-full transition-transform duration-200"
-                  style={{
-                    transform: `scale(${zoomLevel}) translate(${panOffset.x}px, ${panOffset.y}px)`,
-                    transformOrigin: '50% 50%',
-                  }}
-                >
-                  <defs>
-                    <linearGradient id="roadGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#475569" />
-                      <stop offset="100%" stopColor="#334155" />
-                    </linearGradient>
-                    <linearGradient id="grassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#064E3B" stopOpacity="0.4" />
-                      <stop offset="100%" stopColor="#047857" stopOpacity="0.2" />
-                    </linearGradient>
-                    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                      <feGaussianBlur stdDeviation="3" result="blur" />
-                      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                    </filter>
-                  </defs>
-
-                  {/* Campus Ground */}
-                  <rect width="1000" height="650" fill="#0A1120" />
-
-                  {/* Geographic Campus Zone Boxes (Accurate West to East Orientation) */}
-                  {/* West: Freshman Residential Area (Angola & Moz) */}
-                  <rect x="80" y="100" width="160" height="150" fill="#0E7490" fillOpacity="0.2" stroke="#06B6D4" strokeWidth="1" strokeDasharray="3,3" />
-                  <text x="90" y="120" fill="#22D3EE" fontSize="9" fontWeight="bold">WEST: FRESHMEN (ANGOLA & MOZ)</text>
-
-                  {/* West-Central: Stalite Residential (Awo, Fajuyi, ETF) */}
-                  <rect x="200" y="220" width="180" height="220" fill="#374151" fillOpacity="0.25" stroke="#9CA3AF" strokeWidth="1" strokeDasharray="3,3" />
-                  <text x="210" y="240" fill="#D1D5DB" fontSize="9" fontWeight="bold">STALITE RESIDENCES (AWO & FAJ)</text>
-
-                  {/* Central Academic Core */}
-                  <rect x="470" y="210" width="180" height="180" fill="#1E3A8A" fillOpacity="0.25" stroke="#3B82F6" strokeWidth="1.5" />
-                  <text x="480" y="230" fill="#60A5FA" fontSize="9" fontWeight="bold">CENTRAL ACADEMIC CORE</text>
-
-                  {/* Motion Ground Lawn */}
-                  <ellipse cx="572" cy="320" rx="35" ry="25" fill="url(#grassGrad)" stroke="#10B981" strokeWidth="1" />
-                  <text x="548" y="323" fill="#6EE7B7" fontSize="8" fontWeight="bold">Motion Ground</text>
-
-                  {/* South: Sports Basin */}
-                  <rect x="480" y="440" width="140" height="80" fill="#064E3B" fillOpacity="0.2" stroke="#10B981" strokeWidth="1" strokeDasharray="3,3" />
-                  <text x="490" y="460" fill="#34D399" fontSize="8" fontWeight="bold">SPORTS BASIN & MAIN BOWL</text>
-
-                  {/* East: Science Quad & Technology Belt */}
-                  <rect x="670" y="240" width="220" height="200" fill="#B45309" fillOpacity="0.2" stroke="#F59E0B" strokeWidth="1" strokeDasharray="3,3" />
-                  <text x="680" y="260" fill="#FBBF24" fontSize="9" fontWeight="bold">EAST: SCIENCE QUAD & TECH BELT</text>
-
-                  {/* Accurate Arterial Road 1 Spine */}
-                  <path
-                    d="M 580 640 L 590 540 L 560 450 L 570 360 L 610 340"
-                    fill="none"
-                    stroke="url(#roadGrad)"
-                    strokeWidth="10"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M 580 640 L 590 540 L 560 450 L 570 360 L 610 340"
-                    fill="none"
-                    stroke="#E2E8F0"
-                    strokeWidth="1.5"
-                    strokeDasharray="6,6"
-                  />
-                  <text x="595" y="580" fill="#CBD5E1" fontSize="8" fontWeight="bold" transform="rotate(-85 595 580)">
-                    ROAD 1 (MAIN ENTRANCE SPINE)
-                  </text>
-
-                  {/* Accurate Road 2 Corridor */}
-                  <path
-                    d="M 610 340 L 520 370 L 390 290 L 350 370 L 220 240 L 160 170"
-                    fill="none"
-                    stroke="url(#roadGrad)"
-                    strokeWidth="8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <text x="320" y="325" fill="#94A3B8" fontSize="8" transform="rotate(-30 320 325)">
-                    ROAD 2 (ACADEMIC TO RESIDENTIAL)
-                  </text>
-
-                  {/* Spider Road East to Tech */}
-                  <path
-                    d="M 610 340 L 690 330 L 780 320 L 830 380 L 865 130"
-                    fill="none"
-                    stroke="url(#roadGrad)"
-                    strokeWidth="6"
-                    strokeLinecap="round"
-                  />
-                  <text x="730" y="315" fill="#94A3B8" fontSize="8">
-                    SPIDER ROAD (TECH AXIS)
-                  </text>
-
-                  {/* Maintenance Road behind Angola/Moz */}
-                  <path
-                    d="M 110 180 L 90 140 L 150 90 L 220 80"
-                    fill="none"
-                    stroke="#475569"
-                    strokeWidth="5"
-                    strokeDasharray="4,4"
-                  />
-                  <text x="85" y="110" fill="#64748B" fontSize="7" transform="rotate(-60 85 110)">
-                    MAINTENANCE ROAD
-                  </text>
-
-                  {/* Active Route Highlight Overlay in SVG Mode */}
-                  {routeCoordinates && (
-                    <g className="route-layer animate-pulse">
-                      <path
-                        d={`M ${routeCoordinates.x1} ${routeCoordinates.y1} Q ${routeCoordinates.midX} ${routeCoordinates.midY} ${routeCoordinates.x2} ${routeCoordinates.y2}`}
-                        fill="none"
-                        stroke="#F59E0B"
-                        strokeWidth="5"
-                        strokeLinecap="round"
-                        filter="url(#glow)"
-                      />
-                      <circle cx={routeCoordinates.x1} cy={routeCoordinates.y1} r="6" fill="#10B981" stroke="#FFFFFF" strokeWidth="2" />
-                      <circle cx={routeCoordinates.x2} cy={routeCoordinates.y2} r="6" fill="#EF4444" stroke="#FFFFFF" strokeWidth="2" />
-                    </g>
-                  )}
-
-                  {/* Landmarks Marker Dots */}
-                  {filteredLandmarks.map((landmark) => {
-                    const isSelected = selectedLandmark?.id === landmark.id;
-                    const catColor = getCategoryColor(landmark.category);
-                    return (
-                      <g
-                        key={landmark.id}
-                        className="cursor-pointer transition-transform hover:scale-125"
-                        onClick={() => handleSelectLandmark(landmark)}
-                      >
-                        {isSelected && (
-                          <circle
-                            cx={landmark.mapX}
-                            cy={landmark.mapY}
-                            r="14"
-                            fill={catColor}
-                            fillOpacity="0.3"
-                            className="animate-ping"
-                          />
-                        )}
-                        <circle
-                          cx={landmark.mapX}
-                          cy={landmark.mapY}
-                          r={isSelected ? 8 : 5}
-                          fill={catColor}
-                          stroke="#FFFFFF"
-                          strokeWidth={isSelected ? 2 : 1}
-                        />
-                        <text
-                          x={landmark.mapX}
-                          y={landmark.mapY + (isSelected ? 16 : 12)}
-                          fill={isSelected ? '#FBBF24' : '#E2E8F0'}
-                          fontSize={isSelected ? '9' : '7.5'}
-                          fontWeight={isSelected ? 'bold' : 'normal'}
-                          textAnchor="middle"
-                          className="pointer-events-none drop-shadow-sm select-none"
-                        >
-                          {landmark.name.replace(/ \(.*\)/, '')}
-                        </text>
-                      </g>
-                    );
-                  })}
-                </svg>
-
-                {/* SVG Zoom Controls */}
-                <div className="absolute top-3 right-3 flex flex-col gap-1.5 z-20">
-                  <button
-                    onClick={() => handleVectorZoom(0.2)}
-                    className="p-2 bg-white/90 text-oau-navy hover:bg-white border border-slate-300 shadow-sm transition-colors"
-                    title="Zoom in"
-                  >
-                    <ZoomIn className="w-4 h-4" />
-                  </button>
-                  <button
-                    onClick={() => handleVectorZoom(-0.2)}
-                    className="p-2 bg-white/90 text-oau-navy hover:bg-white border border-slate-300 shadow-sm transition-colors"
-                    title="Zoom out"
-                  >
-                    <ZoomOut className="w-4 h-4" />
-                  </button>
-                  <button
-                    onClick={handleVectorReset}
-                    className="p-2 bg-white/90 text-oau-navy hover:bg-white border border-slate-300 shadow-sm transition-colors"
-                    title="Reset view"
-                  >
-                    <RotateCcw className="w-4 h-4" />
-                  </button>
                 </div>
               </div>
             )}
@@ -1073,13 +608,12 @@ export default function CampusMap({
                     </a>
                     <button
                       onClick={() => {
-                        setActiveTab('downloaded');
-                        handleSelectLandmark(selectedLandmark);
+                        setActiveTab(activeTab === 'interactive' ? 'google' : 'interactive');
                       }}
                       className="w-full py-1.5 px-3 bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] font-bold flex items-center justify-center gap-1.5 border border-slate-300 transition-colors rounded-xs"
                     >
                       <Crosshair className="w-3 h-3 text-slate-600" />
-                      <span>Inspect on Downloaded Aerial Map</span>
+                      <span>Switch to {activeTab === 'interactive' ? 'Google Maps (Live)' : 'Interactive Map (GPS)'}</span>
                     </button>
                   </div>
                 </div>
@@ -1100,7 +634,7 @@ export default function CampusMap({
                 <span className="font-bold text-xs uppercase tracking-wider text-oau-navy">
                   Campus POI Directory ({filteredLandmarks.length})
                 </span>
-                <span className="text-[10px] text-slate-500 font-normal">Click to pan</span>
+                <span className="text-[10px] text-slate-500 font-normal">Click to focus</span>
               </div>
               <div className="overflow-y-auto space-y-1.5 text-xs pr-1 flex-1">
                 {filteredLandmarks.map((lm) => (

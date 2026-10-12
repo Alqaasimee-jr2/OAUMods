@@ -1,4 +1,6 @@
 import React from 'react';
+import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ExternalLink, BookOpen, Clock, ShieldCheck, MapPin, Award, Quote, Music } from 'lucide-react';
 import { GeometricShape, WordAccent } from '@/components/GeometricShapes';
 import {
@@ -7,6 +9,39 @@ import {
   SPATIAL_NICKNAMES,
   CAMPUS_MYTHBUSTERS,
 } from '@/data/campusHistoryAndActivities';
+
+export const metadata: Metadata = {
+  title: 'Architectural Heritage & Tropical Modernism',
+  description:
+    'Discover the world-renowned Bauhaus tropical modernism of Obafemi Awolowo University, designed by Arieh Sharon. Cantilevered overhangs, breeze channels, and colonnades.',
+  alternates: {
+    canonical: '/heritage',
+  },
+  openGraph: {
+    title: 'Architectural Heritage & Tropical Modernism | OAUMods',
+    description:
+      'Discover the world-renowned Bauhaus tropical modernism of Obafemi Awolowo University, designed by Arieh Sharon. Cantilevered overhangs, breeze channels, and colonnades.',
+    url: '/heritage',
+    siteName: 'OAUMods | Great Ife Freshman Companion',
+    locale: 'en_NG',
+    type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'OAUMods — Great Ife Freshman Companion',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Architectural Heritage & Tropical Modernism | OAUMods',
+    description:
+      'Discover the world-renowned Bauhaus tropical modernism of Obafemi Awolowo University, designed by Arieh Sharon. Cantilevered overhangs, breeze channels, and colonnades.',
+    images: ['/og-image.png'],
+  },
+};
 
 export default function HeritagePage() {
   const architecturalFeatures = [
@@ -49,6 +84,7 @@ export default function HeritagePage() {
       name: 'Hezekiah Oluwasanmi Library Building',
       role: 'Intellectual & Architectural Anchor',
       location: 'Central Campus Core',
+      landmarkId: 'hezekiah-library',
       description:
         'Named after Professor Hezekiah Oluwasanmi (Vice-Chancellor 1966–1975), the visionary builder of Great Ife. Commands the central quadrangle with towering concrete pillars, tiered mezzanine study floors, and multi-story natural light wells.',
       shape: 'square' as const,
@@ -58,6 +94,7 @@ export default function HeritagePage() {
       name: 'Oduduwa Hall & Afrika Amphitheatre',
       role: 'Ceremonial & Cultural Headquarters',
       location: 'Central Campus Quadrangle',
+      landmarkId: 'oduduwa-hall',
       description:
         'Named after the legendary progenitor of the Yoruba people. Houses an indoor grand theatre and an adjoining 5,000-seat stepped open-air bowl renamed in eternal honor of student martyr George Iwilade ("Afrika"). Host to matriculations, convocations, and historic student congresses.',
       shape: 'hexagon' as const,
@@ -67,6 +104,7 @@ export default function HeritagePage() {
       name: 'The Senate Building (Secretariat)',
       role: 'Administrative Command Center',
       location: 'Overlooking Motion Ground',
+      landmarkId: 'senate-building',
       description:
         'The administrative tower of university governance, elevated on pilotis (stilts) with panoramic views across the academic belt, Motion Ground, and residential corridors.',
       shape: 'triangle' as const,
@@ -76,6 +114,7 @@ export default function HeritagePage() {
       name: 'The Pit Theatre',
       role: 'Dramatic Arts Arena',
       location: 'Faculty of Arts / Humanities Complex',
+      landmarkId: 'pit-theatre',
       description:
         'A sunken circular theatre designed by Arieh Sharon with stepped concentric seating tiers. The historic performance home of Nobel Laureate Wole Soyinka, Ola Rotimi, and groundbreaking African theatrical productions.',
       shape: 'circle' as const,
@@ -85,6 +124,7 @@ export default function HeritagePage() {
       name: 'Natural History Museum of Nigeria',
       role: 'National Scientific & Archaeological Repository',
       location: 'Road 1 / Leventis Complex',
+      landmarkId: 'motion-ground',
       description:
         'A sculptural concrete monument designed by James Cubitt Architects, housing millions of scientific specimens, paleontological fossils, and Nigeria’s natural heritage.',
       shape: 'square' as const,
@@ -94,6 +134,7 @@ export default function HeritagePage() {
       name: 'Spider House (Faculty of Technology)',
       role: 'Engineering & Industrial Studios',
       location: 'Technology Axis',
+      landmarkId: 'spider-house',
       description:
         'Known for its bold diagonal external steel trusses projecting outward like giant spider legs, designed to accommodate expansive column-free civil and mechanical engineering workshops.',
       shape: 'hexagon' as const,
@@ -282,6 +323,18 @@ export default function HeritagePage() {
                 <p className="text-xs font-semibold text-amber-700">{landmark.role}</p>
                 <p className="text-xs text-slate-700 leading-relaxed">{landmark.description}</p>
               </div>
+
+              {landmark.landmarkId && (
+                <div className="pt-2 border-t border-slate-100">
+                  <Link
+                    href={`/map?landmark=${landmark.landmarkId}`}
+                    className="w-full inline-flex items-center justify-center gap-1.5 py-1.5 px-3 text-xs font-bold text-oau-navy bg-slate-50 hover:bg-oau-navy hover:text-white border border-slate-200 transition-colors"
+                  >
+                    <MapPin className="w-3.5 h-3.5 text-red-500" />
+                    <span>Locate on Map</span>
+                  </Link>
+                </div>
+              )}
             </div>
           ))}
         </div>

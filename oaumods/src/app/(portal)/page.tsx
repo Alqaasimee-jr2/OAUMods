@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -9,32 +10,69 @@ import {
   Trophy,
   Map as MapIcon,
   Compass,
+  MapPin,
 } from 'lucide-react';
 import { GeometricShape, WordAccent, ShapeType, ShapeColor } from '@/components/GeometricShapes';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'OAUMods — Great Ife Freshman Companion & Campus Hub',
+  },
+  description:
+    'The authoritative, offline-first digital compass for Obafemi Awolowo University (OAU). Explore 15 faculties, campus landmarks, clearance workflows, and student tools.',
+  alternates: {
+    canonical: 'https://oaumods.vercel.app/',
+  },
+  openGraph: {
+    title: 'OAUMods — Great Ife Freshman Companion & Campus Hub',
+    description:
+      'The authoritative, offline-first digital compass for Obafemi Awolowo University (OAU). Explore 15 faculties, campus landmarks, clearance workflows, and student tools.',
+    url: 'https://oaumods.vercel.app/',
+    siteName: 'OAUMods | Great Ife Freshman Companion',
+    locale: 'en_NG',
+    type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'OAUMods — Great Ife Freshman Companion',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'OAUMods — Great Ife Freshman Companion & Campus Hub',
+    description:
+      'The authoritative, offline-first digital compass for Obafemi Awolowo University (OAU). Explore 15 faculties, campus landmarks, clearance workflows, and student tools.',
+    images: ['/og-image.png'],
+  },
+};
 
 export default function PortalHomePage() {
   const faculties: Array<{
     name: string;
     code: string;
+    landmarkId: string;
     location: string;
     shape: ShapeType;
     shapeColor: ShapeColor;
   }> = [
-    { name: 'Faculty of Administration', code: 'ADMIN', location: 'Near Hezekiah Library & Pit Theatre', shape: 'square', shapeColor: 'navy' },
-    { name: 'Faculty of Agriculture', code: 'AGRIC', location: 'Agric Complex & Teaching Farm', shape: 'hexagon', shapeColor: 'emerald' },
-    { name: 'Faculty of Arts', code: 'ARTS', location: 'Humanities Blocks 1, 2 & 3', shape: 'circle', shapeColor: 'amber' },
-    { name: 'Faculty of Basic Medical Sciences', code: 'BMS', location: 'Health Sciences corridor', shape: 'triangle', shapeColor: 'blue' },
-    { name: 'Faculty of Clinical Sciences', code: 'CLIN', location: 'Teaching Hospital (OAUTHC) campus', shape: 'square', shapeColor: 'emerald' },
-    { name: 'Faculty of Computing', code: 'COMP', location: 'Computing Complex & INTECU Axis', shape: 'hexagon', shapeColor: 'blue' },
-    { name: 'Faculty of Dentistry', code: 'DENT', location: 'Dental Hospital Complex (Road 2 & OAUTHC)', shape: 'circle', shapeColor: 'gold' },
-    { name: 'Faculty of Education', code: 'EDUC', location: 'Education Building near Social Sciences', shape: 'circle', shapeColor: 'gold' },
-    { name: 'Faculty of Environmental Design & Mgt', code: 'EDM', location: 'Near Yellow House & Architecture Studio', shape: 'hexagon', shapeColor: 'amber' },
-    { name: 'Faculty of Law', code: 'LAW', location: 'Law Complex near Central Administration', shape: 'square', shapeColor: 'navy' },
-    { name: 'Faculty of Nursing Science', code: 'NURS', location: 'Health Sciences Complex & OAUTHC', shape: 'triangle', shapeColor: 'emerald' },
-    { name: 'Faculty of Pharmacy', code: 'PHARM', location: 'Pharmacy Complex along Road 2', shape: 'circle', shapeColor: 'emerald' },
-    { name: 'Faculty of Science', code: 'SCI', location: 'White House & Central Science Building', shape: 'triangle', shapeColor: 'blue' },
-    { name: 'Faculty of Social Sciences', code: 'SOC SCI', location: 'Faculty Quadrangle & 1000-Seater', shape: 'square', shapeColor: 'blue' },
-    { name: 'Faculty of Technology', code: 'TECH', location: 'Spider House & Tech Blocks', shape: 'hexagon', shapeColor: 'gold' },
+    { name: 'Faculty of Administration', code: 'ADMIN', landmarkId: 'faculty-admin', location: 'Near Hezekiah Library & Pit Theatre', shape: 'square', shapeColor: 'navy' },
+    { name: 'Faculty of Agriculture', code: 'AGRIC', landmarkId: 'faculty-agric', location: 'Agric Complex & Teaching Farm', shape: 'hexagon', shapeColor: 'emerald' },
+    { name: 'Faculty of Arts', code: 'ARTS', landmarkId: 'faculty-arts', location: 'Humanities Blocks 1, 2 & 3', shape: 'circle', shapeColor: 'amber' },
+    { name: 'Faculty of Basic Medical Sciences', code: 'BMS', landmarkId: 'faculty-bms', location: 'Health Sciences corridor', shape: 'triangle', shapeColor: 'blue' },
+    { name: 'Faculty of Clinical Sciences', code: 'CLIN', landmarkId: 'faculty-clin', location: 'Teaching Hospital (OAUTHC) campus', shape: 'square', shapeColor: 'emerald' },
+    { name: 'Faculty of Computing', code: 'COMP', landmarkId: 'faculty-computing', location: 'Computing Complex & INTECU Axis', shape: 'hexagon', shapeColor: 'blue' },
+    { name: 'Faculty of Dentistry', code: 'DENT', landmarkId: 'faculty-dentistry', location: 'Dental Hospital Complex (Road 2 & OAUTHC)', shape: 'circle', shapeColor: 'gold' },
+    { name: 'Faculty of Education', code: 'EDUC', landmarkId: 'faculty-education', location: 'Education Building near Social Sciences', shape: 'circle', shapeColor: 'gold' },
+    { name: 'Faculty of Environmental Design & Mgt', code: 'EDM', landmarkId: 'edm-architecture', location: 'Near Yellow House & Architecture Studio', shape: 'hexagon', shapeColor: 'amber' },
+    { name: 'Faculty of Law', code: 'LAW', landmarkId: 'faculty-law', location: 'Law Complex near Central Administration', shape: 'square', shapeColor: 'navy' },
+    { name: 'Faculty of Nursing Science', code: 'NURS', landmarkId: 'faculty-nursing', location: 'Health Sciences Complex & OAUTHC', shape: 'triangle', shapeColor: 'emerald' },
+    { name: 'Faculty of Pharmacy', code: 'PHARM', landmarkId: 'faculty-pharmacy', location: 'Pharmacy Complex along Road 2', shape: 'circle', shapeColor: 'emerald' },
+    { name: 'Faculty of Science', code: 'SCI', landmarkId: 'white-house', location: 'White House & Central Science Building', shape: 'triangle', shapeColor: 'blue' },
+    { name: 'Faculty of Social Sciences', code: 'SOC SCI', landmarkId: 'faculty-social-sciences', location: 'Faculty Quadrangle & 1000-Seater', shape: 'square', shapeColor: 'blue' },
+    { name: 'Faculty of Technology', code: 'TECH', landmarkId: 'spider-house', location: 'Spider House & Tech Blocks', shape: 'hexagon', shapeColor: 'gold' },
   ];
 
   const transitOptions = [
@@ -250,8 +288,8 @@ export default function PortalHomePage() {
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
           <div className="oa-card p-3 space-y-1">
-            <span className="font-bold text-slate-900 block">🗺️ 100% Offline Vector</span>
-            <p className="text-[11px] text-slate-600">Fast interactive masterplan schematic with zero data consumption.</p>
+            <span className="font-bold text-slate-900 block">📍 Verified Campus GPS</span>
+            <p className="text-[11px] text-slate-600">Institutional coordinates for all 15 faculties, hostels, and lecture theatres.</p>
           </div>
           <div className="oa-card p-3 space-y-1">
             <span className="font-bold text-slate-900 block">🚶 Walking Trail Finder</span>
@@ -297,15 +335,28 @@ export default function PortalHomePage() {
                     <GeometricShape type={fac.shape} color={fac.shapeColor} size="sm" />
                     <span>{fac.code}</span>
                   </span>
-                  <span className="text-[10px] px-1.5 py-0.2 bg-white border border-slate-300 text-slate-600">
-                    OAU Faculty
-                  </span>
+                  <Link
+                    href={`/map?landmark=${fac.landmarkId}`}
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-campus-blue hover:text-oau-navy hover:underline"
+                    title={`View ${fac.name} on map`}
+                  >
+                    <MapPin className="w-3 h-3 text-amber-500" />
+                    <span>Map</span>
+                  </Link>
                 </div>
                 <h4 className="font-bold text-sm text-slate-900">{fac.name}</h4>
               </div>
-              <p className="text-xs text-slate-600 mt-2 pt-2 border-t border-slate-200">
-                <span className="font-semibold text-slate-700">Location:</span> {fac.location}
-              </p>
+              <div className="flex items-center justify-between mt-2 pt-2 border-t border-slate-200 text-xs">
+                <p className="text-slate-600 truncate mr-2">
+                  <span className="font-semibold text-slate-700">Loc:</span> {fac.location}
+                </p>
+                <Link
+                  href={`/map?landmark=${fac.landmarkId}`}
+                  className="px-2 py-0.5 bg-white border border-slate-300 hover:bg-slate-100 text-[11px] font-bold text-slate-700 shrink-0 transition-colors"
+                >
+                  View POI
+                </Link>
+              </div>
             </div>
           ))}
         </div>

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "node tests/seo-e2e.test.mjs"
   },
   "dependencies": {
     "@types/leaflet": "^1.9.22",

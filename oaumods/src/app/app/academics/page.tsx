@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import {
   Calculator,
   BookOpen,
@@ -9,6 +10,7 @@ import {
   RotateCcw,
   AlertCircle,
   GraduationCap,
+  MapPin,
 } from 'lucide-react';
 import { GeometricShape, WordAccent } from '@/components/GeometricShapes';
 import { FACULTY_COURSE_TEMPLATES } from '@/data/courseTemplates';
@@ -493,7 +495,7 @@ export default function AcademicsPage() {
                   Choose your faculty to auto-fill the simulator with verified 100L courses, including <strong>GST 111, 112, and LIB 101</strong>.
                 </p>
               </div>
-              <div className="flex items-center gap-2 self-start sm:self-auto">
+              <div className="flex flex-wrap items-center gap-2 self-start sm:self-auto">
                 <select
                   value={selectedFacultyId}
                   onChange={(e) => setSelectedFacultyId(e.target.value)}
@@ -509,10 +511,37 @@ export default function AcademicsPage() {
                 <button
                   type="button"
                   onClick={() => handleLoadFacultyBundle(selectedFacultyId)}
-                  className="px-3 py-2 bg-oau-navy text-white text-xs font-bold hover:bg-slate-800 shrink-0"
+                  className="px-3 py-2 bg-oau-navy text-white text-xs font-bold hover:bg-slate-800 shrink-0 transition-colors shadow-xs"
                 >
                   Load Bundle
                 </button>
+                <Link
+                  href={`/app/map?landmark=${
+                    {
+                      admin: 'faculty-admin',
+                      agric: 'faculty-agric',
+                      arts: 'faculty-arts',
+                      'basic-med': 'faculty-bms',
+                      'clinical-sciences': 'faculty-clin',
+                      computing: 'faculty-computing',
+                      dentistry: 'faculty-dentistry',
+                      education: 'faculty-education',
+                      edm: 'edm-architecture',
+                      law: 'faculty-law',
+                      nursing: 'faculty-nursing',
+                      pharmacy: 'faculty-pharmacy',
+                      science: 'white-house',
+                      'social-sciences': 'faculty-social-sciences',
+                      technology: 'spider-house',
+                    }[selectedFacultyId] || 'white-house'
+                  }`}
+                  className="px-3 py-2 bg-white text-slate-800 border border-slate-300 hover:bg-slate-100 text-xs font-bold flex items-center gap-1.5 shrink-0 transition-colors shadow-xs"
+                  title="Locate selected faculty on campus map"
+                >
+                  <MapPin className="w-3.5 h-3.5 text-amber-500" />
+                  <span className="hidden sm:inline">Locate on Map</span>
+                  <span className="sm:hidden">Map</span>
+                </Link>
               </div>
             </div>
           </div>
