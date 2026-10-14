@@ -1,21 +1,11 @@
-const CACHE_NAME = 'oaumods-cache-v4';
+const CACHE_NAME = 'oaumods-cache-v5';
 const PRECACHE_ASSETS = [
   '/',
-  '/map',
-  '/faculties',
-  '/facilities',
-  '/halls',
-  '/life',
-  '/heritage',
   '/app',
-  '/app/map',
-  '/app/clearance',
-  '/app/venues',
-  '/app/academics',
-  '/app/guide',
   '/oau-logo.png',
-  '/freshers.jpg',
-  '/oau-satellite-map.png',
+  '/freshers.webp',
+  '/manifest.webmanifest',
+  '/favicon.ico',
 ];
 
 self.addEventListener('install', (event) => {

@@ -125,8 +125,10 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
   - [x] Usability & Complication vetting completed: streamlined mobile bottom bar to floating dock, eliminated unexpected new tabs, and enabled smart accordion for clearance.
   - [ ] Have roommates stress-test usability, speed, and accuracy of clearance steps and GPA math.
   - [ ] Log all feedback, bugs, and clearance war stories directly into `CHANGELOG.md`.
-- [ ] **3.4 Offline PWA Hardening**:
-  - [x] Service Worker precaching all static assets, landmark images, and JSON directories (`oaumods-cache-v4`).
+- [ ] **3.4 Offline PWA Hardening & Core Web Vitals**:
+  - [x] Service Worker precision pre-caching optimized (`oaumods-cache-v5`), purging unreferenced 1.31MB map and shifting directory pages to runtime Stale-While-Revalidate caching.
+  - [x] LCP media optimization: pre-cropped static `freshers.webp` (31 KB) with unoptimized direct static delivery and responsive sizes.
+  - [x] Deferred service worker registration via `requestIdleCallback` to free initial main-thread paint.
   - [ ] Full offline functionality verified in airplane mode.
 
 **Exit Criteria for Phase 3**: Roommates give unanimous sign-off; GPA calculator and clearance operate 100% offline without glitches.

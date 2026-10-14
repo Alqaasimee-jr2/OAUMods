@@ -209,12 +209,14 @@ export default function PortalHomePage() {
             </div>
 
             <Image
-              src="/freshers.jpg"
+              src="/freshers.webp"
               alt="Great Ife Campus View"
               width={540}
               height={320}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 540px"
               className="w-full h-48 sm:h-56 object-cover"
               priority
+              unoptimized
             />
             <div className="p-2.5 bg-white border-t border-slate-200 text-xs text-slate-700 flex items-center justify-between">
               <p className="font-bold text-oau-navy flex items-center gap-1.5">

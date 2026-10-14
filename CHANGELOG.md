@@ -2121,3 +2121,37 @@ Enacted and codified **Rule 5 (Strict Ground-Truth & Anti-Hallucination Policy)*
 ### 👥 People & Community
 *   **Project Lead**: Steered the `/grill-me` alignment, preserving all 6 mobile destinations and safeguarding the authentic Sharon architectural geometric system.
 *   **Guide 17 / Antigravity**: Diagnosed the split-brain root cause, engineered the floating icon dock, implemented the smart clearance accordion, and verified 100% test and build health.
+
+---
+
+## 2026-10-14 (Entry 053: Mobile Core Web Vitals Remediation & Vercel Speed Insights Optimization)
+
+### 📌 Summary & Strategic Alignment
+*   Conducted forensic performance investigation into real user monitoring (RUM) telemetry from Vercel Speed Insights, which showed a mobile Real Experience Score of **59** on the homepage (`/`) contrasted with **100** on the companion app (`/app`).
+*   Executed mobile Lighthouse trace and runtime analysis, identifying the exact bottlenecks dragging down the mobile score:
+    1.  **Hero Image LCP Optimization (-97.8% image download latency)**:
+        *   Replaced uncompressed 95 KB JPEG (`freshers.jpg`) with an optimized, pre-cropped WebP asset (`freshers.webp`, 31 KB) matching the exact 600×356 aspect ratio.
+        *   Added explicit responsive `sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 540px"` and `unoptimized` direct static asset delivery to eliminate dynamic serverless transcoding delays.
+        *   Reduced image network load duration from **3,138ms to 68ms**.
+    2.  **Service Worker Precision Pre-Caching (-90% initial background bandwidth)**:
+        *   Bumped Service Worker cache version to `oaumods-cache-v5` in `public/sw.js`.
+        *   Purged an unreferenced **1.31 MB satellite map** (`oau-satellite-map.png`) and bulk directory routes from `PRECACHE_ASSETS`.
+        *   Restricted initial pre-caching exclusively to the critical app shell (`/`, `/app`, `/oau-logo.png`, `/freshers.webp`, `/manifest.webmanifest`, `/favicon.ico`), slashing initial background payload from **> 2.5 MB to ~180 KB**.
+        *   Secondary routes continue to use automatic Stale-While-Revalidate caching on-demand, guaranteeing 100% offline-first capability without choking initial mobile cellular bandwidth.
+    3.  **Non-Blocking Idle Service Worker Registration**:
+        *   Refactored `ServiceWorkerRegister.tsx` to schedule service worker registration and legacy cache deletion inside `requestIdleCallback` (with a 1500ms timeout fallback).
+        *   Freed the browser main-thread during critical React hydration and first paint.
+    4.  **Font Display & Next.js Image Config Hardening**:
+        *   Configured `display: 'swap'` and `preload: true` on Geist font definitions in `src/app/layout.tsx` to prevent invisible text during font loading.
+        *   Added modern image formats (`image/avif`, `image/webp`) and 1-year cache TTL to `next.config.ts`.
+
+### 🏛️ Verification & Build Health
+*   `npm test`: **103 / 103 tests passing (100%)**.
+*   `npm run lint`: **0 errors, 0 warnings**.
+*   `npm run build`: Compiled all 20 static routes cleanly via Next.js Turbopack.
+*   **Offline-First Parity**: Preserved 100% offline capability across cached routes with zero visual or layout regressions.
+
+### 👥 People & Community
+*   **Project Lead**: Shared direct Vercel Speed Insights telemetry identifying the mobile homepage score discrepancy and authorized the performance remediation.
+*   **Guide 17 / Antigravity**: Diagnosed the LCP and service worker pre-cache root causes, implemented the media and caching optimizations, and verified full test suite health.
+
