@@ -12,6 +12,7 @@ import {
   Compass,
   ArrowRight,
   Map as MapIcon,
+  Calendar as CalendarIcon,
 } from 'lucide-react';
 import { GeometricShape } from '@/components/GeometricShapes';
 
@@ -83,6 +84,17 @@ export default function AppLayout({
     },
   ];
 
+  const desktopSidebarItems = [
+    ...navItems,
+    {
+      href: '/app/calendar',
+      label: 'Harmattan Calendar',
+      mobileLabel: 'Calendar',
+      icon: CalendarIcon,
+      exact: false,
+    },
+  ];
+
   const isCurrentActive = (itemHref: string, exact: boolean) => {
     if (exact) {
       return pathname === itemHref;
@@ -147,7 +159,7 @@ export default function AppLayout({
           <p className="px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-500">
             Freshman Toolkit
           </p>
-          {navItems.map((item) => {
+          {desktopSidebarItems.map((item) => {
             const Icon = item.icon;
             const active = isCurrentActive(item.href, item.exact);
             return (
@@ -185,8 +197,8 @@ export default function AppLayout({
       {/* ========================================================= */}
       {/* MOBILE TOP HEADER (< 768px)                               */}
       {/* ========================================================= */}
-      <header className="md:hidden sticky top-0 z-40 w-full border-b border-slate-200 bg-white px-4 h-14 flex items-center justify-between">
-        <Link href="/app" className="flex items-center gap-2.5">
+      <header className="md:hidden sticky top-0 z-40 w-full border-b border-slate-200 bg-white px-3 sm:px-4 h-14 flex items-center justify-between">
+        <Link href="/app" className="flex items-center gap-2">
           <Image
             src="/oau-logo.png"
             alt="OAU Crest"
@@ -204,13 +216,23 @@ export default function AppLayout({
           </div>
         </Link>
 
-        <Link
-          href="/"
-          className="text-xs font-bold text-slate-600 hover:text-oau-navy flex items-center gap-1 border border-slate-200 px-2.5 py-1 bg-slate-50"
-        >
-          <span>Campus Directory</span>
-          <ArrowRight className="w-3 h-3" />
-        </Link>
+        <div className="flex items-center gap-1.5">
+          <Link
+            href="/app/calendar"
+            className="text-[11px] font-black text-oau-navy hover:bg-amber-300 flex items-center gap-1 border border-amber-300 px-2 py-1 bg-amber-400 transition-colors"
+            title="Harmattan 2026/2027 Academic Calendar"
+          >
+            <CalendarIcon className="w-3 h-3 text-oau-navy" />
+            <span>Calendar</span>
+          </Link>
+          <Link
+            href="/"
+            className="text-xs font-bold text-slate-600 hover:text-oau-navy flex items-center gap-1 border border-slate-200 px-2 py-1 bg-slate-50"
+          >
+            <span>Directory</span>
+            <ArrowRight className="w-3 h-3" />
+          </Link>
+        </div>
       </header>
 
       {/* ========================================================= */}

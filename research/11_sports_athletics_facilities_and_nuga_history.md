@@ -201,7 +201,17 @@ The history of Obafemi Awolowo University is inextricably linked with the evolut
     *   *Subsequent Runs*: The Giants reached high knockout stages in the 2019 and 2021 HiFL editions, maintaining an unbeaten home record at the Main Bowl for three straight seasons.
 
 ### West African & International Collegiate Games
-*   **WAUG (West African University Games)**: OAU is a consistent top-five contender in WAUG, regularly competing in Ghana, Senegal, Burkina Faso, and Nigeria.
+*   **15th West African Universities Games (WAUG 2026) — Overall Champions!**:
+    *   **Host & Dates**: Obafemi Awolowo University (OAU), Ile-Ife (2–12 October 2026).
+    *   **Scale**: Welcomed over 1,500 student-athletes and university officials from across West Africa competing in 18 sports disciplines.
+    *   **Official Mascot**: *Orí Olókun* (The iconic ancient bronze head of Ife, symbolizing royalty, heritage, and physical power).
+    *   **Official Medal Standings**: OAU emerged as the **Overall Champion** of West Africa, dominating the final medal table:
+        *   🥇 **33 Gold Medals**
+        *   🥈 **50 Silver Medals**
+        *   🥉 **39 Bronze Medals**
+        *   🏆 **Total Haul: 122 Medals (1st Position)**
+    *   **Varsity Football Epic Semi-Final**: The **OAU Giants** football team knocked out defending champions University for Development Studies (UDS, Ghana) 4–3 on penalties in a dramatic sudden-death shootout at the OAU Main Bowl Stadium.
+    *   *Verified Citations*: MySchoolGist, The Nigeria Education News, Ground News, Association of Campus Journalists (ACJ OAU).
 *   **International Olympians**: Great Ife has produced numerous student-athletes who progressed to represent Nigeria at the Olympic Games, Commonwealth Games, and All-Africa Games in track and field, table tennis, and martial arts.
 
 ---

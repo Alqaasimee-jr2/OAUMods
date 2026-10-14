@@ -11,6 +11,8 @@ import {
   AlertCircle,
   GraduationCap,
   MapPin,
+  Calendar as CalendarIcon,
+  ArrowRight,
 } from 'lucide-react';
 import { GeometricShape, WordAccent } from '@/components/GeometricShapes';
 import { FACULTY_COURSE_TEMPLATES } from '@/data/courseTemplates';
@@ -418,6 +420,29 @@ export default function AcademicsPage() {
           Understand credit units for campus-wide general courses (GST 111, GST 112, LIB 101) and faculty core
           courses across all 15 faculties. Simulate your target semester GPA using the official Senate 5.0 scale.
         </p>
+      </div>
+
+      {/* 2026/2027 Harmattan Schedule Alert Strip */}
+      <div className="border border-slate-200 bg-white p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+        <div className="space-y-1">
+          <div className="flex items-center gap-2">
+            <span className="font-black text-oau-navy uppercase tracking-wide flex items-center gap-1.5">
+              <CalendarIcon className="w-3.5 h-3.5 text-amber-600" />
+              <span>Harmattan 2026/2027 Academic Schedule</span>
+            </span>
+            <span className="bg-amber-400 text-oau-navy font-bold text-[10px] px-1.5 py-0.2">13 Teaching Weeks</span>
+          </div>
+          <p className="text-slate-600 text-xs">
+            Lectures kick off <strong>16 Nov 2026</strong> • Mid-Semester CA Tests: <strong>4–9 Jan 2027</strong> • Revision: <strong>1–5 March 2027</strong> • Exams: <strong>8–27 March 2027</strong>.
+          </p>
+        </div>
+        <Link
+          href="/app/calendar"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-white bg-oau-navy hover:bg-slate-800 shrink-0 self-start sm:self-auto transition-colors"
+        >
+          <span>Full Calendar &amp; Deadlines</span>
+          <ArrowRight className="w-3.5 h-3.5 text-amber-400" />
+        </Link>
       </div>
 
       {/* Mode Tabs */}

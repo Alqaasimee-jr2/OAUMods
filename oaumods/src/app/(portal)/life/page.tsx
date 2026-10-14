@@ -22,6 +22,7 @@ import {
   SPORTS_DISCIPLINES,
   HOW_TO_JOIN_SPORTS,
   EXTRACURRICULAR_CLUBS,
+  WAUG_2026_CHAMPIONSHIP,
 } from '@/data/studentLife';
 import {
   ACADEMIC_CALENDAR_STRUCTURE,
@@ -269,6 +270,92 @@ export default function CampusLifePage() {
             <p className="leading-relaxed">
               The Directorate of Sports manages one of West Africa’s most complete collegiate sports installations. Great Ife pioneered the Nigerian Universities Games Association (NUGA) and has hosted the games four times (1970, 1973, 1984, and 2014). Students can participate recreationally or compete for varsity honors.
             </p>
+          </div>
+
+          {/* WAUG 2026 OVERALL CHAMPIONS SPOTLIGHT CARD */}
+          <div className="relative border-2 border-amber-400 bg-gradient-to-br from-amber-50 via-white to-amber-50/40 p-5 sm:p-6 space-y-4 overflow-hidden shadow-xs">
+            <div className="absolute top-2 right-3 pointer-events-none opacity-20 hidden sm:block">
+              <GeometricShape type="hexagon" color="gold" size="xl" />
+            </div>
+
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-amber-200 pb-3">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-amber-400 text-oau-navy text-xs font-black uppercase tracking-wide">
+                  <Trophy className="w-3.5 h-3.5" />
+                  <span>OVERALL CHAMPIONS • OCTOBER 2026</span>
+                </span>
+                <span className="text-xs font-bold text-amber-900 bg-amber-100 px-2 py-0.5 border border-amber-300">
+                  {WAUG_2026_CHAMPIONSHIP.edition}
+                </span>
+              </div>
+              <span className="text-xs font-black text-oau-navy">
+                Hosted at Great Ife ({WAUG_2026_CHAMPIONSHIP.dates})
+              </span>
+            </div>
+
+            <div className="space-y-1.5">
+              <h2 className="text-lg sm:text-xl font-black text-oau-navy leading-snug">
+                OAU Dominates West African Universities Games with 122 Medals
+              </h2>
+              <p className="text-xs text-slate-700 leading-relaxed max-w-3xl">
+                Obafemi Awolowo University made collegiate sports history from 2–12 October 2026, hosting over 1,500 student-athletes and university officials from across West Africa in 18 sports under the official mascot <strong>{WAUG_2026_CHAMPIONSHIP.mascot}</strong>. Great Ife topped the final medal standings to be crowned <strong>Overall Champion of West Africa</strong>.
+              </p>
+            </div>
+
+            {/* Medal Stand Display */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+              <div className="bg-amber-100/80 border border-amber-300 p-3 text-center">
+                <span className="block text-2xl font-black text-amber-900 leading-none">
+                  {WAUG_2026_CHAMPIONSHIP.medals.gold}
+                </span>
+                <span className="text-[11px] font-black uppercase text-amber-800 tracking-wider">
+                  🥇 Gold Medals
+                </span>
+              </div>
+              <div className="bg-slate-100 border border-slate-300 p-3 text-center">
+                <span className="block text-2xl font-black text-slate-800 leading-none">
+                  {WAUG_2026_CHAMPIONSHIP.medals.silver}
+                </span>
+                <span className="text-[11px] font-black uppercase text-slate-600 tracking-wider">
+                  🥈 Silver Medals
+                </span>
+              </div>
+              <div className="bg-orange-100/70 border border-orange-300 p-3 text-center">
+                <span className="block text-2xl font-black text-amber-950 leading-none">
+                  {WAUG_2026_CHAMPIONSHIP.medals.bronze}
+                </span>
+                <span className="text-[11px] font-black uppercase text-amber-900 tracking-wider">
+                  🥉 Bronze Medals
+                </span>
+              </div>
+              <div className="bg-oau-navy border border-oau-navy p-3 text-center text-white">
+                <span className="block text-2xl font-black text-amber-400 leading-none">
+                  {WAUG_2026_CHAMPIONSHIP.totalMedals}
+                </span>
+                <span className="text-[11px] font-black uppercase text-slate-200 tracking-wider">
+                  🏆 Total Haul (1st)
+                </span>
+              </div>
+            </div>
+
+            {/* Football Highlight Banner */}
+            <div className="bg-white border border-amber-300 p-4 space-y-2">
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-amber-600" />
+                <h3 className="font-black text-xs sm:text-sm text-oau-navy uppercase tracking-wide">
+                  Varsity Football Semi-Final Thriller: OAU Giants 4–3 UDS Ghana
+                </h3>
+              </div>
+              <p className="text-xs text-slate-700 leading-relaxed">
+                {WAUG_2026_CHAMPIONSHIP.footballHighlight.summary} Defending champions University for Development Studies (UDS) were held to a deadlock before the Giants triumphed in sudden-death penalties before a roaring home crowd.
+              </p>
+              <div className="pt-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] text-slate-500 border-t border-slate-100">
+                <span className="font-bold text-slate-700">Official Mascot:</span>
+                <span>{WAUG_2026_CHAMPIONSHIP.mascot}</span>
+                <span className="font-bold text-slate-700">Verified Sources:</span>
+                <span>MySchoolGist • The Nigeria Education News • Ground News • ACJ OAU</span>
+              </div>
+            </div>
           </div>
 
           {/* Facilities Grid */}

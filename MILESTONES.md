@@ -98,7 +98,7 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
 - [x] **2.4 Great Ife Residential, Religious & Sports Knowledge Base**:
   - [x] Comprehensive profiling of all 9 halls of residence, layout, amenities, cooking/appliance bans, and curfew (`research/08`).
   - [x] Complete mapping of religious ecosystems: UJCM, Committee of Presidents, major fellowships, Catholic Chaplaincy OLPLC, All Souls Chapel, MSSN OAU, Central Mosque, hall mosques, and Jihad Week (`research/09`).
-  - [x] Extensive sports intelligence: Directorate of Sports, available disciplines, world-class Sports Complex facilities, trials, HOD/Dean/VC cups, and 1970/1973/1984/2014 NUGA hosting history (`research/11`).
+  - [x] Extensive sports intelligence: Directorate of Sports, available disciplines, world-class Sports Complex facilities, trials, HOD/Dean/VC cups, 1970/1973/1984/2014 NUGA hosting history, and the historic 15th WAUG 2026 Overall Championship victory (`research/11`).
 
 **Exit Criteria for Phase 2**: Full coverage of day-to-day freshman survival, transport, food, health, and safety.
 
@@ -167,8 +167,9 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
 ### Key Tasks:
 - [ ] **5.1 Lightweight Admin / Curator Dashboard**:
   - [ ] Secure portal to review community submissions, update transport fares, and post announcements.
-- [ ] **5.2 Campus Updates & Deadline Notifications**:
-  - [ ] Alerts for hostel balloting, course registration closing dates, matriculation rehearsals, and exams.
+- [x] **5.2 Campus Updates & Deadline Notifications**:
+  - [x] Official 2026/2027 Harmattan Academic Calendar engine with live milestone countdowns, category filters, and .ics calendar sync.
+  - [x] Contextual alerts for course registration closing dates, matriculation, CA test weeks, and semester exams across Dashboard, Clearance, and Academics.
 - [ ] **5.3 🤖 Future AI Campus Assistant**:
   - [ ] Natural language Q&A grounded in verified OAU handbook data (*"Where do I submit my green file for CSC?"*).
 - [ ] **5.4 Semester Timetable Builder & Senior Marketplace**:

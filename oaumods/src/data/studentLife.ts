@@ -231,6 +231,56 @@ export const RELIGIOUS_REGULATIONS = [
   },
 ];
 
+export interface WaugChampionshipData {
+  edition: string;
+  host: string;
+  dates: string;
+  result: string;
+  totalMedals: number;
+  medals: {
+    gold: number;
+    silver: number;
+    bronze: number;
+  };
+  athletesCount: string;
+  sportsCount: number;
+  mascot: string;
+  footballHighlight: {
+    match: string;
+    score: string;
+    summary: string;
+  };
+  sources: Array<{ name: string; url: string }>;
+}
+
+export const WAUG_2026_CHAMPIONSHIP: WaugChampionshipData = {
+  edition: '15th West African Universities Games (WAUG 2026)',
+  host: 'Obafemi Awolowo University (OAU), Ile-Ife',
+  dates: '2–12 October 2026',
+  result: 'Overall Championship Winner & 1st on Final Medal Table',
+  totalMedals: 122,
+  medals: {
+    gold: 33,
+    silver: 50,
+    bronze: 39,
+  },
+  athletesCount: '1,500+ athletes & officials across West African institutions',
+  sportsCount: 18,
+  mascot: 'Orí Olókun (The Iconic Bronze Head of Ancient Ife)',
+  footballHighlight: {
+    match: 'OAU Giants vs. University for Development Studies (UDS, Ghana — Defending Champions)',
+    score: '4–3 on penalties (Semi-Final Thriller)',
+    summary:
+      'The varsity football squad, OAU Giants, knocked out defending champions UDS Ghana in a breathless penalty shootout (4–3) at the packed OAU Sports Complex Main Bowl to advance to the finals.',
+  },
+  sources: [
+    { name: 'MySchoolGist (Official Medal Table)', url: 'https://myschoolgist.com/news/oau-waug-medals-table-2026-193233/' },
+    { name: 'The Nigeria Education News', url: 'https://thenigeriaeducationnews.com/2026/10/13/oau-dominates-medal-table-with-122-medals-at-west-african-university-games/' },
+    { name: 'Ground News (UDS Semi-Final)', url: 'https://ground.news/article/uds-knocked-out-of-waug-football-after-penalty-shootout-loss-to-oau' },
+    { name: 'Association of Campus Journalists (ACJ OAU)', url: 'https://acjoau.com.ng/category/sports/' },
+  ],
+};
+
 export const SPORTS_FACILITIES: SportsFacility[] = [
   {
     id: 'main-bowl',

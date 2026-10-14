@@ -11,6 +11,7 @@ import {
   ArrowRight,
   Map as MapIcon,
   Sparkles,
+  Calendar as CalendarIcon,
 } from 'lucide-react';
 import { GeometricShape, WordAccent } from '@/components/GeometricShapes';
 
@@ -227,6 +228,35 @@ export default function PortalHomePage() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* ========================================================= */}
+      {/* ⚡ HARMATTAN 2026/2027 ACADEMIC CALENDAR ALERT            */}
+      {/* ========================================================= */}
+      <section className="border-2 border-oau-navy bg-white p-4 sm:p-5 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="space-y-1">
+          <div className="flex items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-amber-400 text-oau-navy text-[10px] font-black uppercase tracking-wide">
+              <CalendarIcon className="w-3 h-3" />
+              <span>Official Academic Calendar</span>
+            </span>
+            <span className="text-xs font-bold text-slate-500">2026/2027 Harmattan Session</span>
+          </div>
+          <h2 className="text-base sm:text-lg font-black text-oau-navy">
+            Fresh Students Resumption: Saturday, 31 October 2026
+          </h2>
+          <p className="text-xs text-slate-600">
+            Online Course Reg: <strong>2 Nov</strong> • Orientation: <strong>2–6 Nov</strong> • Lectures Begin: <strong>16 Nov</strong> • Matriculation: <strong>3 Dec 2026</strong>.
+          </p>
+        </div>
+
+        <Link
+          href="/app/calendar"
+          className="inline-flex items-center justify-center gap-2 px-4 py-2 text-xs font-black text-white bg-oau-navy hover:bg-slate-800 transition-colors shrink-0"
+        >
+          <span>View Full Calendar &amp; Deadlines</span>
+          <ArrowRight className="w-3.5 h-3.5 text-amber-400" />
+        </Link>
       </section>
 
       {/* ========================================================= */}
