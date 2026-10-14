@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { Navigation, Coffee, AlertCircle, Building2, MapPin, Map as MapIcon, ArrowRight } from 'lucide-react';
 import { GeometricShape, WordAccent, ShapeType, ShapeColor } from '@/components/GeometricShapes';

@@ -7,7 +7,7 @@ export default function ServiceWorkerRegister() {
     if (typeof window !== 'undefined' && 'caches' in window) {
       caches.keys().then((keys) => {
         keys.forEach((key) => {
-          if (key !== 'oaumods-cache-v3') {
+          if (key !== 'oaumods-cache-v4') {
             caches.delete(key);
           }
         });

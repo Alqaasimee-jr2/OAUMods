@@ -1,4 +1,4 @@
-import React from 'react';
+
 import type { Metadata } from 'next';
 import ClearanceChecklist from '@/components/ClearanceChecklist';
 import { GeometricShape, WordAccent } from '@/components/GeometricShapes';
