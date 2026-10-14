@@ -2223,3 +2223,28 @@ Enacted and codified **Rule 5 (Strict Ground-Truth & Anti-Hallucination Policy)*
 ### 👥 People & Community
 *   **Project Lead**: Shared real-time institutional sports intelligence and verified news links for the WAUG 2026 championship.
 *   **Guide 17 / Antigravity**: Structured the sports dataset, designed the championship UI spotlight, updated the institutional timeline, and verified 100% test and build health.
+
+---
+
+## 2026-10-14 (Entry 056: Dynamic Calendar Countdown Clock & Real-Time Midnight Rollover Verification)
+
+### 📌 Summary & Strategic Alignment
+*   The Project Lead inquired into the dynamic behavior of the 2026/2027 Harmattan Academic Calendar countdown ("Is it live? If I check tomorrow, will it change from 17 days to 16?").
+*   Verified and confirmed that the calendar engine computes dates dynamically at runtime using `new Date()` evaluated against client local midnight, guaranteeing an automatic decrease every day at 00:00.
+*   Enhanced `FreshmanDashboardClient.tsx` with an active 60-second interval timer (matching `CalendarClient.tsx`) so that the countdown ticker updates automatically in open browser tabs across midnight without requiring a manual page refresh.
+
+### 🧠 Key Architecture & Feature Implementations
+1.  **Dynamic Date Math (`src/data/academicCalendar.ts`)**:
+    *   `getDaysUntil(targetDateStr, referenceDate = new Date())` calculates difference between normalized midnights (`T00:00:00`), dividing by `86,400,000ms`.
+    *   On 14 October 2026: 17 days to 31 October 2026 (Freshmen Resumption).
+    *   On 15 October 2026: 16 days remaining.
+    *   On 31 October 2026: Displays `TODAY` / `Active`.
+    *   On 1 November 2026: Automatically cascades to the next upcoming milestone (Online Course Registration Opens on 2 November 2026, displaying `1 day remaining`).
+2.  **Zero-Reload State Synchronization (`FreshmanDashboardClient.tsx`)**:
+    *   Added a 60,000ms interval timer that refreshes `currentDate` in component state, ensuring open phone tabs seamlessly transition to the next day count at midnight.
+
+### 🏛️ Verification & Build Health
+*   `npm test`: **103 / 103 test cases passed (100%)**.
+*   `npm run lint`: **0 errors, 0 warnings**.
+*   Verified zero regression across mobile viewports (360px–420px) and offline PWA capability.
+

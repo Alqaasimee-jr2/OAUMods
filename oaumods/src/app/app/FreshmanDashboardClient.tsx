@@ -23,8 +23,16 @@ import {
 
 export default function FreshmanDashboardClient() {
   const [completedSteps, setCompletedSteps] = useState<number>(0);
-  const [currentDate] = useState<Date>(() => new Date());
+  const [currentDate, setCurrentDate] = useState<Date>(() => new Date());
   const totalSteps = 7;
+
+  // Auto-refresh date ticker every minute so the countdown ticks over at midnight without refreshing
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentDate(new Date());
+    }, 60000);
+    return () => clearInterval(timer);
+  }, []);
 
   const nextMilestone = getNextUpcomingEvent(HARMATTAN_2026_CALENDAR, currentDate);
   const daysToNextMilestone = nextMilestone
