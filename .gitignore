@@ -35,6 +35,7 @@ scratch/
 temp/
 tmp/
 *.tmp
+.agents/teamwork/
 
 # Environment & Dependency Directories
 node_modules/
