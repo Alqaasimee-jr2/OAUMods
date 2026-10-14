@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 export type ShapeType = 'circle' | 'square' | 'triangle' | 'hexagon';
 export type ShapeColor = 'gold' | 'blue' | 'navy' | 'slate' | 'amber' | 'emerald';

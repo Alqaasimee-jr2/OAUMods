@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { CheckSquare, Square, ChevronDown, ChevronUp, AlertCircle, FileText } from 'lucide-react';
 import { GeometricShape, WordAccent } from './GeometricShapes';
 

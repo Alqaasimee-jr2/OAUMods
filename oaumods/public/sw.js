@@ -1,4 +1,4 @@
-const CACHE_NAME = 'oaumods-cache-v3';
+const CACHE_NAME = 'oaumods-cache-v4';
 const PRECACHE_ASSETS = [
   '/',
   '/map',
@@ -15,6 +15,7 @@ const PRECACHE_ASSETS = [
   '/app/guide',
   '/oau-logo.png',
   '/freshers.jpg',
+  '/oau-satellite-map.png',
 ];
 
 self.addEventListener('install', (event) => {
@@ -43,6 +44,12 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
+  const url = new URL(event.request.url);
+
+  // Exclude API calls and Next.js HMR/telemetry from cache
+  if (url.pathname.startsWith('/api') || url.pathname.startsWith('/_next/webpack') || url.hostname === 'vercel.com') {
+    return;
+  }
 
   // Network-First strategy for HTML navigation requests to prevent stale UI
   if (event.request.mode === 'navigate') {
