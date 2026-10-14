@@ -8,7 +8,7 @@ import {
   Compass,
   Building2,
   BookOpen,
-  ExternalLink,
+  ArrowRight,
   Menu,
   X,
   Landmark,
@@ -83,17 +83,15 @@ export default function PortalLayout({
             })}
           </nav>
 
-          {/* Right Action: Launch Layer B Freshman App */}
+          {/* Right Action: Launch Freshman Companion App */}
           <div className="hidden sm:flex items-center gap-2">
-            <a
+            <Link
               href="/app"
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-oau-navy bg-amber-400 hover:bg-amber-300 border border-amber-500 shadow-xs transition-colors"
             >
-              <span>Freshman Guide (App)</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
+              <span>Freshman Companion</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
 
           {/* Mobile Menu Hamburger */}
@@ -129,15 +127,14 @@ export default function PortalLayout({
               );
             })}
             <div className="pt-2 border-t border-slate-200">
-              <a
+              <Link
                 href="/app"
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
                 className="w-full flex items-center justify-center gap-2 py-2.5 text-xs font-bold text-oau-navy bg-amber-400 hover:bg-amber-300 border border-amber-500"
               >
-                <span>Freshman Guide (OAUMods App)</span>
-                <ExternalLink className="w-4 h-4" />
-              </a>
+                <span>Freshman Companion (OAUMods)</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         )}
@@ -220,15 +217,13 @@ export default function PortalLayout({
               <p className="text-xs text-slate-600">
                 Newly admitted 100-level student? Use our dedicated companion web app:
               </p>
-              <a
+              <Link
                 href="/app"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-oau-navy bg-amber-400 hover:bg-amber-300 border border-amber-500"
               >
                 <span>Launch Freshman Guide</span>
-                <ExternalLink className="w-3 h-3" />
-              </a>
+                <ArrowRight className="w-3 h-3" />
+              </Link>
             </div>
           </div>
 

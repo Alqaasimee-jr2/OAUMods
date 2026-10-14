@@ -122,10 +122,11 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
   - [x] Degree classification badges and category-based course directory filters.
 - [ ] **3.3 Roommate Testing & Alpha Review**:
   - [x] Deploy a live staging link for mobile testing (Live at https://oaumods.vercel.app/).
+  - [x] Usability & Complication vetting completed: streamlined mobile bottom bar to floating dock, eliminated unexpected new tabs, and enabled smart accordion for clearance.
   - [ ] Have roommates stress-test usability, speed, and accuracy of clearance steps and GPA math.
   - [ ] Log all feedback, bugs, and clearance war stories directly into `CHANGELOG.md`.
 - [ ] **3.4 Offline PWA Hardening**:
-  - [ ] Service Worker precaching all static assets, landmark images, and JSON directories.
+  - [x] Service Worker precaching all static assets, landmark images, and JSON directories (`oaumods-cache-v4`).
   - [ ] Full offline functionality verified in airplane mode.
 
 **Exit Criteria for Phase 3**: Roommates give unanimous sign-off; GPA calculator and clearance operate 100% offline without glitches.

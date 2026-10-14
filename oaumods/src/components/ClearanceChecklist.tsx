@@ -115,6 +115,12 @@ export default function ClearanceChecklist() {
           const parsed = JSON.parse(saved);
           if (Array.isArray(parsed)) {
             setCompleted(parsed);
+            const firstIncomplete = STAGES.find((s) => !parsed.includes(s.id));
+            if (firstIncomplete) {
+              setExpanded(firstIncomplete.id);
+            } else {
+              setExpanded(null);
+            }
           }
         }
       } catch {
@@ -130,11 +136,14 @@ export default function ClearanceChecklist() {
       updated = completed.filter((item) => item !== id);
     } else {
       updated = [...completed, id];
+      const nextIncomplete = STAGES.find((s) => s.id !== id && !completed.includes(s.id));
+      if (nextIncomplete && expanded === id) {
+        setExpanded(nextIncomplete.id);
+      }
     }
     setCompleted(updated);
     try {
       localStorage.setItem('oau_clearance_progress', JSON.stringify(updated));
-      // Keep secondary key in sync
       const obj: Record<string, boolean> = {};
       updated.forEach((k) => (obj[k] = true));
       localStorage.setItem('oaumods_clearance_progress_v1', JSON.stringify(obj));
@@ -174,6 +183,33 @@ export default function ClearanceChecklist() {
             style={{ width: `${percent}%` }}
           ></div>
         </div>
+
+        {/* Active Stage Callout / Celebration */}
+        {completed.length === STAGES.length ? (
+          <div className="p-3 bg-emerald-50 border border-emerald-300 text-emerald-900 text-xs font-bold flex items-center gap-2">
+            <CheckSquare className="w-4 h-4 text-emerald-600 shrink-0" />
+            <span>All 7 Clearance Stages Completed! You are officially fully registered.</span>
+          </div>
+        ) : (
+          (() => {
+            const currentStage = STAGES.find((s) => !completed.includes(s.id));
+            if (!currentStage) return null;
+            return (
+              <div className="p-2.5 bg-slate-50 border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                <div className="flex items-center gap-2 text-slate-700">
+                  <span className="font-bold text-oau-navy">Next Active Step:</span>
+                  <span className="font-semibold text-slate-900">Stage {currentStage.stepNumber} — {currentStage.title}</span>
+                </div>
+                <button
+                  onClick={() => setExpanded(currentStage.id)}
+                  className="text-xs font-bold text-campus-blue hover:underline self-start sm:self-auto"
+                >
+                  View Details & Documents →
+                </button>
+              </div>
+            );
+          })()
+        )}
       </div>
 
       {/* Mandatory File Jacket Notice */}

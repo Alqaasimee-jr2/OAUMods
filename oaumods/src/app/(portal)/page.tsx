@@ -1,18 +1,18 @@
-
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
-  ExternalLink,
-  Bus,
+  CheckSquare,
+  MapPin,
+  GraduationCap,
+  Building2,
+  Building,
   PhoneCall,
   ArrowRight,
-  Trophy,
   Map as MapIcon,
-  Compass,
-  MapPin,
+  Sparkles,
 } from 'lucide-react';
-import { GeometricShape, WordAccent, ShapeType, ShapeColor } from '@/components/GeometricShapes';
+import { GeometricShape, WordAccent } from '@/components/GeometricShapes';
 
 export const metadata: Metadata = {
   title: {
@@ -50,67 +50,118 @@ export const metadata: Metadata = {
 };
 
 export default function PortalHomePage() {
-  const faculties: Array<{
-    name: string;
-    code: string;
-    landmarkId: string;
-    location: string;
-    shape: ShapeType;
-    shapeColor: ShapeColor;
-  }> = [
-    { name: 'Faculty of Administration', code: 'ADMIN', landmarkId: 'faculty-admin', location: 'Near Hezekiah Library & Pit Theatre', shape: 'square', shapeColor: 'navy' },
-    { name: 'Faculty of Agriculture', code: 'AGRIC', landmarkId: 'faculty-agric', location: 'Agric Complex & Teaching Farm', shape: 'hexagon', shapeColor: 'emerald' },
-    { name: 'Faculty of Arts', code: 'ARTS', landmarkId: 'faculty-arts', location: 'Humanities Blocks 1, 2 & 3', shape: 'circle', shapeColor: 'amber' },
-    { name: 'Faculty of Basic Medical Sciences', code: 'BMS', landmarkId: 'faculty-bms', location: 'Health Sciences corridor', shape: 'triangle', shapeColor: 'blue' },
-    { name: 'Faculty of Clinical Sciences', code: 'CLIN', landmarkId: 'faculty-clin', location: 'Teaching Hospital (OAUTHC) campus', shape: 'square', shapeColor: 'emerald' },
-    { name: 'Faculty of Computing', code: 'COMP', landmarkId: 'faculty-computing', location: 'Computing Complex & INTECU Axis', shape: 'hexagon', shapeColor: 'blue' },
-    { name: 'Faculty of Dentistry', code: 'DENT', landmarkId: 'faculty-dentistry', location: 'Dental Hospital Complex (Road 2 & OAUTHC)', shape: 'circle', shapeColor: 'gold' },
-    { name: 'Faculty of Education', code: 'EDUC', landmarkId: 'faculty-education', location: 'Education Building near Social Sciences', shape: 'circle', shapeColor: 'gold' },
-    { name: 'Faculty of Environmental Design & Mgt', code: 'EDM', landmarkId: 'edm-architecture', location: 'Near Yellow House & Architecture Studio', shape: 'hexagon', shapeColor: 'amber' },
-    { name: 'Faculty of Law', code: 'LAW', landmarkId: 'faculty-law', location: 'Law Complex near Central Administration', shape: 'square', shapeColor: 'navy' },
-    { name: 'Faculty of Nursing Science', code: 'NURS', landmarkId: 'faculty-nursing', location: 'Health Sciences Complex & OAUTHC', shape: 'triangle', shapeColor: 'emerald' },
-    { name: 'Faculty of Pharmacy', code: 'PHARM', landmarkId: 'faculty-pharmacy', location: 'Pharmacy Complex along Road 2', shape: 'circle', shapeColor: 'emerald' },
-    { name: 'Faculty of Science', code: 'SCI', landmarkId: 'white-house', location: 'White House & Central Science Building', shape: 'triangle', shapeColor: 'blue' },
-    { name: 'Faculty of Social Sciences', code: 'SOC SCI', landmarkId: 'faculty-social-sciences', location: 'Faculty Quadrangle & 1000-Seater', shape: 'square', shapeColor: 'blue' },
-    { name: 'Faculty of Technology', code: 'TECH', landmarkId: 'spider-house', location: 'Spider House & Tech Blocks', shape: 'hexagon', shapeColor: 'gold' },
-  ];
-
-  const transitOptions = [
+  const quickActions = [
     {
-      type: 'Campus Shuttle Bus',
-      paymentMethod: 'Official Paper Ticket',
-      note: 'Paper tickets required before boarding; cash is not accepted directly on buses.',
+      title: 'Clearance Steps',
+      subtitle: '7-phase physical & online checklist',
+      href: '/app/clearance',
+      icon: CheckSquare,
+      badge: 'Action Required',
+      badgeColor: 'bg-amber-100 text-amber-900 border-amber-300',
       shape: 'square' as const,
       shapeColor: 'navy' as const,
     },
     {
-      type: 'Town Campus Bus',
-      paymentMethod: 'Cash to Conductor / Driver',
-      note: 'Buses connecting Campus Gate park to Mayfair and town commercial stops.',
+      title: 'Campus GPS Map',
+      subtitle: 'Geospatial trails & walking times',
+      href: '/map',
+      icon: MapIcon,
+      badge: 'Interactive',
+      badgeColor: 'bg-emerald-100 text-emerald-900 border-emerald-300',
+      shape: 'hexagon' as const,
+      shapeColor: 'emerald' as const,
+    },
+    {
+      title: 'Lecture Venues',
+      subtitle: 'BOOC, White House, AUD, ODLT',
+      href: '/app/venues',
+      icon: MapPin,
+      badge: 'Venues Directory',
+      badgeColor: 'bg-blue-100 text-blue-900 border-blue-300',
       shape: 'triangle' as const,
+      shapeColor: 'blue' as const,
+    },
+    {
+      title: 'Courses & 5.0 GPA',
+      subtitle: '100L curricula & grade simulator',
+      href: '/app/academics',
+      icon: GraduationCap,
+      badge: 'Academics',
+      badgeColor: 'bg-purple-100 text-purple-900 border-purple-300',
+      shape: 'square' as const,
       shapeColor: 'gold' as const,
     },
     {
-      type: 'Teaching Hospital Cab',
-      paymentMethod: 'Direct Cash to Driver',
-      note: 'Direct route between Main Campus Gate and OAUTHC Hospital complex.',
+      title: '15 Faculties Guide',
+      subtitle: 'Departments, offices & locations',
+      href: '/faculties',
+      icon: Building2,
+      badge: 'Directory',
+      badgeColor: 'bg-slate-100 text-slate-800 border-slate-300',
       shape: 'hexagon' as const,
       shapeColor: 'blue' as const,
     },
     {
-      type: 'Electric Tricycle (E-Trike / Keke)',
-      paymentMethod: 'Official Paper Ticket',
-      note: 'Operates internal shuttle routes between Gate, SUB, and student halls.',
+      title: 'Hostels & Housing',
+      subtitle: 'Angola, Moz, porter clearance',
+      href: '/halls',
+      icon: Building,
+      badge: 'Accommodation',
+      badgeColor: 'bg-amber-100 text-amber-900 border-amber-300',
       shape: 'circle' as const,
+      shapeColor: 'amber' as const,
+    },
+  ];
+
+  const gatewayCards = [
+    {
+      title: 'Freshman Companion & Orientation Hub',
+      category: '100-Level Roadmap',
+      desc: 'Complete guide to Great Ife freshman survival: step-by-step physical clearance in pale yellow manila folders, health screening at JAC, bed space balloting, and freshman course credit units.',
+      href: '/app',
+      cta: 'Open Freshman Companion',
+      shape: 'square' as const,
+      shapeColor: 'navy' as const,
+      tags: ['Clearance Checklist', 'Angola & Moz Rules', '5.0 GPA Calculator'],
+    },
+    {
+      title: 'Spatial Campus Atlas & Sharon Masterplan',
+      category: 'Geospatial Navigator',
+      desc: 'Explore Arieh Sharon’s iconic brutalist and tropical modernist campus masterplan. Interactive OpenStreetMap tiles, verified GPS coordinates, walking times from student halls, and photo dossiers.',
+      href: '/map',
+      cta: 'Explore Campus Atlas',
+      shape: 'hexagon' as const,
       shapeColor: 'emerald' as const,
+      tags: ['30+ Landmark POIs', 'Walking Trails', 'Oduduwa Hall'],
+    },
+    {
+      title: 'Directory of 15 Institutional Faculties',
+      category: 'Academic Structure',
+      desc: 'Comprehensive breakdown of all 15 university faculties and 90+ academic departments. Find exact locations for faculty officers, deans, departmental secretaries, and foundational requirements.',
+      href: '/faculties',
+      cta: 'View All 15 Faculties',
+      shape: 'triangle' as const,
+      shapeColor: 'blue' as const,
+      tags: ['Administration', 'Science', 'Technology', 'Health Sciences'],
+    },
+    {
+      title: 'Campus Transit, Facilities & Student Life',
+      category: 'Daily Living',
+      desc: 'Everything you need for daily life on campus: official paper ticket transit rules, shuttle bus and e-trike routes, Hezekiah Library borrower registration, JAC clinic protocols, faith communities, and sports.',
+      href: '/facilities',
+      cta: 'Browse Facilities & Transit',
+      shape: 'circle' as const,
+      shapeColor: 'gold' as const,
+      tags: ['Shuttle Bus Fares', 'JAC Clinic Card', 'Faith & Sports'],
     },
   ];
 
   return (
-    <div className="space-y-12 text-left">
-      {/* Top Welcome Header with Bauhaus Geometric Accents */}
-      <div className="relative rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 overflow-hidden shadow-[0_12px_40px_rgba(15,23,42,0.06)]">
-        {/* Architectural Background Shapes (Subtle Contrast) */}
+    <div className="space-y-10 text-left">
+      {/* ========================================================= */}
+      {/* 1. HERO SECTION (Compact, Visual & Focused)              */}
+      {/* ========================================================= */}
+      <section className="relative rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 overflow-hidden shadow-[0_12px_40px_rgba(15,23,42,0.06)]">
         <div className="absolute -top-6 -right-6 pointer-events-none opacity-20 hidden sm:block">
           <GeometricShape type="hexagon" color="gold" size="xl" variant="outline" />
         </div>
@@ -120,43 +171,39 @@ export default function PortalHomePage() {
 
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 space-y-4">
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 bg-amber-100 text-oau-navy text-xs font-black uppercase tracking-wide border border-amber-300">
+              <GeometricShape type="square" color="navy" size="sm" />
+              <span>Great Ife Digital Compass</span>
+            </div>
 
-            <h1 className="text-2xl sm:text-3xl font-black text-oau-navy leading-tight">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-oau-navy leading-tight">
               <WordAccent shape="hexagon" color="gold">Obafemi Awolowo</WordAccent>{' '}
-              University Campus Information Hub
+              University Campus Hub
             </h1>
-            <p className="text-sm text-slate-700 leading-relaxed">
-              Welcome to the general information guide for Obafemi Awolowo University (OAU),
-              Ile-Ife. This portal is built for students, staff, and visitors to easily find
-              faculties, campus services, transit routes, and emergency help.
+
+            <p className="text-sm sm:text-base text-slate-700 leading-relaxed max-w-xl">
+              The verified, offline-first companion for Great Ife students. Navigate clearance steps, calculate your 5.0 GPA, locate lecture theatres (BOOC, White House), and explore 15 academic faculties.
             </p>
 
-            <div className="pt-2 flex flex-wrap gap-2.5 text-xs font-bold">
+            <div className="pt-2 flex flex-wrap items-center gap-3">
+              <Link
+                href="/app"
+                className="oa-action inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-amber-400 hover:bg-amber-300 text-oau-navy font-black text-xs sm:text-sm border-2 border-oau-navy shadow-xs transition-colors"
+              >
+                <span>Launch Freshman Companion</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
               <Link
                 href="/map"
-                className="oa-action px-4 py-2 rounded-lg bg-oau-navy text-white hover:bg-slate-800 border border-oau-navy flex items-center gap-1.5 shadow-xs"
+                className="oa-action inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-oau-navy hover:bg-slate-800 text-white font-bold text-xs sm:text-sm border border-oau-navy shadow-xs transition-colors"
               >
-                <MapIcon className="w-3.5 h-3.5 text-amber-400" />
-                <span>Interactive Campus Map</span>
-              </Link>
-              <Link
-                href="/faculties"
-                className="oa-action px-4 py-2 rounded-lg bg-white text-slate-800 hover:bg-slate-100 border border-slate-300 flex items-center gap-1.5"
-              >
-                <span>15 Faculties</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-              <Link
-                href="/facilities"
-                className="px-4 py-2 bg-white text-slate-800 hover:bg-slate-100 border border-slate-300 flex items-center gap-1.5"
-              >
-                <span>Facilities & Services</span>
+                <MapIcon className="w-4 h-4 text-amber-400" />
+                <span>Campus GPS Map</span>
               </Link>
             </div>
           </div>
 
           <div className="lg:col-span-5 relative border border-slate-200 bg-slate-50 p-2">
-            {/* Contrast Geometric Stamp behind photo corner */}
             <div className="absolute -top-3 -left-3 pointer-events-none opacity-30 z-20">
               <GeometricShape type="circle" color="gold" size="md" />
             </div>
@@ -166,338 +213,175 @@ export default function PortalHomePage() {
               alt="Great Ife Campus View"
               width={540}
               height={320}
-              className="w-full h-56 sm:h-64 object-cover"
+              className="w-full h-48 sm:h-56 object-cover"
               priority
             />
-            <div className="p-3 bg-white border-t border-slate-200 text-xs text-slate-700">
+            <div className="p-2.5 bg-white border-t border-slate-200 text-xs text-slate-700 flex items-center justify-between">
               <p className="font-bold text-oau-navy flex items-center gap-1.5">
                 <GeometricShape type="triangle" color="gold" size="sm" />
-                <span>Obafemi Awolowo University, Ile-Ife</span>
+                <span>Obafemi Awolowo University</span>
               </p>
-              <p className="text-[11px] text-slate-500">Established 1961 • Renowned for architecture and academic excellence</p>
+              <span className="text-[11px] text-slate-500 font-semibold">Est. 1961</span>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Dedicated Freshman Guide Callout Box with Geometric Contrast */}
-      <div className="relative rounded-2xl border-2 border-amber-500 bg-amber-50/70 p-6 sm:p-7 overflow-hidden shadow-[0_10px_30px_rgba(217,119,6,0.08)]">
-        {/* Contrast Background Hexagon */}
-        <div className="absolute -right-4 -bottom-4 pointer-events-none opacity-25">
-          <GeometricShape type="hexagon" color="amber" size="xl" />
-        </div>
-
-        <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-5">
-          <div className="space-y-2">
-            <div className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-amber-400 text-oau-navy text-[11px] font-black uppercase tracking-wide">
-              <GeometricShape type="square" color="navy" size="sm" />
-              <span>ATTENTION: 100-LEVEL FRESHMEN</span>
-            </div>
-            <h2 className="text-xl font-black text-oau-navy">
-              Are You a Newly Admitted Student?
+      {/* ========================================================= */}
+      {/* 2. ⚡ QUICK-ACTION LAUNCHPAD (Above the Fold Utility Grid) */}
+      {/* ========================================================= */}
+      <section className="space-y-3">
+        <div className="flex items-center justify-between pb-1">
+          <div className="flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-amber-500" />
+            <h2 className="text-sm font-black uppercase tracking-wider text-oau-navy">
+              Quick-Action Launchpad
             </h2>
-            <p className="text-xs sm:text-sm text-slate-800 max-w-2xl leading-relaxed">
-              We built a dedicated, step-by-step companion web application called <strong>OAUMods</strong>.
-              It guides you through your physical and online clearance steps, shows you where 100-level
-              classes hold (like BOOC, White House, and AUD), helps you with Angola and Mozambique hostel
-              rules, and includes a 5.0 CGPA calculator.
-            </p>
           </div>
-
-          <a
-            href="/app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="oa-action inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-amber-400 hover:bg-amber-300 text-oau-navy font-black text-sm border-2 border-oau-navy shrink-0 shadow-xs"
-          >
-            <span>Launch Freshman Guide (App)</span>
-            <ExternalLink className="w-4 h-4" />
-          </a>
-        </div>
-      </div>
-
-      {/* University Key Facts */}
-      <div className="oa-section">
-        <h3 className="text-base font-bold text-oau-navy uppercase tracking-wide border-b border-slate-200 pb-2 mb-4 flex items-center gap-2">
-          <GeometricShape type="circle" color="navy" size="sm" />
-          <span>University Quick Facts</span>
-        </h3>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-left">
-          <div className="relative p-3 bg-slate-50 border border-slate-200 overflow-hidden">
-            <div className="absolute top-2 right-2 opacity-20">
-              <GeometricShape type="circle" color="blue" size="md" />
-            </div>
-            <p className="text-xs text-slate-500 uppercase font-semibold">Founded</p>
-            <p className="text-xl font-black text-oau-navy">1961</p>
-            <p className="text-[11px] text-slate-600">Formerly University of Ife</p>
-          </div>
-
-          <div className="relative p-3 bg-slate-50 border border-slate-200 overflow-hidden">
-            <div className="absolute top-2 right-2 opacity-20">
-              <GeometricShape type="triangle" color="gold" size="md" />
-            </div>
-            <p className="text-xs text-slate-500 uppercase font-semibold">Faculties</p>
-            <p className="text-xl font-black text-oau-navy">15 Faculties</p>
-            <p className="text-[11px] text-slate-600">Over 90 academic depts</p>
-          </div>
-
-          <div className="relative p-3 bg-slate-50 border border-slate-200 overflow-hidden">
-            <div className="absolute top-2 right-2 opacity-20">
-              <GeometricShape type="square" color="navy" size="md" />
-            </div>
-            <p className="text-xs text-slate-500 uppercase font-semibold">Campus Land</p>
-            <p className="text-xl font-black text-oau-navy">11,861 Ha</p>
-            <p className="text-[11px] text-slate-600">One of Africa&apos;s largest</p>
-          </div>
-
-          <div className="relative p-3 bg-slate-50 border border-slate-200 overflow-hidden">
-            <div className="absolute top-2 right-2 opacity-20">
-              <GeometricShape type="hexagon" color="emerald" size="md" />
-            </div>
-            <p className="text-xs text-slate-500 uppercase font-semibold">Student Body</p>
-            <p className="text-xl font-black text-oau-navy">35,000+</p>
-            <p className="text-[11px] text-slate-600">Undergrad & Postgrad</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Interactive Campus Map & Masterplan Showcase */}
-      <div className="relative oa-section overflow-hidden space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-slate-200 gap-3">
-          <div>
-            <div className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-blue-100 text-blue-900 border border-blue-300 text-[10px] font-bold uppercase tracking-wide mb-1">
-              <Compass className="w-3 h-3 text-campus-blue" />
-              <span>SPATIAL ORIENTATION &amp; MASTERPLAN</span>
-            </div>
-            <h3 className="text-lg sm:text-xl font-black text-oau-navy">
-              Interactive Campus <WordAccent shape="square" color="navy">Map &amp; Navigator</WordAccent>
-            </h3>
-            <p className="text-xs text-slate-600 max-w-xl">
-              Navigate 30+ verified campus landmarks, lecture theatres (BOOC, White House, AUD), student hostels (Angola, Mozambique), and transit shuttle stops across Sharon&apos;s 11 functional zones.
-            </p>
-          </div>
-          <Link
-            href="/map"
-            className="oa-action inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-oau-navy hover:bg-slate-800 text-white font-bold text-xs shrink-0 transition-colors shadow-xs"
-          >
-            <MapIcon className="w-4 h-4 text-amber-400" />
-            <span>Launch Interactive Map</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </Link>
+          <span className="text-xs text-slate-500 font-medium">Instant student utilities</span>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
-          <div className="oa-card p-3 space-y-1">
-            <span className="font-bold text-slate-900 block">📍 Verified Campus GPS</span>
-            <p className="text-[11px] text-slate-600">Institutional coordinates for all 15 faculties, hostels, and lecture theatres.</p>
-          </div>
-          <div className="oa-card p-3 space-y-1">
-            <span className="font-bold text-slate-900 block">🚶 Walking Trail Finder</span>
-            <p className="text-[11px] text-slate-600">Walking times and step-by-step directions from Angola and Moz.</p>
-          </div>
-          <div className="oa-card p-3 space-y-1">
-            <span className="font-bold text-slate-900 block">🏛️ 30+ Mapped POIs</span>
-            <p className="text-[11px] text-slate-600">Amphitheatres, faculties, libraries, health clinics, and sports arena.</p>
-          </div>
-          <div className="oa-card p-3 space-y-1">
-            <span className="font-bold text-slate-900 block">🌐 Live OpenStreetMap</span>
-            <p className="text-[11px] text-slate-600">Real-time geospatial tiles and mobile GPS navigation links.</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Directory of 15 Faculties with Geometric Badges */}
-      <div className="oa-section">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-slate-200 gap-2 mb-4">
-          <div>
-            <h3 className="text-base font-bold text-oau-navy uppercase tracking-wide">
-              The <WordAccent shape="triangle" color="blue">15 Faculties</WordAccent> of Obafemi Awolowo University
-            </h3>
-            <p className="text-xs text-slate-600">
-              Classes and departments are divided across these 15 academic faculties.
-            </p>
-          </div>
-          <Link
-            href="/faculties"
-            className="text-xs font-bold text-campus-blue hover:underline flex items-center gap-1"
-          >
-            <span>Full Faculty Guide</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-          {faculties.map((fac) => (
-            <div key={fac.code} className="relative oa-card p-3.5 flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-between text-xs font-bold mb-1">
-                  <span className="text-oau-navy flex items-center gap-1.5">
-                    <GeometricShape type={fac.shape} color={fac.shapeColor} size="sm" />
-                    <span>{fac.code}</span>
-                  </span>
-                  <Link
-                    href={`/map?landmark=${fac.landmarkId}`}
-                    className="inline-flex items-center gap-1 text-[11px] font-bold text-campus-blue hover:text-oau-navy hover:underline"
-                    title={`View ${fac.name} on map`}
-                  >
-                    <MapPin className="w-3 h-3 text-amber-500" />
-                    <span>Map</span>
-                  </Link>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          {quickActions.map((action) => {
+            const Icon = action.icon;
+            return (
+              <Link
+                key={action.title}
+                href={action.href}
+                className="group relative bg-white border border-slate-200 hover:border-oau-navy p-3.5 sm:p-4 transition-all duration-200 hover:shadow-md flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 group-hover:bg-oau-navy group-hover:text-amber-400 text-oau-navy flex items-center justify-center transition-colors">
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <GeometricShape type={action.shape} color={action.shapeColor} size="sm" />
+                  </div>
+                  <h3 className="font-bold text-sm text-oau-navy group-hover:text-campus-blue transition-colors">
+                    {action.title}
+                  </h3>
+                  <p className="text-xs text-slate-600 mt-1 line-clamp-2">
+                    {action.subtitle}
+                  </p>
                 </div>
-                <h4 className="font-bold text-sm text-slate-900">{fac.name}</h4>
-              </div>
-              <div className="flex items-center justify-between mt-2 pt-2 border-t border-slate-200 text-xs">
-                <p className="text-slate-600 truncate mr-2">
-                  <span className="font-semibold text-slate-700">Loc:</span> {fac.location}
+                <div className="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-slate-500 group-hover:text-oau-navy">
+                  <span>Open Tool</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ========================================================= */}
+      {/* 3. 🧭 4 HIGH-LEVEL PROGRESSIVE GATEWAYS                    */}
+      {/* ========================================================= */}
+      <section className="space-y-4">
+        <div className="border-b border-slate-200 pb-2">
+          <h2 className="text-base font-black text-oau-navy uppercase tracking-wide">
+            Explore Campus Knowledge Portals
+          </h2>
+          <p className="text-xs text-slate-600">
+            Progressive guides covering the complete Great Ife student experience.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {gatewayCards.map((gateway) => (
+            <div
+              key={gateway.title}
+              className="bg-white border border-slate-200 p-5 flex flex-col justify-between space-y-4 hover:border-slate-300 transition-colors shadow-xs"
+            >
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 bg-slate-100 px-2 py-0.5 border border-slate-200">
+                    {gateway.category}
+                  </span>
+                  <GeometricShape type={gateway.shape} color={gateway.shapeColor} size="sm" />
+                </div>
+                <h3 className="font-bold text-base text-oau-navy">
+                  {gateway.title}
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {gateway.desc}
                 </p>
+
+                <div className="flex flex-wrap gap-1.5 pt-1">
+                  {gateway.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[10px] font-medium px-2 py-0.5 bg-slate-50 text-slate-600 border border-slate-200"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-2 border-t border-slate-100">
                 <Link
-                  href={`/map?landmark=${fac.landmarkId}`}
-                  className="px-2 py-0.5 bg-white border border-slate-300 hover:bg-slate-100 text-[11px] font-bold text-slate-700 shrink-0 transition-colors"
+                  href={gateway.href}
+                  className="w-full inline-flex items-center justify-between px-4 py-2.5 bg-slate-50 hover:bg-oau-navy hover:text-white border border-slate-300 hover:border-oau-navy text-xs font-bold text-oau-navy transition-colors rounded-sm"
                 >
-                  View POI
+                  <span>{gateway.cta}</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
-      {/* Regulated Campus Transit & Mobility with Geometric Markers */}
-      <div className="oa-section">
-        <div className="border-b border-slate-200 pb-2 mb-4">
-          <div className="flex items-center gap-2 text-oau-navy">
-            <Bus className="w-4 h-4 text-amber-500" />
-            <h3 className="text-base font-bold uppercase tracking-wide">
-              Official Campus Transit & Routes (<WordAccent shape="circle" color="amber">Regulated</WordAccent> Mobility)
-            </h3>
-          </div>
-          <p className="text-xs text-slate-600">
-            The transport currency within campus is official paper tickets. Specific fare costs from location to location are not known or fixed at the moment. Purchase paper tickets at designated ticketing booths (Campus Main Gate and SUB Car Park) before boarding.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {transitOptions.map((t, idx) => (
-            <div key={idx} className="relative p-4 border border-slate-200 bg-slate-50 space-y-1.5">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Route Type</span>
-                <GeometricShape type={t.shape} color={t.shapeColor} size="sm" />
-              </div>
-              <h4 className="font-bold text-sm text-slate-900">{t.type}</h4>
-              <div className="pt-1">
-                <span className="inline-block px-2 py-0.5 bg-white border border-slate-300 text-xs font-bold text-oau-navy">
-                  {t.paymentMethod}
-                </span>
-              </div>
-              <p className="text-xs text-slate-600 leading-normal">{t.note}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Campus Faith Communities, Sports & Extracurricular Life */}
-      <div className="border border-slate-200 bg-white p-6 space-y-4">
-        <div className="border-b border-slate-200 pb-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-          <div>
-            <div className="flex items-center gap-2 text-oau-navy">
-              <Trophy className="w-4 h-4 text-amber-500" />
-              <h3 className="text-base font-bold uppercase tracking-wide">
-                Faith Communities, <WordAccent shape="triangle" color="gold">Sports</WordAccent> & Student Societies
-              </h3>
-            </div>
-            <p className="text-xs text-slate-600">
-              Spiritual sanctuaries, collegiate athletic championships, independent campus journalism, and debating societies at Great Ife.
-            </p>
-          </div>
-          <Link
-            href="/life"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-oau-navy bg-slate-100 hover:bg-slate-200 border border-slate-300 self-start sm:self-auto shrink-0"
-          >
-            <span>Explore All Faith & Sports</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="oa-card p-4 space-y-2">
-            <div className="flex items-center justify-between">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-1.5 py-0.5">Faith Ecosystem</span>
-              <GeometricShape type="square" color="emerald" size="sm" />
-            </div>
-            <h4 className="font-bold text-sm text-slate-900">Mosques, Chapels & Fellowships</h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              OAU Central Mosque & hall mosques (MSSN), Catholic Chaplaincy OLPLC, All Souls’ Chapel, and UJCM fellowships (ECU, RCF, DLCF).
-            </p>
-          </div>
-
-          <div className="oa-card p-4 space-y-2">
-            <div className="flex items-center justify-between">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-1.5 py-0.5">Collegiate Athletics</span>
-              <GeometricShape type="hexagon" color="gold" size="sm" />
-            </div>
-            <h4 className="font-bold text-sm text-slate-900">The OAU Giants & Sports Complex</h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              IAAF-certified Main Bowl stadium, Olympic 50m competition pool, indoor gymnasium, tennis and basketball courts. Open Harmattan trials.
-            </p>
-          </div>
-
-          <div className="oa-card p-4 space-y-2">
-            <div className="flex items-center justify-between">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-800 bg-blue-100 px-1.5 py-0.5">Societies & Traditions</span>
-              <GeometricShape type="triangle" color="blue" size="sm" />
-            </div>
-            <h4 className="font-bold text-sm text-slate-900">Journalism, Debates & Hall Weeks</h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Association of Campus Journalists (ACJ OAU), legendary hall press boards, debating societies, and the famous Awo Aro Carnival.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Emergency Assistance & Health Care */}
-      <div className="oa-section">
-        <div className="border-b border-slate-200 pb-2 mb-4">
-          <div className="flex items-center gap-2 text-oau-navy">
+      {/* ========================================================= */}
+      {/* 4. 🚨 EMERGENCY HELPLINES BAR (Clean 1-Tap Access)        */}
+      {/* ========================================================= */}
+      <section className="border border-slate-200 bg-white p-4 sm:p-5 space-y-3">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-2">
+          <div className="flex items-center gap-2">
             <PhoneCall className="w-4 h-4 text-red-600" />
-            <h3 className="text-base font-bold uppercase tracking-wide">
-              <WordAccent shape="square" color="navy">Emergency</WordAccent> & Health Centre Helplines
+            <h3 className="text-sm font-black text-oau-navy uppercase tracking-wide">
+              Emergency &amp; Health Centre Helplines
             </h3>
           </div>
-          <p className="text-xs text-slate-600">
-            University Health Centre (&ldquo;JAC&rdquo;) provides round-the-clock primary medical care.
-            For medical emergencies on campus, reach the mobile ambulance service immediately.
-          </p>
+          <span className="text-xs text-slate-500">24/7 Mobile Medical Dispatch</span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="oa-card p-4 space-y-1">
-            <div className="flex items-center justify-between">
-              <p className="text-xs font-bold uppercase text-slate-500">Ambulance Line 1</p>
-              <GeometricShape type="square" color="navy" size="sm" />
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+          <a
+            href="tel:08153750977"
+            className="p-3 bg-red-50/60 hover:bg-red-50 border border-red-200 flex items-center justify-between group transition-colors"
+          >
+            <div>
+              <p className="text-[10px] uppercase font-bold text-red-700">Ambulance Line 1</p>
+              <p className="text-sm font-black text-oau-navy group-hover:text-red-700">0815 375 0977</p>
             </div>
-            <p className="text-base font-black text-oau-navy">0815 375 0977</p>
-            <p className="text-xs text-slate-600">Available 24/7 for students and staff on campus.</p>
-          </div>
+            <PhoneCall className="w-4 h-4 text-red-600" />
+          </a>
 
-          <div className="oa-card p-4 space-y-1">
-            <div className="flex items-center justify-between">
-              <p className="text-xs font-bold uppercase text-slate-500">Ambulance Line 2</p>
-              <GeometricShape type="triangle" color="gold" size="sm" />
+          <a
+            href="tel:09035699725"
+            className="p-3 bg-red-50/60 hover:bg-red-50 border border-red-200 flex items-center justify-between group transition-colors"
+          >
+            <div>
+              <p className="text-[10px] uppercase font-bold text-red-700">Ambulance Line 2</p>
+              <p className="text-sm font-black text-oau-navy group-hover:text-red-700">0903 569 9725</p>
             </div>
-            <p className="text-base font-black text-oau-navy">0903 569 9725</p>
-            <p className="text-xs text-slate-600">Direct mobile dispatch for student medical distress.</p>
-          </div>
+            <PhoneCall className="w-4 h-4 text-red-600" />
+          </a>
 
-          <div className="oa-card p-4 space-y-1">
-            <div className="flex items-center justify-between">
-              <p className="text-xs font-bold uppercase text-slate-500">Hospital Emergency (OAUTHC)</p>
-              <GeometricShape type="hexagon" color="blue" size="sm" />
+          <a
+            href="tel:08152092813"
+            className="p-3 bg-slate-50 hover:bg-slate-100 border border-slate-200 flex items-center justify-between group transition-colors"
+          >
+            <div>
+              <p className="text-[10px] uppercase font-bold text-slate-600">OAUTHC Hospital Emergency</p>
+              <p className="text-sm font-black text-oau-navy">0815 209 2813</p>
             </div>
-            <p className="text-base font-black text-oau-navy">0815 209 2813</p>
-            <p className="text-xs text-slate-600">Teaching Hospital Emergency Department.</p>
-          </div>
+            <PhoneCall className="w-4 h-4 text-slate-600" />
+          </a>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
