@@ -87,8 +87,11 @@ export default function CampusMap({
         (l) => l.id === queryLandmarkId || l.nickname?.toLowerCase() === queryLandmarkId.toLowerCase()
       );
       if (match) {
-        setSelectedLandmark(match);
-        setRightPanelTab('dossier');
+        // Using setTimeout to defer state update outside of current render cycle
+        setTimeout(() => {
+          setSelectedLandmark(match);
+          setRightPanelTab('dossier');
+        }, 0);
       }
     }
   }, [queryLandmarkId]);
