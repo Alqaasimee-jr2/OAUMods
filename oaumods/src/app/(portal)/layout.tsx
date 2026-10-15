@@ -163,7 +163,7 @@ export default function PortalLayout({
                 </span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed max-w-md">
-                Official information directory for all students, staff, and visitors.
+                Unofficial student guide for all students, staff, and visitors.
                 Provides verified information on faculties, campus buildings, transportation,
                 and health services.
               </p>
@@ -228,7 +228,7 @@ export default function PortalLayout({
           </div>
 
           <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-slate-500">
-            <p>© {new Date().getFullYear()} Obafemi Awolowo University, Ile-Ife. Built for Great Ife students.</p>
+            <p>© {new Date().getFullYear()} OAUMods. Unofficial student guide. Built for Great Ife students.</p>
             <p className="font-semibold text-oau-navy">For Learning and Culture</p>
           </div>
         </div>
