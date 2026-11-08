@@ -42,18 +42,17 @@ Neither experience asks for a name or email. Both use a hidden honeypot field to
 
 ## Smoke-test checklist
 
-1. On a page other than `/feedback`, open the floating **Feedback** panel and confirm it appears above the shortcut without navigating away.
-2. Confirm the panel is keyboard operable, its focus indicator is visible, and Escape closes it and returns focus to the shortcut.
-3. Confirm a rating is required, the comment is optional, and the comment cannot exceed 500 characters.
-4. Submit a rating with and without a comment; confirm Formspree receives the rating, current page path, and source label.
-5. Simulate a network failure and a request timeout; confirm an error is shown and retry is possible.
-6. Navigate to another page while the panel is open; confirm it closes and the next page starts with a clean feedback state.
+1. On a page other than `/feedback`, open the floating **Feedback** panel and confirm it appears without navigating away.
+2. Confirm keyboard users can reach the rating buttons, see focus indicators, and close the panel with Escape; focus should return to the shortcut.
+3. Confirm a rating is required, the comment is optional, and the comment is limited to 500 characters.
+4. Submit a rating with and without a comment; confirm Formspree receives the rating, current pathname, and source label.
+5. Simulate a network failure and a request timeout; confirm an error is shown and the student can retry.
+6. Navigate to another page while the panel is open; confirm it closes and does not reopen unexpectedly when returning to the previous page.
 7. Confirm the floating shortcut is hidden on `/feedback`.
 8. Visit `/feedback` on a phone-sized viewport.
-2. Confirm category cards and star rating work with touch and keyboard.
-3. Submit a message shorter than 12 characters; it should be blocked.
-4. Submit a valid test message and confirm it appears in Formspree.
-5. Confirm a filled honeypot never displays the success message.
-6. Confirm network failures and timeouts show an error and allow retrying.
-7. Confirm an HTTP-success response without Formspree's `ok: true` confirmation is not shown as successful.
-8. Confirm the floating shortcut opens the page and is hidden on the feedback page itself.
+9. Confirm category cards and star rating work with touch and keyboard.
+10. Submit a message shorter than 12 characters; it should be blocked.
+11. Submit a valid test message and confirm it appears in Formspree.
+12. Confirm a filled honeypot never displays the success message.
+13. Confirm network failures and timeouts show an error and allow retrying.
+14. Confirm an HTTP-success response without Formspree's `ok: true` confirmation is not shown as successful.
