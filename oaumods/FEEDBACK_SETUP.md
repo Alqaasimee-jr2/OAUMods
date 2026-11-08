@@ -1,6 +1,6 @@
 # OAUMods feedback form setup
 
-The student feedback page is available at `/feedback`. A floating **Feedback** shortcut links to it across the app.
+The full student feedback page is available at `/feedback`. Across the rest of the app, the floating **Feedback** shortcut opens a small page-specific feedback panel; students can rate the current page and optionally add a short comment without leaving it. The full page remains available for detailed reports, corrections, and feature suggestions.
 
 ## Formspree configuration
 
@@ -22,18 +22,34 @@ Set it in the `oaumods` app's local environment (for local testing) or the deplo
 
 No GitHub token, GitHub issue integration, or server-side environment variable is used by this implementation. Do not add secrets to client-side code.
 
-## What the form collects
+## What feedback collects
+
+The floating page-feedback panel collects:
+
+- A required helpful / not helpful rating
+- An optional comment (up to 500 characters)
+- The current page path (pathname only; query strings are not included)
+- A source label identifying the floating panel
+
+The full `/feedback` page collects:
 
 - Feedback category
 - Message (12–2,000 characters)
 - Optional page or campus place
 - Optional 1–5 rating
 
-The form does not ask for a name or email. A hidden honeypot field discourages basic automated spam. Do not ask students to include passwords or sensitive personal information.
+Neither experience asks for a name or email. Both use a hidden honeypot field to discourage basic automated spam. Do not ask students to include passwords or sensitive personal information.
 
 ## Smoke-test checklist
 
-1. Visit `/feedback` on a phone-sized viewport.
+1. On a page other than `/feedback`, open the floating **Feedback** panel and confirm it appears above the shortcut without navigating away.
+2. Confirm the panel is keyboard operable, its focus indicator is visible, and Escape closes it and returns focus to the shortcut.
+3. Confirm a rating is required, the comment is optional, and the comment cannot exceed 500 characters.
+4. Submit a rating with and without a comment; confirm Formspree receives the rating, current page path, and source label.
+5. Simulate a network failure and a request timeout; confirm an error is shown and retry is possible.
+6. Navigate to another page while the panel is open; confirm it closes and the next page starts with a clean feedback state.
+7. Confirm the floating shortcut is hidden on `/feedback`.
+8. Visit `/feedback` on a phone-sized viewport.
 2. Confirm category cards and star rating work with touch and keyboard.
 3. Submit a message shorter than 12 characters; it should be blocked.
 4. Submit a valid test message and confirm it appears in Formspree.
