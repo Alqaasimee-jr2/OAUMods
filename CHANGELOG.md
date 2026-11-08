@@ -2022,4 +2022,5 @@ Enacted and codified **Rule 5 (Strict Ground-Truth & Anti-Hallucination Policy)*
 * `oaumods/FEEDBACK_SETUP.md`: Documented the panel fields and manual verification checklist.
 
 ### 🧪 Verification
-* Automated lint/build and browser interaction checks have not yet been run in this remote editing session. Run `npm run lint` and `npm run build` from `oaumods/`, then complete the feedback smoke-test checklist before merging.
+* GitHub Actions completed `npm run lint` and `npm run build` successfully for the pull request branch.
+* Manual mobile/desktop interaction and live Formspree delivery/failure checks remain outstanding; complete the feedback smoke-test checklist before merging.
