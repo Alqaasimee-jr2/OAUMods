@@ -152,7 +152,7 @@ function FeedbackShortcutPanel({ pathname }: { pathname: string }) {
                 Was this page helpful?
               </h2>
               <p className="mt-1 text-xs leading-5 text-slate-600">
-                Your anonymous feedback helps us improve OAUMods.
+                No name or email is needed. Your feedback helps us improve OAUMods.
               </p>
             </div>
             <button
@@ -268,7 +268,7 @@ function FeedbackShortcutPanel({ pathname }: { pathname: string }) {
                 <Send className="h-4 w-4" aria-hidden="true" />
               </button>
               <p className="text-center text-xs leading-5 text-slate-500">
-                No name or account is required. Page: <span className="font-medium text-slate-600">{pathname || '/'}</span>
+                No name or email is requested. Page: <span className="font-medium text-slate-600">{pathname || '/'}</span>
               </p>
             </form>
           )}
