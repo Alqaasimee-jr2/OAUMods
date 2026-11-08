@@ -19,10 +19,8 @@ const FORMSPREE_ENDPOINT =
 type Rating = 'helpful' | 'not-helpful';
 type SubmissionStatus = 'idle' | 'sending' | 'success' | 'error';
 
-export default function FeedbackShortcut() {
-  const pathname = usePathname();
-  const [openPathname, setOpenPathname] = useState<string | null>(null);
-  const isOpen = openPathname === pathname;
+function FeedbackShortcutPanel({ pathname }: { pathname: string }) {
+  const [isOpen, setIsOpen] = useState(false);
   const [rating, setRating] = useState<Rating | null>(null);
   const [comment, setComment] = useState('');
   const [website, setWebsite] = useState('');
@@ -38,7 +36,7 @@ export default function FeedbackShortcut() {
 
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === 'Escape') {
-        setOpenPathname(null);
+        setIsOpen(false);
         setRating(null);
         setComment('');
         setStatus('idle');
@@ -56,7 +54,7 @@ export default function FeedbackShortcut() {
   }
 
   function closePanel() {
-    setOpenPathname(null);
+    setIsOpen(false);
     setRating(null);
     setComment('');
     setWebsite('');
@@ -289,7 +287,7 @@ export default function FeedbackShortcut() {
             setWebsite('');
             setStatus('idle');
             setError('');
-            setOpenPathname(pathname);
+            setIsOpen(true);
           }
         }}
         aria-label={isOpen ? 'Close page feedback' : 'Give feedback about this page'}
@@ -306,4 +304,10 @@ export default function FeedbackShortcut() {
       </button>
     </>
   );
+}
+
+
+export default function FeedbackShortcut() {
+  const pathname = usePathname();
+  return <FeedbackShortcutPanel key={pathname} pathname={pathname} />;
 }
