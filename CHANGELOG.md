@@ -1999,3 +1999,27 @@ Enacted and codified **Rule 5 (Strict Ground-Truth & Anti-Hallucination Policy)*
 
 
 
+
+
+---
+
+## 2026-11-08 (Entry 049: Contextual Student Feedback)
+
+### 📌 Summary & Product Decision
+* Improved the existing floating feedback shortcut instead of adding a second feedback entry point.
+* The shortcut now opens a compact page-feedback panel without navigating away from the page.
+* Students can mark a page as helpful or not helpful and optionally add a comment of up to 500 characters.
+* Submissions reuse the existing Formspree endpoint and include the page pathname and source label. No name, email, account, query string, or new service is requested.
+* The full `/feedback` page remains unchanged for longer feedback, problem reports, campus corrections, and feature suggestions.
+
+### ♿ Interaction & Accessibility
+* Added labelled controls, visible keyboard focus, Escape-to-close behavior, and focus return to the shortcut.
+* Added sending, confirmed-success, error, and retry states. Success is shown only after Formspree returns an affirmative `ok: true` response.
+* The panel remains hidden on `/feedback`, does not open automatically, and resets its inputs when opened on another page.
+
+### 🏛️ Files Updated
+* `oaumods/src/components/FeedbackShortcut.tsx`: Replaced the route-only shortcut with the contextual feedback panel.
+* `oaumods/FEEDBACK_SETUP.md`: Documented the panel fields and manual verification checklist.
+
+### 🧪 Verification
+* Automated lint/build and browser interaction checks have not yet been run in this remote editing session. Run `npm run lint` and `npm run build` from `oaumods/`, then complete the feedback smoke-test checklist before merging.
