@@ -1,58 +1,77 @@
-# OAUMods feedback form setup
+# OAUMods Feedback System & Backend Delivery Setup
 
-The full student feedback page is available at `/feedback`. Across the rest of the app, the floating **Feedback** shortcut opens a small page-specific feedback panel; students can rate the current page and optionally add a short comment without leaving it. The full page remains available for detailed reports, corrections, and feature suggestions.
+The OAUMods feedback system features two complementary entry points:
+1. **Contextual Floating Panel (`FeedbackShortcut.tsx`)**: Appears floating in the bottom-right corner across pages (except `/feedback`). Allows students to rate pages (`Helpful` / `Not helpful`) and leave optional comments (up to 500 characters) without interrupting their reading.
+2. **Dedicated Feedback Portal (`/feedback`)**: Full-page form for categorised input:
+   - General feedback
+   - Problem/bug reporting
+   - Feature suggestions
+   - Campus ground-truth corrections (places, fees, hours)
 
-## Formspree configuration
-
-The form submits directly from the browser to Formspree. By default it uses the current endpoint ID in `src/app/feedback/page.tsx`. To configure a different Formspree form, set this **public form endpoint** before building/deploying:
-
-```env
-NEXT_PUBLIC_FORMSPREE_ENDPOINT=https://formspree.io/f/YOUR_FORM_ID
+Both client components submit to the internal serverless API route:
+```http
+POST /api/feedback
 ```
 
-Set it in the `oaumods` app's local environment (for local testing) or the deployment project's environment settings, then rebuild/redeploy. The value is sent to the browser, so it must contain only the public Formspree form endpoint—not a password, private API key, or other secret. If unset, the existing endpoint is used.
+---
 
-1. Confirm the endpoint belongs to the OAUMods project in Formspree.
-2. Confirm the Formspree form is active and its destination email is verified.
-3. Submit a test from the deployed `/feedback` page.
-4. Check Formspree's submissions dashboard and destination inbox, including spam.
-5. Simulate a failed request and confirm the page shows an error instead of a success message.
-6. Confirm a request that takes longer than 15 seconds times out with a retryable error.
-7. Confirm the page only displays success when Formspree returns a successful JSON response (`ok: true`).
+## 🚀 Receiving Feedback Submissions (Backend Options)
 
-No GitHub token, GitHub issue integration, or server-side environment variable is used by this implementation. Do not add secrets to client-side code.
+The Next.js backend (`/api/feedback`) securely handles validation, honeypot spam protection, and dispatches submissions to the Project Lead via your choice of backend channels:
 
-## What feedback collects
+### Option 1: Instant Discord / Slack Push Notifications (Recommended)
+Receive instant push notifications on your phone or desktop whenever a student submits feedback.
 
-The floating page-feedback panel collects:
+1. In Discord: Go to **Server Settings** > **Integrations** > **Webhooks** > **New Webhook**. Copy the Webhook URL.
+   *(Or in Slack: Create an Incoming Webhook in your Slack workspace).*
+2. Add this environment variable in your local `.env.local` or on your Vercel project dashboard:
+   ```env
+   FEEDBACK_WEBHOOK_URL=https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN
+   ```
+3. Submissions will automatically arrive as rich embed cards displaying the category, rating, location, student comment, and timestamp.
 
-- A required helpful / not helpful rating
-- An optional comment (up to 500 characters)
-- The current page path (pathname only; query strings are not included)
-- A source label identifying the floating panel
+### Option 2: Direct Email to Your Inbox via Resend
+Receive feedback directly in your personal or administrative email:
 
-The full `/feedback` page collects:
+1. Sign up for a free account at [resend.com](https://resend.com) and get an API key.
+2. Add these environment variables in Vercel:
+   ```env
+   RESEND_API_KEY=re_xxxxxxxxxxxx
+   FEEDBACK_RECIPIENT_EMAIL=your-email@gmail.com
+   ```
 
-- Feedback category
-- Message (12–2,000 characters)
-- Optional page or campus place
-- Optional 1–5 rating
+### Option 3: Formspree Email Forwarding (Server-Side Proxy)
+If you prefer Formspree email digests:
+1. Set:
+   ```env
+   FORMSPREE_ENDPOINT=https://formspree.io/f/YOUR_FORM_ID
+   ```
+2. The backend proxies submissions server-to-server. This completely eliminates client ad-blocker interference, CORS issues, and protects your form endpoint from public scraping.
+*(If unset, it falls back to the default OAUMods Formspree endpoint).*
 
-Neither experience asks for a name or email. Both use a hidden honeypot field to discourage basic automated spam. Do not ask students to include passwords or sensitive personal information.
+### Option 4: Serverless Runtime Logs
+If no external webhook or email service is configured (e.g. during local offline development), submissions are cleanly formatted and logged to `console.info` in the server terminal and Vercel runtime logs.
 
-## Smoke-test checklist
+---
 
-1. On a page other than `/feedback`, open the floating **Feedback** panel and confirm it appears without navigating away.
-2. Confirm keyboard users can reach the rating buttons, see focus indicators, and close the panel with Escape; focus should return to the shortcut.
-3. Confirm a rating is required, the comment is optional, and the comment is limited to 500 characters.
-4. Submit a rating with and without a comment; confirm Formspree receives the rating, current pathname, and source label.
-5. Simulate a network failure and a request timeout; confirm an error is shown and the student can retry.
-6. Navigate to another page while the panel is open; confirm it closes and does not reopen unexpectedly when returning to the previous page.
-7. Confirm the floating shortcut is hidden on `/feedback`.
-8. Visit `/feedback` on a phone-sized viewport.
-9. Confirm category cards and star rating work with touch and keyboard.
-10. Submit a message shorter than 12 characters; it should be blocked.
-11. Submit a valid test message and confirm it appears in Formspree.
-12. Confirm a filled honeypot never displays the success message.
-13. Confirm network failures and timeouts show an error and allow retrying.
-14. Confirm an HTTP-success response without Formspree's `ok: true` confirmation is not shown as successful.
+## 🔒 Privacy & Ground-Truth Protection
+- **Zero PII Required**: No student name, matric number, password, or student email is requested.
+- **Honeypot Shield**: Includes a hidden field (`website`) that rejects automated bot submissions with `HTTP 400`.
+- **Character Boundaries**: Messages are capped at 2,000 characters and location inputs at 200 characters.
+
+---
+
+## 🧪 Verification & Smoke-Test Checklist
+
+1. **Floating Shortcut Test**:
+   - Open any page (e.g. `/halls` or `/map`).
+   - Click **Feedback**. Confirm the panel opens without navigating away.
+   - Press <kbd>Escape</kbd>; confirm it closes and returns focus to the trigger button.
+   - Choose **Helpful**, add an optional comment, and click **Send feedback**.
+   - Confirm the success state appears.
+2. **Full Page Test**:
+   - Visit `/feedback` on mobile viewport (360px–420px).
+   - Select a category, enter feedback (>12 characters), and submit.
+   - Confirm success banner displays.
+3. **Backend Delivery Check**:
+   - Check your Discord channel, email inbox, or Vercel Function logs to verify receipt of the submission payload.

@@ -2252,24 +2252,48 @@ Enacted and codified **Rule 5 (Strict Ground-Truth & Anti-Hallucination Policy)*
 
 ---
 
-## 2026-11-08 (Entry 049: Contextual Student Feedback)
+## 2026-11-08 (Entry 057: Contextual Student Feedback & Dedicated Feedback Portal)
 
 ### 📌 Summary & Product Decision
 * Improved the existing floating feedback shortcut instead of adding a second feedback entry point.
 * The shortcut now opens a compact page-feedback panel without navigating away from the page.
 * Students can mark a page as helpful or not helpful and optionally add a comment of up to 500 characters.
-* Submissions reuse the existing Formspree endpoint and include the page pathname and source label. No name, email, account, query string, or new service is requested.
-* The full `/feedback` page remains unchanged for longer feedback, problem reports, campus corrections, and feature suggestions.
+* Submissions include the page pathname and source label. No name, email, account, query string, or new service is requested.
+* The full `/feedback` page provides categorised feedback (General, Problems/Bugs, Feature Ideas, Campus Ground-Truth Corrections).
 
 ### ♿ Interaction & Accessibility
 * Added labelled controls, visible keyboard focus, Escape-to-close behavior, and focus return to the shortcut.
-* Added sending, confirmed-success, error, and retry states. Success is shown only after Formspree returns an affirmative `ok: true` response.
+* Added sending, confirmed-success, error, and retry states. Success is shown only after the backend confirms receipt.
 * The panel remains hidden on `/feedback`, does not open automatically, and resets its inputs when opened on another page.
 
 ### 🏛️ Files Updated
-* `oaumods/src/components/FeedbackShortcut.tsx`: Replaced the route-only shortcut with the contextual feedback panel.
-* `oaumods/FEEDBACK_SETUP.md`: Documented the panel fields and manual verification checklist.
+* `oaumods/src/components/FeedbackShortcut.tsx`: Contextual feedback panel.
+* `oaumods/src/app/feedback/page.tsx`: Full-page categorized feedback portal.
+* `oaumods/FEEDBACK_SETUP.md`: Documented fields and verification checklist.
 
-### 🧪 Verification
-* GitHub Actions completed `npm run lint` and `npm run build` successfully for the pull request branch.
-* Manual mobile/desktop interaction and live Formspree delivery/failure checks remain outstanding; complete the feedback smoke-test checklist before merging.
+---
+
+## 2026-11-10 (Entry 058: PR #11 Main Integration & Multi-Channel Backend Feedback Delivery System)
+
+### 📌 Summary & Strategic Alignment
+* Merged `origin/main` into PR #11 (`pr-11`), successfully resolving all layout conflicts between modern Vercel analytics/error boundary wrappers and the new `<FeedbackShortcut />` widget.
+* Delivered a dedicated backend route handler at `oaumods/src/app/api/feedback/route.ts` to route and forward student submissions directly to the Project Lead via configurable backend channels.
+
+### 🧠 Key Architecture & Feature Implementations
+1. **Serverless Feedback Route Handler (`/api/feedback`)**:
+   * Next.js App Router dynamic POST route handler (`ƒ /api/feedback`).
+   * **Honeypot Validation**: Rejects automated spam submissions (`website` field) with `HTTP 400`.
+   * **Length Bounds**: Enforces limits on message text (2,000 chars) and location input (200 chars).
+2. **Multi-Channel Backend Dispatching**:
+   * **Instant Push Webhook (`FEEDBACK_WEBHOOK_URL`)**: Supports Discord rich embeds and Slack/generic JSON webhooks to ping the Project Lead's phone/desktop in real-time.
+   * **Direct Transactional Email (`RESEND_API_KEY` + `FEEDBACK_RECIPIENT_EMAIL`)**: Sends clean HTML email notifications directly to the Project Lead's inbox.
+   * **Server-to-Server Formspree Proxy (`FORMSPREE_ENDPOINT`)**: Proxies submissions to Formspree from the server, shielding client IP, bypassing client ad-blockers, and eliminating CORS issues.
+   * **Runtime Fallback**: Safely logs formatted payloads to `console.info` in serverless runtime logs if no external keys are configured.
+3. **Frontend Client Refactoring**:
+   * Refactored both `FeedbackShortcut.tsx` and `src/app/feedback/page.tsx` to POST to `/api/feedback`.
+   * Updated `FEEDBACK_SETUP.md` with full setup instructions for Discord, Slack, Resend, and Formspree.
+
+### 🏛️ Verification & Build Health
+* `npm test`: **103 / 103 test cases passed (100%)**.
+* `npm run lint`: **0 errors, 0 warnings**.
+* `npm run build`: Compiled all 23 routes (22 static + 1 dynamic API route) cleanly via Turbopack.

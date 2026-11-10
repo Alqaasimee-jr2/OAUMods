@@ -14,9 +14,7 @@ import {
   Send,
 } from 'lucide-react';
 
-const FORMSPREE_ENDPOINT =
-  process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT?.trim() ||
-  'https://formspree.io/f/mrpedlyz';
+const FEEDBACK_API_ENDPOINT = '/api/feedback';
 
 const categories = [
   { value: 'General feedback', label: 'General feedback', detail: 'Tell us what works or what could be better.', icon: MessageSquareText },
@@ -53,7 +51,7 @@ export default function FeedbackPage() {
     const timeoutId = window.setTimeout(() => controller.abort(), 15000);
 
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch(FEEDBACK_API_ENDPOINT, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -73,10 +71,7 @@ export default function FeedbackPage() {
 
       const result = await response.json().catch(() => null);
       if (!response.ok || result?.ok !== true) {
-        const formspreeError = Array.isArray(result?.errors)
-          ? result.errors.map((item: { message?: string }) => item.message).filter(Boolean).join(' ')
-          : '';
-        throw new Error(formspreeError || 'We could not confirm delivery of your feedback. Please try again.');
+        throw new Error(result?.error || 'We could not confirm delivery of your feedback. Please try again.');
       }
 
       setStatus('success');

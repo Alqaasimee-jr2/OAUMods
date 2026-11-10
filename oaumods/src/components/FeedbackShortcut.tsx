@@ -12,9 +12,7 @@ import {
   X,
 } from 'lucide-react';
 
-const FORMSPREE_ENDPOINT =
-  process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT?.trim() ||
-  'https://formspree.io/f/mrpedlyz';
+const FEEDBACK_API_ENDPOINT = '/api/feedback';
 
 type Rating = 'helpful' | 'not-helpful';
 type SubmissionStatus = 'idle' | 'sending' | 'success' | 'error';
@@ -88,7 +86,7 @@ function FeedbackShortcutPanel({ pathname }: { pathname: string }) {
       : `Page rating: ${ratingLabel}`;
 
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch(FEEDBACK_API_ENDPOINT, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -108,14 +106,8 @@ function FeedbackShortcutPanel({ pathname }: { pathname: string }) {
 
       const result = await response.json().catch(() => null);
       if (!response.ok || result?.ok !== true) {
-        const formspreeError = Array.isArray(result?.errors)
-          ? result.errors
-              .map((item: { message?: string }) => item.message)
-              .filter(Boolean)
-              .join(' ')
-          : '';
         throw new Error(
-          formspreeError || 'We could not confirm delivery. Please try again.',
+          result?.error || 'We could not confirm delivery. Please try again.',
         );
       }
 
