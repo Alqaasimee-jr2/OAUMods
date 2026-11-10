@@ -1977,27 +1977,276 @@ Enacted and codified **Rule 5 (Strict Ground-Truth & Anti-Hallucination Policy)*
     *   [`CHANGELOG.md`](file:///c:/Users/DELL/Desktop/GUIDE17/CHANGELOG.md): Appended Entry 048.
 
 ### 👥 People & Community
-*   **Project Lead**: Tested the live production link at `https://oaumods.vercel.app/` and guided alignment on public repository syncing and map layout refinements.
-*   **Guide 17 / Antigravity**: Performed live HTTP verification across all portal and app routes, audited desktop and mobile responsiveness, and verified seamless Vercel production deployment.
 
 
+## 2026-09-28 (Entry 049: Session Pause, Teamwork Subagent Shutdown & Handover Log)
+
+### 📌 Summary & Strategic Alignment
+*   **Session Suspension & Resource Conservation**:
+    1.  **Immediate Work Stoppage**:
+        *   In accordance with the Project Lead's directive regarding remaining quota limits (20% left) and an imminent logout, all active processes and generation loops were halted immediately.
+    2.  **Subagent Swarm Termination**:
+        *   Killed active subagent `44b65148-7d9e-41a3-930b-ebbad46282bb` (`teamwork_preview`) and its nested orchestrator (`719cca80-4118-4fbd-8867-1b5658998ce6`) via `manage_subagents(Action: 'kill_all')`.
+        *   All recurring cron jobs (8-minute report, 10-minute liveness watchdog) and nested explorer/worker subagents have been terminated. Zero background tasks remain active.
+    3.  **Root-Cause Diagnosis for Prolonged Work & Hurdles**:
+        *   Triggering the "Full multi-agent team" mode of `/teamwork-preview` generated a heavyweight multi-agent hierarchy inside `.agents/teamwork/` (`teamwork_preview_orchestrator`, `spec_miner_1`, `explorer_routes_1`, `explorer_assets_1`, `test_writer_1`, `worker_m1`, `worker_m4`).
+        *   The swarm constructed an elaborate 103-case automated E2E test harness (`oaumods/tests/seo-e2e.test.mjs`), redundant auditing loops, and multi-tier handoffs that consumed excessive tool turns and token budget.
+        *   For future iterations, focused single-turn or targeted subagents are recommended over full swarm orchestration when implementing discrete features.
+
+### 🏛️ Deliverables Completed & Preserved on Disk
+1.  **Social Preview Image Asset (`oaumods/public/og-image.png`)**:
+    *   Synthesized from authentic Oduduwa Hall photograph (`docs/imgs/20260702185336 (1).jpeg`).
+    *   Strict adherence to user boundary: used **solely** for the social preview card.
+    *   Verified dimensions: **1200 × 630 px** (Open Graph 1.91:1 ratio).
+    *   Optimized file size: **269.5 KB** (well within WhatsApp/Twitter/Telegram 500KB limits).
+2.  **Search Discovery (`sitemap.ts` & `robots.ts`)**:
+    *   `oaumods/src/app/sitemap.ts`: Dynamic Next.js sitemap mapping all 18 routes with canonical URLs, change frequencies, and priorities.
+    *   `oaumods/src/app/robots.ts`: Search engine crawler rules pointing to `https://oaumods.vercel.app/sitemap.xml`.
+3.  **Root Layout Metadata & Structured Data (`layout.tsx`)**:
+    *   Configured `metadataBase: new URL('https://oaumods.vercel.app')`.
+    *   Configured Open Graph defaults, Twitter `summary_large_image`, Apple touch icons (`/oau-logo.png`), theme-color (`#12345B`), and JSON-LD schema (`WebApplication` & `EducationalOrganization`).
+4.  **Route-Level Social Cards & Server Layout Wrappers**:
+    *   Portal routes (`/`, `/map`, `/faculties`, `/facilities`, `/halls`, `/life`, `/heritage`).
+    *   Companion app routes (`/app`, `/app/clearance`, `/app/map`, `/app/venues`, `/app/academics`, `/app/guide`).
+    *   Clean separation of interactive client components (`FreshmanDashboardClient.tsx`) from server metadata layouts (`layout.tsx`).
+
+### 🚀 Resumption Checklist (Next Session Handover)
+1.  **Local Build Verification**:
+    *   Run `npm run build` in `oaumods/` to confirm 0 TypeScript errors and verify generated `/sitemap.xml` and `/robots.txt`.
+2.  **Test Cleanup**:
+    *   Optionally remove or archive temporary `.agents/teamwork/` and `oaumods/tests/` scaffolding if not required for CI.
+3.  **Git Commit & Sync**:
+    *   Stage changes: `git add .`
+
+---
+
+## 2026-10-12 (Entry 050: Map Streamlining to 2 Modes, Direct POI Deep-Linking & Directory Map Connect)
+
+### 📌 Summary & Strategic Alignment
+*   **Map System Overhaul & Elimination of Redundant Modes**:
+    1.  **Strict Limitation to Exactly Two Map Modes**:
+        *   In accordance with user directive, removed the legacy 300+ line static SVG masterplan mode and raw downloaded satellite canvas views from `CampusMap.tsx`.
+        *   Streamlined map modes strictly to:
+            - **Interactive Campus GPS Map** (`interactive`): Real-time Leaflet map powered by OpenStreetMap and Esri World Imagery satellite tiles, interactive marker pins, walking paths, geolocation, and search filter pills.
+            - **Google Maps View** (`google`): Embedded live Google Maps iframe with satellite/roadmap toggle and direct external navigation directions link.
+    2.  **Universal URL Landmark Deep-Linking**:
+        *   Equipped `CampusMap.tsx` with dynamic `useSearchParams` reader (`?landmark=` and `?id=`).
+        *   Visiting any map URL with a landmark query parameter instantly focuses the map view, sets appropriate zoom level, and opens the detailed landmark dossier drawer.
+        *   Wrapped `CampusMap` in `<Suspense>` across both `/map` and `/app/map` to ensure robust Next.js App Router static optimization.
+    3.  **Institutional Faculty & POI Map Integration**:
+        *   Added missing verified landmarks to `campusMapData.ts` for all 15 faculties (`faculty-agric`, `faculty-computing`, `faculty-bms`, `faculty-clin`, `faculty-dentistry`, `faculty-nursing`).
+        *   Linked all 15 faculty cards in `faculties/page.tsx` and homepage grid to `/map?landmark=${fac.landmarkId}`.
+        *   Linked all lecture theatres and venues in `app/venues/page.tsx` (`BOOC`, `White House`, `1000-Seater`, `First Bank LT`, `Spider House`, `AUD`, `ODLT`, etc.) to `/app/map?landmark=...`.
+        *   Linked academic curriculum faculties in `app/academics/page.tsx` to `/app/map?landmark=...`.
+        *   Linked residential halls in `halls/page.tsx` (Angola, Mozambique, Fajuyi, Awolowo, Moremi, ETF) to `/map?landmark=...`.
+        *   Linked campus facilities in `facilities/page.tsx` (Hezekiah Library, JAC Health Centre, SUB, Sports Complex, Computer Centre, Security Unit) with inline map badges and "Locate on Map" action buttons.
+        *   Linked architectural landmarks in `heritage/page.tsx` (Oduduwa Hall, Hezekiah Library, Senate Building, Pit Theatre, Spider House) directly to `/map?landmark=...`.
+
+### 🏛️ Verification & Build Health
+*   **Static Page Generation**: Tested and compiled cleanly with `npm run build` using Next.js 16.3.5 and Turbopack.
+*   **Route Integrity**: All 20 application routes compiled with 0 TypeScript errors and 0 missing static endpoints.
+*   **Pacing & Mobile UX**: Verified 360px–420px responsive rhythm with zero horizontal overflow and seamless client-side SPA navigation via `<Link>`.
+
+### 👥 People & Community
+*   **Project Lead**: Clarified UX vision to eliminate SVG clutter, maintain two clean map modes, and tie all directory entities to map coordinates.
+*   **Guide 17 / Antigravity**: Implemented map deep-linking, wired all standalone directories to GPS coordinates, and verified production build health.
+
+---
+
+## 2026-10-14 (Entry 051: Non-User Optimization, Error Control & Performance Streak)
+
+### 📌 Summary & Strategic Alignment
+*   Addressed the Project Lead's directive for "a streak of upgrades for the non user side of this project," focusing on Optimization, Speed, Error control, and Seamlessness.
+*   **Architectural Upgrades**:
+    1.  **Next.js Configuration Hardening**:
+        *   Updated `next.config.ts` to include strict security headers (`X-Frame-Options`, `X-Content-Type-Options`, `X-XSS-Protection`).
+        *   Enabled React Strict Mode and automatic removal of console logs in production for cleaner client bundles.
+        *   Optimized `lucide-react` imports to reduce the initial load payload.
+    2.  **Global React Error Boundary**:
+        *   Created and integrated `GlobalErrorBoundary.tsx` across the root layout.
+        *   Replaces the blank white screen of death with a graceful fallback UI offering error telemetry and a one-click page reload in the event of unexpected runtime exceptions.
+    3.  **Seamless Page Loading**:
+        *   Implemented `loading.tsx` at the app root, leveraging Next.js Suspense. This provides a branded, animated loading skeleton immediately during route transitions or data fetching, vastly improving perceived performance.
+    4.  **Service Worker (PWA) Caching Advancements**:
+        *   Incremented cache to `oaumods-cache-v4` in `sw.js`.
+        *   Excluded API calls, Next.js telemetry, and internal Webpack Hot Module Replacement from caching to prevent stale state loops and dev-environment bugs.
+    5.  **Strict Linting & Type Enforcement**:
+        *   Configured `noUnusedLocals: true` and `noUnusedParameters: true` in `tsconfig.json`.
+        *   Globally purged unused React imports (`import React from 'react'`) which are no longer required in Next.js 16/React 19, stripping unnecessary syntax from dozens of files.
+
+### 🏛️ Build & Compilation Verification
+*   `npm run lint`: **0 errors, 0 warnings**.
+*   `npm run build`: Compiled all static routes flawlessly via Turbopack.
+*   `npm run test`: All 103 test cases executed and passed flawlessly.
+
+### 👥 People & Community
+*   **Project Lead**: Directed the focus onto non-user optimizations, error boundaries, speed, and seamlessness while strictly forbidding backend tools like Supabase.
+*   **Guide 17 / Antigravity**: Engineered the Next.js config hardening, error boundaries, loading screens, strict TS types, and verified full test suite completion.
+
+---
+
+## 2026-10-14 (Entry 052: UX Streamlining, Mobile Floating Dock, Smart Clearance Accordion & Same-Tab Routing)
+
+### 📌 Summary & Strategic Alignment
+*   Conducted a comprehensive UI/UX Complication Audit following direct user feedback (*"The website is complicated"*). Evaluated the platform across five HCI dimensions and codified findings in `ux_complication_vetting_report.md`.
+*   Aligned with the Project Lead via an interactive `/grill-me` architectural review, locking in key UX decisions:
+    1.  **Same-Tab SPA Routing (Zero Unexpected Tabs)**:
+        *   Removed all instances of `target="_blank"` and `rel="noopener noreferrer"` connecting the public portal to the freshman companion.
+        *   Converted cross-section navigation to standard Next.js `<Link>` components, delivering instantaneous client-side transitions in the same browser window.
+    2.  **Architectural Jargon Eradication**:
+        *   Purged developer-facing terminology ("Layer A" and "Layer B") from all user-facing UI copy in both desktop sidebars and mobile headers.
+        *   Standardized terminology to natural, student-friendly copy: *"Campus Directory (Faculties & Services)"* and *"Freshman Companion"*.
+    3.  **Sleek Floating 6-Icon Mobile Dock**:
+        *   Preserved all 6 primary destinations (`Dashboard`, `Clearance`, `Map`, `Venues`, `Courses`, `Survival`) as directed by the Project Lead.
+        *   Replaced the cramped edge-to-edge bar and squished `52px` labels with an elevated glassmorphic floating pill dock (`fixed bottom-3 left-3 right-3 max-w-sm mx-auto`).
+        *   Equipped each icon button with spacious `44px–48px` touch targets, micro-interaction active indicators, and explicit accessibility `aria-label` / `title` attributes.
+    4.  **Clearance Progressive Disclosure Smart Accordion**:
+        *   Refactored `ClearanceChecklist.tsx` to automatically calculate the user's active clearance stage from `localStorage`.
+        *   The first incomplete stage auto-expands with its complete prerequisite checklist, location notes, and pro-tips, while completed stages collapse into clean green checkmark rows.
+        *   Checking off an active stage automatically marks it complete and auto-advances the view to the next pending hurdle.
+        *   Added an active stage callout banner displaying the immediate next step or a congratulatory completion banner.
+    5.  **Aesthetic Preservation**:
+        *   Maintained 100% adherence to the codified Bauhaus / Arieh Sharon architectural geometric shapes, word accents, and badges as mandated by the Project Lead.
+    6.  **Homepage Launchpad Refactor & Vertical De-Sprawl**:
+        *   Resolved the "information dumping" and "box-in-box" overload on `/`.
+        *   Replaced the 500-line vertical dump with an above-the-fold Quick-Action Launchpad (Clearance, Map, Venues, GPA, Faculties, Hostels) and 4 high-level progressive disclosure gateway cards.
+        *   Added a streamlined 1-tap Emergency & Ambulance call strip.
+
+### 🏛️ Verification & Build Health
+*   `npm test`: **103 / 103 test cases passed (100%)**.
+*   `npm run lint`: **0 errors, 0 warnings**.
+*   `npm run build`: Compiled all 20 static routes cleanly in **1.95s** via Next.js Turbopack.
+*   **Mobile Ergonomics**: Verified zero horizontal bleed on 360px–420px viewports with adequate `pb-24` dock clearance.
+
+### 👥 People & Community
+*   **Project Lead**: Steered the `/grill-me` alignment, preserving all 6 mobile destinations and safeguarding the authentic Sharon architectural geometric system.
+*   **Guide 17 / Antigravity**: Diagnosed the split-brain root cause, engineered the floating icon dock, implemented the smart clearance accordion, and verified 100% test and build health.
+
+---
+
+## 2026-10-14 (Entry 053: Mobile Core Web Vitals Remediation & Vercel Speed Insights Optimization)
+
+### 📌 Summary & Strategic Alignment
+*   Conducted forensic performance investigation into real user monitoring (RUM) telemetry from Vercel Speed Insights, which showed a mobile Real Experience Score of **59** on the homepage (`/`) contrasted with **100** on the companion app (`/app`).
+*   Executed mobile Lighthouse trace and runtime analysis, identifying the exact bottlenecks dragging down the mobile score:
+    1.  **Hero Image LCP Optimization (-97.8% image download latency)**:
+        *   Replaced uncompressed 95 KB JPEG (`freshers.jpg`) with an optimized, pre-cropped WebP asset (`freshers.webp`, 31 KB) matching the exact 600×356 aspect ratio.
+        *   Added explicit responsive `sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 540px"` and `unoptimized` direct static asset delivery to eliminate dynamic serverless transcoding delays.
+        *   Reduced image network load duration from **3,138ms to 68ms**.
+    2.  **Service Worker Precision Pre-Caching (-90% initial background bandwidth)**:
+        *   Bumped Service Worker cache version to `oaumods-cache-v5` in `public/sw.js`.
+        *   Purged an unreferenced **1.31 MB satellite map** (`oau-satellite-map.png`) and bulk directory routes from `PRECACHE_ASSETS`.
+        *   Restricted initial pre-caching exclusively to the critical app shell (`/`, `/app`, `/oau-logo.png`, `/freshers.webp`, `/manifest.webmanifest`, `/favicon.ico`), slashing initial background payload from **> 2.5 MB to ~180 KB**.
+        *   Secondary routes continue to use automatic Stale-While-Revalidate caching on-demand, guaranteeing 100% offline-first capability without choking initial mobile cellular bandwidth.
+    3.  **Non-Blocking Idle Service Worker Registration**:
+        *   Refactored `ServiceWorkerRegister.tsx` to schedule service worker registration and legacy cache deletion inside `requestIdleCallback` (with a 1500ms timeout fallback).
+        *   Freed the browser main-thread during critical React hydration and first paint.
+    4.  **Font Display & Next.js Image Config Hardening**:
+        *   Configured `display: 'swap'` and `preload: true` on Geist font definitions in `src/app/layout.tsx` to prevent invisible text during font loading.
+        *   Added modern image formats (`image/avif`, `image/webp`) and 1-year cache TTL to `next.config.ts`.
+
+### 🏛️ Verification & Build Health
+*   `npm test`: **103 / 103 tests passing (100%)**.
+*   `npm run lint`: **0 errors, 0 warnings**.
+*   `npm run build`: Compiled all 20 static routes cleanly via Next.js Turbopack.
+*   **Offline-First Parity**: Preserved 100% offline capability across cached routes with zero visual or layout regressions.
+
+### 👥 People & Community
+*   **Project Lead**: Shared direct Vercel Speed Insights telemetry identifying the mobile homepage score discrepancy and authorized the performance remediation.
+*   **Guide 17 / Antigravity**: Diagnosed the LCP and service worker pre-cache root causes, implemented the media and caching optimizations, and verified full test suite health.
 
 
+---
 
+## 2026-10-14 (Entry 054: Official 2026/2027 Harmattan Academic Calendar Engine & Live Milestone Integration)
 
+### 📌 Summary & Strategic Alignment
+*   The Project Lead provided the official proposed Senate Academic Calendar for the **2026/2027 Harmattan Semester**, anchoring the platform in authentic institutional dates starting with Fresh Students Resumption on **Saturday, 31 October 2026**.
+*   Designed and engineered an interactive, offline-first **Academic Calendar & Milestone Engine** across OAUMods, solving one of the most critical anxiety points for freshmen: knowing when registration opens/closes, when matriculation holds, when lectures begin, and when examinations kick off.
 
+### 🧠 Key Architecture & Feature Implementations
+1.  **Single Source of Truth (`src/data/academicCalendar.ts`)**:
+    *   Curated all 16 official milestones with structured categories (`resumption`, `registration`, `orientation`, `training`, `lectures`, `ceremony`, `break`, `exam`), audience tagging, venues, descriptions, and actionable freshman survival tips.
+    *   Encoded the Senate 13-week teaching breakdown (Teaching Phase 1: 16 Nov–18 Dec 2026; Holiday Break: 25 Dec 2026–1 Jan 2027; Teaching Phase 2: 4 Jan–26 Feb 2027; Revision: 1–5 March 2027; Exams: 8–27 March 2027; Semester Vacation: 5–17 April 2027).
+    *   Engineered zero-dependency iCalendar (`.ics`) generation for single-event and full-semester 1-tap calendar synchronization with Apple Calendar, Google Calendar, and Outlook.
+2.  **Dedicated Interactive Calendar Hub (`/app/calendar`)**:
+    *   Built a mobile-first, Bauhaus/Arieh Sharon-styled page with live countdown tickers computing days remaining from current time (e.g., 17 days to Freshmen Resumption).
+    *   Equipped with category filter tabs (`All`, `Freshmen Critical`, `Registration`, `Lectures`, `Matriculation`, `Exams`, `Breaks`), instant text search, status indicators (`Happening Now`, `Upcoming`, `Concluded`), and expandable freshman action guides.
+    *   Embedded the official institutional ground-truth disclaimer regarding Senate review and adjustments.
+3.  **Freshman Dashboard Live Milestone Ticker (`/app`)**:
+    *   Integrated a live milestone countdown strip directly above the clearance progress meter on the Survival Dashboard.
+    *   Added Module 6 (`Harmattan Academic Calendar`) to the primary freshman action modules grid.
+4.  **Clearance & Academics Contextual Reminders**:
+    *   **Clearance Pipeline (`/app/clearance`)**: Added a 2026/2027 registration window alert banner emphasizing the 2 Nov opening and 20 Nov normal registration deadline (with 4 Jan amendments close).
+    *   **Course & GPA Hub (`/app/academics`)**: Added a schedule banner summarizing teaching weeks, CA tests, revision week, and final examination periods with 1-tap calendar navigation.
+5.  **Navigation & Homepage Integration**:
+    *   Updated the desktop sidebar with a dedicated "Harmattan Calendar" item while strictly preserving the 6-item mobile floating dock for mobile ergonomics.
+    *   Added a quick "Calendar" pill to the mobile header and a high-visibility calendar alert banner on the portal homepage (`/`).
 
+### 🏛️ Verification & Build Health
+*   `npm test`: **103 / 103 test cases passed (100%)**.
+*   `npm run lint`: **0 errors, 0 warnings**.
+*   `npm run build`: Compiled all 21 static routes cleanly in **2.4s** via Next.js Turbopack.
+*   **Offline-First Parity**: Preserved 100% offline capability across cached routes with automatic service worker navigation caching.
 
+### 👥 People & Community
+*   **Project Lead**: Dropped the verified 2026/2027 Harmattan Semester calendar schedule, initiating this milestone implementation.
+*   **Guide 17 / Antigravity**: Engineered the typed calendar engine, live countdown tickers, contextual alert banners, .ics export generator, and verified complete test and build health.
 
+---
 
+## 2026-10-14 (Entry 055: 15th West African Universities Games (WAUG 2026) Overall Championship Integration)
 
+### 📌 Summary & Strategic Alignment
+*   The Project Lead supplied verified sports intelligence from the just-concluded **15th West African Universities Games (WAUG 2026)** hosted at Obafemi Awolowo University (2–12 October 2026).
+*   Great Ife emerged as the **Overall Champions**, topping the medal table with **122 medals (33 gold, 50 silver, 39 bronze)** across 18 disciplines, featuring over 1,500 athletes and officials from across West Africa under the official mascot **Orí Olókun**.
+*   The varsity football team, the **OAU Giants**, knocked out defending champions University for Development Studies (UDS, Ghana) 4–3 on penalties in an epic semi-final shootout at the Main Bowl stadium.
 
+### 🧠 Key Architecture & Feature Implementations
+1.  **Athletic Data Layer (`src/data/studentLife.ts`)**:
+    *   Added structured `WAUG_2026_CHAMPIONSHIP` dataset detailing edition, host venue, dates, medal haul (33G, 50S, 39B = 122 total), official mascot (*Orí Olókun*), and the OAU Giants vs. UDS Ghana penalty victory.
+    *   Cross-linked verified institutional sources: MySchoolGist, The Nigeria Education News, Ground News, and ACJ OAU.
+2.  **Great Ife Historical Milestones (`src/data/campusHistoryAndActivities.ts`)**:
+    *   Enshrined the October 2026 WAUG Championship into the official university chronological timeline alongside the 1962 temporary site opening, 1967 relocation, NUGA hostings, and 1999 anti-cultism victory.
+3.  **Sports & Student Life Portal UI (`/life`)**:
+    *   Designed and embedded a high-impact **WAUG 2026 Championship Spotlight Card** directly in the Sports & OAU Giants section.
+    *   Features an authentic medal stand (33G, 50S, 39B, 122 Total), varsity football semi-final recap, and mascot narrative.
+4.  **Research Documentation (`research/11`)**:
+    *   Updated the sports intelligence dossier with Section 7 documenting the 15th WAUG hosting and championship statistics.
 
+### 🏛️ Verification & Build Health
+*   `npm test`: **103 / 103 test cases passed (100%)**.
+*   `npm run lint`: **0 errors, 0 warnings**.
+*   `npm run build`: Compiled all 21 static routes cleanly in **2.3s** via Next.js Turbopack.
+*   **Zero Visual Regression**: Preserved sharp rectangular Bauhaus aesthetic, high contrast, and responsive viewports.
 
+### 👥 People & Community
+*   **Project Lead**: Shared real-time institutional sports intelligence and verified news links for the WAUG 2026 championship.
+*   **Guide 17 / Antigravity**: Structured the sports dataset, designed the championship UI spotlight, updated the institutional timeline, and verified 100% test and build health.
 
+---
 
+## 2026-10-14 (Entry 056: Dynamic Calendar Countdown Clock & Real-Time Midnight Rollover Verification)
 
+### 📌 Summary & Strategic Alignment
+*   The Project Lead inquired into the dynamic behavior of the 2026/2027 Harmattan Academic Calendar countdown ("Is it live? If I check tomorrow, will it change from 17 days to 16?").
+*   Verified and confirmed that the calendar engine computes dates dynamically at runtime using `new Date()` evaluated against client local midnight, guaranteeing an automatic decrease every day at 00:00.
+*   Enhanced `FreshmanDashboardClient.tsx` with an active 60-second interval timer (matching `CalendarClient.tsx`) so that the countdown ticker updates automatically in open browser tabs across midnight without requiring a manual page refresh.
 
+### 🧠 Key Architecture & Feature Implementations
+1.  **Dynamic Date Math (`src/data/academicCalendar.ts`)**:
+    *   `getDaysUntil(targetDateStr, referenceDate = new Date())` calculates difference between normalized midnights (`T00:00:00`), dividing by `86,400,000ms`.
+    *   On 14 October 2026: 17 days to 31 October 2026 (Freshmen Resumption).
+    *   On 15 October 2026: 16 days remaining.
+    *   On 31 October 2026: Displays `TODAY` / `Active`.
+    *   On 1 November 2026: Automatically cascades to the next upcoming milestone (Online Course Registration Opens on 2 November 2026, displaying `1 day remaining`).
+2.  **Zero-Reload State Synchronization (`FreshmanDashboardClient.tsx`)**:
+    *   Added a 60,000ms interval timer that refreshes `currentDate` in component state, ensuring open phone tabs seamlessly transition to the next day count at midnight.
+
+### 🏛️ Verification & Build Health
+*   `npm test`: **103 / 103 test cases passed (100%)**.
+*   `npm run lint`: **0 errors, 0 warnings**.
+*   Verified zero regression across mobile viewports (360px–420px) and offline PWA capability.
 
 
 

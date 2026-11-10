@@ -101,6 +101,12 @@ export const HISTORICAL_MILESTONES: HistoricalMilestone[] = [
     description:
       'The international Getty Foundation awarded OAU its prestigious "Keeping It Modern" conservation grant to protect and preserve Arieh Sharon’s tropical modernist architectural masterwork for future generations.',
   },
+  {
+    year: 'October 2026',
+    title: '15th West African Universities Games (WAUG) Overall Champions',
+    description:
+      'OAU hosted the 15th West African Universities Games (2–12 October 2026) under the official mascot Orí Olókun, welcoming over 1,500 athletes and officials from across West Africa in 18 sports disciplines. Great Ife clinched the Overall Championship, topping the medal table with 122 medals (33 gold, 50 silver, 39 bronze), while the OAU Giants football squad knocked out defending champions UDS Ghana 4–3 on penalties.',
+  },
 ];
 
 export const ACADEMIC_CALENDAR_STRUCTURE = {

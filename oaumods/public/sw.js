@@ -1,20 +1,11 @@
-const CACHE_NAME = 'oaumods-cache-v3';
+const CACHE_NAME = 'oaumods-cache-v5';
 const PRECACHE_ASSETS = [
   '/',
-  '/map',
-  '/faculties',
-  '/facilities',
-  '/halls',
-  '/life',
-  '/heritage',
   '/app',
-  '/app/map',
-  '/app/clearance',
-  '/app/venues',
-  '/app/academics',
-  '/app/guide',
   '/oau-logo.png',
-  '/freshers.jpg',
+  '/freshers.webp',
+  '/manifest.webmanifest',
+  '/favicon.ico',
 ];
 
 self.addEventListener('install', (event) => {
@@ -43,6 +34,12 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
+  const url = new URL(event.request.url);
+
+  // Exclude API calls and Next.js HMR/telemetry from cache
+  if (url.pathname.startsWith('/api') || url.pathname.startsWith('/_next/webpack') || url.hostname === 'vercel.com') {
+    return;
+  }
 
   // Network-First strategy for HTML navigation requests to prevent stale UI
   if (event.request.mode === 'navigate') {

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import L from 'leaflet';
 import { CampusLandmark, WalkingRoute, OAU_CENTER_COORDINATES } from '@/data/campusMapData';
 import { Layers, Crosshair, RotateCcw, Maximize2, Minimize2, Eye, EyeOff, Info } from 'lucide-react';

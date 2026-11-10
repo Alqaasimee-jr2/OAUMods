@@ -1,7 +1,17 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { CheckSquare, Square, ChevronDown, ChevronUp, AlertCircle, FileText } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import {
+  CheckSquare,
+  Square,
+  ChevronDown,
+  ChevronUp,
+  AlertCircle,
+  FileText,
+  Calendar as CalendarIcon,
+  ArrowRight,
+} from 'lucide-react';
 import { GeometricShape, WordAccent } from './GeometricShapes';
 
 const STAGES = [
@@ -115,6 +125,12 @@ export default function ClearanceChecklist() {
           const parsed = JSON.parse(saved);
           if (Array.isArray(parsed)) {
             setCompleted(parsed);
+            const firstIncomplete = STAGES.find((s) => !parsed.includes(s.id));
+            if (firstIncomplete) {
+              setExpanded(firstIncomplete.id);
+            } else {
+              setExpanded(null);
+            }
           }
         }
       } catch {
@@ -130,11 +146,14 @@ export default function ClearanceChecklist() {
       updated = completed.filter((item) => item !== id);
     } else {
       updated = [...completed, id];
+      const nextIncomplete = STAGES.find((s) => s.id !== id && !completed.includes(s.id));
+      if (nextIncomplete && expanded === id) {
+        setExpanded(nextIncomplete.id);
+      }
     }
     setCompleted(updated);
     try {
       localStorage.setItem('oau_clearance_progress', JSON.stringify(updated));
-      // Keep secondary key in sync
       const obj: Record<string, boolean> = {};
       updated.forEach((k) => (obj[k] = true));
       localStorage.setItem('oaumods_clearance_progress_v1', JSON.stringify(obj));
@@ -147,6 +166,28 @@ export default function ClearanceChecklist() {
 
   return (
     <div className="space-y-6 text-left">
+      {/* 2026/2027 Course Registration Deadline Alert */}
+      <div className="border border-blue-200 bg-blue-50/80 p-4 space-y-1.5 text-xs text-blue-950">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <span className="font-black flex items-center gap-1.5 uppercase tracking-wide text-oau-navy">
+            <CalendarIcon className="w-3.5 h-3.5 text-blue-700" />
+            <span>2026/2027 Registration Window</span>
+          </span>
+          <Link
+            href="/app/calendar"
+            className="font-bold underline text-blue-800 hover:text-blue-950 flex items-center gap-1 text-[11px]"
+          >
+            <span>View Full Academic Calendar</span>
+            <ArrowRight className="w-3 h-3" />
+          </Link>
+        </div>
+        <p className="leading-relaxed text-slate-700">
+          Online course registration opens <strong>Monday, 2 November 2026</strong>. Normal registration closes{' '}
+          <strong>Friday, 20 November 2026</strong> (Final amendment deadline: <strong>Monday, 4 January 2027</strong>).
+          Complete School Fees (Stage 01) and Bio-data (Stage 02) early to secure your course enrolment without late fees.
+        </p>
+      </div>
+
       {/* Progress Box */}
       <div className="relative border border-slate-200 bg-white p-5 space-y-3 overflow-hidden">
         <div className="absolute top-2 right-4 pointer-events-none opacity-20 hidden sm:block">
@@ -174,6 +215,33 @@ export default function ClearanceChecklist() {
             style={{ width: `${percent}%` }}
           ></div>
         </div>
+
+        {/* Active Stage Callout / Celebration */}
+        {completed.length === STAGES.length ? (
+          <div className="p-3 bg-emerald-50 border border-emerald-300 text-emerald-900 text-xs font-bold flex items-center gap-2">
+            <CheckSquare className="w-4 h-4 text-emerald-600 shrink-0" />
+            <span>All 7 Clearance Stages Completed! You are officially fully registered.</span>
+          </div>
+        ) : (
+          (() => {
+            const currentStage = STAGES.find((s) => !completed.includes(s.id));
+            if (!currentStage) return null;
+            return (
+              <div className="p-2.5 bg-slate-50 border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                <div className="flex items-center gap-2 text-slate-700">
+                  <span className="font-bold text-oau-navy">Next Active Step:</span>
+                  <span className="font-semibold text-slate-900">Stage {currentStage.stepNumber} — {currentStage.title}</span>
+                </div>
+                <button
+                  onClick={() => setExpanded(currentStage.id)}
+                  className="text-xs font-bold text-campus-blue hover:underline self-start sm:self-auto"
+                >
+                  View Details & Documents →
+                </button>
+              </div>
+            );
+          })()
+        )}
       </div>
 
       {/* Mandatory File Jacket Notice */}

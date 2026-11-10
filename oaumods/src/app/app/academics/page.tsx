@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import {
   Calculator,
   BookOpen,
@@ -9,6 +10,9 @@ import {
   RotateCcw,
   AlertCircle,
   GraduationCap,
+  MapPin,
+  Calendar as CalendarIcon,
+  ArrowRight,
 } from 'lucide-react';
 import { GeometricShape, WordAccent } from '@/components/GeometricShapes';
 import { FACULTY_COURSE_TEMPLATES } from '@/data/courseTemplates';
@@ -418,6 +422,29 @@ export default function AcademicsPage() {
         </p>
       </div>
 
+      {/* 2026/2027 Harmattan Schedule Alert Strip */}
+      <div className="border border-slate-200 bg-white p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+        <div className="space-y-1">
+          <div className="flex items-center gap-2">
+            <span className="font-black text-oau-navy uppercase tracking-wide flex items-center gap-1.5">
+              <CalendarIcon className="w-3.5 h-3.5 text-amber-600" />
+              <span>Harmattan 2026/2027 Academic Schedule</span>
+            </span>
+            <span className="bg-amber-400 text-oau-navy font-bold text-[10px] px-1.5 py-0.2">13 Teaching Weeks</span>
+          </div>
+          <p className="text-slate-600 text-xs">
+            Lectures kick off <strong>16 Nov 2026</strong> • Mid-Semester CA Tests: <strong>4–9 Jan 2027</strong> • Revision: <strong>1–5 March 2027</strong> • Exams: <strong>8–27 March 2027</strong>.
+          </p>
+        </div>
+        <Link
+          href="/app/calendar"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-white bg-oau-navy hover:bg-slate-800 shrink-0 self-start sm:self-auto transition-colors"
+        >
+          <span>Full Calendar &amp; Deadlines</span>
+          <ArrowRight className="w-3.5 h-3.5 text-amber-400" />
+        </Link>
+      </div>
+
       {/* Mode Tabs */}
       <div className="flex border-b border-slate-300 gap-2">
         <button
@@ -493,7 +520,7 @@ export default function AcademicsPage() {
                   Choose your faculty to auto-fill the simulator with verified 100L courses, including <strong>GST 111, 112, and LIB 101</strong>.
                 </p>
               </div>
-              <div className="flex items-center gap-2 self-start sm:self-auto">
+              <div className="flex flex-wrap items-center gap-2 self-start sm:self-auto">
                 <select
                   value={selectedFacultyId}
                   onChange={(e) => setSelectedFacultyId(e.target.value)}
@@ -509,10 +536,37 @@ export default function AcademicsPage() {
                 <button
                   type="button"
                   onClick={() => handleLoadFacultyBundle(selectedFacultyId)}
-                  className="px-3 py-2 bg-oau-navy text-white text-xs font-bold hover:bg-slate-800 shrink-0"
+                  className="px-3 py-2 bg-oau-navy text-white text-xs font-bold hover:bg-slate-800 shrink-0 transition-colors shadow-xs"
                 >
                   Load Bundle
                 </button>
+                <Link
+                  href={`/app/map?landmark=${
+                    {
+                      admin: 'faculty-admin',
+                      agric: 'faculty-agric',
+                      arts: 'faculty-arts',
+                      'basic-med': 'faculty-bms',
+                      'clinical-sciences': 'faculty-clin',
+                      computing: 'faculty-computing',
+                      dentistry: 'faculty-dentistry',
+                      education: 'faculty-education',
+                      edm: 'edm-architecture',
+                      law: 'faculty-law',
+                      nursing: 'faculty-nursing',
+                      pharmacy: 'faculty-pharmacy',
+                      science: 'white-house',
+                      'social-sciences': 'faculty-social-sciences',
+                      technology: 'spider-house',
+                    }[selectedFacultyId] || 'white-house'
+                  }`}
+                  className="px-3 py-2 bg-white text-slate-800 border border-slate-300 hover:bg-slate-100 text-xs font-bold flex items-center gap-1.5 shrink-0 transition-colors shadow-xs"
+                  title="Locate selected faculty on campus map"
+                >
+                  <MapPin className="w-3.5 h-3.5 text-amber-500" />
+                  <span className="hidden sm:inline">Locate on Map</span>
+                  <span className="sm:hidden">Map</span>
+                </Link>
               </div>
             </div>
           </div>
