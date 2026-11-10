@@ -5,6 +5,24 @@
 
 ---
 
+
+## 📅 2026-10-15 — Update: Site Positioning & Footer Revision
+
+### 📌 Summary & Strategic Alignment
+*   The Project Lead identified a branding risk: the application footer previously claimed to be the "Official information directory" and was copyrighted under "© Obafemi Awolowo University".
+*   As a student-built, non-profit companion app, claiming official institutional status invites credibility hits or potential takedowns.
+*   The footer was relabeled to explicitly state it is an "Unofficial student guide" built by OAUMods.
+
+### 🧠 Key Architecture & Feature Implementations
+1.  **Footer Copy Revision (`oaumods/src/app/(portal)/layout.tsx`)**:
+    *   Changed the descriptive paragraph from "Official information directory for all students, staff, and visitors." to "Unofficial student guide for all students, staff, and visitors."
+    *   Updated the copyright line to "© 2026 OAUMods. Unofficial student guide. Built for Great Ife students." to protect the project's independence and credibility.
+
+### 🏛️ Verification & Build Health
+*   `npm test`: **103 / 103 test cases passed (100%)**.
+*   `npm run lint`: **0 errors, 0 warnings**.
+*   `npm run build`: **Success**.
+
 ## 📅 2026-09-18 — Entry 001: The Spark, The Vision & Setting The Compass
 
 ### 💭 Context & The Spark
