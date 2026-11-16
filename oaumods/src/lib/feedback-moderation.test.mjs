@@ -44,6 +44,7 @@ test('allows legitimate negative feedback', () => {
   }
 });
 
-test('allows empty and non-string-safe input to be handled by callers', () => {
+test('allows empty and non-string input safely', () => {
   assert.equal(containsBlockedLanguage(''), false);
+  assert.equal(containsBlockedLanguage(null), false);
 });
