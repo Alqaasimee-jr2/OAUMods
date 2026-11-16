@@ -4,13 +4,13 @@ The full student feedback page is available at `/feedback`. Across the rest of t
 
 ## Formspree configuration
 
-The form submits directly from the browser to Formspree. By default it uses the current endpoint ID in `src/app/feedback/page.tsx`. To configure a different Formspree form, set this **public form endpoint** before building/deploying:
+The two feedback forms submit to the same-site `/api/feedback` route. That route checks the message on the server and, if it passes, forwards the unchanged payload to the configured destination. By default the destination is the existing Formspree endpoint. To configure a different public feedback endpoint, set this value before building/deploying:
 
 ```env
 NEXT_PUBLIC_FORMSPREE_ENDPOINT=https://formspree.io/f/YOUR_FORM_ID
 ```
 
-Set it in the `oaumods` app's local environment (for local testing) or the deployment project's environment settings, then rebuild/redeploy. The value is sent to the browser, so it must contain only the public Formspree form endpoint—not a password, private API key, or other secret. If unset, the existing endpoint is used.
+Set it in the `oaumods` app's local environment or the deployment project's environment settings, then rebuild/redeploy. The endpoint is read by the server route and is not included in the client bundle. It must still be a public submission endpoint, not a password, private API key, or other secret. If unset, the existing Formspree endpoint is used.
 
 1. Confirm the endpoint belongs to the OAUMods project in Formspree.
 2. Confirm the Formspree form is active and its destination email is verified.
@@ -20,9 +20,9 @@ Set it in the `oaumods` app's local environment (for local testing) or the deplo
 6. Confirm a request that takes longer than 15 seconds times out with a retryable error.
 7. Confirm the page only displays success when Formspree returns a successful JSON response (`ok: true`).
 
-No GitHub token, GitHub issue integration, or server-side environment variable is used by this implementation. Do not add secrets to client-side code.
+No GitHub token or GitHub issue integration is used. The moderation route uses the existing endpoint setting and does not require a new secret.
 
-## What feedback collects
+## Content moderation\n\nBoth feedback forms pass through the server-side moderation route before delivery. Common English profanity and abusive slurs are rejected, including basic punctuation, spacing, and leetspeak obfuscation. The filter uses whole-word boundaries so ordinary criticism such as “terrible”, “confusing”, and “disappointing” remains allowed. It is a practical English-language filter, not a complete multilingual classifier; new terms and false positives should be reviewed through tests. A rejected message is not forwarded, and the form keeps the student's text so it can be edited.\n\nThe moderation unit tests run in CI with `npm test`. The route also retains the honeypot check and only reports success after the configured destination confirms delivery. Because the configured destination is a public submission endpoint, someone who deliberately bypasses OAUMods and posts directly to that external endpoint is outside this route's control.\n\n## What feedback collects
 
 The floating page-feedback panel collects:
 
