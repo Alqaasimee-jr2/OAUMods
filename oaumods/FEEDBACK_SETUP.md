@@ -15,10 +15,10 @@ Set it in the `oaumods` app's local environment or the deployment project's envi
 1. Confirm the configured endpoint belongs to the OAUMods feedback flow.
 2. Confirm the destination service is active and its delivery target is configured.
 3. Submit a test from the deployed `/feedback` page.
-4. Check Formspree's submissions dashboard and destination inbox, including spam.
+4. Check the configured destination's submissions dashboard and delivery inbox, including spam.
 5. Simulate a failed request and confirm the page shows an error instead of a success message.
 6. Confirm a request that takes longer than 15 seconds times out with a retryable error.
-7. Confirm the page only displays success when Formspree returns a successful JSON response (`ok: true`).
+7. Confirm the page only displays success when the configured destination returns a successful JSON response (`ok: true`).
 
 No GitHub token or GitHub issue integration is used. The moderation route uses the existing endpoint setting and does not require a new secret.
 
