@@ -22,7 +22,13 @@ Set it in the `oaumods` app's local environment or the deployment project's envi
 
 No GitHub token or GitHub issue integration is used. The moderation route uses the existing endpoint setting and does not require a new secret.
 
-## Content moderation\n\nBoth feedback forms pass through the server-side moderation route before delivery. Common English profanity and abusive slurs are rejected, including basic punctuation, spacing, and leetspeak obfuscation. The filter uses whole-word boundaries so ordinary criticism such as “terrible”, “confusing”, and “disappointing” remains allowed. It is a practical English-language filter, not a complete multilingual classifier; new terms and false positives should be reviewed through tests. A rejected message is not forwarded, and the form keeps the student's text so it can be edited.\n\nThe moderation unit tests run in CI with `npm test`. The route also retains the honeypot check and only reports success after the configured destination confirms delivery. Because the configured destination is a public submission endpoint, someone who deliberately bypasses OAUMods and posts directly to that external endpoint is outside this route's control.\n\n## What feedback collects
+## Content moderation
+
+Both feedback forms pass through the server-side moderation route before delivery. Common English profanity and abusive slurs are rejected, including basic punctuation, spacing, and leetspeak obfuscation. The filter uses whole-word boundaries so ordinary criticism such as “terrible”, “confusing”, and “disappointing” remains allowed. It is a practical English-language filter, not a complete multilingual classifier; new terms and false positives should be reviewed through tests. A rejected message is not forwarded, and the form keeps the student's text so it can be edited.
+
+The moderation unit tests run in CI with `npm test`. The route also retains the honeypot check and only reports success after the configured destination confirms delivery. Because the configured destination is a public submission endpoint, someone who deliberately bypasses OAUMods and posts directly to that external endpoint is outside this route's control.
+
+## What feedback collects
 
 The floating page-feedback panel collects:
 
