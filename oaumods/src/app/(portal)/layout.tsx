@@ -15,6 +15,7 @@ import {
   Building,
   Trophy,
   Map as MapIcon,
+  Store,
 } from 'lucide-react';
 
 export default function PortalLayout({
@@ -30,6 +31,7 @@ export default function PortalLayout({
     { href: '/map', label: 'Campus Map', icon: MapIcon },
     { href: '/faculties', label: 'Faculties', icon: Building2 },
     { href: '/facilities', label: 'Facilities', icon: Landmark },
+    { href: '/venues', label: 'Campus Places', icon: Store },
     { href: '/halls', label: 'Campus Hostels', icon: Building },
     { href: '/life', label: 'Faith & Sports', icon: Trophy },
     { href: '/heritage', label: 'Heritage', icon: BookOpen },
@@ -65,7 +67,7 @@ export default function PortalLayout({
           <nav className="hidden lg:flex items-center gap-1 text-sm font-semibold">
             {navLinks.map((link) => {
               const Icon = link.icon;
-              const isActive = pathname === link.href;
+              const isActive = pathname === link.href || (link.href === '/venues' && pathname.startsWith('/venues/'));
               return (
                 <Link
                   key={link.href}
