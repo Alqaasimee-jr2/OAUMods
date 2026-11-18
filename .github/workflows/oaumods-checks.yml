@@ -32,6 +32,8 @@ jobs:
           cache-dependency-path: oaumods/package-lock.json
       - name: Install dependencies
         run: npm ci
+      - name: Run moderation tests
+        run: npm test
       - name: Run ESLint
         run: npm run lint
       - name: Build Next.js app

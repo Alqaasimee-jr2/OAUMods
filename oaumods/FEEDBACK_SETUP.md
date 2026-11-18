@@ -2,25 +2,31 @@
 
 The full student feedback page is available at `/feedback`. Across the rest of the app, the floating **Feedback** shortcut opens a small page-specific feedback panel; students can rate the current page and optionally add a short comment without leaving it. The full page remains available for detailed reports, corrections, and feature suggestions.
 
-## Formspree configuration
+## Feedback delivery configuration
 
-The form submits directly from the browser to Formspree. By default it uses the current endpoint ID in `src/app/feedback/page.tsx`. To configure a different Formspree form, set this **public form endpoint** before building/deploying:
+The two feedback forms submit to the same-site `/api/feedback` route. That route checks the message on the server and, if it passes, forwards the unchanged payload to the configured destination. By default the destination is the existing Formspree endpoint. To configure a different public feedback endpoint, set this value before building/deploying:
 
 ```env
 NEXT_PUBLIC_FORMSPREE_ENDPOINT=https://formspree.io/f/YOUR_FORM_ID
 ```
 
-Set it in the `oaumods` app's local environment (for local testing) or the deployment project's environment settings, then rebuild/redeploy. The value is sent to the browser, so it must contain only the public Formspree form endpoint—not a password, private API key, or other secret. If unset, the existing endpoint is used.
+Set it in the `oaumods` app's local environment or the deployment project's environment settings, then rebuild/redeploy. The endpoint is read by the server route and is not included in the client bundle. It must still be a public submission endpoint, not a password, private API key, or other secret. If unset, the existing Formspree endpoint is used.
 
-1. Confirm the endpoint belongs to the OAUMods project in Formspree.
-2. Confirm the Formspree form is active and its destination email is verified.
+1. Confirm the configured endpoint belongs to the OAUMods feedback flow.
+2. Confirm the destination service is active and its delivery target is configured.
 3. Submit a test from the deployed `/feedback` page.
-4. Check Formspree's submissions dashboard and destination inbox, including spam.
+4. Check the configured destination's submissions dashboard and delivery inbox, including spam.
 5. Simulate a failed request and confirm the page shows an error instead of a success message.
 6. Confirm a request that takes longer than 15 seconds times out with a retryable error.
-7. Confirm the page only displays success when Formspree returns a successful JSON response (`ok: true`).
+7. Confirm the page only displays success when the configured destination returns a successful JSON response (`ok: true`).
 
-No GitHub token, GitHub issue integration, or server-side environment variable is used by this implementation. Do not add secrets to client-side code.
+No GitHub token or GitHub issue integration is used. The moderation route uses the existing endpoint setting and does not require a new secret.
+
+## Content moderation
+
+Both feedback forms pass through the server-side moderation route before delivery. Common English profanity and abusive slurs are rejected, including basic punctuation, spacing, and leetspeak obfuscation. The filter uses whole-word boundaries so ordinary criticism such as “terrible”, “confusing”, and “disappointing” remains allowed. It is a practical English-language filter, not a complete multilingual classifier; new terms and false positives should be reviewed through tests. A rejected message is not forwarded, and the form keeps the student's text so it can be edited.
+
+The moderation unit tests run in CI with `npm test`. The route also retains the honeypot check and only reports success after the configured destination confirms delivery. Because the configured destination is a public submission endpoint, someone who deliberately bypasses OAUMods and posts directly to that external endpoint is outside this route's control.
 
 ## What feedback collects
 
@@ -45,14 +51,16 @@ Neither experience asks for a name or email. Both use a hidden honeypot field to
 1. On a page other than `/feedback`, open the floating **Feedback** panel and confirm it appears without navigating away.
 2. Confirm keyboard users can reach the rating buttons, see focus indicators, and close the panel with Escape; focus should return to the shortcut.
 3. Confirm a rating is required, the comment is optional, and the comment is limited to 500 characters.
-4. Submit a rating with and without a comment; confirm Formspree receives the rating, current pathname, and source label.
+4. Submit a rating with and without a comment; confirm the configured destination receives the rating, current pathname, and source label.
 5. Simulate a network failure and a request timeout; confirm an error is shown and the student can retry.
 6. Navigate to another page while the panel is open; confirm it closes and does not reopen unexpectedly when returning to the previous page.
 7. Confirm the floating shortcut is hidden on `/feedback`.
 8. Visit `/feedback` on a phone-sized viewport.
 9. Confirm category cards and star rating work with touch and keyboard.
 10. Submit a message shorter than 12 characters; it should be blocked.
-11. Submit a valid test message and confirm it appears in Formspree.
+11. Submit a valid test message and confirm it appears at the configured destination.
 12. Confirm a filled honeypot never displays the success message.
 13. Confirm network failures and timeouts show an error and allow retrying.
-14. Confirm an HTTP-success response without Formspree's `ok: true` confirmation is not shown as successful.
+14. Confirm an HTTP-success response without the destination's `ok: true` confirmation is not shown as successful.
+15. Submit a message containing a blocked term and confirm it is rejected before forwarding.
+16. Submit criticism without profanity (for example, “the page is confusing”) and confirm it is accepted.
