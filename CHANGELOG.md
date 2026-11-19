@@ -2315,3 +2315,33 @@ Enacted and codified **Rule 5 (Strict Ground-Truth & Anti-Hallucination Policy)*
 * `npm test`: **103 / 103 test cases passed (100%)**.
 * `npm run lint`: **0 errors, 0 warnings**.
 * `npm run build`: Compiled all 23 routes (22 static + 1 dynamic API route) cleanly via Turbopack.
+
+---
+
+## 📅 2026-11-18 — Entry 059: 2026/2027 Full Session Schedules, Campus Tourist Attractions, Landmark Pin Fixes & Student Place Reviews
+
+### 📌 Summary & Strategic Alignment
+* Conducted a web intelligence sweep across official `oauife.edu.ng` institutional releases, academic session calendars, and campus geography records.
+* Following Project Lead selection and team feedback (*"let the students review restaurants and locations alike"*), expanded OAUMods across four major fronts while strictly adhering to Rule 5 (no invented prices or unverified clock hours).
+
+### 🧠 Key Architecture & Feature Implementations
+1. **2026/2027 Full Academic Session Schedule & Annual Events ([`oaumods/src/data/academicCalendar.ts`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/data/academicCalendar.ts), [`oaumods/src/app/app/calendar/CalendarClient.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/app/app/calendar/CalendarClient.tsx))**:
+   * Updated Harmattan Freshmen Resumption to reflect the official phased arrival (`Saturday, 31 October – Sunday, 1 November 2026` by faculty batch) and added the statutory **Late Course Registration with Penalty (`14–18 December 2026`)**.
+   * Enriched December Convocation with the traditional **Convocation Play at Oduduwa Hall** and Convocation Lecture.
+   * Added the full approved **2026/2027 Rain Semester Calendar (`RAIN_2027_CALENDAR` & `RAIN_2027_METADATA`)**: 12 milestones covering April resumption, lectures, registration/add-drop deadlines, mid-semester CA tests, **Students' Union Week (14–18 June 2027)**, Rain exams, **Students' Innovation Exhibition & Pitching (16–27 Aug 2027)**, and **SWEP / SIWES & Teaching Practice**.
+   * Added Semester View switching (`Full 2026/2027 Session`, `Harmattan`, `Rain`), dynamic `.ics` export per view, and an **Annual University Events & Academic Traditions** section (Convocation & Command Play, Research Fair & Excellence Awards, Inaugural Lectures).
+2. **Campus Landmarks, Tourist Attractions & Map Pin Fixes ([`oaumods/src/data/campusMapData.ts`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/data/campusMapData.ts), [`oaumods/src/components/CampusMap.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/components/CampusMap.tsx))**:
+   * Added 17 missing campus landmarks and tourist attractions: **OAU Biological Gardens ("OAU Zoo")**, **OAU Botanical Gardens**, **Opa Dam & Reservoir**, **Campus Hills (Hills 1, 2 & 3 / Archi Mountain)**, **A.G. Leventis Museum of Natural History**, **The Pit Theatre**, **ODLT I & II**, **Yellow House (Mathematics)**, **Ajose LT**, **Alumni Hall**, **Ladoke Akintola Hall**, **Maintenance Pedestrian Gate**, **New Market**, **New Buka**, **OAU Central Mosque**, **All Souls’ Chapel**, and **Catholic Chaplaincy (OLPLC)**.
+   * Added `Attractions & Landmarks` filter pill in `CampusMap.tsx` and repaired fallback map deep-links across [`heritage/page.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/app/(portal)/heritage/page.tsx), [`halls/page.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/app/(portal)/halls/page.tsx), and [`venues/page.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/app/app/venues/page.tsx).
+3. **Tourist Attractions & Scenic Sanctuaries UI ([`oaumods/src/app/(portal)/heritage/page.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/app/(portal)/heritage/page.tsx), [`oaumods/src/app/app/guide/page.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/app/app/guide/page.tsx))**:
+   * Added the **Campus Tourist Attractions, Nature & Ecological Wonders** showcase grid on `/heritage` linking each attraction directly to the interactive map.
+   * Rendered `SCENIC_SANCTUARIES` (*The Mountain Behind Archi*, *Alex Duduyemi / Old EDM Open Side*, *Biological Garden Around Moot Court*, *Sports Complex Main Bowl Bleachers*) on `/app/guide` under the Food & Sanctuaries view.
+4. **Student Restaurant & Location Review System ([`oaumods/src/data/placeReviews.ts`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/data/placeReviews.ts), [`oaumods/src/components/PlaceReviewWidget.tsx`](file:///c:/Users/DELL/Desktop/GUIDE17/oaumods/src/components/PlaceReviewWidget.tsx))**:
+   * Built an inline, SSR-safe (`useSyncExternalStore` + `localStorage`) 1–5 star rating, vibe tag, and student tip review widget.
+   * Reviews appear immediately on the student's device and dispatch in the background to `/api/feedback` for team moderation and curation.
+   * Integrated across dining spot cards and scenic sanctuaries (`/app/guide`), lecture venues (`/app/venues`), and all map landmark dossiers (`/map` and `/app/map`).
+
+### 🏛️ Verification & Build Health
+* `npm run lint`: **0 errors, 0 warnings**.
+* `npm run build`: Compiled all **23 routes** (22 static + 1 dynamic API route) cleanly via Next.js 16.3.5 Turbopack.
+* `npm test`: **103 / 103 test cases passed (100%)**.

@@ -146,7 +146,7 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
   - [ ] Push welcoming `CONTRIBUTING.md` and issue templates.
   - [ ] Label beginner-friendly issues (`good first issue`, `data wanted`, `design tweak`).
 - [ ] **4.2 Community Verification Engine**:
-  - [ ] In-app contribution trigger: students can submit corrections, new food spots, or updated clearance room numbers.
+  - [x] In-app contribution trigger: students can submit corrections, restaurant & campus location reviews (1–5 stars, tags, comments via `PlaceReviewWidget` + `/api/feedback`), and categorized page feedback.
   - [ ] Departmental verification badges ensuring data reliability.
 - [ ] **4.3 The Public Recruitment Call**:
   - [ ] Post the public call to Great Ife tech communities (GDSC OAU, NACOS, tech WhatsApp groups).
@@ -168,7 +168,7 @@ Phase 5: Reusability & Semester Companion [LONG-TERM]
 - [ ] **5.1 Lightweight Admin / Curator Dashboard**:
   - [ ] Secure portal to review community submissions, update transport fares, and post announcements.
 - [x] **5.2 Campus Updates & Deadline Notifications**:
-  - [x] Official 2026/2027 Harmattan Academic Calendar engine with live milestone countdowns, category filters, and .ics calendar sync.
+  - [x] Official 2026/2027 Harmattan & Rain Semester Academic Calendar engine with live milestone countdowns, semester/category filters, annual institutional events, and .ics calendar sync.
   - [x] Contextual alerts for course registration closing dates, matriculation, CA test weeks, and semester exams across Dashboard, Clearance, and Academics.
 - [ ] **5.3 🤖 Future AI Campus Assistant**:
   - [ ] Natural language Q&A grounded in verified OAU handbook data (*"Where do I submit my green file for CSC?"*).

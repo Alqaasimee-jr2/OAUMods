@@ -1,7 +1,7 @@
 
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ExternalLink, BookOpen, Clock, ShieldCheck, MapPin, Award, Quote, Music } from 'lucide-react';
+import { ExternalLink, BookOpen, Clock, ShieldCheck, MapPin, Award, Quote, Music, Compass } from 'lucide-react';
 import { GeometricShape, WordAccent } from '@/components/GeometricShapes';
 import {
   SCHOOL_IDENTITY,
@@ -124,7 +124,7 @@ export default function HeritagePage() {
       name: 'Natural History Museum of Nigeria',
       role: 'National Scientific & Archaeological Repository',
       location: 'Road 1 / Leventis Complex',
-      landmarkId: 'motion-ground',
+      landmarkId: 'natural-history-museum',
       description:
         'A sculptural concrete monument designed by James Cubitt Architects, housing millions of scientific specimens, paleontological fossils, and Nigeria’s natural heritage.',
       shape: 'square' as const,
@@ -138,6 +138,59 @@ export default function HeritagePage() {
       description:
         'Known for its bold diagonal external steel trusses projecting outward like giant spider legs, designed to accommodate expansive column-free civil and mechanical engineering workshops.',
       shape: 'hexagon' as const,
+      shapeColor: 'navy' as const,
+    },
+  ];
+
+  const touristAttractions = [
+    {
+      name: 'OAU Biological Gardens ("OAU Zoo")',
+      category: 'Wildlife & Conservation',
+      location: 'Biological Sciences / Zoology Corridor',
+      landmarkId: 'oau-zoo',
+      description:
+        'Established around 1968 across over 13 hectares of preserved secondary rainforest. Serves as a live teaching and conservation park housing lions, spotted hyenas, Nile crocodiles, ostriches, primates, tortoises, and exotic birds.',
+      shape: 'square' as const,
+      shapeColor: 'emerald' as const,
+    },
+    {
+      name: 'OAU Botanical Gardens & Arboretum',
+      category: 'Botanical Sanctuary',
+      location: 'North-East Biological Sciences Belt',
+      landmarkId: 'botanical-gardens',
+      description:
+        'Lush indigenous and exotic plant conservation forest along the campus valley, supporting botany taxonomy fieldwork, ecological nature trails, and calm outdoor study escapes.',
+      shape: 'circle' as const,
+      shapeColor: 'emerald' as const,
+    },
+    {
+      name: 'Opa Dam & Reservoir (University Lake)',
+      category: 'Scenic Waterfront',
+      location: 'Opa River Valley / Road 1 Approach',
+      landmarkId: 'opa-dam',
+      description:
+        'Commissioned in the early 1980s across the Opa River, the reservoir supplies campus potable water, anchors fisheries and hydrobiology research, and offers tranquil waterfront views for excursions.',
+      shape: 'hexagon' as const,
+      shapeColor: 'blue' as const,
+    },
+    {
+      name: 'The Campus Hills (Hills 1, 2 & 3 / Archi Mountain)',
+      category: 'Natural Topography & Panoramas',
+      location: 'Northern Ridge & Behind Architecture (EDM)',
+      landmarkId: 'campus-hills',
+      description:
+        'Granite inselberg hills framing the campus horizon—including the rocky mountain ridge behind the Department of Architecture—famed for geological mapping, sunset views, and breezy evening walks.',
+      shape: 'triangle' as const,
+      shapeColor: 'gold' as const,
+    },
+    {
+      name: 'A.G. Leventis Museum of Natural History',
+      category: 'Museum & Antiquities',
+      location: 'Opposite Computer Building / Near Geology',
+      landmarkId: 'natural-history-museum',
+      description:
+        'Nicknamed "The Snail Shell" or "The Eighth Wonder." West Africa’s only university Natural History Museum, showcasing Ife terracotta, Igbo Olokun glass beads, fossils, taxidermy, and a herbarium.',
+      shape: 'square' as const,
       shapeColor: 'navy' as const,
     },
   ];
@@ -335,6 +388,53 @@ export default function HeritagePage() {
                   </Link>
                 </div>
               )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Campus Tourist Attractions, Nature & Ecological Wonders */}
+      <div className="space-y-4">
+        <div className="border-b border-slate-200 pb-2">
+          <h2 className="text-base font-bold text-oau-navy uppercase tracking-wide flex items-center gap-2">
+            <Compass className="w-4 h-4 text-emerald-700" />
+            Campus Tourist Attractions, Nature &amp; Ecological Wonders
+          </h2>
+          <p className="text-xs text-slate-600">
+            Scenic nature spots, wildlife parks, museums, and rolling hills right inside Great Ife’s 13,000-acre campus.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {touristAttractions.map((spot) => (
+            <div
+              key={spot.name}
+              className="border border-slate-200 bg-white p-5 space-y-3 flex flex-col justify-between"
+            >
+              <div className="space-y-2">
+                <div className="flex items-center justify-between text-xs gap-2">
+                  <span className="font-bold text-emerald-900 bg-emerald-50 border border-emerald-200 px-2 py-0.5">
+                    {spot.category}
+                  </span>
+                  <GeometricShape type={spot.shape} color={spot.shapeColor} size="sm" />
+                </div>
+                <h3 className="font-black text-base text-oau-navy leading-snug">{spot.name}</h3>
+                <p className="text-[11px] font-semibold text-slate-500 flex items-center gap-1">
+                  <MapPin className="w-3 h-3 text-slate-400 shrink-0" />
+                  <span>{spot.location}</span>
+                </p>
+                <p className="text-xs text-slate-700 leading-relaxed">{spot.description}</p>
+              </div>
+
+              <div className="pt-2 border-t border-slate-100">
+                <Link
+                  href={`/map?landmark=${spot.landmarkId}`}
+                  className="w-full inline-flex items-center justify-center gap-1.5 py-1.5 px-3 text-xs font-bold text-oau-navy bg-slate-50 hover:bg-oau-navy hover:text-white border border-slate-200 transition-colors"
+                >
+                  <MapPin className="w-3.5 h-3.5 text-red-500" />
+                  <span>Locate on Campus Map</span>
+                </Link>
+              </div>
             </div>
           ))}
         </div>

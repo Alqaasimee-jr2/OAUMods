@@ -12,6 +12,7 @@ export interface CalendarEvent {
   id: string;
   title: string;
   shortTitle: string;
+  semester?: 'Harmattan' | 'Rain';
   category: CalendarCategory;
   categoryLabel: string;
   categoryColor: {
@@ -86,8 +87,9 @@ export const SEMESTER_METADATA: SemesterMetadata = {
 export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
   {
     id: 'freshmen-resumption',
-    title: 'Fresh Students Resumption & Hostel Check-In',
+    title: 'Fresh Students Phased Resumption & Hostel Check-In',
     shortTitle: 'Freshmen Resumption',
+    semester: 'Harmattan',
     category: 'resumption',
     categoryLabel: 'Resumption & Housing',
     categoryColor: {
@@ -97,16 +99,16 @@ export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
       badge: 'bg-emerald-100 text-emerald-900 border-emerald-300',
     },
     startDate: '2026-10-31',
-    endDate: '2026-10-31',
-    displayDate: 'Saturday, 31 October 2026',
+    endDate: '2026-11-01',
+    displayDate: 'Saturday, 31 October – Sunday, 1 November 2026 (Phased by Faculty)',
     targetAudience: 'Freshmen',
     isFreshmanMilestone: true,
     venue: 'Angola Hall (Male Freshmen) & Mozambique Hall (Female Freshmen)',
     description:
-      'Official campus arrival and hall check-in date for all newly admitted 100-level undergraduate students at Great Ife.',
+      'Phased official campus arrival and hall check-in for newly admitted 100-level undergraduate students: Batch 1 (Sat, 31 Oct) for Administration, Arts, EDM, Education, Law, and Social Sciences; Batch 2 (Sun, 1 Nov) for Agriculture, Basic Medical Sciences, Clinical Sciences, Computing, Dentistry, Nursing, Pharmacy, Science, and Technology.',
     freshmanActionGuide: [
-      'Report to Angola Hall (males) or Mozambique Hall (females) porter lodge with your printed ePortal bed space allocation slip.',
-      'Bring original and duplicate copies of your JAMB Admission Letter and verified school fees receipt.',
+      'Check your faculty arrival batch: Sat, 31 Oct (Admin, Arts, EDM, Education, Law, Social Sciences) or Sun, 1 Nov (Agric, CHS, Computing, Dentistry, Nursing, Pharmacy, Science, Technology).',
+      'Report to Angola Hall (males) or Mozambique Hall (females) porter lodge with your printed ePortal bed space allocation slip, JAMB Admission Letter, and verified charges receipt.',
       'Collect your room keys, inspect your allocated bed space, and locate the nearest water points and dining buttery.',
     ],
     actionLink: {
@@ -118,6 +120,7 @@ export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
     id: 'online-course-registration-begins',
     title: 'Online Course Registration Opens on ePortal',
     shortTitle: 'Course Registration Begins',
+    semester: 'Harmattan',
     category: 'registration',
     categoryLabel: 'Portal & Registration',
     categoryColor: {
@@ -147,6 +150,7 @@ export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
     id: 'freshman-orientation',
     title: 'University Fresh-Student Orientation Program',
     shortTitle: 'Orientation Week',
+    semester: 'Harmattan',
     category: 'orientation',
     categoryLabel: 'Orientation & Induction',
     categoryColor: {
@@ -177,6 +181,7 @@ export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
     id: 'ict-training',
     title: 'Freshman ICT Skills & ePortal Training',
     shortTitle: 'ICT Training',
+    semester: 'Harmattan',
     category: 'training',
     categoryLabel: 'Technology & Training',
     categoryColor: {
@@ -207,6 +212,7 @@ export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
     id: 'returning-students-resumption',
     title: 'Returning Students (Stalites) Resumption',
     shortTitle: 'Returning Students Resume',
+    semester: 'Harmattan',
     category: 'resumption',
     categoryLabel: 'Campus Resumption',
     categoryColor: {
@@ -231,6 +237,7 @@ export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
     id: 'harmattan-lectures-begin',
     title: 'Harmattan Semester Lectures Kick Off (13 Weeks Total)',
     shortTitle: 'Harmattan Lectures Begin',
+    semester: 'Harmattan',
     category: 'lectures',
     categoryLabel: 'Academic Teaching',
     categoryColor: {
@@ -260,6 +267,7 @@ export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
     id: 'normal-registration-ends',
     title: 'Normal Course Registration Closes (Statutory Deadline)',
     shortTitle: 'Normal Registration Deadline',
+    semester: 'Harmattan',
     category: 'registration',
     categoryLabel: 'Strict Deadline',
     categoryColor: {
@@ -289,6 +297,7 @@ export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
     id: 'matriculation-ceremony',
     title: 'Freshman Matriculation Ceremony',
     shortTitle: 'Matriculation Day',
+    semester: 'Harmattan',
     category: 'ceremony',
     categoryLabel: 'Official Swearing-In',
     categoryColor: {
@@ -317,8 +326,9 @@ export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
   },
   {
     id: 'convocation-activities',
-    title: 'University Convocation Ceremonies',
+    title: 'University Convocation Ceremonies & Convocation Play',
     shortTitle: 'Convocation Week',
+    semester: 'Harmattan',
     category: 'ceremony',
     categoryLabel: 'University Ceremony',
     categoryColor: {
@@ -334,16 +344,48 @@ export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
     isFreshmanMilestone: false,
     venue: 'Oduduwa Hall & Amphitheatre Complex',
     description:
-      'Annual university convocation conferring undergraduate and postgraduate degrees. Campus experiences heavy visitor traffic and celebratory atmosphere.',
+      'Annual university convocation week featuring the traditional Convocation Play at Oduduwa Hall, Convocation Lecture, and conferment of undergraduate, postgraduate, and honorary degrees.',
     freshmanActionGuide: [
-      'Plan travel routes early; Road 1 and the Senate precinct experience strict vehicular security checks.',
-      'Enjoy the lively atmosphere and witness the proud tradition of Great Ife graduates.',
+      'Watch out for the annual Convocation Play staged by the Department of Dramatic Arts inside Oduduwa Hall.',
+      'Plan travel routes early; Road 1 and the Senate precinct experience heavy visitor traffic and vehicular checks.',
+      'Enjoy the celebratory atmosphere across Motion Ground and witness Great Ife graduates take their honors.',
     ],
+  },
+  {
+    id: 'harmattan-late-registration',
+    title: 'Late Course Registration with Penalty',
+    shortTitle: 'Late Registration Window',
+    semester: 'Harmattan',
+    category: 'registration',
+    categoryLabel: 'Late Registration',
+    categoryColor: {
+      bg: 'bg-orange-50',
+      text: 'text-orange-900',
+      border: 'border-orange-200',
+      badge: 'bg-orange-100 text-orange-900 border-orange-300',
+    },
+    startDate: '2026-12-14',
+    endDate: '2026-12-18',
+    displayDate: 'Monday, 14 December – Friday, 18 December 2026',
+    targetAudience: 'All Students',
+    isFreshmanMilestone: true,
+    venue: 'Online (eportal.oauife.edu.ng)',
+    description:
+      'Statutory late course registration window on ePortal for students who missed the November 20 normal registration deadline. Subject to the university late registration penalty charge.',
+    freshmanActionGuide: [
+      'If you missed normal registration, complete your late registration immediately within this 5-day window.',
+      'Print your verified Course Registration Form (CRF) and submit copies to your Faculty Officer and Course Adviser.',
+    ],
+    actionLink: {
+      href: '/app/clearance',
+      label: 'Check Clearance Pipeline',
+    },
   },
   {
     id: 'christmas-new-year-break',
     title: 'Christmas & New Year Holiday Vacation',
     shortTitle: 'Christmas & New Year Break',
+    semester: 'Harmattan',
     category: 'break',
     categoryLabel: 'Holiday Break',
     categoryColor: {
@@ -369,6 +411,7 @@ export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
     id: 'mid-semester-examinations',
     title: 'Mid-Semester Examinations / Continuous Assessment (CA) Tests',
     shortTitle: 'Mid-Semester CA Tests',
+    semester: 'Harmattan',
     category: 'exam',
     categoryLabel: 'Continuous Assessment',
     categoryColor: {
@@ -399,6 +442,7 @@ export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
     id: 'course-registration-amendments-close',
     title: 'Course-Registration Amendments (Add/Drop) Close',
     shortTitle: 'Add/Drop Deadline',
+    semester: 'Harmattan',
     category: 'registration',
     categoryLabel: 'Strict Deadline',
     categoryColor: {
@@ -423,6 +467,7 @@ export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
     id: 'lectures-end',
     title: 'Harmattan Semester Lectures Conclude',
     shortTitle: 'Lectures End',
+    semester: 'Harmattan',
     category: 'lectures',
     categoryLabel: 'Curriculum Completion',
     categoryColor: {
@@ -447,6 +492,7 @@ export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
     id: 'revision-week',
     title: 'Revision / Lecture-Free Week ("Reading Week")',
     shortTitle: 'Revision Week',
+    semester: 'Harmattan',
     category: 'break',
     categoryLabel: 'Intensive Revision',
     categoryColor: {
@@ -477,6 +523,7 @@ export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
     id: 'harmattan-examinations',
     title: 'Harmattan Semester Final Examinations (3 Weeks)',
     shortTitle: 'Harmattan Final Exams',
+    semester: 'Harmattan',
     category: 'exam',
     categoryLabel: 'Final Examinations',
     categoryColor: {
@@ -507,6 +554,7 @@ export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
     id: 'harmattan-semester-break',
     title: 'Harmattan Semester Vacation (Inter-Semester Break)',
     shortTitle: 'Harmattan Semester Break',
+    semester: 'Harmattan',
     category: 'break',
     categoryLabel: 'Semester Vacation',
     categoryColor: {
@@ -526,6 +574,410 @@ export const HARMATTAN_2026_CALENDAR: CalendarEvent[] = [
     freshmanActionGuide: [
       'Check ePortal periodically for released Harmattan semester grades and GPA computation.',
       'Recharge, review your 100L academic standing, and prepare for Rain Semester.',
+    ],
+  },
+];
+
+export const RAIN_2027_METADATA: SemesterMetadata = {
+  title: 'OAU 2026/2027 Rain Semester Calendar',
+  session: '2026/2027',
+  semester: 'Rain',
+  totalTeachingWeeks: 13,
+  teachingPhases: [
+    {
+      name: 'Rain Teaching Period',
+      dates: '19 April – 17 July 2027',
+      weeks: 13,
+      description: 'Full 13-week Rain Semester lecture curriculum across all 15 faculties.',
+    },
+    {
+      name: 'CA Tests & Students’ Week',
+      dates: '7 June – 18 June 2027',
+      weeks: 2,
+      description:
+        'Mid-semester continuous assessment tests (7–11 June) followed by Students’ Union Week (14–18 June).',
+    },
+    {
+      name: 'Innovation Pitch & SWEP/SIWES',
+      dates: '16 August – 30 September 2027',
+      weeks: 6,
+      description:
+        'Conference marking (16–20 Aug), Students’ Innovation Exhibition & Pitching (16–27 Aug), and SWEP/SIWES/Teaching Practice.',
+    },
+  ],
+  revisionWeek: '19–23 July 2027',
+  examinationPeriod: 'Monday, 26 July – Friday, 13 August 2027',
+  semesterBreak: '16 August – 30 September 2027 (SWEP / SIWES & Long Vacation)',
+  officialNote:
+    'This is the official proposed calendar approved by the University Senate; Obafemi Awolowo University may adjust dates during the academic session.',
+};
+
+export const RAIN_2027_CALENDAR: CalendarEvent[] = [
+  {
+    id: 'rain-online-registration-begins',
+    title: 'Rain Semester Online Course Registration Begins',
+    shortTitle: 'Rain Registration Opens',
+    semester: 'Rain',
+    category: 'registration',
+    categoryLabel: 'Portal & Registration',
+    categoryColor: {
+      bg: 'bg-blue-50',
+      text: 'text-blue-900',
+      border: 'border-blue-200',
+      badge: 'bg-blue-100 text-blue-900 border-blue-300',
+    },
+    startDate: '2027-04-15',
+    displayDate: 'Thursday, 15 April 2027',
+    targetAudience: 'All Students',
+    isFreshmanMilestone: true,
+    venue: 'Online (eportal.oauife.edu.ng)',
+    description:
+      'OAU ePortal opens for Rain Semester course registration. Students select second-semester departmental courses and compulsory university electives.',
+    freshmanActionGuide: [
+      'Confirm your Harmattan registration cleared cleanly and log into ePortal to enroll in Rain Semester courses.',
+      'Ensure your total semester credit load stays within the 15–24 unit requirement.',
+    ],
+    actionLink: {
+      href: '/app/academics',
+      label: 'Open Course & GPA Hub',
+    },
+  },
+  {
+    id: 'rain-students-resumption',
+    title: 'All Students Resume for Rain Semester',
+    shortTitle: 'Rain Semester Resumption',
+    semester: 'Rain',
+    category: 'resumption',
+    categoryLabel: 'Campus Resumption',
+    categoryColor: {
+      bg: 'bg-emerald-50',
+      text: 'text-emerald-900',
+      border: 'border-emerald-200',
+      badge: 'bg-emerald-100 text-emerald-900 border-emerald-300',
+    },
+    startDate: '2027-04-17',
+    displayDate: 'Saturday, 17 April 2027',
+    targetAudience: 'All Students',
+    isFreshmanMilestone: true,
+    venue: 'All Campus Halls of Residence (Angola, Moz, Awo, Fajuyi, Moremi, ETF, Alumni)',
+    description:
+      'Official resumption date for all undergraduate students returning from the inter-semester vacation to begin Rain Semester.',
+    freshmanActionGuide: [
+      'Return to your allocated hall of residence ahead of Monday morning lectures.',
+      'Pick up official paper transit tickets at the Main Gate or SUB booth if arriving with luggage.',
+    ],
+  },
+  {
+    id: 'rain-lectures-begin',
+    title: 'Rain Semester Lectures Begin (13 Weeks)',
+    shortTitle: 'Rain Lectures Begin',
+    semester: 'Rain',
+    category: 'lectures',
+    categoryLabel: 'Academic Teaching',
+    categoryColor: {
+      bg: 'bg-purple-50',
+      text: 'text-purple-900',
+      border: 'border-purple-200',
+      badge: 'bg-purple-100 text-purple-900 border-purple-300',
+    },
+    startDate: '2027-04-19',
+    displayDate: 'Monday, 19 April 2027',
+    targetAudience: 'All Students',
+    isFreshmanMilestone: true,
+    venue: 'All Faculty Lecture Theatres (BOOC, White House, AUD, ODLT, 1000-Seater)',
+    description:
+      'Commencement of Rain Semester teaching across all 15 faculties, spanning 13 weeks from 19 April to 17 July 2027.',
+    freshmanActionGuide: [
+      'Check faculty and departmental notice boards for Rain Semester lecture timetables (e.g. MTH 102, PHY 102, CHM 102, BIO 102).',
+      'Carry an umbrella or raincoat during the Rain Semester tropical showers; use the covered Arieh Sharon colonnades between buildings.',
+    ],
+    actionLink: {
+      href: '/app/venues',
+      label: 'Find Lecture Theatres',
+    },
+  },
+  {
+    id: 'rain-normal-registration-ends',
+    title: 'Rain Semester Normal Course Registration Ends',
+    shortTitle: 'Rain Normal Reg Ends',
+    semester: 'Rain',
+    category: 'registration',
+    categoryLabel: 'Strict Deadline',
+    categoryColor: {
+      bg: 'bg-red-50',
+      text: 'text-red-900',
+      border: 'border-red-200',
+      badge: 'bg-red-100 text-red-900 border-red-300',
+    },
+    startDate: '2027-04-30',
+    displayDate: 'Friday, 30 April 2027',
+    targetAudience: 'All Students',
+    isFreshmanMilestone: true,
+    venue: 'Online (eportal.oauife.edu.ng)',
+    description:
+      'Normal online course registration for Rain Semester closes at midnight. Registrations completed after this deadline attract late registration penalties.',
+    freshmanActionGuide: [
+      'Submit and lock your Rain Semester courses on ePortal before 11:59 PM.',
+      'Print copies of your Course Registration Form (CRF) for Course Adviser endorsement.',
+    ],
+  },
+  {
+    id: 'rain-late-registration',
+    title: 'Rain Semester Late Registration with Penalty',
+    shortTitle: 'Rain Late Registration',
+    semester: 'Rain',
+    category: 'registration',
+    categoryLabel: 'Late Registration',
+    categoryColor: {
+      bg: 'bg-orange-50',
+      text: 'text-orange-900',
+      border: 'border-orange-200',
+      badge: 'bg-orange-100 text-orange-900 border-orange-300',
+    },
+    startDate: '2027-05-10',
+    endDate: '2027-05-14',
+    displayDate: 'Monday, 10 May – Friday, 14 May 2027',
+    targetAudience: 'All Students',
+    isFreshmanMilestone: true,
+    venue: 'Online (eportal.oauife.edu.ng)',
+    description:
+      '5-day late registration window for Rain Semester courses with statutory late registration penalty.',
+    freshmanActionGuide: [
+      'Complete any pending Rain Semester registrations immediately to retain eligibility for CA tests and exams.',
+    ],
+  },
+  {
+    id: 'rain-amendments-close',
+    title: 'Rain Registration Amendments (Add/Drop) Close',
+    shortTitle: 'Rain Add/Drop Deadline',
+    semester: 'Rain',
+    category: 'registration',
+    categoryLabel: 'Strict Deadline',
+    categoryColor: {
+      bg: 'bg-red-50',
+      text: 'text-red-900',
+      border: 'border-red-200',
+      badge: 'bg-red-100 text-red-900 border-red-300',
+    },
+    startDate: '2027-06-04',
+    displayDate: 'Friday, 4 June 2027',
+    targetAudience: 'All Students',
+    isFreshmanMilestone: true,
+    venue: 'Online (eportal.oauife.edu.ng)',
+    description:
+      'Final statutory deadline to add or drop Rain Semester courses on ePortal before mid-semester assessments begin.',
+    freshmanActionGuide: [
+      'Verify every course code and unit on your ePortal profile against your attendance sheets.',
+    ],
+  },
+  {
+    id: 'rain-mid-semester-exams',
+    title: 'Rain Mid-Semester Examinations / CA Tests',
+    shortTitle: 'Rain Mid-Semester Tests',
+    semester: 'Rain',
+    category: 'exam',
+    categoryLabel: 'Continuous Assessment',
+    categoryColor: {
+      bg: 'bg-rose-50',
+      text: 'text-rose-900',
+      border: 'border-rose-200',
+      badge: 'bg-rose-100 text-rose-900 border-rose-300',
+    },
+    startDate: '2027-06-07',
+    endDate: '2027-06-11',
+    displayDate: 'Monday, 7 June – Friday, 11 June 2027',
+    targetAudience: 'All Students',
+    isFreshmanMilestone: true,
+    venue: 'Faculty Lecture Theatres & CBT Laboratories',
+    description:
+      'University-wide continuous assessment week for Rain Semester courses (typically 30%–40% of total course grades).',
+    freshmanActionGuide: [
+      'Confirm test venues with your Course Rep and carry your student ID card.',
+    ],
+  },
+  {
+    id: 'rain-students-week',
+    title: 'Students’ Union Week (Students’ Week)',
+    shortTitle: 'Students’ Week',
+    semester: 'Rain',
+    category: 'ceremony',
+    categoryLabel: 'Campus Festival',
+    categoryColor: {
+      bg: 'bg-amber-50',
+      text: 'text-amber-900',
+      border: 'border-amber-200',
+      badge: 'bg-amber-100 text-amber-900 border-amber-300',
+    },
+    startDate: '2027-06-14',
+    endDate: '2027-06-18',
+    displayDate: 'Monday, 14 June – Friday, 18 June 2027',
+    targetAudience: 'All Students',
+    isFreshmanMilestone: false,
+    venue: 'Ken Saro-Wiwa SUB, Afrika Amphitheatre, Motion Ground & Sports Complex',
+    description:
+      'Official campus-wide Students’ Union Week featuring cultural parades, intellectual symposia, rag day / community outreach, inter-hall competitions, and cultural variety nights.',
+    freshmanActionGuide: [
+      'Participate in faculty and hall carnivals, cultural showcases, and union town halls around SUB and Afrika Amphitheatre.',
+      'Check out the student life guide for Awolowo Aro Carnival, Fajuyi Tug of Words, and Moz/Moremi festivities.',
+    ],
+    actionLink: {
+      href: '/life',
+      label: 'Explore Student Life & Hall Weeks',
+    },
+  },
+  {
+    id: 'rain-lectures-end',
+    title: 'Rain Semester Lectures End',
+    shortTitle: 'Rain Lectures End',
+    semester: 'Rain',
+    category: 'lectures',
+    categoryLabel: 'Curriculum Completion',
+    categoryColor: {
+      bg: 'bg-purple-50',
+      text: 'text-purple-900',
+      border: 'border-purple-200',
+      badge: 'bg-purple-100 text-purple-900 border-purple-300',
+    },
+    startDate: '2027-07-17',
+    displayDate: 'Saturday, 17 July 2027',
+    targetAudience: 'All Students',
+    isFreshmanMilestone: true,
+    venue: 'All Faculty Lecture Theatres',
+    description:
+      'Conclusion of the 13-week Rain Semester teaching period across all faculties.',
+    freshmanActionGuide: [
+      'Submit all lab manuals, term papers, and verify your published CA scores before Revision Week.',
+    ],
+  },
+  {
+    id: 'rain-revision-week',
+    title: 'Rain Semester Revision / Lecture-Free Week',
+    shortTitle: 'Rain Revision Week',
+    semester: 'Rain',
+    category: 'break',
+    categoryLabel: 'Intensive Revision',
+    categoryColor: {
+      bg: 'bg-amber-50',
+      text: 'text-amber-900',
+      border: 'border-amber-200',
+      badge: 'bg-amber-100 text-amber-900 border-amber-300',
+    },
+    startDate: '2027-07-19',
+    endDate: '2027-07-23',
+    displayDate: 'Monday, 19 July – Friday, 23 July 2027',
+    targetAudience: 'All Students',
+    isFreshmanMilestone: true,
+    venue: 'Hezekiah Oluwasanmi Library & Quiet Study Lounges',
+    description:
+      'Mandatory lecture-free revision week ahead of the Rain Semester final examinations.',
+    freshmanActionGuide: [
+      'Print your Rain Semester Exam Docket from ePortal.',
+      'Review past exam questions at Hezekiah Library or quiet faculty reading spaces.',
+    ],
+  },
+  {
+    id: 'rain-final-examinations',
+    title: 'Rain Semester Final Examinations (3 Weeks)',
+    shortTitle: 'Rain Final Exams',
+    semester: 'Rain',
+    category: 'exam',
+    categoryLabel: 'Final Examinations',
+    categoryColor: {
+      bg: 'bg-red-50',
+      text: 'text-red-900',
+      border: 'border-red-200',
+      badge: 'bg-red-100 text-red-900 border-red-300',
+    },
+    startDate: '2027-07-26',
+    endDate: '2027-08-13',
+    displayDate: 'Monday, 26 July – Friday, 13 August 2027',
+    targetAudience: 'All Students',
+    isFreshmanMilestone: true,
+    venue: 'Central Examination Centres (BOOC, White House, AUD, ODLT, CBT Labs)',
+    description:
+      'Three weeks of Rain Semester final examinations concluding the 2026/2027 academic session.',
+    freshmanActionGuide: [
+      'Remember the Strict 48-Hour Exam Illness Rule: report immediately to University Health Centre (JAC) if ill during an exam.',
+      'Check final-year Sign-Out celebrations on Motion Ground as graduating students complete their last papers.',
+    ],
+  },
+  {
+    id: 'rain-innovation-and-swep',
+    title: 'Students’ Innovation Exhibition, Conference Marking & SWEP / SIWES',
+    shortTitle: 'Innovation Pitch & SWEP/SIWES',
+    semester: 'Rain',
+    category: 'training',
+    categoryLabel: 'Research & Practical Training',
+    categoryColor: {
+      bg: 'bg-indigo-50',
+      text: 'text-indigo-900',
+      border: 'border-indigo-200',
+      badge: 'bg-indigo-100 text-indigo-900 border-indigo-300',
+    },
+    startDate: '2027-08-16',
+    endDate: '2027-09-30',
+    displayDate: 'Monday, 16 August – Thursday, 30 September 2027',
+    targetAudience: 'All Students',
+    isFreshmanMilestone: true,
+    venue: 'Oduduwa Hall, Faculty Workshops & External Placements',
+    description:
+      'Post-examination academic activities: Conference Marking (16–20 Aug), Students’ Innovation Exhibition and Pitching / Celebration of Academic and Research Activities (16–27 Aug), and SWEP / SIWES & Teaching Practice (16 Aug – 30 Sep).',
+    freshmanActionGuide: [
+      'Attend the Students’ Innovation Exhibition and Pitching at Oduduwa Hall to explore Great Ife startups and prototypes.',
+      'Engineering, Technology, Science, and Education students prepare logbooks and safety gear for SWEP / SIWES / Teaching Practice.',
+    ],
+  },
+];
+
+export const FULL_2026_2027_CALENDAR: CalendarEvent[] = [
+  ...HARMATTAN_2026_CALENDAR,
+  ...RAIN_2027_CALENDAR,
+];
+
+export interface AnnualInstitutionalEvent {
+  id: string;
+  title: string;
+  typicalWindow: string;
+  venue: string;
+  summary: string;
+  highlights: string[];
+}
+
+export const ANNUAL_INSTITUTIONAL_EVENTS: AnnualInstitutionalEvent[] = [
+  {
+    id: 'annual-convocation-play',
+    title: 'Annual Convocation Ceremonies & Command Convocation Play',
+    typicalWindow: 'December (Annually)',
+    venue: 'Oduduwa Hall & Afrika Amphitheatre',
+    summary:
+      'Multi-day academic celebration conferring first degrees, higher degrees, diplomas, and honorary awards across Great Ife.',
+    highlights: [
+      'Features the historic Convocation Play staged by the Department of Dramatic Arts inside Oduduwa Hall.',
+      'Includes the Convocation Lecture delivered by distinguished scholars and statesmen.',
+    ],
+  },
+  {
+    id: 'research-fair-innovation',
+    title: 'OAU University Research Fair, Excellence Awards & Innovation Pitching',
+    typicalWindow: 'July / August',
+    venue: 'Oduduwa Hall Precinct',
+    summary:
+      'Flagship university showcase celebrating scholarly excellence, faculty breakthroughs, and student innovation prototypes.',
+    highlights: [
+      'Showcases campus engineering, computing, biomedical, agricultural, and humanities research exhibitions.',
+      'Pairs with the Students’ Innovation Exhibition & Pitching following Rain Semester exams.',
+    ],
+  },
+  {
+    id: 'inaugural-lectures',
+    title: 'OAU Inaugural Lectures Series',
+    typicalWindow: 'Periodic Tuesdays during Academic Session',
+    venue: 'Oduduwa Hall',
+    summary:
+      'Statutory academic lectures where newly elevated Professors present decades of original research to the university community and general public.',
+    highlights: [
+      'Open to all students (including 100L freshers), staff, and guests.',
+      'Processions begin from the Senate Building / Motion Ground into Oduduwa Hall.',
     ],
   },
 ];
@@ -567,7 +1019,7 @@ export function getEventStatus(
  * Retrieves the immediate next milestone event from the calendar.
  */
 export function getNextUpcomingEvent(
-  events: CalendarEvent[] = HARMATTAN_2026_CALENDAR,
+  events: CalendarEvent[] = FULL_2026_2027_CALENDAR,
   referenceDate: Date = new Date()
 ): CalendarEvent | null {
   const ref = new Date(referenceDate.getFullYear(), referenceDate.getMonth(), referenceDate.getDate());
@@ -640,7 +1092,7 @@ export function generateSingleEventIcs(event: CalendarEvent): string {
 /**
  * Generates a full semester iCalendar (.ics) export containing all events.
  */
-export function generateFullSemesterIcs(events: CalendarEvent[] = HARMATTAN_2026_CALENDAR): string {
+export function generateFullSemesterIcs(events: CalendarEvent[] = FULL_2026_2027_CALENDAR): string {
   const formatIcsDate = (dateStr: string) => dateStr.replace(/-/g, '');
   const nowStamp = `${formatIcsDate(new Date().toISOString().split('T')[0])}T000000Z`;
 

@@ -10,9 +10,11 @@ import {
   AlertTriangle,
   Trophy,
   Sparkles,
+  Trees,
 } from 'lucide-react';
 import { GeometricShape, WordAccent } from '@/components/GeometricShapes';
-import { DINING_SPOTS } from '@/data/diningSpots';
+import PlaceReviewWidget from '@/components/PlaceReviewWidget';
+import { DINING_SPOTS, SCENIC_SANCTUARIES } from '@/data/diningSpots';
 import {
   SPORTS_FACILITIES,
   SPORTS_DISCIPLINES,
@@ -500,9 +502,71 @@ export default function GuidePage() {
                     <strong className="text-oau-navy font-bold">Fresher Tip: </strong>
                     <span>{d.tips}</span>
                   </div>
+
+                  <PlaceReviewWidget
+                    placeId={d.id}
+                    placeName={d.name}
+                    placeType="restaurant"
+                  />
                 </div>
               );
             })}
+          </div>
+
+          {/* Scenic Sanctuaries, Picnic Lawns & Chill Spots */}
+          <div className="space-y-4 pt-4 border-t border-slate-200">
+            <div className="flex items-center gap-2">
+              <Trees className="w-4 h-4 text-emerald-700" />
+              <div>
+                <h3 className="text-base font-bold text-oau-navy uppercase tracking-wide">
+                  Scenic Sanctuaries, Picnic Lawns &amp; Chill Spots
+                </h3>
+                <p className="text-xs text-slate-600">
+                  Peaceful green lawns, hillside sunset viewpoints, and quiet campus retreats — rate and review your favorites.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {SCENIC_SANCTUARIES.map((s) => (
+                <div key={s.id} className="border border-slate-200 bg-white p-5 space-y-3">
+                  <div className="border-b border-slate-100 pb-2 flex items-start justify-between gap-2">
+                    <div>
+                      <h4 className="font-black text-base text-oau-navy leading-snug">{s.name}</h4>
+                      <p className="text-xs text-slate-500 font-semibold mt-0.5">{s.location}</p>
+                    </div>
+                    {s.recommendedSetting && (
+                      <span className="text-[10px] font-bold px-2 py-0.5 bg-emerald-50 border border-emerald-200 text-emerald-900 shrink-0">
+                        {s.recommendedSetting}
+                      </span>
+                    )}
+                  </div>
+
+                  <p className="text-xs text-slate-700 leading-relaxed">{s.vibe}</p>
+
+                  <ul className="space-y-1 text-xs text-slate-600 list-disc pl-4">
+                    {s.highlights.map((hl, idx) => (
+                      <li key={idx} className="leading-relaxed">
+                        {hl}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {s.caveat && (
+                    <div className="p-2.5 bg-amber-50 border border-amber-200 text-[11px] text-amber-950 flex items-start gap-1.5">
+                      <AlertTriangle className="w-3.5 h-3.5 text-amber-700 shrink-0 mt-0.5" />
+                      <span>{s.caveat}</span>
+                    </div>
+                  )}
+
+                  <PlaceReviewWidget
+                    placeId={s.id}
+                    placeName={s.name}
+                    placeType="location"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}

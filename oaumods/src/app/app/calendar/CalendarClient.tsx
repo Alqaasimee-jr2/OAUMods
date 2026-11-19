@@ -17,7 +17,11 @@ import {
 import { GeometricShape, WordAccent } from '@/components/GeometricShapes';
 import {
   HARMATTAN_2026_CALENDAR,
+  RAIN_2027_CALENDAR,
+  FULL_2026_2027_CALENDAR,
   SEMESTER_METADATA,
+  RAIN_2027_METADATA,
+  ANNUAL_INSTITUTIONAL_EVENTS,
   CalendarEvent,
   getDaysUntil,
   getEventStatus,
@@ -26,9 +30,11 @@ import {
   generateFullSemesterIcs,
 } from '@/data/academicCalendar';
 
+type SemesterTab = 'all' | 'Harmattan' | 'Rain';
 type FilterTab = 'all' | 'freshmen' | 'registration' | 'lectures' | 'ceremony' | 'exam' | 'break';
 
 export default function CalendarClient() {
+  const [selectedSemester, setSelectedSemester] = useState<SemesterTab>('all');
   const [selectedFilter, setSelectedFilter] = useState<FilterTab>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [downloadSuccess, setDownloadSuccess] = useState<string | null>(null);
@@ -43,8 +49,16 @@ export default function CalendarClient() {
     return () => clearInterval(timer);
   }, []);
 
+  const semesterEvents = useMemo(() => {
+    if (selectedSemester === 'Harmattan') return HARMATTAN_2026_CALENDAR;
+    if (selectedSemester === 'Rain') return RAIN_2027_CALENDAR;
+    return FULL_2026_2027_CALENDAR;
+  }, [selectedSemester]);
+
+  const activeMetadata = selectedSemester === 'Rain' ? RAIN_2027_METADATA : SEMESTER_METADATA;
+
   const nextMilestone = useMemo(() => {
-    return getNextUpcomingEvent(HARMATTAN_2026_CALENDAR, currentDate);
+    return getNextUpcomingEvent(FULL_2026_2027_CALENDAR, currentDate);
   }, [currentDate]);
 
   const daysToNextMilestone = useMemo(() => {
@@ -53,7 +67,7 @@ export default function CalendarClient() {
   }, [nextMilestone, currentDate]);
 
   const filteredEvents = useMemo(() => {
-    return HARMATTAN_2026_CALENDAR.filter((event) => {
+    return semesterEvents.filter((event) => {
       // Filter tab
       if (selectedFilter === 'freshmen' && !event.isFreshmanMilestone) return false;
       if (selectedFilter === 'registration' && event.category !== 'registration') return false;
@@ -76,7 +90,7 @@ export default function CalendarClient() {
 
       return true;
     });
-  }, [selectedFilter, searchQuery]);
+  }, [semesterEvents, selectedFilter, searchQuery]);
 
   const handleDownloadIcs = (event: CalendarEvent) => {
     try {
@@ -100,18 +114,24 @@ export default function CalendarClient() {
 
   const handleDownloadFullCalendar = () => {
     try {
-      const icsData = generateFullSemesterIcs(HARMATTAN_2026_CALENDAR);
+      const icsData = generateFullSemesterIcs(semesterEvents);
       const blob = new Blob([icsData], { type: 'text/calendar;charset=utf-8' });
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.setAttribute('download', 'oau-2026-2027-harmattan-semester.ics');
+      const suffix =
+        selectedSemester === 'all' ? 'full-session' : `${selectedSemester.toLowerCase()}-semester`;
+      link.setAttribute('download', `oau-2026-2027-${suffix}.ics`);
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
       URL.revokeObjectURL(url);
 
-      setDownloadSuccess('Complete Harmattan Semester Calendar exported (.ics)!');
+      const label =
+        selectedSemester === 'all'
+          ? 'Full 2026/2027 Session Calendar'
+          : `${selectedSemester} Semester Calendar`;
+      setDownloadSuccess(`${label} exported (.ics)!`);
       setTimeout(() => setDownloadSuccess(null), 4000);
     } catch {
       // Fallback
@@ -119,36 +139,36 @@ export default function CalendarClient() {
   };
 
   const filterTabs: Array<{ id: FilterTab; label: string; count: number }> = [
-    { id: 'all', label: 'All Milestones', count: HARMATTAN_2026_CALENDAR.length },
+    { id: 'all', label: 'All Milestones', count: semesterEvents.length },
     {
       id: 'freshmen',
       label: 'Freshmen Critical',
-      count: HARMATTAN_2026_CALENDAR.filter((e) => e.isFreshmanMilestone).length,
+      count: semesterEvents.filter((e) => e.isFreshmanMilestone).length,
     },
     {
       id: 'registration',
       label: 'Registration',
-      count: HARMATTAN_2026_CALENDAR.filter((e) => e.category === 'registration').length,
+      count: semesterEvents.filter((e) => e.category === 'registration').length,
     },
     {
       id: 'lectures',
       label: 'Teaching & Lectures',
-      count: HARMATTAN_2026_CALENDAR.filter((e) => e.category === 'lectures').length,
+      count: semesterEvents.filter((e) => e.category === 'lectures').length,
     },
     {
       id: 'ceremony',
-      label: 'Matriculation & Events',
-      count: HARMATTAN_2026_CALENDAR.filter((e) => e.category === 'ceremony').length,
+      label: 'Ceremonies & Events',
+      count: semesterEvents.filter((e) => e.category === 'ceremony').length,
     },
     {
       id: 'exam',
       label: 'Tests & Exams',
-      count: HARMATTAN_2026_CALENDAR.filter((e) => e.category === 'exam').length,
+      count: semesterEvents.filter((e) => e.category === 'exam').length,
     },
     {
       id: 'break',
       label: 'Breaks & Holidays',
-      count: HARMATTAN_2026_CALENDAR.filter((e) => e.category === 'break').length,
+      count: semesterEvents.filter((e) => e.category === 'break').length,
     },
   ];
 
@@ -165,10 +185,10 @@ export default function CalendarClient() {
         <div className="flex flex-wrap items-center gap-2">
           <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-amber-400 text-oau-navy text-xs font-black uppercase tracking-wide">
             <GeometricShape type="square" color="navy" size="sm" />
-            <span>HARMATTAN SEMESTER 2026/2027</span>
+            <span>2026/2027 ACADEMIC SESSION</span>
           </div>
           <span className="text-xs font-bold text-slate-500 bg-slate-100 px-2 py-0.5 border border-slate-200">
-            13 Teaching Weeks
+            Harmattan &amp; Rain Semesters • 13 Weeks Each
           </span>
         </div>
 
@@ -177,9 +197,9 @@ export default function CalendarClient() {
             Academic <WordAccent shape="circle" color="gold">Calendar</WordAccent> & Key Dates
           </h1>
           <p className="text-xs sm:text-sm text-slate-700 leading-relaxed max-w-2xl">
-            Official proposed Senate schedule for the 2026/2027 Harmattan session. Track
-            countdown dates to freshman resumption, online course registration, matriculation,
-            continuous assessments, and final examinations.
+            Official Senate schedule for the 2026/2027 Harmattan and Rain Semesters. Track
+            countdown dates for phased freshman resumption, course registration, matriculation,
+            convocation, Students’ Week, exams, and SWEP/SIWES.
           </p>
         </div>
 
@@ -191,7 +211,9 @@ export default function CalendarClient() {
             className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-black text-white bg-oau-navy hover:bg-slate-800 border border-oau-navy transition-colors active:scale-98"
           >
             <Download className="w-3.5 h-3.5 text-amber-400" />
-            <span>Export Semester to Calendar (.ics)</span>
+            <span>
+              Export {selectedSemester === 'all' ? 'Full Session' : `${selectedSemester} Semester`} (.ics)
+            </span>
           </button>
           <Link
             href="/app/academics"
@@ -277,6 +299,38 @@ export default function CalendarClient() {
       )}
 
       {/* ========================================================= */}
+      {/* SEMESTER SWITCHER BAR                                     */}
+      {/* ========================================================= */}
+      <div className="flex flex-wrap items-center gap-2 bg-white border border-slate-200 p-2 shadow-xs">
+        <span className="text-[11px] font-black uppercase tracking-wider text-slate-500 px-2">
+          Semester View:
+        </span>
+        {(
+          [
+            { id: 'all', label: `Full 2026/2027 Session (${FULL_2026_2027_CALENDAR.length})` },
+            { id: 'Harmattan', label: `Harmattan Semester (1st • ${HARMATTAN_2026_CALENDAR.length})` },
+            { id: 'Rain', label: `Rain Semester (2nd • ${RAIN_2027_CALENDAR.length})` },
+          ] as const
+        ).map((sem) => {
+          const isActive = selectedSemester === sem.id;
+          return (
+            <button
+              key={sem.id}
+              type="button"
+              onClick={() => setSelectedSemester(sem.id)}
+              className={`px-3 py-1.5 text-xs font-bold border transition-colors ${
+                isActive
+                  ? 'bg-oau-navy text-white border-oau-navy shadow-xs'
+                  : 'bg-slate-50 text-slate-700 border-slate-300 hover:bg-slate-100'
+              }`}
+            >
+              {sem.label}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* ========================================================= */}
       {/* 13-WEEK TEACHING PERIOD BREAKDOWN                          */}
       {/* ========================================================= */}
       <div className="border border-slate-200 bg-white p-5 space-y-3">
@@ -284,19 +338,20 @@ export default function CalendarClient() {
           <div className="flex items-center gap-2">
             <GeometricShape type="square" color="navy" size="sm" />
             <h2 className="text-sm font-black text-oau-navy uppercase tracking-wide">
-              Harmattan 13-Week Teaching Structure
+              {activeMetadata.semester} 13-Week Teaching Structure
             </h2>
           </div>
           <span className="text-xs font-bold text-slate-500">Senate Approved</span>
         </div>
 
         <p className="text-xs text-slate-600 leading-relaxed">
-          The semester comprises a statutory 13-week academic lecture period split around the
-          Christmas break, followed by continuous assessment and comprehensive exams:
+          {selectedSemester === 'Rain'
+            ? 'The Rain Semester features a continuous 13-week academic lecture block, mid-semester tests, Students’ Union Week, final exams, and SWEP/SIWES training:'
+            : 'The Harmattan Semester comprises a statutory 13-week academic lecture period split around the Christmas break, followed by continuous assessment and comprehensive exams:'}
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
-          {SEMESTER_METADATA.teachingPhases.map((phase, idx) => (
+          {activeMetadata.teachingPhases.map((phase, idx) => (
             <div
               key={idx}
               className="p-3 bg-slate-50 border border-slate-200 space-y-1"
@@ -316,13 +371,13 @@ export default function CalendarClient() {
         <div className="flex flex-wrap items-center gap-2 pt-2 text-xs text-slate-600">
           <span className="font-bold text-oau-navy">Post-Lecture Milestones:</span>
           <span className="bg-amber-50 text-amber-900 border border-amber-200 px-2 py-0.5 font-medium">
-            Revision Week: {SEMESTER_METADATA.revisionWeek}
+            Revision Week: {activeMetadata.revisionWeek}
           </span>
           <span className="bg-rose-50 text-rose-900 border border-rose-200 px-2 py-0.5 font-medium">
-            Exams: {SEMESTER_METADATA.examinationPeriod}
+            Exams: {activeMetadata.examinationPeriod}
           </span>
           <span className="bg-emerald-50 text-emerald-900 border border-emerald-200 px-2 py-0.5 font-medium">
-            Vacation: {SEMESTER_METADATA.semesterBreak}
+            Vacation: {activeMetadata.semesterBreak}
           </span>
         </div>
       </div>
@@ -415,6 +470,17 @@ export default function CalendarClient() {
                 <div className="p-4 sm:p-5 space-y-3">
                   <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-2">
                     <div className="flex flex-wrap items-center gap-1.5">
+                      {event.semester && (
+                        <span
+                          className={`text-[10px] font-black px-2 py-0.5 border ${
+                            event.semester === 'Harmattan'
+                              ? 'bg-slate-800 text-white border-slate-800'
+                              : 'bg-sky-700 text-white border-sky-700'
+                          }`}
+                        >
+                          {event.semester}
+                        </span>
+                      )}
                       <span className={`text-[10px] font-black px-2 py-0.5 border ${event.categoryColor.badge}`}>
                         {event.categoryLabel}
                       </span>
@@ -536,6 +602,46 @@ export default function CalendarClient() {
       </div>
 
       {/* ========================================================= */}
+      {/* ANNUAL UNIVERSITY EVENTS & ACADEMIC TRADITIONS             */}
+      {/* ========================================================= */}
+      <div className="border border-slate-200 bg-white p-5 space-y-4">
+        <div className="border-b border-slate-200 pb-2 flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2">
+            <GeometricShape type="hexagon" color="gold" size="sm" />
+            <h2 className="text-sm font-black text-oau-navy uppercase tracking-wide">
+              Annual University Events &amp; Academic Traditions
+            </h2>
+          </div>
+          <span className="text-[11px] font-bold text-slate-500">Institutional Cycles</span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {ANNUAL_INSTITUTIONAL_EVENTS.map((ev) => (
+            <div key={ev.id} className="border border-slate-200 bg-slate-50 p-4 space-y-2 flex flex-col justify-between">
+              <div className="space-y-1.5">
+                <span className="inline-block text-[10px] font-black uppercase tracking-wider px-2 py-0.5 bg-amber-100 text-amber-900 border border-amber-300">
+                  {ev.typicalWindow}
+                </span>
+                <h3 className="text-sm font-black text-oau-navy leading-snug">{ev.title}</h3>
+                <p className="text-[11px] font-semibold text-slate-600 flex items-center gap-1">
+                  <MapPin className="w-3 h-3 text-slate-400 shrink-0" />
+                  <span>{ev.venue}</span>
+                </p>
+                <p className="text-xs text-slate-700 leading-relaxed pt-1">{ev.summary}</p>
+              </div>
+              <ul className="space-y-1 pt-2 border-t border-slate-200 text-[11px] text-slate-600 list-disc pl-4">
+                {ev.highlights.map((h, i) => (
+                  <li key={i} className="leading-relaxed">
+                    {h}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ========================================================= */}
       {/* OFFICIAL INSTITUTIONAL NOTE & DISCLAIMER                  */}
       {/* ========================================================= */}
       <div className="border border-slate-300 bg-slate-100 p-4 sm:p-5 space-y-2 text-xs text-slate-700">
@@ -544,7 +650,7 @@ export default function CalendarClient() {
           <span className="uppercase tracking-wide">Institutional Ground-Truth Policy</span>
         </div>
         <p className="leading-relaxed">
-          <strong>Note from Project Governance:</strong> {SEMESTER_METADATA.officialNote}
+          <strong>Note from Project Governance:</strong> {activeMetadata.officialNote}
         </p>
         <p className="text-[11px] text-slate-500">
           Source: Official 2026/2027 Senate Academic Calendar for Obafemi Awolowo University, Ile-Ife.

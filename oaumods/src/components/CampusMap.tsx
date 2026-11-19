@@ -32,6 +32,7 @@ import {
   OAU_CENTER_COORDINATES,
 } from '@/data/campusMapData';
 import { GeometricShape, WordAccent } from './GeometricShapes';
+import PlaceReviewWidget from './PlaceReviewWidget';
 
 // Dynamic import of LeafletMap to avoid SSR window/document issues
 const LeafletMap = dynamic(() => import('./LeafletMap'), {
@@ -102,6 +103,7 @@ export default function CampusMap({
 
   const categories = [
     { id: 'all', label: 'All Landmarks', icon: Compass },
+    { id: 'landmark', label: 'Attractions & Landmarks', icon: Sparkles },
     { id: 'theatre', label: 'Lecture Theatres', icon: Navigation },
     { id: 'faculty', label: 'Faculties', icon: Layers },
     { id: 'hostel', label: 'Hostels', icon: MapPin },
@@ -583,6 +585,13 @@ export default function CampusMap({
                       </span>
                       <p className="leading-relaxed text-[11px] text-slate-700">{selectedLandmark.coursesOrUses}</p>
                     </div>
+
+                    {/* Student Location / Dining Reviews */}
+                    <PlaceReviewWidget
+                      placeId={selectedLandmark.id}
+                      placeName={selectedLandmark.name}
+                      placeType={selectedLandmark.category === 'food' ? 'restaurant' : 'location'}
+                    />
                   </div>
 
                   {/* Direct GPS Navigation Buttons (Pinned at Bottom) */}

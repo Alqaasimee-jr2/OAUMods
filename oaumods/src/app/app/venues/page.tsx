@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Navigation, Coffee, AlertCircle, Building2, MapPin, Map as MapIcon, ArrowRight } from 'lucide-react';
 import { GeometricShape, WordAccent, ShapeType, ShapeColor } from '@/components/GeometricShapes';
+import PlaceReviewWidget from '@/components/PlaceReviewWidget';
 
 interface VenueItem {
   code: string;
@@ -60,8 +61,8 @@ export default function VenuesPage() {
     {
       code: 'ODLT 1 & 2',
       name: 'Open Distance Learning Theatres (ODLT 1 & 2)',
-      location: 'Afrika Amphitheatre / Sports Complex Axis',
-      landmarkId: 'amphi-theatre',
+      location: 'Behind Oduduwa Hall / Afrika Amphitheatre Axis',
+      landmarkId: 'odlt-theatres',
       scope: 'central',
       scopeLabel: 'Central / University-Wide Theatre',
       courses: 'Multi-faculty lecture streams, campus-wide exams, evening tutorials, and academic conferences',
@@ -139,6 +140,38 @@ export default function VenuesPage() {
       shape: 'hexagon',
       shapeColor: 'amber',
     },
+    {
+      code: 'YELLOW HOUSE',
+      name: 'Yellow House (Department of Mathematics)',
+      location: 'Science Quadrangle (Adjacent to White House & Moremi Hall)',
+      landmarkId: 'yellow-house',
+      scope: 'science',
+      scopeLabel: 'Faculty of Science Specific',
+      courses: 'MTH 101, MTH 102, Calculus tutorials, and Mathematics departmental notice boards',
+      capacity: 'Departmental Complex & Tutorial Rooms',
+      directions:
+        'Walk past Moremi Hall towards White House; easily recognized by its bright yellow exterior masonry.',
+      fresherTip:
+        'Myth-Buster: Yellow House is strictly the Mathematics Department—never confuse it with the Faculty of Social Sciences!',
+      shape: 'square',
+      shapeColor: 'gold',
+    },
+    {
+      code: 'AJOSE LT',
+      name: 'Oladele Ajose Lecture Theatre (Ajose LT)',
+      location: 'Biological Sciences & Faculty of Agriculture Corridor',
+      landmarkId: 'ajose-lt',
+      scope: 'science',
+      scopeLabel: 'Faculty of Science / Agric Axis',
+      courses: 'BIO 101, CHM 101, Agriculture foundation courses, and large science classes',
+      capacity: 'Refurbished Air-Conditioned Tiered Auditorium',
+      directions:
+        'Located right beside BOOC along the Biological Sciences and Faculty of Agriculture breezeway.',
+      fresherTip:
+        'Refurbished alongside BOOC with modern seating and air conditioning. Confirm whether your stream is assigned to BOOC or Ajose LT.',
+      shape: 'circle',
+      shapeColor: 'blue',
+    },
 
     // Faculty of Administration & Social Sciences Venues
     {
@@ -195,7 +228,7 @@ export default function VenuesPage() {
       code: 'PIT THEATRE',
       name: 'Pit Theatre',
       location: 'Between Faculty of Arts and Faculty of Administration',
-      landmarkId: 'faculty-arts',
+      landmarkId: 'pit-theatre',
       scope: 'arts',
       scopeLabel: 'Faculty of Arts (Dramatic Arts Axis)',
       courses: 'Dramatic Arts productions, stage acting rehearsals, play directorships, and cultural performances',
@@ -488,6 +521,12 @@ export default function VenuesPage() {
                 </span>
                 <p className="leading-relaxed">{v.fresherTip}</p>
               </div>
+
+              <PlaceReviewWidget
+                placeId={v.landmarkId}
+                placeName={v.name}
+                placeType="location"
+              />
 
               <div className="pt-2.5 flex items-center justify-between border-t border-slate-100">
                 <span className="text-[11px] text-slate-500 font-semibold">Campus Spatial Landmark</span>
